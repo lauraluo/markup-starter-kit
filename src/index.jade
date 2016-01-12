@@ -1,14 +1,17 @@
-div.l-wrap
-            nav.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
-                div.l-container.clearfix
-                    a.logo: img
-                    div.nav-btn
-                        div.one
-                        div.two
-                        div.three
-                    div.nav-menu(role="navigation")
-                        ul.clearfix
-                            li
-                                a: span 首頁22222
-            section.l-main
-        div.l-footer
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+    script(type='text/javascript').
+  body
+    h1 Jade - node template engine
+    #container.col
+      if youAreUsingJade
+        p You are amazing
+      else
+        p adfasdfaffadfafsdaaadddddaGetddfdfdfsdfdsfsdf dd afsdfsdf on it!ddddaaaaaddddddddddddddddfdfddddfd
+      p.
+        Jade is a terse and simple
+        templating language with a
+        strong focus on performance
+        and powerful features.
