@@ -1,15 +1,24 @@
-//@charset 'UTF-8';
+@charset 'UTF-8';
+
+/**
+ * NOTE
+ *
+ * =>  !!! 如果使用 foundation or bootstrap 這類型的框架，因為變數名稱可能衝突，建議將Local的其他Scss忽略
+ */
+
+// @import
+//    'vendor/foundation/foundation';
 
 // 1. Configuration and helpers
 @import
   'utils/variables',
   'utils/functions',
   'utils/mixins';
-
+  
 // 2. Vendors
 @import
-  'vendor/normalize',
-  'vendor/foundation/foundation';
+  'vendor/normalize';
+
 // 3. Base stuff
 @import
   'base/base',
