@@ -1,17 +1,34 @@
-npm install gulp-ruby-sass gulp-autoprefixer  gulp.spritesmith gulp-jade gulp-less gulp-minify-css gulp-concat gulp-uglify gulp-watch gulp-plumber gulp-clean del --save-dev
+# Markup Starter Kit
 
+- 使用 Jade
+- 使用 Scss
+- 使用 Gulp
 
-watch error fixed
-file rwde
-http://stackoverflow.com/questions/16748737/grunt-watch-error-waiting-fatal-error-watch-enospc
+# 安裝
 
+```
+npm install 
+```
+
+## 修複Ubuntu Gulp Watch 檔案權限
+
+引用： http://stackoverflow.com/questions/16748737/grunt-watch-error-waiting-fatal-error-watch-enospc
+
+```
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+```
 
-install ruby
-https://www.ruby-lang.org/zh_tw/documentation/installation/
+## 檔案結構
 
-sudo apt-get install ruby
-dont used
+待補
 
-sever
+## Gulp Task
+
+待補
+
+## Gulp 一些相關工具的設計
+
+### gulp-connect 
+
+簡易伺服器
 https://www.npmjs.com/package/gulp-connect
