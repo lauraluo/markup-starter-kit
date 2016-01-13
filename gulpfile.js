@@ -12,7 +12,8 @@ var gulp = require('gulp'),
     gulpkss = require('gulp-kss'),
     less = require('gulp-less'),
     connect = require('gulp-connect'),
-    clean = require('gulp-clean');
+    clean = require('gulp-clean'),
+    open = require('gulp-open');
 
 // // LESS for gulp-kss
 // gulp.task('less', function() {
@@ -110,71 +111,48 @@ gulp.task('connectDist', function() {
     });
 });
 
+//Copy
+gulp.task('copyJS', function() {
+    gulp.src(['src/js/**'])
+        .pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('copyImg', function() {
+    gulp.src(['src/images/**'])
+        .pipe(gulp.dest('dist/images'));
+});
+
+gulp.task('copyAll', ['copyJS', 'copyImg'], function() {});
+
+//Clean
+gulp.task('reset', function() {
+    gulp.src(['dist/'])
+        .pipe(clean());
+});
+
+
+//Open
+gulp.task('open', function() {
+    gulp.src(__filename)
+        .pipe(open({
+            uri: 'http://localhost:3000',
+            app: 'firefox'
+        }));
+});
+
 // Watch
 gulp.task('watch', function() {
     gulp.watch(['src/*.jade'], ['jade']);
     gulp.watch('src/scss/**', ['sass']);
-    // gulp.watch(['dist/*.html','dist/css/*.css'], ['reload']);//reload
-    // gulp.watch('src/sprite/*', ['sprite']);
-    // gulp.watch(['src/scss/**'], ['kss']);
-    // gulp.watch('src/dev-js/**', ['concat']);
-    // gulp.watch('styleguide/template/public/**', ['less']);
-    // gulp.watch('src/dev-js/**', ['copy']);
+    gulp.watch(['src/js/**'], ['copyJS']);
+    gulp.watch(['src/images/**'], ['copyImg']);
 });
 
-// Minify CSS
-// gulp.task('minify-css', function() {
-//     gulp.src('dist/css/*.css')
-//         .pipe(minifyCSS())
-//         .pipe(gulp.dest('dist/css/'));
-// });
+//Build
+gulp.task('build', ['jade', 'sass', 'copyAll'], function() {});
 
-// Copy
-// gulp.task('copy', function() {
-//     gulp.src([
-//             'src/dev-js/**'
-//         ])
-//         .pipe(gulp.dest('dist/js'));
-// });
+//Group Dev
+gulp.task('dev', ['build', 'connectDist', 'watch', 'open'], function() {});
 
-// // Concat
-// gulp.task('concat', function() {
-//     gulp.src([
-//             'src/dev-js/jquery-ui.min.js',
-//             'src/dev-js/jquery.ui.datepicker-ja.js'
-//         ])
-//         .pipe(concat("jquery.datepicker.js"))
-//         .pipe(gulp.dest('dist/js'));
-// });
-
-// //Uglify
-// gulp.task('compress', function() {
-//     gulp.src([
-//             'dist/js/**/*'
-//         ])
-//         .pipe(uglify())
-//         .pipe(gulp.dest('dist/js'));
-// });
-
-// // Image
-// gulp.task('img', function() {
-//     gulp.run('sprite');
-// });
-
-// // Deploy Task
-// gulp.task('deploy', function() {
-//     gulp.run('minify-css', 'compress');
-// });
-
-// // Release Task
-// gulp.task('release', function() {
-//     gulp.run('concat');
-// });
-
-
-// Default Task
-gulp.task('default', function() {
-    gulp.run('connectDist');
-    gulp.run('watch');
-});
-
+// Default  Task
+gulp.task('default', ['dev'], function() {});

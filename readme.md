@@ -26,7 +26,7 @@ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo s
 
 待補
 
-## Gulp 一些相關工具的設計
+## Gulp 一些相關工具的介紹————
 
 ### gulp-connect 
 
