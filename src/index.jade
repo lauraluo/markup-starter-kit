@@ -1,11 +1,21 @@
-doctype html
+//layout-index
 
-html(lang="en")
-
-head
-title= pageTitle
-link(rel='stylesheet' href='css/main.css')
+include _head.jade
 
 body
-	a(href="http://", target="_blank") link
+    div.l-wrap 
+        nav.nav
 
+        div.carousel
+            div.main
+                
+                section.events-list.events-list--move
+                    div.row
+                        div.events-list__hd
+                            h1.events__title 
+                        div.events-list__bd
+                            div.event-item
+                        div.events-list__ft
+
+
+    footer.footer
