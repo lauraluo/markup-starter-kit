@@ -1,7 +1,4 @@
 //@charset 'UTF-8';
-// .note {
-// transform: rotate(10deg);
-// }
 
 // 1. Configuration and helpers
 @import
@@ -11,8 +8,8 @@
 
 // 2. Vendors
 @import
-  'vendor/normalize';
-
+  'vendor/normalize',
+  'vendor/foundation/foundation';
 // 3. Base stuff
 @import
   'base/base',

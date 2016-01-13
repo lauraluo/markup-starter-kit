@@ -2,7 +2,6 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     watch = require('gulp-watch'),
-    // sass = require('gulp-ruby-sass'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -72,7 +71,10 @@ gulp.task('sass', function() {
         .pipe(autoprefixer({
             browsers: ["last 4 versions", "Firefox >= 27", "Blackberry >= 7", "IE 8", "IE 9"],
             cascade: false
-        }));
+        }))
+        .pipe(gulp.dest('dist/css/'))
+        .pipe(connect.reload());
+
 });
 
 // CSS Sprite
@@ -85,14 +87,7 @@ gulp.task('sprite', function() {
             imgPath: '../images/sprite.png'
         }));
     spriteData.img.pipe(gulp.dest('dist/images'));
-    spriteData.css.pipe(gulp.dest('dist/css'));
-});
-
-// Minify CSS
-gulp.task('minify-css', function() {
-    gulp.src('dist/css/*.css')
-        .pipe(minifyCSS())
-        .pipe(gulp.dest('dist/css/'));
+    spriteData.css.pipe(gulp.dest('dist/css/'));
 });
 
 // Jade
@@ -127,11 +122,12 @@ gulp.task('watch', function() {
     // gulp.watch('src/dev-js/**', ['copy']);
 });
 
-// Default Task
-gulp.task('default', function() {
-    gulp.run('connectDist');
-    gulp.run('watch');
-});
+// Minify CSS
+// gulp.task('minify-css', function() {
+//     gulp.src('dist/css/*.css')
+//         .pipe(minifyCSS())
+//         .pipe(gulp.dest('dist/css/'));
+// });
 
 // Copy
 // gulp.task('copy', function() {
@@ -160,7 +156,6 @@ gulp.task('default', function() {
 //         .pipe(gulp.dest('dist/js'));
 // });
 
-
 // // Image
 // gulp.task('img', function() {
 //     gulp.run('sprite');
@@ -175,3 +170,11 @@ gulp.task('default', function() {
 // gulp.task('release', function() {
 //     gulp.run('concat');
 // });
+
+
+// Default Task
+gulp.task('default', function() {
+    gulp.run('connectDist');
+    gulp.run('watch');
+});
+
