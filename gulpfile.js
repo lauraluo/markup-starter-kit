@@ -14,61 +14,17 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     clean = require('gulp-clean'),
     open = require('gulp-open');
+// bowerFiles = require('bower-files');
 
-// // LESS for gulp-kss
-// gulp.task('less', function() {
-//     gulp.src('styleguide/template/public/*.less')
-//         .pipe(less())
-//         .pipe(gulp.dest('styleguide/public'));
-// });
-
-// // KSS
-// gulp.task('kss', function() {
-//     gulp.src([
-//             'styleguide/public/script.js'
-//         ], {
-//             read: false
-//         })
-//         .pipe(clean({
-//             force: true
-//         }));
-
-//     gulp.src(['src/scss/**/*.scss'])
-//         .pipe(gulpkss({
-//             overview: 'styleguide/styleguide.md', //Absolute path to markdown file which is used for styleguide home page
-//             templateDirectory: 'styleguide/template'
-//                 // kss: Options supported by KSS-Node (https://github.com/hughsk/kss-node)
-//         }))
-//         .pipe(gulp.dest('styleguide/'));
-
-//     gulp.src(['src/scss/**/*.scss'])
-//         .pipe(sass({
-//             style: 'expanded'
-//         }))
-//         .pipe(autoprefixer({
-//             browsers: ["last 4 versions", "Firefox >= 27", "Blackberry >= 7", "IE 8", "IE 9"],
-//             cascade: false
-//         }))
-//         .pipe(gulp.dest('styleguide/public'));
-
-//     //Add any styleguide images
-//     gulp.src('dist/images/**/*')
-//         .pipe(gulp.dest('styleguide/images/'));
-//     gulp.src('src/sprite/**/*')
-//         .pipe(gulp.dest('styleguide/public/icon/'));
-
-//     //Add any styleguide JS files
-//     gulp.src('dist/js/**')
-//         .pipe(gulp.dest('styleguide/public/'));
-// });
 
 // // Sass
 gulp.task('sass', function() {
-    gulp.src(['src/scss/*.scss', '!src/scss/_*.scss'])
+    gulp.src(['src/scss/**/*.scss', '!src/scss/**/_*.scss'])
         .pipe(plumber())
-        .pipe(sourcemaps.init())
-        .pipe(sass().on('error', sass.logError))
-        .pipe(sourcemaps.write())
+        .pipe(sass({
+            errLogToConsole: true,
+            includePaths: ['src/scss/**/**']
+        }))
         .pipe(autoprefixer({
             browsers: ["last 4 versions", "Firefox >= 27", "Blackberry >= 7", "IE 8", "IE 9"],
             cascade: false
@@ -98,7 +54,11 @@ gulp.task('jade', function() {
         .pipe(jade({
             pretty: true
         }))
-        .pipe(gulp.dest('dist/'))
+        .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('html', function() {
+    gulp.src('dist/*.html')
         .pipe(connect.reload());
 });
 
@@ -122,7 +82,12 @@ gulp.task('copyImg', function() {
         .pipe(gulp.dest('dist/images'));
 });
 
-gulp.task('copyAll', ['copyJS', 'copyImg'], function() {});
+gulp.task('copyAssets', function() {
+    gulp.src(['src/assets/**'])
+        .pipe(gulp.dest('dist/assets'));
+});
+
+gulp.task('copyAll', ['copyJS', 'copyImg', 'copyAssets'], function() {});
 
 //Clean
 gulp.task('reset', function() {
@@ -143,9 +108,10 @@ gulp.task('open', function() {
 // Watch
 gulp.task('watch', function() {
     gulp.watch(['src/*.jade'], ['jade']);
-    gulp.watch('src/scss/**', ['sass']);
+    gulp.watch('src/scss/**/**.scss', ['sass']);
     gulp.watch(['src/js/**'], ['copyJS']);
     gulp.watch(['src/images/**'], ['copyImg']);
+    gulp.watch(['dist/*.html'], ['html']);
 });
 
 //Build

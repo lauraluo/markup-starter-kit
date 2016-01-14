@@ -2,20 +2,45 @@
 
 include _head.jade
 
+
+
 body
-    div.l-wrap 
-        nav.nav
-
-        div.carousel
-            div.main
-                
-                section.events-list.events-list--move
-                    div.row
-                        div.events-list__hd
-                            h1.events__title 
-                        div.events-list__bd
-                            div.event-item
-                        div.events-list__ft
-
-
-    footer.footer
+	div.l-wrap 
+		nav.nav
+			div.row.columns 
+			div.nav__bd
+				
+				
+		div.carousel
+		div.main   
+			section.events-list.events-list--move
+					div.row.columns 
+						div.events-list__hd
+							h3.events__title 清單名稱
+						div.events-list__bd
+							- for (var x = 0; x < 2; x++)
+								div.event-item.large-6.medium-12.columns 
+									div.event-item__media.callout 
+										img(src="http://dummyimage.com/600x400/555/fff", alt="")
+									div.event-item__info.callout
+										div.event-item__inner
+											p.event-item__title 活動名稱
+											p.event-item__directions 活動說明活動說明活動說明活動說明活動說明活動說明活動說明活動說明活動說明活動說明活動說明活動說明活動說明活動說明活動說明活動說明活動說明活動說明
+										<hr>
+										div.event-item__inner
+											div.evnet-item__status
+												span.event-item__rank
+													i.icon.icon-star6
+													i.icon.icon-star6
+													i.icon.icon-star6
+													i.icon.icon-star5
+													i.icon.icon-star4
+												span.event-item__count
+													span.title 活動人氣 
+													i.icon.icon-fire2
+													span.number 5555
+											a.button(href='#features') 
+												i.icon.icon-pen5
+												span 打開筆尖開始紀錄
+						div.events-list__ft
+	footer.footer

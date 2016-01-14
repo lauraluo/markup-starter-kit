@@ -1,40 +1,80 @@
 @charset 'UTF-8';
+// .row {
+//  background: url(/images/images.jpeg) red;
+// }
 
-// Note
-// 0. framework - 如果使用 foundation or bootstrap 這類型的框架，因為變數名稱可能衝突，建議將Local的其他Scss忽略
+/* ==========================================================================
+ *  使用 foundation 的注意事項
+ * =>  0  @import 'framework/foundation/foundation';  
+ * =>  2-1  使用foundation所有功能 則   @include foundation-everything;
+ * =>  2-2  使用foundation部份功能 則 參考 framework/foundation/foundation.scss 的 foundation-everything mixin 來選擇想要使用的功能
+ * =>  提醒使用 foundation，必需放棄 SASS 的 7-1 pattem 否則可能會有變數名稱重複定義的問題
+ * =>  提醒使用 foundation，使用 rem-calc(value) 計算所有單位
+   ========================================================================== */
+
+@import 'framework/foundation/foundation';
+@include foundation-everything;
+//iconmoon
+@import '/assets/icomoon/style.css';
+.button {
+    transition: box-shadow 0.3s, padding 0.3s;
+    box-shadow: inset rem-calc(0 -6 0 0) rgba(0, 0, 0, 0.15);
+    padding: rem-calc(10 10 16 10);
+    &:hover {
+        box-shadow: inset rem-calc(0 6 0 0) rgba(0, 0, 0, 0.3);
+        padding: rem-calc(16 10 10 10);
+    }
+    > .icon {
+        margin-right: rem-calc(10);
+    }
+}
+
+.row {
+    background: #e6e6e6;
+}
+
+.event-item {
+    &__media {
+        padding: 0px;
+        overflow: hidden;
+    }
+    &__info {
+        padding: 0px;
+    }
+}
+
+// .event-item {
+//     border: 1px solid red;
+// }
+
+/* ==========================================================================
+ *  使用 SASS 7-1 pattem
+ * =>  0  @import 'framework/foundation/foundation';  
+   ========================================================================== */
+
+// // 1. Configuration and helpers
 // @import
-//    'framework/foundation/foundation';
-
-// 1. Configuration and helpers
-@import
-  'utils/variables',
-  'utils/functions',
-  'utils/mixins',
-  'base/normalize';
-  
-// 2. Vendors
-
-// 3. Base stuff
-@import
-  'base/base',
-  'base/fonts',
-  'base/typography',
-  'base/helpers';
-
-// 4. Layout-related sections
-@import
-  'layout/header',
-  'layout/footer';
-
-// 5. Components
-@import
-  'components/buttons';
-
-// 6. Page-specific styles
-@import
-  'pages/home';
-
-// 7. Themes
-@import
-  'themes/default';
-
+//   'utils/variables',
+//   'utils/functions',
+//   'utils/mixins',
+//   'base/normalize';
+// // 2. Vendors
+// // 3. Base stuff
+// @import
+//   'base/base',
+//   'base/fonts',
+//   'base/typography',
+//   'base/helpers';
+// // 4. Layout-related sections
+// @import
+//   'layout/header',
+//   'layout/footer';
+// // 5. Components
+// @import
+//   'components/buttons';
+// // 6. Page-specific styles
+// @import
+//   'pages/home';
+// // 7. Themes
+// @import
+//   'themes/default';
