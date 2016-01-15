@@ -10,7 +10,6 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     jade = require('gulp-jade'),
     gulpkss = require('gulp-kss'),
-    less = require('gulp-less'),
     connect = require('gulp-connect'),
     clean = require('gulp-clean'),
     open = require('gulp-open');

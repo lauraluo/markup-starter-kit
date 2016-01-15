@@ -56,13 +56,13 @@
 
  .cat-icon {
  	&--movie:before {
-
+		content: $icon-movie2	
  	}
  	&--literay:before  {
 		content: $icon-pen5	
  	}
  	&--lohas:before {
-
+		content:  $icon-paper-plane;	
  	}
  }
 
@@ -136,6 +136,12 @@
  *  test components
  *
  */
+
+.gud-rank {
+	> span {
+		margin-right: 10px;
+	}
+}
 .gud-page {
 	> .row {
 		margin-bottom: 40px;
