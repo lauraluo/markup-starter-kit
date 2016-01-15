@@ -26,7 +26,7 @@ $primary-color: #058bee !default;
 
 /// Secondary color, used with components that support the `.secondary` class.
 /// @type Color
-$secondary-color: #777 !default;
+$secondary-color: #d42ca3 !default;
 
 /// Color to indicate a positive status or action, used with the `.success` class.
 /// @type Color
@@ -42,7 +42,7 @@ $alert-color: #ec5840 !default;
 
 /// Color used for light gray UI items.
 /// @type Color
-$light-gray: #e6e6e6 !default;
+$light-gray: #ddd !default;
 
 /// Color used for medium gray UI items.
 /// @type Color
@@ -50,11 +50,11 @@ $medium-gray: #cacaca !default;
 
 /// Color used for dark gray UI items.
 /// @type Color
-$dark-gray: #8a8a8a !default;
+$dark-gray: #737373 !default;
 
 /// Color used for black ui items.
 /// @type Color
-$black: #0a0a0a !default;
+$black: #222 !default;
 
 /// Color used for white ui items.
 /// @type Color

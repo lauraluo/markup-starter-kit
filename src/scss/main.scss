@@ -10,47 +10,166 @@
  * =>  2-2  使用foundation部份功能 則 參考 framework/foundation/foundation.scss 的 foundation-everything mixin 來選擇想要使用的功能
  * =>  提醒使用 foundation，必需放棄 SASS 的 7-1 pattem 否則可能會有變數名稱重複定義的問題
  * =>  提醒使用 foundation，使用 rem-calc(value) 計算所有單位
-   ========================================================================== */
+	 ========================================================================== */
 
 @import 'framework/foundation/foundation';
 @include foundation-everything;
 //iconmoon
 @import '/assets/icomoon/style.css';
+@import 'vendor/icomoon_variables';
+
+.clearfix{zoom:1;}
+.clearfix:after{content:'.';display:block;clear:both;visibility:hidden;height:0;font-size:0;}
+
+
 .button {
-    transition: box-shadow 0.3s, padding 0.3s;
-    box-shadow: inset rem-calc(0 -6 0 0) rgba(0, 0, 0, 0.15);
-    padding: rem-calc(10 10 16 10);
-    &:hover {
-        box-shadow: inset rem-calc(0 6 0 0) rgba(0, 0, 0, 0.3);
-        padding: rem-calc(16 10 10 10);
-    }
-    > .icon {
-        margin-right: rem-calc(10);
-    }
+	transition: box-shadow 0.3s, padding 0.3s;
+	box-shadow: inset rem-calc(0 -6 0 0) rgba(0, 0, 0, 0.15);
+	padding: rem-calc(10 10 16 10);
+	// margin: 0;
+	&:hover {
+			box-shadow: inset rem-calc(0 6 0 0) rgba(0, 0, 0, 0.3);
+			padding: rem-calc(16 10 10 10);
+	}
+	> .icon {
+			margin-right: rem-calc(10);
+	}
+	&.hollow {
+		box-shadow: none;
+		padding: rem-calc(10);
+	}
+	&.disabled, {
+		background: $dark-gray;
+		opacity: 0.4;
+	}
 }
 
 .row {
-    background: #e6e6e6;
+	// background: #e6e6e6;
 }
+
+/**
+ *
+ * event  components
+ *
+ */
+
+ .cat-icon {
+ 	&--movie:before {
+
+ 	}
+ 	&--literay:before  {
+		content: $icon-pen5	
+ 	}
+ 	&--lohas:before {
+
+ 	}
+ }
 
 .event-item {
-    &__media {
-        padding: 0px;
-        overflow: hidden;
-    }
-    &__info {
-        padding: 0px;
-    }
+	&__media {
+			padding: 0px;
+			overflow: hidden;
+	}
+	&__info {
+			padding: 0px;
+	}
+	&__inner{
+		margin: rem-calc(0 15);
+		padding: rem-calc(15 0 0 0);
+	}
+	&__title {
+		color: $black;
+	}
+	&__directions {
+		color: $dark-gray;
+	}
+	&__status ,&__ctrl  {
+		padding: 0;
+	}
+	&__btn{
+		display: block;
+	}
+	&__count {
+		line-height: 1em;
+		.number {
+			font-size: rem-calc(24);
+			color: $primary-color;
+		}
+		.icon {
+			margin: rem-calc(0 10);
+			color: $secondary-color;
+		}
+	}
+	hr {
+		margin: 0px;
+	}
+	.event-rank {
+		display: block;
+	}
 }
 
-// .event-item {
-//     border: 1px solid red;
-// }
+.event-rank {
+	$event-rank:'.event-rank';
+	color: $secondary-color;
+	display: inline-block;
+	font-size: rem-calc(20);
+	line-height: 1em;
+	i:before{
+		content: $icon-star4	
+	}
+	//event-rank--1~event-rank--5  一分到五分
+	@for $i from 1 through 5 {
+		&--#{$i} {
+			//event-rank__1~event-rank__5  計算要亮幾顆星
+			@for $a from 1 through $i{
+				i.event-rank__#{$a}:before {
+					content: $icon-star6;		
+				}
+			}			
+		}
+	}
+}
+
+/**
+ *
+ *  test components
+ *
+ */
+.gud-page {
+	> .row {
+		margin-bottom: 40px;
+	}
+}
+ .gud-button {
+ 	.button {
+ 		margin-right: 10px;
+ 	}
+ }
+ .gud-color {
+ 	.column{
+ 		width: 20%;
+ 		.docs-color-block {
+ 			text-align: center;
+ 			border: $light-gray 1px solid;
+ 			margin-bottom: 30px;
+ 		}
+ 	}
+	$colors-list: $primary-color ,$secondary-color, $success-color ,$warning-color ,$alert-color, $white,$black, $light-gray, $medium-gray, $dark-gray;
+	@for $i from 1 through length($colors-list) {
+		.docs-color-block-#{$i} {
+ 			margin: 10px;
+ 			height: 80px;
+			background: nth($colors-list, $i);
+		}						
+	}
+
+ }
 
 /* ==========================================================================
  *  使用 SASS 7-1 pattem
  * =>  0  @import 'framework/foundation/foundation';  
-   ========================================================================== */
+	 ========================================================================== */
 
 // // 1. Configuration and helpers
 // @import
