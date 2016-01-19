@@ -17,119 +17,233 @@
 //iconmoon
 @import '/assets/icomoon/style.css';
 @import 'vendor/icomoon_variables';
-
-.clearfix{zoom:1;}
-.clearfix:after{content:'.';display:block;clear:both;visibility:hidden;height:0;font-size:0;}
-
-
-.button {
-	transition: box-shadow 0.3s, padding 0.3s;
-	box-shadow: inset rem-calc(0 -6 0 0) rgba(0, 0, 0, 0.15);
-	padding: rem-calc(10 10 16 10);
-	// margin: 0;
-	&:hover {
-			box-shadow: inset rem-calc(0 6 0 0) rgba(0, 0, 0, 0.3);
-			padding: rem-calc(16 10 10 10);
-	}
-	> .icon {
-			margin-right: rem-calc(10);
-	}
-	&.hollow {
-		box-shadow: none;
-		padding: rem-calc(10);
-	}
-	&.disabled, {
-		background: $dark-gray;
-		opacity: 0.4;
-	}
+.clearfix {
+    zoom: 1;
 }
 
-.row {
-	// background: #e6e6e6;
+.clearfix:after {
+    content: '.';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
 }
+
+// body {
+//     @media screen and (max-width: rem-calc(960)) and (min-width: rem-calc(0)) {
+//         font-size: 130%;
+//         .button {
+//             font-size: #{0.9*1.2}rem
+//         }
+//     }
+// }
+
+/*============================
+=            文字系統            =
+============================*/
+
+//文字預留調整裝置大小
+$font-size-lv: ( small: ( 'f-xs': 14, 'f-sm': 18, 'f-md': 20, 'f-xl': 30, 'f-xxl': 36, ), medium: ( 'f-xs': 14, 'f-sm': 18, 'f-md': 24, 'f-xl': 30, 'f-xxl': 36, ), ) !default;
 
 /**
- *
- * event  components
+ *  輸出範晚
+.f-xs { font-size: 0.875rem; }
+.f-sm { font-size: 1.125rem; }
+.f-md { font-size: 1.5rem; }
+.f-xl { font-size: 1.875rem; }
+.f-xxl { font-size: 2.25rem; }
+
+@media screen and (min-width: 23.4375em) {
+  .f-xs { font-size: 0.875rem; }
+  .f-sm { font-size: 1.125rem; }
+  .f-md { font-size: 1.5rem; }
+  .f-xl { font-size: 1.875rem; }
+  .f-xxl { font-size: 2.25rem; } 
+}
  *
  */
 
- .cat-icon {
- 	&--movie:before {
-		content: $icon-movie2	
- 	}
- 	&--literay:before  {
-		content: $icon-pen5	
- 	}
- 	&--lohas:before {
-		content:  $icon-paper-plane;	
- 	}
- }
+@each $query, $lvs in $font-size-lv {
+    @include breakpoint($query) {
+        @each  $lv , $font-size in $lvs {
+            .#{$lv} {
+                font-size: rem-calc($font-size);
+            }
+        }
+    }
+}
+
+
+/*=====  End of 文字系統  ======*/
+
+
+/*=================================
+=            layout 系統            =
+=================================*/
+
+
+.l-container {
+    @media screen and (max-width: rem-calc(960)) and (min-width: rem-calc(640)) {
+        width: rem-calc(640);
+        margin: 0 auto;
+    }
+}
+
+
+// Sass v3.2.6
+
+/*
+https://github.com/stubbornella/oocss/blob/master/core/spacing/space.css
+p,m = padding,margin
+a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
+s,m,l,n = small(5px),medium(10px),large(20px),none(0px)
+*/
+
+$n: 0px;
+$s: 5px;
+$m: $s * 2;
+$l: $m * 2;
+$type: p padding, m margin;
+$top: t v a;
+$right: r h a;
+$bottom: b v a;
+$left: l h a;
+$dirs: top $top, right $right, bottom $bottom, left $left;
+$size: n $n, s $s, m $m, l $l;
+
+@each $t in $type {
+    @each $d in $dirs {
+        @each $s in $size {
+            .#{nth($t,1)}#{nth(nth($d,2),1)}#{nth($s,1)}, .#{nth($t,1)}#{nth(nth($d,2),2)}#{nth($s,1)}, .#{nth($t,1)}#{nth(nth($d,2),3)}#{nth($s,1)}{
+                #{nth($t,2)}-#{nth($d,1)}: rem-calc(nth($s,2)) !important;
+            }
+        }
+    }
+}
+
+.mra,.mha{margin-right:auto }
+.mla,.mha{margin-left:auto }   
+
+
+/*=====  End of layout 系統  ======*/
+
+
+/*=============================
+=            components             =
+=============================*/
+
+.button {
+    transition: box-shadow 0.3s, padding 0.3s;
+    box-shadow: inset rem-calc(0 -6 0 0) rgba(0, 0, 0, 0.15);
+    padding: rem-calc(10 10 16 10);
+    // margin: 0;
+    &:hover {
+        box-shadow: inset rem-calc(0 6 0 0) rgba(0, 0, 0, 0.3);
+        padding: rem-calc(16 10 10 10);
+    }
+    > .icon {
+        margin-right: rem-calc(10);
+    }
+    &.hollow {
+        box-shadow: none;
+        padding: rem-calc(10);
+    }
+    &.disabled,
+    {
+        background: $dark-gray;
+        opacity: 0.4;
+    }
+}
+
+
+/*=====  End of components   ======*/
+
+
+
+
+.cat-icon {
+    &--movie:before {
+        content: $icon-movie2
+    }
+    &--literay:before {
+        content: $icon-pen5
+    }
+    &--lohas:before {
+        content: $icon-paper-plane;
+    }
+}
 
 .event-item {
-	&__media {
-			padding: 0px;
-			overflow: hidden;
-	}
-	&__info {
-			padding: 0px;
-	}
-	&__inner{
-		margin: rem-calc(0 15);
-		padding: rem-calc(15 0 0 0);
-	}
-	&__title {
-		color: $black;
-	}
-	&__directions {
-		color: $dark-gray;
-	}
-	&__status ,&__ctrl  {
-		padding: 0;
-	}
-	&__btn{
-		display: block;
-	}
-	&__count {
-		line-height: 1em;
-		.number {
-			font-size: rem-calc(24);
-			color: $primary-color;
-		}
-		.icon {
-			margin: rem-calc(0 10);
-			color: $secondary-color;
-		}
-	}
-	hr {
-		margin: 0px;
-	}
-	.event-rank {
-		display: block;
-	}
+    &__media {
+        padding: 0px;
+        overflow: hidden;
+        > img  {
+        	width: 100%;
+        }
+    }
+    &__info {
+        padding: 0px;
+    }
+    &__inner {
+        margin: rem-calc(0 15);
+        padding: rem-calc(15 0 0 0);
+    }
+    &__title {
+        color: $black;
+    }
+    &__directions {
+        color: $dark-gray;
+    }
+    &__status,
+    &__ctrl {
+        padding: 0;
+    }
+    &__btn {
+        display: block;
+    }
+    &__count {
+        line-height: 1em;
+        .number {
+            // font-size: rem-calc(24);
+            @extend .f-md;
+            color: $primary-color;
+        }
+        .icon {
+            margin: rem-calc(0 10);
+            color: $secondary-color;
+        }
+    }
+    hr {
+        margin: 0px;
+    }
+    .event-rank {
+        display: block;
+    }
 }
 
 .event-rank {
-	$event-rank:'.event-rank';
-	color: $secondary-color;
-	display: inline-block;
-	font-size: rem-calc(20);
-	line-height: 1em;
-	i:before{
-		content: $icon-star4	
-	}
-	//event-rank--1~event-rank--5  一分到五分
-	@for $i from 1 through 5 {
-		&--#{$i} {
-			//event-rank__1~event-rank__5  計算要亮幾顆星
-			@for $a from 1 through $i{
-				i.event-rank__#{$a}:before {
-					content: $icon-star6;		
-				}
-			}			
-		}
-	}
+    $event-rank: '.event-rank';
+    color: $secondary-color;
+    display: inline-block;
+    font-size: rem-calc(20);
+    line-height: 1em;
+    i:before {
+        content: $icon-star4
+    }
+    //event-rank--1~event-rank--5  一分到五分
+    @for $i from 1 through 5 {
+        &--#{$i} {
+            //event-rank__1~event-rank__5  計算要亮幾顆星
+            @for $a from 1 through $i {
+                i.event-rank__#{$a}:before {
+                    content: $icon-star6;
+                }
+            }
+        }
+    }
 }
+
 
 /**
  *
@@ -137,40 +251,52 @@
  *
  */
 
-.gud-rank {
-	> span {
-		margin-right: 10px;
-	}
+.gu d-rank {
+    > span {
+        margin-right: 10px;
+    }
 }
-.gud-page {
-	> .row {
-		margin-bottom: 40px;
-	}
-}
- .gud-button {
- 	.button {
- 		margin-right: 10px;
- 	}
- }
- .gud-color {
- 	.column{
- 		width: 20%;
- 		.docs-color-block {
- 			text-align: center;
- 			border: $light-gray 1px solid;
- 			margin-bottom: 30px;
- 		}
- 	}
-	$colors-list: $primary-color ,$secondary-color, $success-color ,$warning-color ,$alert-color, $white,$black, $light-gray, $medium-gray, $dark-gray;
-	@for $i from 1 through length($colors-list) {
-		.docs-color-block-#{$i} {
- 			margin: 10px;
- 			height: 80px;
-			background: nth($colors-list, $i);
-		}						
-	}
 
- }
+.gud-page {
+    > .row {
+        margin-bottom: 40px;
+    }
+}
+
+.gud-button {
+    .button {
+        margin-right: 10px;
+    }
+}
+
+.gud-color {
+    .column {
+        width: 20%;
+        .docs-color-block {
+            text-align: center;
+            border: $light-gray 1px solid;
+            margin-bottom: 30px;
+        }
+    }
+    $colors-list: $primary-color,
+    $secondary-color,
+    $success-color,
+    $warning-color,
+    $alert-color,
+    $white,
+    $black,
+    $light-gray,
+    $medium-gray,
+    $dark-gray;
+    @for $i from 1 through length($colors-list) {
+        .docs-color-block-#{$i} {
+            margin: 10px;
+            height: 80px;
+            background: nth($colors-list, $i);
+        }
+    }
+}
+
 
 /* ==========================================================================
  *  使用 SASS 7-1 pattem
