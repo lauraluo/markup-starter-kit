@@ -23,7 +23,7 @@ $grid-column-gutter: null !default;
 /// @since 6.1.0
 $grid-column-responsive-gutter: (
   small: 20px,
-  medium: 30px,
+  medium: 20px,
 ) !default;
 
 /// If `true`, the last column in a row will align to the opposite edge of the row.

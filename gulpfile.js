@@ -9,66 +9,20 @@ var gulp = require('gulp'),
     minifyCSS = require('gulp-minify-css'),
     plumber = require('gulp-plumber'),
     jade = require('gulp-jade'),
-    gulpkss = require('gulp-kss'),
-    less = require('gulp-less'),
     connect = require('gulp-connect'),
     clean = require('gulp-clean'),
     open = require('gulp-open');
+// bowerFiles = require('bower-files');
 
-// // LESS for gulp-kss
-// gulp.task('less', function() {
-//     gulp.src('styleguide/template/public/*.less')
-//         .pipe(less())
-//         .pipe(gulp.dest('styleguide/public'));
-// });
-
-// // KSS
-// gulp.task('kss', function() {
-//     gulp.src([
-//             'styleguide/public/script.js'
-//         ], {
-//             read: false
-//         })
-//         .pipe(clean({
-//             force: true
-//         }));
-
-//     gulp.src(['src/scss/**/*.scss'])
-//         .pipe(gulpkss({
-//             overview: 'styleguide/styleguide.md', //Absolute path to markdown file which is used for styleguide home page
-//             templateDirectory: 'styleguide/template'
-//                 // kss: Options supported by KSS-Node (https://github.com/hughsk/kss-node)
-//         }))
-//         .pipe(gulp.dest('styleguide/'));
-
-//     gulp.src(['src/scss/**/*.scss'])
-//         .pipe(sass({
-//             style: 'expanded'
-//         }))
-//         .pipe(autoprefixer({
-//             browsers: ["last 4 versions", "Firefox >= 27", "Blackberry >= 7", "IE 8", "IE 9"],
-//             cascade: false
-//         }))
-//         .pipe(gulp.dest('styleguide/public'));
-
-//     //Add any styleguide images
-//     gulp.src('dist/images/**/*')
-//         .pipe(gulp.dest('styleguide/images/'));
-//     gulp.src('src/sprite/**/*')
-//         .pipe(gulp.dest('styleguide/public/icon/'));
-
-//     //Add any styleguide JS files
-//     gulp.src('dist/js/**')
-//         .pipe(gulp.dest('styleguide/public/'));
-// });
 
 // // Sass
 gulp.task('sass', function() {
-    gulp.src(['src/scss/*.scss', '!src/scss/_*.scss'])
+    gulp.src(['src/scss/**/*.scss', '!src/scss/**/_*.scss'])
         .pipe(plumber())
-        .pipe(sourcemaps.init())
-        .pipe(sass().on('error', sass.logError))
-        .pipe(sourcemaps.write())
+        .pipe(sass({
+            errLogToConsole: true,
+            includePaths: ['src/scss/**/**']
+        }))
         .pipe(autoprefixer({
             browsers: ["last 4 versions", "Firefox >= 27", "Blackberry >= 7", "IE 8", "IE 9"],
             cascade: false
@@ -80,16 +34,43 @@ gulp.task('sass', function() {
 
 // CSS Sprite
 gulp.task('sprite', function() {
-    var spriteData = gulp.src('src/sprite/*.png')
-        .pipe(plumber())
-        .pipe(spritesmith({
-            imgName: 'sprite.png',
-            cssName: '_sprite.scss',
-            imgPath: '../images/sprite.png'
-        }));
+    var spriteData = gulp.src('src/images/sprites/**/*.png').pipe(spritesmith({
+        imgName: 'sprite.png',
+        cssName: '_sprite.scss',
+        padding: 10,
+        exportOpts : { quality: 50 },
+        cssTemplate: function(data) {
+            var output = '';
+            var v = Math.random();
+            data.sprites.forEach(function(sprite){
+                output += [
+                    '.'+sprite.name+' {\n',
+                    '  display: block;\n',
+                    '  background-image: url(../images/'+sprite.image+'?v='+ v+');\n',
+                    '  background-position: '+sprite.px.offset_x+' '+sprite.px.offset_y+';\n',
+                    '  width:'+sprite.px.width+';\n',
+                    '  height: '+sprite.px.height+';\n',
+                    '/*source-image:'+sprite.source_image+'*/\n',
+                    '}\n',
+                    '@mixin '+sprite.name+'() {\n',
+                    '  display: block;\n',
+                    '  background-image: url(../images/'+sprite.image+'?v='+ v+');\n',
+                    '  background-position: '+sprite.px.offset_x+' '+sprite.px.offset_y+';\n',
+                    '  width:'+sprite.px.width+';\n',
+                    '  height: '+sprite.px.height+';\n',
+                    '/*source-image:'+sprite.source_image+'*/\n',
+                    '}\n'
+                ].join('')
+            });
+            return output;
+        }
+    }));
+
     spriteData.img.pipe(gulp.dest('dist/images'));
-    spriteData.css.pipe(gulp.dest('dist/css/'));
+    spriteData.css.pipe(gulp.dest('src/scss/'));
 });
+
+
 
 // Jade
 gulp.task('jade', function() {
@@ -98,7 +79,11 @@ gulp.task('jade', function() {
         .pipe(jade({
             pretty: true
         }))
-        .pipe(gulp.dest('dist/'))
+        .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('html', function() {
+    gulp.src('dist/*.html')
         .pipe(connect.reload());
 });
 
@@ -106,7 +91,7 @@ gulp.task('jade', function() {
 gulp.task('connectDist', function() {
     connect.server({
         root: 'dist',
-        port: 3000,
+        port: 3001,
         livereload: true
     });
 });
@@ -114,15 +99,21 @@ gulp.task('connectDist', function() {
 //Copy
 gulp.task('copyJS', function() {
     gulp.src(['src/js/**'])
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('dist/js'))
+        .pipe(connect.reload());
 });
 
 gulp.task('copyImg', function() {
-    gulp.src(['src/images/**'])
+    gulp.src(['src/images/*','!src/images/sprite'])
         .pipe(gulp.dest('dist/images'));
 });
 
-gulp.task('copyAll', ['copyJS', 'copyImg'], function() {});
+gulp.task('copyAssets', function() {
+    gulp.src(['src/assets/**'])
+        .pipe(gulp.dest('dist/assets'));
+});
+
+gulp.task('copyAll', ['copyJS', 'copyImg', 'copyAssets'], function() {});
 
 //Clean
 gulp.task('reset', function() {
@@ -135,7 +126,7 @@ gulp.task('reset', function() {
 gulp.task('open', function() {
     gulp.src(__filename)
         .pipe(open({
-            uri: 'http://localhost:3000',
+            uri: 'http://localhost:3001',
             app: 'firefox'
         }));
 });
@@ -143,16 +134,28 @@ gulp.task('open', function() {
 // Watch
 gulp.task('watch', function() {
     gulp.watch(['src/*.jade'], ['jade']);
-    gulp.watch('src/scss/**', ['sass']);
+    gulp.watch('src/scss/**/**.scss', ['sass']);
     gulp.watch(['src/js/**'], ['copyJS']);
-    gulp.watch(['src/images/**'], ['copyImg']);
+    gulp.watch(['src/images/*'], ['copyImg']);
+    gulp.watch(['src/images/sprites/*'], ['sprite']);
+    gulp.watch(['dist/*.html'], ['html']);
 });
 
 //Build
-gulp.task('build', ['jade', 'sass', 'copyAll'], function() {});
+gulp.task('build', ['sprite','jade', 'sass', 'copyAll'], function() {});
 
 //Group Dev
 gulp.task('dev', ['build', 'connectDist', 'watch', 'open'], function() {});
 
-// Default  Task
+//Default  Task
 gulp.task('default', ['dev'], function() {});
+
+
+
+// var jslint = require('gulp-jslint');
+ 
+// gulp.task('jslint', function () {
+//     return gulp.src(['src/js/app.js'])
+//             .pipe(jslint())
+//             .pipe(jslint.reporter('default',errorsOnly));
+// });

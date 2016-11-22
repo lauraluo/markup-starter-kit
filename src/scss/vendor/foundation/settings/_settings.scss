@@ -158,6 +158,7 @@ $keystroke-color: $black;
 $keystroke-background: $light-gray;
 $keystroke-padding: rem-calc(2 4 0);
 $keystroke-radius: $global-radius;
+$keystroke-radius: $global-radius;
 $abbr-underline: 1px dotted $black;
 
 // 5. Typography Helpers
@@ -233,7 +234,7 @@ $button-background: $primary-color;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
 $button-color: #fff;
 $button-color-alt: #000;
-$button-radius: $global-radius;
+$button-radius: 100px;
 $button-sizes: (
   tiny: 0.6rem,
   small: 0.75rem,

@@ -1,21 +1,16 @@
-//layout-index
+//page laytout name
+extends _layout.jade
 
-include _head.jade
+//page html
+block page_main
+    section.index
+        div.index__hd
+        div.index__bd
+            div.index__content
+                div.l-container
+                    div.l-vm
+                        div.l-vm__content
+                            p 灰色區塊內垂直置中
+                            div.sprite__demo
+        div.index__ft
 
-body
-    div.l-wrap 
-        nav.nav
-
-        div.carousel
-            div.main
-                
-                section.events-list.events-list--move
-                    div.row
-                        div.events-list__hd
-                            h1.events__title 
-                        div.events-list__bd
-                            div.event-item
-                        div.events-list__ft
-
-
-    footer.footer
