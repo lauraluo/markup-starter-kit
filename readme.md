@@ -26,17 +26,18 @@ $ npm install
 啟用gulp(gulp default)
 
 ```
-$gulp
+$ gulp
 ```
 
 清掉dist檔
 ```
-$gulp reset
+$ gulp reset
 ```
 ## 注意事項 
 
 ### 使用sprites產生圖片及scss
-
+- 將`.png`圖，置入`src/images/sprites/`底下
+- 只支援`.png`
 - 至少先執行`$ gulp defulat`一次
 - 再將main.scss裡的註解打開
 
