@@ -39,7 +39,8 @@ $ gulp reset
 - 將`.png`圖，置入`src/images/sprites/`底下
 - 只支援`.png`
 - 至少先執行`$ gulp defulat`一次
-- 再將main.scss裡的註解打開
+- gup將圖片合成為一張`dist/images/sprites.png`，並將其對應的樣式宣告及mixin打包成`src/scss/_sprite.scss`
+- 最後記得將main.scss裡的註解打開
 
 before
 ``` scss
