@@ -7,8 +7,8 @@ html(itemscope,itemtype="http://schema.org/Article",ng-app="markup" debug="false
     //html head
     include _head.jade
     //html body
-    body(class="l-index")
-        div.l-wrap
+    body.l-index
+        div.l-wrap#app
             //nav
             include _nav.jade
             div.l-fb
@@ -32,3 +32,4 @@ html(itemscope,itemtype="http://schema.org/Article",ng-app="markup" debug="false
             js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.4&appId=262477160615577";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
+    script(src="../bundle.js")

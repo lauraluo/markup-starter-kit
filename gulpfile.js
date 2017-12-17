@@ -1,90 +1,128 @@
-var gulp = require('gulp'),
+const gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     watch = require('gulp-watch'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
-    spritesmith = require("gulp.spritesmith"),
+    spritesmith = require('gulp.spritesmith'),
     minifyCSS = require('gulp-minify-css'),
     plumber = require('gulp-plumber'),
     jade = require('gulp-jade'),
     connect = require('gulp-connect'),
     clean = require('gulp-clean'),
-    open = require('gulp-open');
-// bowerFiles = require('bower-files');
+    open = require('gulp-open'),
+    vueify = require('gulp-vueify'),
+    babel = require('gulp-babel');
+// browserify = require('gulp-browserify');
 
+var babelify = require('babelify');
+var extend = require('extend');
+var parseArgs = require('minimist');
+var watchify = require('watchify');
+
+var watchify = require('watchify');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
+var gutil = require('gulp-util');
+var assign = require('lodash.assign');
+
+var config = extend(
+    {
+        env: process.env.NODE_ENV
+    },
+    parseArgs(process.argv.slice(2))
+);
 
 // // Sass
 gulp.task('sass', function() {
-    gulp.src(['src/scss/**/*.scss', '!src/scss/**/_*.scss'])
+    gulp
+        .src(['src/scss/**/*.scss', '!src/scss/**/_*.scss'])
         .pipe(plumber())
-        .pipe(sass({
-            errLogToConsole: true,
-            includePaths: ['src/scss/**/**']
-        }))
-        .pipe(autoprefixer({
-            browsers: ["last 4 versions", "Firefox >= 27", "Blackberry >= 7", "IE 8", "IE 9"],
-            cascade: false
-        }))
+        .pipe(
+            sass({
+                errLogToConsole: true,
+                includePaths: ['src/scss/**/**']
+            })
+        )
+        .pipe(
+            autoprefixer({
+                browsers: ['last 4 versions', 'Firefox >= 27', 'Blackberry >= 7', 'IE 8', 'IE 9'],
+                cascade: false
+            })
+        )
         .pipe(gulp.dest('dist/css/'))
         .pipe(connect.reload());
-
 });
 
 // CSS Sprite
 gulp.task('sprite', function() {
-    var spriteData = gulp.src('src/images/sprites/**/*.png').pipe(spritesmith({
-        imgName: 'sprite.png',
-        cssName: '_sprite.scss',
-        padding: 10,
-        exportOpts : { quality: 50 },
-        cssTemplate: function(data) {
-            var output = '';
-            var v = Math.random();
-            data.sprites.forEach(function(sprite){
-                output += [
-                    '.'+sprite.name+' {\n',
-                    '  display: block;\n',
-                    '  background-image: url(../images/'+sprite.image+'?v='+ v+');\n',
-                    '  background-position: '+sprite.px.offset_x+' '+sprite.px.offset_y+';\n',
-                    '  width:'+sprite.px.width+';\n',
-                    '  height: '+sprite.px.height+';\n',
-                    '/*source-image:'+sprite.source_image+'*/\n',
-                    '}\n',
-                    '@mixin '+sprite.name+'() {\n',
-                    '  display: block;\n',
-                    '  background-image: url(../images/'+sprite.image+'?v='+ v+');\n',
-                    '  background-position: '+sprite.px.offset_x+' '+sprite.px.offset_y+';\n',
-                    '  width:'+sprite.px.width+';\n',
-                    '  height: '+sprite.px.height+';\n',
-                    '/*source-image:'+sprite.source_image+'*/\n',
-                    '}\n'
-                ].join('')
-            });
-            return output;
-        }
-    }));
+    var spriteData = gulp.src('src/images/sprites/**/*.png').pipe(
+        spritesmith({
+            imgName: 'sprite.png',
+            cssName: '_sprite.scss',
+            padding: 10,
+            exportOpts: { quality: 50 },
+            cssTemplate: function(data) {
+                var output = '';
+                var v = Math.random();
+                data.sprites.forEach(function(sprite) {
+                    output += [
+                        '.' + sprite.name + ' {\n',
+                        '  display: block;\n',
+                        '  background-image: url(../images/' + sprite.image + '?v=' + v + ');\n',
+                        '  background-position: ' +
+                            sprite.px.offset_x +
+                            ' ' +
+                            sprite.px.offset_y +
+                            ';\n',
+                        '  width:' + sprite.px.width + ';\n',
+                        '  height: ' + sprite.px.height + ';\n',
+                        '/*source-image:' + sprite.source_image + '*/\n',
+                        '}\n',
+                        '@mixin ' + sprite.name + '() {\n',
+                        '  display: block;\n',
+                        '  background-image: url(../images/' + sprite.image + '?v=' + v + ');\n',
+                        '  background-position: ' +
+                            sprite.px.offset_x +
+                            ' ' +
+                            sprite.px.offset_y +
+                            ';\n',
+                        '  width:' + sprite.px.width + ';\n',
+                        '  height: ' + sprite.px.height + ';\n',
+                        '/*source-image:' + sprite.source_image + '*/\n',
+                        '}\n'
+                    ].join('');
+                });
+                return output;
+            }
+        })
+    );
 
     spriteData.img.pipe(gulp.dest('dist/images'));
     spriteData.css.pipe(gulp.dest('src/scss/'));
 });
 
-
-
 // Jade
 gulp.task('jade', function() {
-    gulp.src(['src/*.jade', '!src/_*.jade'])
+    gulp
+        .src(['src/*.jade', '!src/_*.jade'])
         .pipe(plumber())
-        .pipe(jade({
-            pretty: true
-        }))
+        .pipe(
+            jade({
+                pretty: true
+            })
+        )
         .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('html', function() {
-    gulp.src('dist/*.html')
-        .pipe(connect.reload());
+    gulp.src('dist/*.html').pipe(connect.reload());
+});
+
+gulp.task('bundleReload', function() {
+    gulp.src('dist/bundle.js').pipe(connect.reload());
 });
 
 //Sever
@@ -96,66 +134,90 @@ gulp.task('connectDist', function() {
     });
 });
 
-//Copy
-gulp.task('copyJS', function() {
-    gulp.src(['src/js/**'])
-        .pipe(gulp.dest('dist/js'))
-        .pipe(connect.reload());
+gulp.task('scripts', function() {
+    gulp
+        .src('src/main.js')
+        .pipe(
+            browserify({
+                insertGlobals: true,
+                debug: true
+            })
+        )
+        .pipe(gulp.dest('./dist/'));
 });
 
+var customOpts = {
+    entries: ['./src/main.js'],
+    debug: true
+};
+var opts = assign({}, watchify.args, customOpts);
+var b = watchify(browserify(opts));
+
+gulp.task('bundleJs', bundle);
+b.on('update', bundle);
+b.on('log', gutil.log);
+
+function bundle() {
+    return b
+        .bundle()
+        .on('error', gutil.log.bind(gutil, 'Browserify Error'))
+        .pipe(source('bundle.js'))
+        .pipe(buffer())
+        .pipe(sourcemaps.init({ loadMaps: true })) // loads map from browserify file
+        .pipe(sourcemaps.write('./')) // writes .map file
+        .pipe(gulp.dest('./dist'));
+}
+
+//assets
+
 gulp.task('copyImg', function() {
-    gulp.src(['src/images/*','!src/images/sprite'])
-        .pipe(gulp.dest('dist/images'));
+    gulp.src(['src/images/*', '!src/images/sprite']).pipe(gulp.dest('dist/images'));
 });
 
 gulp.task('copyAssets', function() {
-    gulp.src(['src/assets/**'])
-        .pipe(gulp.dest('dist/assets'));
+    gulp.src(['src/assets/**']).pipe(gulp.dest('dist/assets'));
 });
 
-gulp.task('copyAll', ['copyJS', 'copyImg', 'copyAssets'], function() {});
+gulp.task('copyAll', ['copyImg', 'copyAssets'], function() {});
 
 //Clean
 gulp.task('reset', function() {
-    gulp.src(['dist/'])
-        .pipe(clean());
+    gulp.src(['dist/']).pipe(clean());
 });
-
 
 //Open
 gulp.task('open', function() {
-    gulp.src(__filename)
-        .pipe(open({
+    gulp.src(__filename).pipe(
+        open({
             uri: 'http://localhost:3001',
-            app: 'firefox'
-        }));
+            app: 'google-chrome'
+        })
+    );
 });
 
 // Watch
 gulp.task('watch', function() {
     gulp.watch(['src/*.jade'], ['jade']);
     gulp.watch('src/scss/**/**.scss', ['sass']);
-    gulp.watch(['src/js/**'], ['copyJS']);
     gulp.watch(['src/images/*'], ['copyImg']);
     gulp.watch(['src/images/sprites/*'], ['sprite']);
     gulp.watch(['dist/*.html'], ['html']);
+    gulp.watch(['dist/bundle.js'], ['bundleReload']);
+});
+
+gulp.task('set-dev-node-env', function() {
+    return (process.env.NODE_ENV = config.env = 'development');
+});
+
+gulp.task('set-prod-node-env', function() {
+    return (process.env.NODE_ENV = config.env = 'production');
 });
 
 //Build
-gulp.task('build', ['sprite','jade', 'sass', 'copyAll'], function() {});
+gulp.task('build', ['bundleJs', 'sprite', 'jade', 'sass', 'copyAll'], function() {});
 
 //Group Dev
-gulp.task('dev', ['build', 'connectDist', 'watch', 'open'], function() {});
+gulp.task('dev', ['set-dev-node-env', 'build', 'connectDist', 'watch', 'open'], function() {});
 
 //Default  Task
 gulp.task('default', ['dev'], function() {});
-
-
-
-// var jslint = require('gulp-jslint');
- 
-// gulp.task('jslint', function () {
-//     return gulp.src(['src/js/app.js'])
-//             .pipe(jslint())
-//             .pipe(jslint.reporter('default',errorsOnly));
-// });
