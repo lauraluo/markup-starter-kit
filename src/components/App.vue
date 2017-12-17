@@ -1,24 +1,25 @@
 
-<template>
-  <div>APP APP 12325dddd9999 ddddd ddd7777dddddddddd APP</div>
+<template lang="jade">
+    div APP
+        Sub
 </template>
 
 <script>
-  export default {
-    name: 'App',
+import Sub from './Sub.vue';
+export default {
+    name: 'APP',
+    components: { Sub },
     data() {
-      return {}
+        return {};
     },
-    computed: {
-
-        
-    },
+    computed: {},
     mounted() {},
     methods: {}
-  }
+};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
-
+<style scoped>
+h1 {
+    background: red;
+}
 </style>

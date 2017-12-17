@@ -8,8 +8,8 @@
     },
     "browserify": {
         "transform": [
-            "babelify",
-            "vueify"
+            "vueify",
+            "babelify"
         ]
     },
     "author": "laura.luo0812@gmail.com",
