@@ -1,16 +1,528 @@
-.sprite__demo {
+.fb_share {
   display: block;
-  background-image: url(../images/sprite.png?v=0.08149872205128172);
-  background-position: 0px 0px;
-  width:500px;
-  height: 500px;
-/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/sprite__demo.png*/
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -1337px -188px;
+  width:64px;
+  height: 28px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/fb_share.png*/
 }
-@mixin sprite__demo() {
+@mixin fb_share() {
   display: block;
-  background-image: url(../images/sprite.png?v=0.08149872205128172);
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -1337px -188px;
+  width:64px;
+  height: 28px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/fb_share.png*/
+}
+.flow-box1 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -431px -225px;
+  width:232px;
+  height: 251px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/flow-box1.png*/
+}
+@mixin flow-box1() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -431px -225px;
+  width:232px;
+  height: 251px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/flow-box1.png*/
+}
+.flow-box2 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: 0px -681px;
+  width:232px;
+  height: 251px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/flow-box2.png*/
+}
+@mixin flow-box2() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: 0px -681px;
+  width:232px;
+  height: 251px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/flow-box2.png*/
+}
+.index-dish1 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -756px -942px;
+  width:242px;
+  height: 185px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-dish1.png*/
+}
+@mixin index-dish1() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -756px -942px;
+  width:242px;
+  height: 185px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-dish1.png*/
+}
+.index-dish2 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -504px -942px;
+  width:242px;
+  height: 185px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-dish2.png*/
+}
+@mixin index-dish2() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -504px -942px;
+  width:242px;
+  height: 185px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-dish2.png*/
+}
+.index-dish3 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -252px -942px;
+  width:242px;
+  height: 186px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-dish3.png*/
+}
+@mixin index-dish3() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -252px -942px;
+  width:242px;
+  height: 186px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-dish3.png*/
+}
+.index-dish4 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: 0px -942px;
+  width:242px;
+  height: 186px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-dish4.png*/
+}
+@mixin index-dish4() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: 0px -942px;
+  width:242px;
+  height: 186px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-dish4.png*/
+}
+.index-key1 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -570px -1138px;
+  width:180px;
+  height: 150px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-key1.png*/
+}
+@mixin index-key1() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -570px -1138px;
+  width:180px;
+  height: 150px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-key1.png*/
+}
+.index-key2 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: 0px -1138px;
+  width:180px;
+  height: 187px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-key2.png*/
+}
+@mixin index-key2() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: 0px -1138px;
+  width:180px;
+  height: 187px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-key2.png*/
+}
+.index-key3 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -380px -1138px;
+  width:180px;
+  height: 154px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-key3.png*/
+}
+@mixin index-key3() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -380px -1138px;
+  width:180px;
+  height: 154px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-key3.png*/
+}
+.index-note {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -742px 0px;
+  width:585px;
+  height: 213px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-note.png*/
+}
+@mixin index-note() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -742px 0px;
+  width:585px;
+  height: 213px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-note.png*/
+}
+.index-slogan {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -521px -536px;
+  width:343px;
+  height: 132px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-slogan.png*/
+}
+@mixin index-slogan() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -521px -536px;
+  width:343px;
+  height: 132px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-slogan.png*/
+}
+.index-test {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -1337px 0px;
+  width:135px;
+  height: 178px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-test.png*/
+}
+@mixin index-test() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -1337px 0px;
+  width:135px;
+  height: 178px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-test.png*/
+}
+.key-desc1 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -874px -536px;
+  width:234px;
+  height: 130px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key-desc1.png*/
+}
+@mixin key-desc1() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -874px -536px;
+  width:234px;
+  height: 130px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key-desc1.png*/
+}
+.key-desc2 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -242px -873px;
+  width:279px;
+  height: 50px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key-desc2.png*/
+}
+@mixin key-desc2() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -242px -873px;
+  width:279px;
+  height: 50px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key-desc2.png*/
+}
+.key-desc3 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -1118px -536px;
+  width:174px;
+  height: 88px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key-desc3.png*/
+}
+@mixin key-desc3() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -1118px -536px;
+  width:174px;
+  height: 88px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key-desc3.png*/
+}
+.key-desc4 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -1113px -223px;
+  width:211px;
+  height: 217px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key-desc4.png*/
+}
+@mixin key-desc4() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -1113px -223px;
+  width:211px;
+  height: 217px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key-desc4.png*/
+}
+.key-desc5 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: 0px -225px;
+  width:421px;
+  height: 301px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key-desc5.png*/
+}
+@mixin key-desc5() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: 0px -225px;
+  width:421px;
+  height: 301px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key-desc5.png*/
+}
+.key-flow-1 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -1008px -942px;
+  width:212px;
+  height: 142px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key-flow-1.png*/
+}
+@mixin key-flow-1() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -1008px -942px;
+  width:212px;
+  height: 142px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key-flow-1.png*/
+}
+.key-flow-2 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -780px -681px;
+  width:208px;
+  height: 139px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key-flow-2.png*/
+}
+@mixin key-flow-2() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -780px -681px;
+  width:208px;
+  height: 139px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key-flow-2.png*/
+}
+.key-flow-3 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -998px -681px;
+  width:200px;
+  height: 137px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key-flow-3.png*/
+}
+@mixin key-flow-3() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -998px -681px;
+  width:200px;
+  height: 137px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key-flow-3.png*/
+}
+.key-flow-pdline {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -742px -223px;
+  width:361px;
+  height: 246px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key-flow-pdline.png*/
+}
+@mixin key-flow-pdline() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -742px -223px;
+  width:361px;
+  height: 246px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key-flow-pdline.png*/
+}
+.key1-1 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -242px -681px;
+  width:298px;
+  height: 182px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key1-1.png*/
+}
+@mixin key1-1() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -242px -681px;
+  width:298px;
+  height: 182px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key1-1.png*/
+}
+.key1-2 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -550px -681px;
+  width:220px;
+  height: 140px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key1-2.png*/
+}
+@mixin key1-2() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -550px -681px;
+  width:220px;
+  height: 140px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key1-2.png*/
+}
+.key1-3 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -760px -1138px;
+  width:160px;
+  height: 140px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key1-3.png*/
+}
+@mixin key1-3() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -760px -1138px;
+  width:160px;
+  height: 140px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key1-3.png*/
+}
+.key1-4 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -190px -1138px;
+  width:180px;
+  height: 160px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key1-4.png*/
+}
+@mixin key1-4() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -190px -1138px;
+  width:180px;
+  height: 160px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key1-4.png*/
+}
+.key1-5 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -930px -1138px;
+  width:140px;
+  height: 140px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key1-5.png*/
+}
+@mixin key1-5() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -930px -1138px;
+  width:140px;
+  height: 140px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key1-5.png*/
+}
+.key1-6 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -1080px -1138px;
+  width:140px;
+  height: 140px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key1-6.png*/
+}
+@mixin key1-6() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -1080px -1138px;
+  width:140px;
+  height: 140px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key1-6.png*/
+}
+.key1_footer {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
   background-position: 0px 0px;
-  width:500px;
-  height: 500px;
-/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/sprite__demo.png*/
+  width:732px;
+  height: 215px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key1_footer.png*/
+}
+@mixin key1_footer() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: 0px 0px;
+  width:732px;
+  height: 215px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key1_footer.png*/
+}
+.key1_title {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: 0px -536px;
+  width:511px;
+  height: 135px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key1_title.png*/
+}
+@mixin key1_title() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: 0px -536px;
+  width:511px;
+  height: 135px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key1_title.png*/
+}
+.line_share {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -1337px -226px;
+  width:30px;
+  height: 30px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/line_share.png*/
+}
+@mixin line_share() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -1337px -226px;
+  width:30px;
+  height: 30px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/line_share.png*/
+}
+.nav-home-link {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -1411px -188px;
+  width:24px;
+  height: 24px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/nav-home-link.png*/
+}
+@mixin nav-home-link() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -1411px -188px;
+  width:24px;
+  height: 24px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/nav-home-link.png*/
+}
+.nav-logo-link {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -742px -479px;
+  width:220px;
+  height: 34px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/nav-logo-link.png*/
+}
+@mixin nav-logo-link() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.6235156655199714);
+  background-position: -742px -479px;
+  width:220px;
+  height: 34px;
+/*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/nav-logo-link.png*/
 }

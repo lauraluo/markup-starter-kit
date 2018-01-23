@@ -1,0 +1,103 @@
+.l-footer {
+    background: #fff;
+    .footer1 {
+        height: 89px;
+        background: url(../images/footer.gif) no-repeat center center;
+        height: 89px;
+    }
+    .footer2 {
+        border-top: dotted 2px #cfa972;
+        padding: 30px 0;
+    }
+}
+
+#commonhealth_footer {
+    .commonhealth_footer-channel {
+        width: 100%;
+        font-size: 0.9375rem;
+        font-size: 15px;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 5px;
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            display: inline-block;
+            border-right: 1px solid #ccc;
+            padding-right: 12px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            a {
+                color: #333;
+                text-decoration: none;
+                position: relative;
+                &:after {
+                    content: "";
+                    background-color: #094;
+                    width: 0;
+                    height: 1px;
+                    position: absolute;
+                    left: 50%;
+                    bottom: -3px;
+                    display: inline-block;
+                    transition: .3s;
+                }
+                &:hover:after {
+                    width: 100%;
+                    left: 0;
+                }
+            }
+            &:last-child {
+                border: none;
+                margin-right: 0;
+                padding-right: 0;
+            }
+        }
+        a:hover {
+            color: #000;
+        }
+    }
+    .commonhealth_footer-copyright {
+        color: #555;
+        font-size: 0.875rem;
+        font-size: 14px;
+        text-align: center;
+    }
+    .commonhealth_footer-channel br,
+    .commonhealth_footer-copyright br {
+        display: none;
+    }
+    @media (max-width: 768px) {
+        .commonhealth_footer-channel {
+            font-size: 0.875rem;
+            font-size: 14px;
+            li {
+                padding-right: 5px;
+                margin-right: 3px;
+                &:nth-child(5) {
+                    border-right: 0;
+                    padding-right: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+        .commonhealth_footer-copyright {
+            font-size: 0.8125rem;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        .commonhealth_footer-channel br,
+        .commonhealth_footer-copyright br {
+            display: inline-block;
+        }
+    }
+    @media (max-width: 320px) {
+        .commonhealth_footer-channel,
+        .commonhealth_footer-copyright {
+            font-size: 0.75rem;
+            font-size: 12px;
+        }
+    }
+}

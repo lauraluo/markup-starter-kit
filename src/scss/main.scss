@@ -3,38 +3,269 @@
 /* ----- IMPORT -----*/
 
 //1.utils
-@import "utils/_bemify.scss"; //A set of Sass mixins to write well-structured, maintainable, idiomatic BEM-style .scss source:
-@import "utils/_variables.scss";
-@import "utils/_mixins.scss";
-@import "utils/_grid.scss";
+@import 'utils/_bemify.scss'; //A set of Sass mixins to write well-structured, maintainable, idiomatic BEM-style .scss source:
+@import 'utils/_variables.scss';
+@import 'utils/_mixins.scss';
+@import 'utils/_grid.scss';
 //sprite scss import 至少要啟用gulp一次
-//@import "_sprite.scss";
+@import '_sprite.scss';
 //2.vendors
+@import 'vendor/animate.scss';
 //3.base
-@import "base/_reset.scss";
-@import "base/_typography.scss";
+@import 'base/_reset.scss';
+@import 'base/_typography.scss';
+@import 'base/_helpers.scss';
 //4.layout
-@import "layout/_layout.scss";
-@import "layout/_nav.scss";
+@import 'layout/_layout.scss';
+@import 'layout/_nav.scss';
+@import 'layout/_footer.scss';
 //5.components
-@import "components/_load.scss"; //html 在 load.js 裡
+@import 'components/_load.scss'; //html 在 load.js 裡
 //6.pages
 //7.themes
-$tran:0.3s ease-in all;
+$tran: 0.3s ease-in-out 0.1s all;
 $boxShadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
+html {
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: fixed;
+}
+
+.nav {
+    position: relative;
+    z-index: 1;
+}
 
 
 .index {
+    position: relative;
+    top: -10px;
+    padding-bottom: 10px;
+    z-index: 0;
+    padding: 20px;
+    background: url(../images/index-bg.jpg) no-repeat 50% 50%;
+    background-size: cover;
     .l-vm {
-        height: 80vh;
+        height: 75vh;
+        min-height: 720px;
         width: 100%;
-        background: #d6d6d6;
         text-align: center;
     }
     .l-vm__content {
-        background: red;
-        min-height: 200px;
+        // background: red;
     }
-    @include respond-to(small-up) {}
+    &__title {
+        @include index-slogan();
+        margin: 0 auto;
+    }
+    &__cover {
+        background: url(../images/index__dish.png) no-repeat center bottom;
+        width: 300px;
+        height: 216px;
+        margin: 20px auto;
+        position: relative;
+    }
+    &__dish {
+        margin: 0 auto;
+        position: absolute;
+        left: 30px;
+        &--1 {
+            @include index-dish1();
+        }
+        &--2 {
+            @include index-dish2();
+        }
+        &--3 {
+            @include index-dish3();
+        }
+        &--4 {
+            @include index-dish4();
+        }
+    }
+    &__keys {
+        width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        top: -70px;
+        &__item {
+            float: left;
+            margin: 10px;
+            position: relative;
+            transform: scale(1);
+            transition: $tran;
+            &:hover {
+                transform: scale(1.2);
+            }
+            &--1 {
+                transform-origin: 100% 0;
+                @include index-key1();
+            }
+            &--2 {
+                transform-origin: 50% 0;
+                @include index-key2();
+            }
+            &--3 {
+                transform-origin: 0 0;
+                @include index-key3();
+            }
+        }
+    }
+    &__note {
+        position: relative;
+        top: -60px;
+        @include index-note();
+    }
+    &__link-test {
+        @include index-test();
+        position: absolute;
+        right: 0;
+        top: 20vh;
+        transform: scale(1);
+        transition: $tran;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
 }
 
+
+$key-flow-height: 1020px;
+
+.key {
+    &__title {
+        margin: 0 auto;
+    }
+    &__content {
+        padding: 30px 0 40px 0;
+    }
+    &__ani {
+        @for $i from 1 through 5 {
+            &--#{$i} {
+                @extend .key-desc#{$i};
+                position: absolute;
+            }
+        }
+    }
+    &__ani--1 {
+        left: -186px;
+        top: 0;
+    }
+    &__ani--2 {
+        left: 427px;
+        top: 196px;
+    }
+    &__ani--3 {
+        left: -68px;
+        top: 617px;
+    }
+    &__ani--4 {
+        left: 396px;
+        top: 476px;
+    }
+    &__ani--5 {
+        left: 345px;
+        top: 711px;
+    }
+    &__flow {
+        background: url(../images/key-bg.png) no-repeat 50% 0;
+        width: 593px;
+        height: $key-flow-height;
+        margin: 50px auto;
+        position: relative;
+        &__bread {
+            @for $i from 1 through 3 {
+                &--#{$i} {
+                    position: absolute;
+                    @extend .key-flow-#{$i};
+                }
+            }
+        }
+        &__box {
+            position: absolute;
+            @for $i from 1 through 2 {
+                &--#{$i} {
+                    position: absolute;
+                    @extend .flow-box#{$i};
+                }
+            }
+        }
+        &__line {
+            position: absolute;
+            @include key-flow-pdline();
+            left: 0px;
+            top: 470px;
+        }
+        &__box--1 {
+            left: 232px;
+            top: 66px;
+        }
+        &__box--2 {
+            left: 131px;
+            top: 302px;
+        }
+        &__bread--1 {
+            left: 88px;
+            top: 16px;
+        }
+        &__bread--2 {
+            left: 305px;
+            top: 246px;
+        }
+        &__bread--3 {
+            left: 82px;
+            top: 491px;
+        }
+    }
+    &__items {
+        position: absolute;
+        width: 100%;
+        height: $key-flow-height;
+        left: 0;
+        top: 0;
+        border: red solid 1px;
+    }
+    &__item {
+        position: absolute;
+        &--1 {
+            right: -100px;
+            top: -20px;
+        }
+        &--2 {
+            left: -201px;
+            top: 156px;
+        }
+        &--3 {
+            left: 50px;
+            top: 252px;
+        }
+        &--4 {
+            right: -75px;
+            top: 299px;
+        }
+        &--5 {
+            right: -172px;
+            top:540px;
+        }
+    }
+    
+}
+
+.key1 {
+    &__title {
+        @include key1_title();
+        @extend .hideText;
+    }
+    @for $i from 1 through 5 {
+        .key__item.key__item--#{$i} {
+            @extend .key1-#{$i};
+            .icon {
+                
+            }
+        }
+    }
+}
+
+.l-footer {
+    margin-top: -10px;
+}
