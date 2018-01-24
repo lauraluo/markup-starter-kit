@@ -1,0 +1,41 @@
+//page laytout name
+extends _layout.jade
+
+//page html
+block page_main
+    section.qa
+        div.qa__hd
+        div.qa__bd
+            div.qa__content
+                div.l-container
+                    .qa__info
+                        div.qa__step
+                            span 1
+                        .qa__progress
+                            span.display-bar
+                    .qa__type
+                        span 麵包達人得分題
+                    .qa__main.clearfix
+                        .qa__q.clearfix
+                            span.icon Q
+                            span.number 1
+                            span.text 以下哪一個是臺灣人記憶深刻的麵包品牌logo？
+                        .qa__list
+                            .qa__result.ok
+                            .qa__items
+                                div.qa__item
+                                    div.text
+                                        |我超懂，是中種法
+                                        span Sponge-Dough Method
+                                div.qa__item
+                                    div.text
+                                        |我超懂，是中種法
+                                        span Sponge-Dough Method
+                                div.qa__item
+                                    div.text
+                                        |我超懂，是中種法
+                                        span Sponge-Dough Method
+                           
+        div.qa__ft
+    include _footer-page.jade
+

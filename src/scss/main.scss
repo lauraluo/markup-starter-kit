@@ -185,6 +185,70 @@ html {
     }
 }
 
+.test {
+    padding: 20px 0;
+    background: url(../images/test_bg.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    @include respond-to(small) {
+        padding: 30px 0 20px 0;
+    }
+    &__title {
+        @include test-title();
+        margin: 0 auto;
+        @extend .hideText;
+        @include respond-to(small) {
+            transform: scale(1);
+            @include test-title-m;
+            margin-bottom: -50px;
+        }
+    }
+    &__ctrls {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        @include respond-to(small) {
+            margin-top: 180px;
+            margin-bottom: 50px;
+        }
+        a {
+            display: inline-block;
+            margin: 0 auto;
+            background: #009944;
+            box-shadow: 0 10px 0 0 #007130;
+            padding: 10px 50px;
+            border-radius: 20px;
+            transition: $tran;
+            @include respond-to(small) {
+                transform: scale(1.5);
+                border-radius: 30px;
+                padding: 15px 24px;
+            }
+            span {
+                @include text-start();
+            }
+            &:hover {
+                box-shadow: 0 5px 0 0 #007130;
+                transform: translateY(5px);
+                @include respond-to(small) {
+                    transform: translateY(5px) scale(1.5);
+                }
+               
+            }
+        }
+    }
+    &__note {
+        position: relative;
+        z-index: 1;
+        right: -20px;
+        top: -50px;
+        @include test-footer();
+        @include respond-to(small) {
+            @include test-footer-m();
+            right: 0;
+        }
+    }
+}
+
 $key-flow-height: 1020px;
 .key {
     &__title {
@@ -273,9 +337,10 @@ $key-flow-height: 1020px;
             width: 593px;
             height: $key-flow-height;
             position: absolute;
-            top: 140px;
+           
             left: 0;
             @include respond-to(small) {
+                top: 140px;
                 transform: scale(1.26);
             }
         }
@@ -344,7 +409,7 @@ $key-flow-height: 1020px;
                     display: none !important;
                 }
             }
-            s &.mb {
+            &.mb {
                 @include respond-to(small-up) {
                     display: none !important;
                 }
@@ -363,7 +428,7 @@ $key-flow-height: 1020px;
             position: absolute;
             top: -5px;
             right: -5px;
-            @include respond-to(small){
+            @include respond-to(small) {
                 transform: scale(1.5)
             }
         }
@@ -375,7 +440,6 @@ $key-flow-height: 1020px;
             top: -20px;
             .icon {
                 top: 30px;
-               
             }
         }
         &--2 {
@@ -602,7 +666,7 @@ $key-flow-height: 1020px;
         float: left;
         margin: 10px;
         @include respond-to(small) {
-            float:none;
+            float: none;
             margin: 20px auto;
         }
     }
@@ -670,4 +734,201 @@ $key-flow-height: 1020px;
 
 .l-footer {
     margin-top: -10px;
+}
+
+.qa {
+    padding: 20px 0;
+    &__content {
+        padding: 20px 0px;
+        @include respond-to(small){
+            padding: 40px 0px;
+        }
+    }
+    &__info {
+        position: relative;
+        margin:40px 0;
+    }
+    &__progress {
+        background: #fff;
+        height: 10px;
+        width: grid-width(8);
+        margin-left: grid-width(2);
+        border-radius: 50px;
+        border: 1px solid #cfa972;
+        @include respond-to(small){
+            width: grid-width(9);
+            margin-left: grid-width(0.5);
+        }
+        .display-bar {
+            display: block;
+            height: 100%;
+            background: #f39800;
+        }
+    }
+    &__step {
+        position: absolute;
+        transform: scale(0.8);
+        right: grid-width(0.5);
+        top: -50px;
+        font-size: 5.0rem;
+        @include qa-watch();
+        @include respond-to(small){
+            transform: scale(1);
+        }
+        span {
+            color: #e60012;
+            display: block;
+            width: 90px;
+            height: 90px;
+            line-height: 90px;
+            margin-top: 12px;
+            vertical-align: middle;
+            text-align: center;
+        }
+        
+    }
+    &__type {
+        font-size: 2.0rem;
+        color: #6a3906;
+        background: #fff45c;
+        width: grid-width(2);
+        padding: 15px 20px;
+        text-align: center;
+        border-radius: 20px;
+        margin:  0 auto;
+        @include respond-to(small){
+            min-width: grid-width(5);
+            font-size: 2.8rem;
+            padding: 20px;
+        }
+    }
+    &__main {
+        padding: 50px 60px;
+        width: grid-width(10);
+        margin: 0 auto;
+        @include respond-to(small){
+            padding: 50px 0;
+        }
+    }
+    &__q {
+        .icon {
+            font-size: 5.0rem;
+            color: #e60012;
+            display: inline-block;
+            @include respond-to(small){
+                float: left;
+                 font-size: 5.5rem;
+             }
+           
+        }
+        .number {
+            font-size: 2.4rem;
+            color: #e60012;
+            display: inline-block;
+            @include respond-to(small){
+               float: left;
+                font-size: 3.5rem;
+            }
+            
+        }
+        .text {
+            font-size: 2.4rem;
+            color: #6a3906;
+            display: inline-block;
+            margin: 0 10px;
+            line-height: 1.6;
+            @include respond-to(small){
+                float: right;
+                position: relative;
+                width: 440px;
+                left: 30px;
+                font-size: 3.6rem;
+            }
+        }
+    }
+   
+    &__list {
+        padding: 40px 0;
+        width: grid-width(12);
+        position: relative;
+    }
+    
+    &__result {
+        width: 100%;
+        height: 110px;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        @include respond-to(small){
+            position: fixed;
+            height: 150px;
+            top: 45vh;
+        }
+        &.ok {
+            background: url(../images/ok.png) no-repeat 50% 50%;
+            background-size:  auto 100%;
+        }
+        &.error {
+            background: url(../images/error.png) no-repeat 50% 50%;
+            background-size:  auto 100%;
+        }
+    }
+    &__item {
+        width: 333px;
+        height: 214px;
+        background: url(../images/qa-item-bg.png) no-repeat 0 0;
+        box-sizing: border-box;
+        padding-top: 70px;
+        padding-left: 90px;
+        padding-right: 30px;
+        float: left;
+        @include respond-to(small){
+            float: none;
+            margin: 20px auto;
+            width: 471px;
+            height:308px;
+            padding-top: 85px;
+            padding-left: 130px;
+            padding-right: 40px;
+            background: url(../images/qa-item-bg-m.png) no-repeat 0 0;
+        }
+        @include respond-to(small-up){
+            &:nth-child(1) {
+                position: relative;
+                clear: right;
+                margin-right: 80px;
+                transform: translateX(-20px);
+            }
+            &:nth-child(2) {
+                float: right;
+                transform: translateX(20px);
+            }
+            &:nth-child(3) {
+                // float: right;
+                transform: translateX(50%);
+                margin-top: 30px;
+            }
+
+        }
+        .text {
+            line-height: 1.5;
+            float: left;
+            // border: solid 1px red;
+            font-size: 2.4rem;
+            // font-weight: bold;
+            text-shadow: 1px 1px 0 0 #fff;
+            color: #eb6100;
+            span {
+                display: block;
+                font-size: 1.6rem;
+            }
+            @include respond-to(small) {
+                font-size: 3.6rem;
+                span {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+    }
+
 }
