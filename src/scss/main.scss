@@ -232,7 +232,6 @@ html {
                 @include respond-to(small) {
                     transform: translateY(5px) scale(1.5);
                 }
-               
             }
         }
     }
@@ -337,7 +336,6 @@ $key-flow-height: 1020px;
             width: 593px;
             height: $key-flow-height;
             position: absolute;
-           
             left: 0;
             @include respond-to(small) {
                 top: 140px;
@@ -740,13 +738,13 @@ $key-flow-height: 1020px;
     padding: 20px 0;
     &__content {
         padding: 20px 0px;
-        @include respond-to(small){
+        @include respond-to(small) {
             padding: 40px 0px;
         }
     }
     &__info {
         position: relative;
-        margin:40px 0;
+        margin: 40px 0;
     }
     &__progress {
         background: #fff;
@@ -755,7 +753,7 @@ $key-flow-height: 1020px;
         margin-left: grid-width(2);
         border-radius: 50px;
         border: 1px solid #cfa972;
-        @include respond-to(small){
+        @include respond-to(small) {
             width: grid-width(9);
             margin-left: grid-width(0.5);
         }
@@ -772,7 +770,7 @@ $key-flow-height: 1020px;
         top: -50px;
         font-size: 5.0rem;
         @include qa-watch();
-        @include respond-to(small){
+        @include respond-to(small) {
             transform: scale(1);
         }
         span {
@@ -785,7 +783,6 @@ $key-flow-height: 1020px;
             vertical-align: middle;
             text-align: center;
         }
-        
     }
     &__type {
         font-size: 2.0rem;
@@ -795,8 +792,8 @@ $key-flow-height: 1020px;
         padding: 15px 20px;
         text-align: center;
         border-radius: 20px;
-        margin:  0 auto;
-        @include respond-to(small){
+        margin: 0 auto;
+        @include respond-to(small) {
             min-width: grid-width(5);
             font-size: 2.8rem;
             padding: 20px;
@@ -806,7 +803,7 @@ $key-flow-height: 1020px;
         padding: 50px 60px;
         width: grid-width(10);
         margin: 0 auto;
-        @include respond-to(small){
+        @include respond-to(small) {
             padding: 50px 0;
         }
     }
@@ -815,21 +812,19 @@ $key-flow-height: 1020px;
             font-size: 5.0rem;
             color: #e60012;
             display: inline-block;
-            @include respond-to(small){
+            @include respond-to(small) {
                 float: left;
-                 font-size: 5.5rem;
-             }
-           
+                font-size: 5.5rem;
+            }
         }
         .number {
             font-size: 2.4rem;
             color: #e60012;
             display: inline-block;
-            @include respond-to(small){
-               float: left;
+            @include respond-to(small) {
+                float: left;
                 font-size: 3.5rem;
             }
-            
         }
         .text {
             font-size: 2.4rem;
@@ -837,7 +832,7 @@ $key-flow-height: 1020px;
             display: inline-block;
             margin: 0 10px;
             line-height: 1.6;
-            @include respond-to(small){
+            @include respond-to(small) {
                 float: right;
                 position: relative;
                 width: 440px;
@@ -846,31 +841,29 @@ $key-flow-height: 1020px;
             }
         }
     }
-   
     &__list {
         padding: 40px 0;
         width: grid-width(12);
         position: relative;
     }
-    
     &__result {
         width: 100%;
         height: 110px;
         position: absolute;
         top: 80px;
         right: 0;
-        @include respond-to(small){
+        @include respond-to(small) {
             position: fixed;
             height: 150px;
             top: 45vh;
         }
         &.ok {
             background: url(../images/ok.png) no-repeat 50% 50%;
-            background-size:  auto 100%;
+            background-size: auto 100%;
         }
         &.error {
             background: url(../images/error.png) no-repeat 50% 50%;
-            background-size:  auto 100%;
+            background-size: auto 100%;
         }
     }
     &__item {
@@ -882,17 +875,17 @@ $key-flow-height: 1020px;
         padding-left: 90px;
         padding-right: 30px;
         float: left;
-        @include respond-to(small){
+        @include respond-to(small) {
             float: none;
             margin: 20px auto;
             width: 471px;
-            height:308px;
+            height: 308px;
             padding-top: 85px;
             padding-left: 130px;
             padding-right: 40px;
             background: url(../images/qa-item-bg-m.png) no-repeat 0 0;
         }
-        @include respond-to(small-up){
+        @include respond-to(small-up) {
             &:nth-child(1) {
                 position: relative;
                 clear: right;
@@ -908,14 +901,11 @@ $key-flow-height: 1020px;
                 transform: translateX(50%);
                 margin-top: 30px;
             }
-
         }
         .text {
             line-height: 1.5;
-            float: left;
-            // border: solid 1px red;
-            font-size: 2.4rem;
-            // font-weight: bold;
+            float: left; // border: solid 1px red;
+            font-size: 2.4rem; // font-weight: bold;
             text-shadow: 1px 1px 0 0 #fff;
             color: #eb6100;
             span {
@@ -930,9 +920,343 @@ $key-flow-height: 1020px;
             }
         }
     }
-
 }
 
 .result {
+    padding: 80px 0 40px 0;
+    background: url(../images/end-bg.png) no-repeat center 0;
+    @include respond-to(small) {
+        background: url(../images/end-bg-m.png) no-repeat center 0;
+        padding: 120px 0 60px 0;
+    }
+    .title {
+        font-size: 2.4rem;
+        color: #e60012;
+        text-align: center;
+        margin-bottom: 30px;
+        @include respond-to(small) {
+            font-size: 3.6rem;
+        }
+        .mark {
+            color: #009944;
+        }
+    }
+    .desc {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        color: #6a3906;
+        width: grid-width(7);
+        margin: 0 auto;
+        @include respond-to(small) {
+            font-size: 2.6rem;
+            width: grid-width(10);
+        }
+    }
+    .img-wrap {
+        padding: 50px 0;
+        @include respond-to(small) {
+            padding: 80px 0;
+        }
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+    .result2,.result3 {
+        display: none;
+    }
+    
+    .result1 img,
+    .result3 img {
+        width: 241px;
+        @include respond-to(small) {
+            width: auto;
+        }
+    }
+    .result2 img {
+        width: 405px;
+        @include respond-to(small) {
+            width: auto;
+        }
+    }
+    &__share {
+        text-align: center;
+        margin-bottom: 50px;
+        .text {
+            text-align: center;
+            color: #e60012;
+            font-size: 2.4rem;
+            @include respond-to(small) {
+                font-size: 2.8rem;
+            }
+        }
+        &__items {
+            @include respond-to(small) {
+                transform: scale(1.2);
+                margin-top: 20px;
+            }
+        }
+        &__item {
+            margin: 10px;
+            display: inline-block;
+        }
+    }
+    &__more {
+        text-align: center;
+        text-align: center;
+        
+        .text {
+            display: inline-block;
+            color: #996c33;
+            font-size: 2.0rem;
+            margin-right: 10px;
+            @include respond-to(small) {
+                font-size: 2.8rem;
+                display: block;
+                text-align: center;
+            }
+        }
+        .btn {
+            cursor: pointer;
+            display: inline-block;
+            background: #f19149;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 2.0rem;
+            padding: 10px 25px;
+            box-shadow: 0 4px 0 0 #ee7820;
+            transition: $tran;
+            &:hover {
+                transform: translateY(2px);
+                box-shadow: 0 2px 0 0 #ee7820;
+            }
+            @include respond-to(small) {
+                width: 400px;
+                font-size: 2.8rem;
+                display: block;
+                text-align: center;
+                margin: 20px auto;
+            }
+        }
+    }
+}
 
+.libary {
+    &__title {
+        cursor: pointer;
+        background: #eedfbc;
+        color: #a84200;
+        font-size: 2.0rem;
+        line-height: 56px;
+        vertical-align: middle;
+        text-align: center;
+        border-bottom: 1px solid #6a3906;
+        @include respond-to(small) {
+            line-height: 90px;
+            font-size: 2.8rem;
+        }
+        .icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: auto 10px;
+            background: url(../images/end-icon-slideup.png) no-repeat 0 0;
+            background-size: 100% 100%;
+            @include respond-to(small) {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    }
+    &__group.active {
+        .libary__title .icon {
+            background: url(../images/end-icon-slidedown.png) no-repeat 0 0;
+            background-size: 100% 100%;
+        }
+        .main {
+            display: block;
+        }
+    }
+    &__content {
+        margin: 30px auto;
+        .main {
+            @extend .clearfix;
+        }
+        .item {
+            width: 49.5%;
+            box-sizing: border-box;
+            padding: 20px 10px;
+            display: inline-block;
+            clear: right;
+            vertical-align: top;
+            line-height: 1.8;
+            overflow: hidden;
+            @include respond-to(small) {
+                width: 90%;
+                display: block;
+                margin: 0 auto;
+            }
+            &:after {
+                content: '';
+                display: block;
+                margin-top: 30px;
+                border-bottom: 2px dotted #996c33;
+            }
+            .q {
+                color: #e60012;
+                font-size: 1.6rem;
+                @include respond-to(small) {
+                    font-size: 2.4rem;
+                }
+            }
+            .a {
+                color: #009944;
+                font-size: 1.6rem;
+                img {
+                    vertical-align: top;
+                }
+                @include respond-to(small) {
+                    font-size: 2.4rem;
+                }
+            }
+            .text {
+                color: #996c33;
+                font-size: 1.4rem;
+                margin: 15px 0;
+                @include respond-to(small) {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+    }
+}
+
+.result-chart {
+    margin: 100px auto;
+    .title {
+        font-size: 3.0rem;
+        color: #e60012;
+        margin-bottom: 50px;
+        text-align: center;
+        @include respond-to(small) {
+            font-size: 4.2rem;
+        }
+    }
+    .chart {
+        width: 780px;
+        margin: 0 auto;
+        @include respond-to(small) {
+            width: 500px;
+        }
+        .chart-canvas {
+            background: #fff;
+            border-radius: 10px 10px 0 0;
+            height: 255px;
+            margin: 0px auto 0px auto;
+        }
+        .bar-item {
+            position: relative;
+            height: 100%;
+            width: 33.333333%;
+            float: left;
+            position: relative;
+            overflow: hidden;
+            .text {
+                text-align: center;
+                font-size: 2.0rem;
+                color: #f39700;
+                margin: 20px auto;
+                position: relative;
+                z-index: 1;
+                @include respond-to(small) {
+                    font-size: 3.6rem;
+                }
+            }
+            .bar {
+                background: #fff799;
+                border-radius: 10px 10px 0 0;
+                height: 100px;
+                bottom: 0;
+                width: 100%;
+                position: absolute;
+            }
+            &.bar2 .bar {
+                background: #fff45c;
+            }
+        }
+        .user-bar {
+            background: #fff;
+            height: 10px;
+            border-radius: 50px;
+            border: 1px solid #996c33;
+            position: relative;
+            .people {
+                width: 88px;
+                height: 121px;
+                background: url(../images/people.png) no-repeat 0 0;
+                position: absolute;
+                bottom: 0;
+                transform: translateX(-50%);
+                @include respond-to(small) {
+                    width: 158px;
+                    height: 217px;
+                    background: url(../images/people-m.png) no-repeat 0 0;
+                }
+            }
+            .display-bar {
+                display: block;
+                height: 100%;
+                background: #f8b551;
+            }
+        }
+        .y-line {
+            box-shadow: -1px 0 0 0 #996c33;
+            margin-bottom: 10px;
+            span {
+                height: 10px;
+                display: block;
+                float: left;
+                width: (100/8)#{%};
+                box-shadow: 1px 0 0 0 #996c33;
+            }
+        }
+        .y-number {
+            height: 40px;
+            position: relative;
+            .y-number-grid {
+                color: #996c33;
+                font-size: 1.6rem;
+                display: block;
+                float: left;
+                width: (100/8)#{%};
+                text-align: right;
+                @include respond-to(small) {
+                    font-size: 2.4rem;
+                }
+                span {
+                    display: inline-block;
+                    transform: translateX(50%);
+                }
+                &.active {
+                    span {
+                        color: #e60012;
+                        font-size: 3.0rem;
+                        @include respond-to(small) {
+                            font-size: 6.4rem;
+                        }
+                    }
+                }
+                &:nth-child(1) {
+                    text-align: left;
+                    top: 0;
+                    left: 0;
+                    position: absolute;
+                    span {
+                        display: inline-block;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
 }

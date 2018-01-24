@@ -4,15 +4,25 @@ section.result-chart
         div.chart
             div.chart-canvas
                 .bar-item.bar1
-                    .text 100%;
                     .bar
-            .chart__y-line
+                    .text 100%
+                .bar-item.bar2
+                    .bar
+                    .text 100%
+                .bar-item.bar3
+                    .bar
+                    .text 100%
+            .user-bar
+                .people
+                .display-bar 
+            .y-line.clearfix
                 - for (var i = 1; i <= 8; ++i) {
                     span
                 - }
-            .chart__y-number
-                - for (var i = 1; i <= 8; ++i) {
-                    span= i
+            .y-number.clearfix
+                - for (var i = 0; i <= 8; ++i) {
+                    div.y-number-grid.active
+                        span= i
                 - }
 
             
