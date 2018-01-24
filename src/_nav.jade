@@ -2,7 +2,8 @@ nav.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
     div.l-container
         div.nav-bd.clearfix
             h1.nav-logo
-                a.hide-text(href="/" alt="康健x統一麵包" title="康健x統一麵包"): span.nav-logo-link 康健x統一麵包
+                a.hide-text(href="/" alt="康健x統一麵包" title="康健x統一麵包"): span 康健x統一麵包
+            div.nav__home: a(href="#"): span.nav-home-link.hide-text 回首頁
             div.nav-btn
                 div.one
                 div.two
@@ -15,13 +16,12 @@ nav.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
 
             div.nav-menu(role="navigation")
                 ul.clearfix
-                    li.nav-item.nav-item--home: a(href="#"): span.nav-home-link.hide-text 回首頁
                     li.nav-item.nav-item--iscurrent
                         a(href="/" alt="統一麵包大解密" itemprop="url" title="統一麵包大解密"): span 統一麵包大解密
                     li.nav-item.nav-item--parent
                         a(href="/school.html" alt="麵包小學堂" itemprop="url" title="麵包小學堂"): span 麵包小學堂
-                        .nav-sub-wrap  
-                            ul.nav-sub-menu   
+                        .nav-sub-wrap
+                            ul.nav-sub-menu  
                                 li.nav-sub-menu__item
                                     a(href="page.html" alt="保鮮術？兼顧安心美味的製程秘密！" itemprop="url" title="保鮮術？兼顧安心美味的製程秘密！")
                                         span 保鮮術？兼顧安心美味的製程秘密！

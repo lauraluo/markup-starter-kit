@@ -34,29 +34,50 @@ html {
 .nav {
     position: relative;
     z-index: 1;
+    margin-bottom: -10px;
+    @include respond-to(small) {
+        // margin-bottom: -80px;
+    }
 }
 
+.l-main {
+    @include respond-to(small) {
+        margin-top: -80px;
+        padding-top: 40px;
+    }
+}
 
 .index {
     position: relative;
-    top: -10px;
     padding-bottom: 10px;
     z-index: 0;
-    padding: 20px;
+    padding: 20px 0;
     background: url(../images/index-bg.jpg) no-repeat 50% 50%;
     background-size: cover;
+    @include respond-to(small) {
+        padding: 20px 0;
+    }
     .l-vm {
         height: 75vh;
         min-height: 720px;
         width: 100%;
         text-align: center;
+        @include respond-to(small) {
+            min-height: 1050px;
+        }
     }
     .l-vm__content {
         // background: red;
+        @include respond-to(small) {}
     }
     &__title {
         @include index-slogan();
         margin: 0 auto;
+        @include respond-to(small) {
+            position: relative;
+            top: 0px;
+            transform: scale(1.4);
+        }
     }
     &__cover {
         background: url(../images/index__dish.png) no-repeat center bottom;
@@ -64,6 +85,10 @@ html {
         height: 216px;
         margin: 20px auto;
         position: relative;
+        @include respond-to(small) {
+            top: 100px;
+            transform: scale(1.3);
+        }
     }
     &__dish {
         margin: 0 auto;
@@ -88,33 +113,59 @@ html {
         text-align: center;
         position: relative;
         top: -70px;
+        @include respond-to(small) {
+            top: 80px;
+        }
         &__item {
             float: left;
             margin: 10px;
             position: relative;
             transform: scale(1);
             transition: $tran;
-            &:hover {
-                transform: scale(1.2);
+            @include respond-to(small) {
+                margin: 0px;
+            }
+            @include respond-to(small-up) {
+                &:hover {
+                    transform: scale(1.2);
+                }
             }
             &--1 {
                 transform-origin: 100% 0;
                 @include index-key1();
+                @include respond-to(small) {
+                    transform: translateX(-10px);
+                    @include index-key1-m();
+                }
             }
             &--2 {
                 transform-origin: 50% 0;
                 @include index-key2();
+                @include respond-to(small) {
+                    transform: translateY(20px);
+                    @include index-key2-m();
+                }
             }
             &--3 {
                 transform-origin: 0 0;
                 @include index-key3();
+                @include respond-to(small) {
+                    transform: translateX(10px);
+                    @include index-key3-m();
+                }
             }
         }
     }
     &__note {
         position: relative;
         top: -60px;
+        right: -60px;
         @include index-note();
+        @include respond-to(small) {
+            top: 120px;
+            left: 10px;
+            @include index-note-m();
+        }
     }
     &__link-test {
         @include index-test();
@@ -126,18 +177,21 @@ html {
         &:hover {
             transform: scale(1.2);
         }
+        @include respond-to(small) {
+            right: 0;
+            top: 320px;
+            @include index-test-m();
+        }
     }
 }
 
-
 $key-flow-height: 1020px;
-
 .key {
     &__title {
         margin: 0 auto;
     }
     &__content {
-        padding: 30px 0 40px 0;
+        padding: 50px 0 40px 0;
     }
     &__ani {
         @for $i from 1 through 5 {
@@ -146,33 +200,85 @@ $key-flow-height: 1020px;
                 position: absolute;
             }
         }
+        @include respond-to(small) {
+            &.key__ani--1 {
+                @include key-desc1-m()
+            }
+            &.key__ani--2 {
+                @include key-desc2-m()
+            }
+            &.key__ani--3 {
+                @include key-desc3-m()
+            }
+            &.key__ani--4 {
+                @include key-desc4-m()
+            }
+        }
     }
     &__ani--1 {
         left: -186px;
         top: 0;
+        @include respond-to(small) {
+            left: 0;
+            top: -190px;
+        }
     }
     &__ani--2 {
         left: 427px;
         top: 196px;
+        @include respond-to(small) {
+            left: 10px;
+            top: 340px;
+        }
     }
     &__ani--3 {
         left: -68px;
         top: 617px;
+        @include respond-to(small) {
+            left: 408px;
+            top: 695px;
+        }
     }
     &__ani--4 {
         left: 396px;
         top: 476px;
+        @include respond-to(small) {
+            left: 350px;
+            top: 820px;
+        }
     }
     &__ani--5 {
         left: 345px;
-        top: 711px;
+        @include respond-to(small-up) {
+            top: 711px;
+        }
+        @include respond-to(small) {
+            left: 90px;
+            bottom: 0px;
+            transform: scale(1.2);
+        }
     }
     &__flow {
-        background: url(../images/key-bg.png) no-repeat 50% 0;
+        position: relative;
         width: 593px;
         height: $key-flow-height;
-        margin: 50px auto;
-        position: relative;
+        margin: 50px auto -120px auto;
+        @include respond-to(small) {
+            height: 1450px;
+            margin-top: 240px;
+            margin-bottom: -20px;
+        }
+        &__main {
+            background: url(../images/key-bg.png) no-repeat 50% 0;
+            width: 593px;
+            height: $key-flow-height;
+            position: absolute;
+            top: 140px;
+            left: 0;
+            @include respond-to(small) {
+                transform: scale(1.26);
+            }
+        }
         &__bread {
             @for $i from 1 through 3 {
                 &--#{$i} {
@@ -223,13 +329,54 @@ $key-flow-height: 1020px;
         height: $key-flow-height;
         left: 0;
         top: 0;
-        border: red solid 1px;
     }
     &__item {
+        cursor: pointer;
         position: absolute;
+        transform: scale(1);
+        transition: $tran;
+        span {
+            &.pc {
+                @include respond-to(small-up) {
+                    display: block!important;
+                }
+                @include respond-to(small) {
+                    display: none !important;
+                }
+            }
+            s &.mb {
+                @include respond-to(small-up) {
+                    display: none !important;
+                }
+                @include respond-to(small) {
+                    display: block !important;
+                }
+            }
+        }
+        .icon {
+            border-radius: 50px;
+            height: 40px;
+            width: 40px;
+            background: url(../images/key-book.png) no-repeat center center;
+            background-color: #555;
+            box-shadow: 0 4px 0 0 #444;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            @include respond-to(small){
+                transform: scale(1.5)
+            }
+        }
+        &:hover {
+            transform: scale(1.05);
+        }
         &--1 {
-            right: -100px;
+            right: 0px;
             top: -20px;
+            .icon {
+                top: 30px;
+               
+            }
         }
         &--2 {
             left: -201px;
@@ -244,24 +391,279 @@ $key-flow-height: 1020px;
             top: 299px;
         }
         &--5 {
+            left: -111px;
+            top: 477px;
+        }
+        &--6 {
             right: -172px;
-            top:540px;
+            top: 540px;
+        }
+        @include respond-to(small) {
+            &--1 {
+                right: 0px;
+                top: -130px;
+                .icon {
+                    top: 150px;
+                }
+            }
+            &--2 {
+                left: -15px;
+                top: 100px;
+            }
+            &--3 {
+                left: 200px;
+                top: 240px;
+            }
+            &--4 {
+                right: 0px;
+                top: 450px;
+            }
+            &--5 {
+                left: 0px;
+                top: 620px;
+            }
+            &--6 {
+                right: 290px;
+                top: 830px;
+            }
         }
     }
-    
+    &__share {
+        text-align: center;
+        width: 100%;
+        position: relative;
+        margin-bottom: -10px;
+        z-index: 2;
+        @include respond-to(small) {
+            transform: scale(1.2);
+        }
+        &__item {
+            display: inline-block;
+            margin: 0 10px;
+        }
+    }
+    &__end {
+        position: relative;
+    }
+    &__end__note {
+        margin: 30px auto;
+        position: relative;
+        left: -57px;
+        z-index: 1;
+    }
+    &__end__ctrls {
+        text-align: center;
+        margin: 0 auto;
+        .prev,
+        .next {
+            display: inline-block;
+            width: 300px;
+            height: 40px;
+            color: #a84200;
+            font-size: 1.6rem;
+            line-height: 40px;
+            vertical-align: middle;
+            box-sizing: border-box;
+            margin: 0 10px;
+            transition: $tran;
+            transition-delay: 0.3s;
+            transform: translateY(0);
+            &:hover {
+                transform: translateY(-5px);
+            }
+            @include respond-to(small) {
+                width: 533px;
+                height: 71px;
+                font-size: 1.6rem;
+                line-height: 71px;
+                font-size: 2.84rem;
+                margin: 10px auto;
+            }
+        }
+        .prev {
+            padding-left: 20px;
+            background: url(../images/key_bg_prev.png) no-repeat 0 0;
+            @include respond-to(small) {
+                background: url(../images/key-prev-m.png) no-repeat 0 0;
+            }
+        }
+        .next {
+            background: url(../images/key_bg_next.png) no-repeat 0 0;
+            padding-right: 20px;
+            @include respond-to(small) {
+                background: url(../images/key-next-m.png) no-repeat 0 0;
+            }
+        }
+    }
 }
 
-.key1 {
-    &__title {
+.key.key1 {
+    .key__title {
         @include key1_title();
         @extend .hideText;
+        @include respond-to(small) {
+            @include key1-title-m();
+        }
+    }
+    .key__item .icon {
+        background-color: #f8b551;
+        box-shadow: 0 4px 0 0 #f39a05;
+    }
+    @for $i from 1 through 6 {
+        .key__item.key__item--#{$i} span.pc {
+            @extend %key1-#{$i};
+        }
+        .key__item.key__item--#{$i} span.mb {
+            @extend %key1-#{$i}-m;
+        }
+    }
+    .key__end__note {
+        @extend .key1_footer;
+        @include respond-to(small) {
+            left: 0;
+            margin-top: -50px;
+            @include key1-footer-m();
+        }
+    }
+}
+
+.key.key2 {
+    .key__title {
+        @include key2_title();
+        @extend .hideText;
+        @include respond-to(small) {
+            @include key2-title-m();
+        }
+    }
+    .key__item .icon {
+        background-color: #eb6100;
+        box-shadow: 0 4px 0 0 #d34107;
     }
     @for $i from 1 through 5 {
-        .key__item.key__item--#{$i} {
-            @extend .key1-#{$i};
-            .icon {
-                
-            }
+        .key__item.key__item--#{$i} span.pc {
+            @extend %key2-#{$i};
+        }
+        .key__item.key__item--#{$i} span.mb {
+            @extend %key2-#{$i}-m;
+        }
+    }
+    .key__share {
+        margin-bottom: -50px;
+    }
+    .key__end__note {
+        @extend .key2_footer;
+        @include respond-to(small) {
+            left: 0;
+            margin-top: -30px;
+            @include key2-footer-m();
+        }
+    }
+}
+
+.key.key3 {
+    .key__title {
+        @include key3_title();
+        @extend .hideText;
+        @include respond-to(small) {
+            @include key3-title-m();
+        }
+    }
+    .key__item .icon {
+        background-color: #a40000;
+        box-shadow: 0 4px 0 0 #7d0000;
+    }
+    @for $i from 1 through 5 {
+        .key__item.key__item--#{$i} span.pc {
+            @extend %key3-#{$i};
+        }
+        .key__item.key__item--#{$i} span.mb {
+            @extend %key3-#{$i}-m;
+        }
+    }
+    .key__end__note {
+        @extend .key3_footer;
+        @include respond-to(small) {
+            left: 0;
+            margin-top: -10px;
+            @include key3-footer-m();
+        }
+    }
+}
+
+.footer-page {
+    border-top: dotted 2px #cfa972;
+    &__content {
+        text-align: center;
+        margin: 50px auto;
+        @extend .clearfix;
+    }
+    .video,
+    .classic {
+        float: left;
+        margin: 10px;
+        @include respond-to(small) {
+            float:none;
+            margin: 20px auto;
+        }
+    }
+    .video {
+        @include footer-video();
+        @include respond-to(small) {
+            @include footer-video-m();
+        }
+    }
+    .classic {
+        @include footer-classic();
+        @include respond-to(small) {
+            @include footer-classic-m();
+        }
+    }
+}
+
+.pop {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: rgba($color: #000000, $alpha: 0.5);
+    z-index: 99;
+    &__bd {
+        background: #fff;
+        border-radius: 10px;
+        width: 550px;
+        margin: 10vh auto 0 auto;
+    }
+    &__content {
+        padding: 40px;
+        line-height: 1.8;
+    }
+    &__title {
+        color: #e60012;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    &__text {
+        font-size: 1.6rem;
+        color: #996c33;
+    }
+    &__ctrls {
+        text-align: center;
+        margin-top: 30px;
+    }
+    &__btn {
+        cursor: pointer;
+        display: inline-block;
+        background: #cfa972;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 1.4rem;
+        padding: 3px 25px;
+        box-shadow: 0 4px 0 0 #996c33;
+        transition: $tran;
+        &:hover {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 0 #996c33;
         }
     }
 }

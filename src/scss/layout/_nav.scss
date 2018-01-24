@@ -6,15 +6,41 @@ $nav_height_mb: 135px;
     text-align: center;
     height: $nav_height;
     background: url(../images/nav-bg.png) repeat-x 0 0;
+    @include respond-to(small) {
+        background: url(../images/nav-bg-m.png) repeat-x 0 0;
+    }
     &-logo {
-        display: inline-block;
         float: left;
         margin-right: 35px;
         a {
             display: block;
             height: $nav_height - 10;
-            // line-height: $nav_height;
             margin-top: 15px;
+        }
+        span {
+            @include logo();
+        }
+        @include respond-to(small) {
+            margin: 15px;
+            span {
+                @include logo-m();
+            }
+        }
+    }
+    &__home a {
+        display: block;
+        width: auto;
+        overflow: hidden;
+        float: left;
+        span {
+            @include nav-home-link();
+            margin: 20px 0px 0 10px;
+        }
+        @include respond-to(small) {
+            margin: 10px 0px 0 10px;
+            span {
+                @include home-m();
+            }
         }
     }
     &-btn {
@@ -26,19 +52,34 @@ $nav_height_mb: 135px;
             a {
                 color: #a84200;
                 font-size: 1.6rem;
-            }
-            .nav-item {
-                float: left;
-                transition: 0.3s;
-                >a {
-                    height: $nav_height;
-                    line-height: $nav_height;
-                    vertical-align: middle;
-                    display: block;
-                    width: 140px;
+                @include respond-to(small) {
+                    font-size: 2.8rem;
+                    line-height: 80px;
                 }
-                &:hover {
-                    a {}
+            }
+            @include respond-to(small-up) {
+                float: left;
+                margin-left: 30px;
+                background: url(../images/menu_dotted.png) no-repeat left 50%; // background: red;
+                .nav-item {
+                    float: left;
+                    transition: 0.3s;
+                    >a {
+                        height: $nav_height;
+                        line-height: $nav_height;
+                        vertical-align: middle;
+                        display: block;
+                        @include respond-to(small-up) {
+                            width: 140px;
+                        }
+                    }
+                }
+            }
+            @include respond-to(small) {
+                padding-top: 40px;
+                .nav-item> a {
+                    display: block;
+                    
                 }
             }
         }
@@ -46,85 +87,98 @@ $nav_height_mb: 135px;
             padding: 0 10px;
             background: url(../images/menu_dotted.png) no-repeat 100% 50%;
             position: relative;
-            &.nav-item--home a {
-                display: block;
-                width: auto;
-                overflow: hidden;
-                span {
-                    margin: 16px 0;
-                }
+            @include respond-to(small) {
+                padding: 0;
+                width: 100%;
+                background: none;
+                text-align: center;
             }
             &.nav-item--parent {
-                > a {
-                    margin-top: 10px;
-                    height: $nav_height - 10;
-                    line-height: $nav_height - 20;
-                    position: relative;
-                    &:before {
-                        content: "";
-                        display: block;
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        right: 0;
-                        left: 0;
-                        background: #fff45c;
-                        border-radius: 10px 10px 0 0;
-                        z-index: 0;
-                        opacity: 0;
-                        transition: $transition-all;
-                    }
-                    span {
+                @include respond-to(small-up) {
+                    >a {
+                        margin-top: 10px;
+                        height: $nav_height - 10;
+                        line-height: $nav_height - 20;
                         position: relative;
-                        z-index: 1;
+                        &:before {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            right: 0;
+                            left: 0;
+                            background: #fff45c;
+                            border-radius: 10px 10px 0 0;
+                            z-index: 0;
+                            opacity: 0;
+                            transition: $transition-all;
+                        }
+                        span {
+                            position: relative;
+                            z-index: 1;
+                        }
                     }
-                }
-                &:hover {
-                    // a {
-                    //     background: #fff45c;
-                    //     border-radius: 10px 10px 0 0;
-                    // }
-                    .nav-sub-wrap {
-                        height: auto;
-                        overflow: hidden;
-                        z-index: 1;
-                    }
-                    .nav-sub-menu {
-                        opacity: 1;
-                    }
-                    a:before {
-                        opacity: 1;
+                    &:hover {
+                        .nav-sub-wrap {
+                            height: auto;
+                            overflow: hidden;
+                            z-index: 1;
+                        }
+                        .nav-sub-menu {
+                            opacity: 1;
+                        }
+                        a:before {
+                            opacity: 1;
+                        }
                     }
                 }
             }
         }
         .nav-sub-wrap {
-            height: 0;
-            overflow: hidden;
-            position: absolute;
-            right: 10px;
-            top: $nav_height - 10;
-            z-index: -1;
+            @include respond-to(small-up) {
+                height: 0;
+                overflow: hidden;
+                position: absolute;
+                right: 10px;
+                top: $nav_height - 10;
+                z-index: -1;
+            }
         }
         .nav-sub-menu {
-            background: #fff45c;
-            width: 492px;
-            border-radius: 10px 0 10px 10px;
-            padding: 20px 0;
-            opacity: 0;
-            transition: $transition-all;
-            &__item {
+            @include respond-to(small-up) {
+                background: #fff45c;
+                width: 492px;
+                border-radius: 10px 0 10px 10px;
+                padding: 20px 0;
+                opacity: 0;
+                transition: $transition-all;
+                &__item {
+                    a {
+                        display: block;
+                        height: auto;
+                        padding: 0;
+                        line-height: 3.2rem;
+                        padding: 0 20px;
+                        text-align: left;
+                    }
+                    a:hover {
+                        background: #fff;
+                        color: #e60012;
+                    }
+                }
+            }
+            @include respond-to(small) {
+                padding-top: 0;
+                background: #ededed;
                 a {
                     display: block;
-                    height: auto;
-                    padding: 0;
-                    line-height: 3.2rem;
-                    padding: 0 20px;
-                    text-align: left;
-                }
-                a:hover {
-                    background: #fff;
-                    color: #e60012;
+                    font-size: 2.4rem;
+                    color: #a84200;
+                    &:hover,&:focus {
+                        background: #fff45c;
+                        color: #e60012;
+                    }
                 }
             }
         }
@@ -141,52 +195,26 @@ $nav_height_mb: 135px;
             float: left;
             margin-left: 10px;
         }
+        @include respond-to(small) {
+            display: none;
+        }
     }
     @include respond-to(small) {
         height: $nav_height_mb;
         .l-container {
             position: static;
         }
-        &-logo {
-            width: 209px;
-            height: $nav_height_mb;
-            line-height: $nav_height_mb;
-        } //MOBILE NAV MENU
         &-menu {
-            background: $brandColor1;
-            width: 50%;
-            right: -50%;
+            background: url(../images/nav-bg-m.png) #fff no-repeat 0 -101px;
+            width: 100%;
+            top: 101px;
             position: absolute;
-            height: 100vh;
             transition: all 0.3s ease-out;
-            ul {
-                padding: 65px 0;
-                margin: 0 35px;
-                li {
-                    width: 100%;
-                    &:not(:last-child) {
-                        border-bottom: 1px solid #fff;
-                    }
-                    a {
-                        font-size: 2.8rem;
-                        width: 100%;
-                        height: 80px;
-                        line-height: 80px;
-                    }
-                    &:hover {
-                        a {
-                            background: none;
-                        }
-                    }
-                }
+            display: none;
+            &--active {
+
             }
         }
-        &--active {
-            .nav-menu {
-                right: 0;
-                box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
-            }
-        } //MOBILE NAV MenuBtn
         &-btn {
             border-radius: 10px;
             display: block;
@@ -203,7 +231,7 @@ $nav_height_mb: 135px;
                 border-radius: 5px;
                 width: 60px;
                 height: 8px;
-                background: $brandColor1;
+                background: #e60012;
                 margin: 10px auto;
                 backface-visibility: hidden;
                 transition-duration: 0.3s;
@@ -227,6 +255,7 @@ $nav_height_mb: 135px;
                     transform: (rotate(-45deg) translate(13px, -12px));
                 }
             }
-        } //NAV z-index 按鈕>選單>LOGO&NAV背景
+            
+        }
     }
 }

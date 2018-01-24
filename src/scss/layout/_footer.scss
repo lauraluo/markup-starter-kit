@@ -3,7 +3,10 @@
     .footer1 {
         height: 89px;
         background: url(../images/footer.gif) no-repeat center center;
-        height: 89px;
+        @include respond-to(small) {
+            height: 158px;
+            background: url(../images/footer-m.gif) no-repeat center center;
+        }
     }
     .footer2 {
         border-top: dotted 2px #cfa972;
@@ -12,6 +15,7 @@
 }
 
 #commonhealth_footer {
+    padding-bottom: 10px;
     .commonhealth_footer-channel {
         width: 100%;
         font-size: 0.9375rem;
@@ -69,10 +73,9 @@
     .commonhealth_footer-copyright br {
         display: none;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 640px) {
         .commonhealth_footer-channel {
-            font-size: 0.875rem;
-            font-size: 14px;
+            font-size: 20px;
             li {
                 padding-right: 5px;
                 margin-right: 3px;
@@ -84,20 +87,12 @@
             }
         }
         .commonhealth_footer-copyright {
-            font-size: 0.8125rem;
-            font-size: 13px;
+            font-size: 18px;
             line-height: 1.5;
         }
         .commonhealth_footer-channel br,
         .commonhealth_footer-copyright br {
             display: inline-block;
-        }
-    }
-    @media (max-width: 320px) {
-        .commonhealth_footer-channel,
-        .commonhealth_footer-copyright {
-            font-size: 0.75rem;
-            font-size: 12px;
         }
     }
 }

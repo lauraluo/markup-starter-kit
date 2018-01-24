@@ -81,6 +81,18 @@ gulp.task('sprite', function() {
                         '  height: ' + sprite.px.height + ';\n',
                         '/*source-image:' + sprite.source_image + '*/\n',
                         '}\n',
+                        '%' + sprite.name + ' {\n',
+                        '  display: block;\n',
+                        '  background-image: url(../images/' + sprite.image + '?v=' + v + ');\n',
+                        '  background-position: ' +
+                            sprite.px.offset_x +
+                            ' ' +
+                            sprite.px.offset_y +
+                            ';\n',
+                        '  width:' + sprite.px.width + ';\n',
+                        '  height: ' + sprite.px.height + ';\n',
+                        '/*source-image:' + sprite.source_image + '*/\n',
+                        '}\n',
                         '@mixin ' + sprite.name + '() {\n',
                         '  display: block;\n',
                         '  background-image: url(../images/' + sprite.image + '?v=' + v + ');\n',
