@@ -4,16 +4,16 @@
         key1(v-on:showpop="showPop" v-on:closepop="closePop"  v-show="currentKeyPage == 1" v-bind:is-show-pop="isShowPop" v-bind:current-title="currentTitle" v-bind:current-content="currentContent")
         key2(v-on:showpop="showPop" v-on:closepop="closePop"  v-show="currentKeyPage == 2" v-bind:is-show-pop="isShowPop" v-bind:current-title="currentTitle" v-bind:current-content="currentContent")
         key3(v-on:showpop="showPop" v-on:closepop="closePop"  v-show="currentKeyPage == 3" v-bind:is-show-pop="isShowPop" v-bind:current-title="currentTitle" v-bind:current-content="currentContent")
-    transition(name='fade'  enter-active-class="animated fadeIn active" leave-active-class="animated fadeOut")
-        div.pop(v-show="isShowPop")
-            div.l-container
-                div.pop__bd
-                    .pop__content
-                        .pop__title(v-html="currentTitle")
-                        .pop__text {{currentContent}}
-                        .pop__ctrls
-                            .pop__btn(v-on:click="closePop($event)") 了解!
-/template>
+        transition(name='fade'  enter-active-class="animated fadeIn active" leave-active-class="animated fadeOut")
+            div.pop(v-show="isShowPop")
+                div.l-container
+                    div.pop__bd
+                        .pop__content
+                            .pop__title(v-html="currentTitle")
+                            .pop__text {{currentContent}}
+                            .pop__ctrls
+                                .pop__btn(v-on:click="closePop($event)") 了解!
+</template>
 
 <script>
 import Key1 from './Key1.vue';
@@ -44,8 +44,6 @@ export default {
 
             var _currentTitle = dItem.find('.title').text();
             var _currentContent = dItem.find('.content').text();
-
-            console.log(_currentTitle);
 
             this.currentTitle = _currentTitle;
             this.currentContent = _currentContent;

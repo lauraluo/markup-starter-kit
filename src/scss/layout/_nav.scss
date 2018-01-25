@@ -237,11 +237,11 @@ $nav_height_mb: 135px;
             top: -301px;
             position: absolute;
             transition: all 0.3s ease-out;
-            box-shadow: 0 0 0 9999px rgba(0,0,0,0.4);
             // display: none;
             padding: 30px 0;
             z-index: 1;
             &--active {
+                box-shadow: 0 0 0 9999px rgba(0,0,0,0.4);
                 top: 101px;
             }
         }

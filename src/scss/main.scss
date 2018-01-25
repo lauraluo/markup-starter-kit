@@ -709,10 +709,16 @@ $key-flow-height: 1020px;
         font-size: 2rem;
         margin-bottom: 20px;
         text-align: center;
+        @include respond-to(small) {
+            font-size: 2.8rem;
+        }
     }
     &__text {
         font-size: 1.6rem;
         color: #996c33;
+        @include respond-to(small) {
+            font-size: 2.4rem;
+        }
     }
     &__ctrls {
         text-align: center;
@@ -728,6 +734,10 @@ $key-flow-height: 1020px;
         padding: 3px 25px;
         box-shadow: 0 4px 0 0 #996c33;
         transition: $tran;
+        @include respond-to(small) {
+            font-size: 2.4rem;
+            padding: 5px 45px;
+        }
         &:hover {
             transform: translateY(2px);
             box-shadow: 0 2px 0 0 #996c33;
@@ -742,10 +752,33 @@ $key-flow-height: 1020px;
 .qa {
     padding: 20px 0;
     &__content {
+        height: 70vh;
+        min-height: 740px;
         padding: 20px 0px;
         @include respond-to(small) {
             padding: 40px 0px;
         }
+    }
+    &__mask {
+        position: fixed;
+        top: 0;
+        left:0;
+        right: 0;
+        bottom: 0;
+        background: rgba($color: #000000, $alpha: 0.5);
+        z-index: 1;
+    }
+    .l-vm {
+        height: 70vh;
+        min-height: 740px;
+        @include respond-to(small) {
+          
+        }
+    }
+    .qa-wrap{
+        position: absolute;
+        top: 0;
+        left: 0;
     }
     &__info {
         position: relative;
@@ -755,11 +788,12 @@ $key-flow-height: 1020px;
         background: #fff;
         height: 10px;
         width: grid-width(8);
-        margin-left: grid-width(2);
+        margin-left: grid-width(1);
         border-radius: 50px;
         border: 1px solid #cfa972;
         @include respond-to(small) {
             width: grid-width(9);
+            height: 15px;
             margin-left: grid-width(0.5);
         }
         .display-bar {
@@ -771,12 +805,13 @@ $key-flow-height: 1020px;
     &__step {
         position: absolute;
         transform: scale(0.8);
-        right: grid-width(0.5);
+        right: 100px;
         top: -50px;
         font-size: 5.0rem;
         @include qa-watch();
         @include respond-to(small) {
             transform: scale(1);
+            right: 0px;
         }
         span {
             color: #e60012;
@@ -806,7 +841,6 @@ $key-flow-height: 1020px;
     }
     &__main {
         padding: 50px 60px;
-        width: grid-width(10);
         margin: 0 auto;
         @include respond-to(small) {
             padding: 50px 0;
@@ -856,11 +890,12 @@ $key-flow-height: 1020px;
         height: 110px;
         position: absolute;
         top: 80px;
-        right: 0;
+        // z-index: 2;
         @include respond-to(small) {
             position: fixed;
-            height: 150px;
+            height: 200px;
             top: 45vh;
+            
         }
         &.ok {
             background: url(../images/ok.png) no-repeat 50% 50%;
@@ -871,15 +906,28 @@ $key-flow-height: 1020px;
             background-size: auto 100%;
         }
     }
+    &__items {
+        margin:  0 auto;
+        @include respond-to(small-up) {
+            width: 810px;
+        }
+        @include respond-to(small) {
+            width: 620px;
+        }
+    }
     &__item {
         width: 333px;
         height: 214px;
         background: url(../images/qa-item-bg.png) no-repeat 0 0;
         box-sizing: border-box;
         padding-top: 70px;
-        padding-left: 90px;
-        padding-right: 30px;
+        padding-left: 80px;
+        padding-right: 28px;
         float: left;
+        &.disabled {
+            opacity: 0.5;
+        }
+        cursor: pointer;
         @include respond-to(small) {
             float: none;
             margin: 20px auto;
@@ -892,27 +940,36 @@ $key-flow-height: 1020px;
         }
         @include respond-to(small-up) {
             &:nth-child(1) {
+                display: inline-block;
                 position: relative;
-                clear: right;
-                margin-right: 80px;
+                margin-right: 133px;
                 transform: translateX(-20px);
             }
             &:nth-child(2) {
-                float: right;
+                display: inline-block;
                 transform: translateX(20px);
             }
             &:nth-child(3) {
-                // float: right;
-                transform: translateX(50%);
+                // display: none;
+                display: inline-block;
+                transform: translateX(60%);
                 margin-top: 30px;
             }
         }
         .text {
             line-height: 1.5;
-            float: left; // border: solid 1px red;
             font-size: 2.4rem; // font-weight: bold;
             text-shadow: 1px 1px 0 0 #fff;
             color: #eb6100;
+            text-align: center;
+            img {
+                position: relative;
+                top: -20px;
+                @include respond-to(small) {
+                    top: -30px;
+                    width: 210px
+                }
+            }
             span {
                 display: block;
                 font-size: 1.6rem;

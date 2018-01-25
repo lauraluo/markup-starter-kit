@@ -1,0 +1,27 @@
+section.qa(id="qa")
+    div.qa__bd            
+        div.qa__content
+            div.l-container
+                transition-group(name='fade'  enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft")
+                    div.qa-wrap(v-for="(question,index) in questions" v-bind:key="index"  v-if="index == currentQuestion")            
+                        div.l-vm
+                            div.l-vm__content
+                                .qa__info
+                                    div.qa__step
+                                        span {{timeCount}}
+                                    .qa__progress
+                                        span.display-bar
+                                .qa__type
+                                    span {{question.type}}
+                                .qa__main.clearfix
+                                    .qa__q.clearfix
+                                        span.icon Q
+                                        span.number {{index + 1}}
+                                        span.text 以下哪一個是臺灣人記憶深刻的麵包品牌logo？
+                                    .qa__list
+                                        div.qa__result.ok(v-if="isShowResult && selectedAnsResult[index]")
+                                        div.qa__result.error(v-if="isShowResult && !selectedAnsResult[index]")
+                                        .qa__items
+                                            div.qa__item(v-for="(option,optionIndex) in question.options" v-bind:key="optionIndex" v-on:click="selectedOption($event,index,optionIndex + 1)" v-bind:class="{ 'active': optionIndex +1 == currentSelected && isShowResult ,'disabled': optionIndex +1 != currentSelected && isShowResult }")
+                                                div.text(v-html="option")
+    .qa__mask(v-if="isShowResult")
