@@ -31,6 +31,10 @@ html {
     background-position: fixed;
 }
 
+.hide {
+    display: none !important;
+}
+
 .nav {
     position: relative;
     z-index: 1;
@@ -688,13 +692,13 @@ $key-flow-height: 1020px;
     top: 0;
     right: 0;
     left: 0;
-    background: rgba($color: #000000, $alpha: 0.5);
     z-index: 99;
     &__bd {
         background: #fff;
         border-radius: 10px;
         width: 550px;
-        margin: 10vh auto 0 auto;
+        margin: 20vh auto 0 auto;
+        box-shadow: 0 0 0 9999px rgba($color: #000000, $alpha: 0.5);
     }
     &__content {
         padding: 40px;
@@ -704,6 +708,7 @@ $key-flow-height: 1020px;
         color: #e60012;
         font-size: 2rem;
         margin-bottom: 20px;
+        text-align: center;
     }
     &__text {
         font-size: 1.6rem;

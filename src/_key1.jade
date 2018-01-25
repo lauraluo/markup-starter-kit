@@ -1,0 +1,60 @@
+section.key.key1(id="key")
+    div.key__hd
+    div.key__bd
+        div.l-container
+            section.key__content
+                h1.key__title 安心關鍵 1 一張圖看懂 麵包保鮮關鍵 保鮮術？兼顧安心美味的製程秘密！
+                div.key__flow
+                    div.key__flow__main
+                        div.key__flow__bread.key__flow__bread--1
+                        div.key__flow__box.key__flow__box--1
+                        div.key__flow__bread.key__flow__bread--2
+                        div.key__flow__box.key__flow__box--2
+                        div.key__flow__line
+                        div.key__flow__bread.key__flow__bread--3
+                    div.key__anis
+                        div.key__ani.key__ani--1
+                        div.key__ani.key__ani--2
+                        div.key__ani.key__ani--3
+                        div.key__ani.key__ani--4
+                        div.key__ani.key__ani--5
+                    div.key__items
+                        - var title0 = "麵包專業講解鮮度≠添加防腐劑";
+                        - var content0 = "麵包的鮮度取決於微生物生長速度，和製程及保存方式息息相關，控制環境中的溫度、濕度和落菌數及麵包的pH值和水分，麵包不需要防腐劑就能保持鮮度，放置3-4天都維持最佳風味。";
+                        
+                        - var title1 = "專業細節1 : 落菌數隨時監控";
+                        - var content1 = "麵包的鮮度取決於微生物生長速度，和製程及保存方式息息相關，控制環境中的溫度、濕度和落菌數及麵包的pH值和水分，麵包不需要防腐劑就能保持鮮度，放置3-4天都維持最佳風味。";
+                        
+                        - var title2 = "專業細節2 : 麵糰pH值";
+                        - var content2= "麵包師傅進到工廠內，要經過一系列的清潔除塵，空間上也有防蟲的防護層，確保生產線上最低的落菌數！";
+                        
+                        - var title3= "專業細節3 : 製程各環節溫度控管";
+                        - var content3 = "低溫熟成法讓麵包的酸鹼值不利雜菌生長，不需多添加防腐劑就能維持鮮度。";
+                        
+                        - var title4 = "專業細節4 : 全程溫濕度監控";
+                        - var content4 = "烘焙時需達到中心溫度到95℃完全熟化、包裝前又要完全降溫....麵包的不同階段都有管控溫度。";
+
+                        - var title5 = "專業細節5 : 陳列時包裝保護";
+                        - var content5 = "環境的溫、濕度會影響細菌的生長，專業工廠會全程監控環境溫、濕度，維持在一定標準之下，以增加賞味期限。";
+                        
+                        
+                        - var popTitles = [ title0, title1, title2, title3, title4, title5];
+                        - var contentItems = [content0,content1,content2,content3,content4,content5];
+                        
+                        - var order = 0;
+                        for title in popTitles
+                            div(class="key__item key__item--#{++order}" v-on:click="showPop($event, #{order})")
+                                span.title.hide #{title}
+                                span.content.hide #{contentItems[order-1]}
+                                span.pc
+                                span.mb
+                                div.icon
+                div.key__end
+                    div.key__share
+                        div.key__share__item.square_fb
+                        div.key__share__item.square_line
+                        div.key__share__item.square_tw
+                        div.key__share__item.square_gl
+                    div.key__end__note
+                    div.key__end__ctrls
+                        a.next(href="/key.2.html") 下個關鍵：麵包一致的品質

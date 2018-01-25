@@ -7,7 +7,7 @@ $nav_height_mb: 135px;
     height: $nav_height;
     background: url(../images/nav-bg.png) repeat-x 0 0;
     @include respond-to(small) {
-        background: url(../images/nav-bg-m.png) repeat-x 0 0;
+        // background: url(../images/nav-bg-m.png) repeat-x 0 0;
     }
     &-logo {
         float: left;
@@ -119,14 +119,14 @@ $nav_height_mb: 135px;
                             z-index: 1;
                         }
                     }
-                    &:hover {
+                    &.active {
                         .nav-sub-wrap {
-                            height: auto;
-                            overflow: hidden;
+                            // height: auto;
+                            // overflow: hidden;
                             z-index: 1;
                         }
                         .nav-sub-menu {
-                            opacity: 1;
+                            // opacity: 1;
                         }
                         a:before {
                             opacity: 1;
@@ -136,8 +136,18 @@ $nav_height_mb: 135px;
             }
         }
         .nav-sub-wrap {
+            // &:before {
+            //     content: "";
+            //     display: block;
+            //     background: red;
+            //     position: fixed;
+            //     top: 0;
+            //     right: 0;
+            //     left: 0;
+            //     bottom: 0;
+            // }
             @include respond-to(small-up) {
-                height: 0;
+                // height: 0;
                 overflow: hidden;
                 position: absolute;
                 right: 10px;
@@ -151,7 +161,7 @@ $nav_height_mb: 135px;
                 width: 492px;
                 border-radius: 10px 0 10px 10px;
                 padding: 20px 0;
-                opacity: 0;
+                // opacity: 0;
                 transition: $transition-all;
                 &__item {
                     a {
@@ -201,18 +211,38 @@ $nav_height_mb: 135px;
     }
     @include respond-to(small) {
         height: $nav_height_mb;
+        .nav-bd:before {
+            background: url(../images/nav-bg-m.png) no-repeat 0 0;
+            content: '';
+            position: absolute;
+            height: 132px;
+            right: 0;
+            left: 0;
+            top: 0;
+            display: block;
+            z-index: 2;
+        }
+       
+        .nav-logo,.nav__home,.nav-soical {
+            position: relative;
+            z-index: 3;
+        }
         .l-container {
             position: static;
         }
         &-menu {
-            background: url(../images/nav-bg-m.png) #fff no-repeat 0 -101px;
+            // background: url(../images/nav-bg-m.png) #fff no-repeat 0 -101px;
+            background: #fff;
             width: 100%;
-            top: 101px;
+            top: -301px;
             position: absolute;
             transition: all 0.3s ease-out;
-            display: none;
+            box-shadow: 0 0 0 9999px rgba(0,0,0,0.4);
+            // display: none;
+            padding: 30px 0;
+            z-index: 1;
             &--active {
-
+                top: 101px;
             }
         }
         &-btn {
@@ -225,6 +255,7 @@ $nav_height_mb: 135px;
             right: 10px;
             top: 10px;
             background: #fff;
+            z-index: 4;
             >.one,
             >.two,
             >.three {
@@ -244,14 +275,14 @@ $nav_height_mb: 135px;
             .nav-btn {
                 background: transparent;
                 >.one {
-                    background: #fff;
+                    // background: #fff;
                     transform: (rotate(45deg) translate(13px, 13px));
                 }
                 >.two {
                     opacity: 0;
                 }
                 >.three {
-                    background: #fff;
+                    // background: #fff;
                     transform: (rotate(-45deg) translate(13px, -12px));
                 }
             }

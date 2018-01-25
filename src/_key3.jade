@@ -1,0 +1,60 @@
+section.key.key3(id="key")
+    div.key__hd
+    div.key__bd
+        div.l-container
+            section.key__content
+                h1.key__title 安心關鍵 3 一張圖看懂 麵包飲食安全關鍵 食安微角落靠專業自律！烘焙業龍頭大廠這樣做
+                div.key__flow
+                    div.key__flow__main
+                        div.key__flow__bread.key__flow__bread--1
+                        div.key__flow__box.key__flow__box--1
+                        div.key__flow__bread.key__flow__bread--2
+                        div.key__flow__box.key__flow__box--2
+                        div.key__flow__line
+                        div.key__flow__bread.key__flow__bread--3
+                    div.key__anis
+                        div.key__ani.key__ani--1
+                        div.key__ani.key__ani--2
+                        div.key__ani.key__ani--3
+                        div.key__ani.key__ani--4
+                        div.key__ani.key__ani--5
+                    div.key__items
+                        - var title0 = "麵包專業講解：<br/>食安微角落的自律把關才有食品安全!";
+                        - var content0 = "食品真的是良心事業！平價產品卻有高標準、高成本的自律機制，麵包製程不複雜，但食品安全關鍵在於魔鬼細節，幾大關鍵點是民眾和其他烘焙業者要參考學習的。";
+                        
+                        - var title1 = "專業細節1：嚴格採購原則原料品質把關";
+                        - var content1 = "原料的品質和等級每批都不同，內部要訂定嚴格的採購原則，確保產品的食安品質。例如不得含防腐劑、到貨的原料保存期限，在採購時捨棄能降低成本的大量購買，而是用少量訂單的方式逐批採購，維持原料的鮮度。";
+                        
+                        - var title2 = "專業細節2：溯源管理原料源頭把關";
+                        - var content2= "食安危機常出現於源頭，大型的烘焙品牌才有力量前往源頭要求與檢驗。以雞蛋為例，從畜牧場使用的水、飼料、養殖環境，到液蛋的藥物殘留檢測、液蛋全程運輸溫控，都是食安的重要把關作為。";
+                        
+                        - var title3= "專業細節3：嚴格原料及成品檢驗";
+                        - var content3 = "食品大廠除了能有嚴密的供應商管理，將採購風險降到最低，進廠生產到出貨也需要嚴格「自主檢驗」。例如金屬、包裝等食安指標檢測，確認安全無虞才能出貨。";
+                        
+                        - var title4 = "專業細節4：烹飪器皿的安全性";
+                        - var content4 = "烹飪器皿的材質風險、過度使用都可能導致食安問題的發生，任何細節都不可輕忽。例如烤盤的使用紀錄、定期更換，在所有接觸到原料的器具材質也都應有嚴格的要求。";
+
+                        - var title5 = "專業細節5：體制外食安中心監督";
+                        - var content5 = "除了自主管理，第三方單位的不定期抽檢也是食安維護不懈怠的動能。專業良心的食品品牌會有「食安警察」機制，隨時把關風險、嚴格監控，幫助民眾安心飲食。";
+                        
+                        
+                        - var popTitles = [ title0, title1, title2, title3, title4, title5];
+                        - var contentItems = [content0,content1,content2,content3,content4,content5];
+                        
+                        - var order = 0;
+                        for title in popTitles
+                            div(class="key__item key__item--#{++order}" v-on:click="showPop($event, #{order})")
+                                span.title.hide #{title}
+                                span.content.hide #{contentItems[order-1]}
+                                span.pc
+                                span.mb
+                                div.icon
+                div.key__end
+                    div.key__share
+                        div.key__share__item.square_fb
+                        div.key__share__item.square_line
+                        div.key__share__item.square_tw
+                        div.key__share__item.square_gl
+                    div.key__end__note
+                    div.key__end__ctrls
+                        a.prev(href="/key.2.html") 上個關鍵：麵包一致的品質

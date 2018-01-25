@@ -1,0 +1,57 @@
+section.key.key2(id="key")
+    div.key__hd
+    div.key__bd
+        div.l-container
+            section.key__content
+                h1.key__title 安心關鍵 2 一張圖看懂 麵包一致的品質關鍵 30年麵包師傅：紀律，才能確保每一口最佳口感！
+                div.key__flow
+                    div.key__flow__main
+                        div.key__flow__bread.key__flow__bread--1
+                        div.key__flow__box.key__flow__box--1
+                        div.key__flow__bread.key__flow__bread--2
+                        div.key__flow__box.key__flow__box--2
+                        div.key__flow__line
+                        div.key__flow__bread.key__flow__bread--3
+                    div.key__anis
+                        div.key__ani.key__ani--1
+                        div.key__ani.key__ani--2
+                        div.key__ani.key__ani--3
+                        div.key__ani.key__ani--4
+                        div.key__ani.key__ani--5
+                    div.key__items
+                        - var title0 = "麵包專業講解：紀律X時間，換取一致的品質";
+                        - var content0 = "「每一個麵包都能享受到同樣的幸福，才能讓消費者吃到的都是一樣新鮮和口感的麵包！」高品質麵包不只需要研發者的用心，更需要製程上所有人員的專業和嚴格控管，相較於一般的烘焙坊，機製麵包有專業製程與把關，才能每天為國人供應超過30萬一致的高品質麵包！";
+                                                    
+                        - var title1 = "專業細節1：人員專業及研發力";
+                        - var content1 = "高品質的製程從第一線人員開始，工廠的創新速度(專利申請)和員工的專業程度(國家級證照)，都直接影響每個產品的品質！";
+                        
+                        - var title2 = "專業細節2：長時間中種法";
+                        - var content2= "麵包要美味一刻也急不得！相較一般烘焙採取短時間直接法；長時間低溫培養，才能讓酵母菌和乳酸菌充分地活化，代謝產生的有機酸、酵素與麵糰作用，才能完整釋放出熟成的香氣、品質更柔軟細緻。不用添加物也能香郁美味！";
+                        
+                        - var title3= "專業細節3：自製老麵種";
+                        - var content3 = "低溫熟成的自製老麵種產生乳酸及醋酸等有機酸降低麵糰的pH值，能夠抑制雜菌的生長，讓麵包的賞味期限得以延長，柔軟鮮度能維持得更久。";
+                        
+                        - var title4 = "專業細節4：自動生產的輔助";
+                        - var content4 = "手工+機器做出來的麵包，比全手工更有品質！手工難免有技術侷限和不穩定度，機器可以成為很好的輔助。例如手工包餡的時候很難掌控，但包餡機就能做到皮薄餡多、均勻分布，確保最完美的口感。";
+                        
+                        - var popTitles = [ title0, title1, title2, title3, title4];
+                        - var contentItems = [content0,content1,content2,content3,content4];
+                        
+                        - var order = 0;
+                        for title in popTitles
+                            div(class="key__item key__item--#{++order}" v-on:click="showPop($event, #{order})")
+                                span.title.hide #{title}
+                                span.content.hide #{contentItems[order-1]}
+                                span.pc
+                                span.mb
+                                div.icon
+                div.key__end
+                    div.key__share
+                        div.key__share__item.square_fb
+                        div.key__share__item.square_line
+                        div.key__share__item.square_tw
+                        div.key__share__item.square_gl
+                    div.key__end__note
+                    div.key__end__ctrls
+                        a.next(href="/key.1.html") 上個關鍵：麵包保鮮
+                        a.next(href="/key.3.html") 下個關鍵：麵包飲食安全
