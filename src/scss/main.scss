@@ -63,7 +63,7 @@ html {
     }
     .l-vm {
         height: 75vh;
-        min-height: 720px;
+        min-height: 750px;
         width: 100%;
         text-align: center;
         @include respond-to(small) {
@@ -756,26 +756,35 @@ $key-flow-height: 1020px;
         min-height: 740px;
         padding: 20px 0px;
         @include respond-to(small) {
-            padding: 40px 0px;
+            padding: 40px 20px;
+            height: 70vh;
+            min-height: 1040px;
+        }
+        &.fixed3 {
+            @include respond-to(small) {
+                height: 70vh;
+                min-height: 1600px;
+            }
         }
     }
     &__mask {
         position: fixed;
         top: 0;
-        left:0;
+        left: 0;
         right: 0;
         bottom: 0;
         background: rgba($color: #000000, $alpha: 0.5);
         z-index: 1;
+        @include respond-to(small) {
+        }
     }
     .l-vm {
         height: 70vh;
         min-height: 740px;
-        @include respond-to(small) {
-          
-        }
+        position: relative;
+        @include respond-to(small) {}
     }
-    .qa-wrap{
+    .qa-wrap {
         position: absolute;
         top: 0;
         left: 0;
@@ -862,7 +871,8 @@ $key-flow-height: 1020px;
             display: inline-block;
             @include respond-to(small) {
                 float: left;
-                font-size: 3.5rem;
+                font-size: 4.2rem;
+                margin-top: 10px;
             }
         }
         .text {
@@ -872,10 +882,9 @@ $key-flow-height: 1020px;
             margin: 0 10px;
             line-height: 1.6;
             @include respond-to(small) {
-                float: right;
                 position: relative;
-                width: 440px;
                 left: 30px;
+                width: 500px;
                 font-size: 3.6rem;
             }
         }
@@ -889,30 +898,41 @@ $key-flow-height: 1020px;
         width: 100%;
         height: 110px;
         position: absolute;
-        top: 80px;
-        // z-index: 2;
+        top: 500px;
+        z-index: 4;
+        // display: none;
+        &.active {
+            display: block;
+        }
         @include respond-to(small) {
             position: fixed;
-            height: 200px;
-            top: 45vh;
-            
+            width: 100vw;
+            height: 100vh;
+            top:0;
+            left: 0;
         }
         &.ok {
             background: url(../images/ok.png) no-repeat 50% 50%;
             background-size: auto 100%;
+            @include respond-to(small) {
+                background-size: auto 200px;
+            }
         }
         &.error {
             background: url(../images/error.png) no-repeat 50% 50%;
             background-size: auto 100%;
+            @include respond-to(small) {
+                background-size: auto 200px;
+            }
         }
     }
     &__items {
-        margin:  0 auto;
+        margin: 0 auto;
         @include respond-to(small-up) {
             width: 810px;
         }
         @include respond-to(small) {
-            width: 620px;
+            width: 600px;
         }
     }
     &__item {
@@ -1024,10 +1044,10 @@ $key-flow-height: 1020px;
         display: block;
         margin: 0 auto;
     }
-    .result2,.result3 {
-        display: none;
+    .result2,
+    .result3 {
+        // display: none;
     }
-    
     .result1 img,
     .result3 img {
         width: 241px;
@@ -1066,7 +1086,6 @@ $key-flow-height: 1020px;
     &__more {
         text-align: center;
         text-align: center;
-        
         .text {
             display: inline-block;
             color: #996c33;
@@ -1141,6 +1160,7 @@ $key-flow-height: 1020px;
     }
     &__content {
         margin: 30px auto;
+        display: none;
         .main {
             @extend .clearfix;
         }
@@ -1219,7 +1239,7 @@ $key-flow-height: 1020px;
         .bar-item {
             position: relative;
             height: 100%;
-            width: 33.333333%;
+            // width: 33.333333%;
             float: left;
             position: relative;
             overflow: hidden;
@@ -1242,6 +1262,15 @@ $key-flow-height: 1020px;
                 width: 100%;
                 position: absolute;
             }
+            &.bar1 {
+                width: (4/8*100)#{'%'};
+            } 
+            &.bar2 {
+                width: (2/8*100)#{'%'};
+            } 
+            &.bar3 {
+                width: (2/8*100)#{'%'};
+            } 
             &.bar2 .bar {
                 background: #fff45c;
             }

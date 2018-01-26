@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Menu from './components/Menu.vue';
 import Key from './components/Key.vue';
 import Qa from './components/Qa.vue';
+import Result from './components/Result.vue';
 
 new Vue({
     el: '#nav',
@@ -39,6 +40,24 @@ if($('#qa').length > 0){
     new Vue({
         el: '#qa',
         render: h => h(Qa)
+    });
+    
+}
+
+
+if($('#result').length > 0){
+    console.log('init qa');
+    new Vue({
+        el: '#result',
+        render: function(createElement) {
+            var href = location.href;
+           
+            return createElement(Result, {
+                props: {
+                 
+                }
+            });
+        }
     });
     
 }

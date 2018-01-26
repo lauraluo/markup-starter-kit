@@ -41,6 +41,7 @@
     "browserify": "^14.5.0",
     "browserify-hmr": "^0.3.6",
     "extend": "^3.0.1",
+    "firebase-tools": "^3.17.4",
     "gulp-babel": "^7.0.0",
     "gulp-browserify": "^0.5.1",
     "gulp-util": "^3.0.8",

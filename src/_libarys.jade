@@ -1,10 +1,10 @@
 div.library
-    .libary__group.active
+    .libary__group.libary__group--1(v-on:click="toogleLibary($event,1)" v-bind:class="{'active': currentOpened == 1}")
         .libary__title
             div.l-container
                 span.text 一般麵包知識題
                 span.icon
-        .libary__content
+        .libary__content(ref="content1")
             dl.l-container
                 .main
                     div.item
@@ -25,12 +25,12 @@ div.library
                         dd.a A. 應該是酵母菌
                         dd.text 酵母可使麵糰蓬鬆。<br/>
                             |統一麵包研究團隊不斷地技術創新，例如透過使用卵磷脂、蛋黃或是攪拌方式，強化口感綿密的效果。
-    .libary__group
+    .libary__group.libary__group--2(v-on:click="toogleLibary($event,2)" v-bind:class="{active: currentOpened == 2}")
         .libary__title
             div.l-container
                 span.text 包裝麵包認知題
                 span.icon
-        .libary__content
+        .libary__content(ref="content2")
             dl.l-container
                 .main
                     div.item
@@ -50,12 +50,12 @@ div.library
                         dt.q Q. 麵包剛出爐，應該控制什麼環境因子來維持鮮度？
                         dd.a A. 溫濕度
                         dd.text 統一麵包生產廠除了有嚴密的清潔消毒，空氣中的落菌數也必須每天監測，全廠區內也均有嚴格的溫、溼度掌控。除了生產線上從半成品到成品的輸送過程，嚴格要求完整的覆蓋保護，包裝後的麵包，從廠內到裝上配送車送到門市，全程都必須控制在28℃ 以下。避免過程中出現任何食安隱憂。
-    .libary__group
+    .libary__group.libary__group--3(v-on:click="toogleLibary($event,3)" v-bind:class="{active: currentOpened == 3}")
         .libary__title
             div.l-container
                 span.text 麵包達人得分題
                 span.icon
-        .libary__content
+        .libary__content(ref="content3")
             dl.l-container
                 .main
                     div.item

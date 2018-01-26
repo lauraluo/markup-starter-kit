@@ -8,6 +8,7 @@ export default {
     data() {
         return {
             isShowResult: false,
+            displayResult: false,
             currentSelected: -1,
             currentCount: 0,
             timeCount: 5,
@@ -68,7 +69,12 @@ export default {
                     type: '麵包達人得分題',
                     options: ['低溫熟成的<br>自製老麵種', '單一成分的<br>純麵粉']
                 }
-            ]
+            ],
+            lvTotalCount: {
+                lv1Count: null,
+                lv2Count: null,
+                lv3Count: null
+            }
         };
     },
     computed: {},
@@ -78,6 +84,16 @@ export default {
             this.selectedAns.push(-1);
             this.selectedAnsResult.push(false);
         }
+        _firebase
+            .database()
+            .ref()
+            .on('value', snapshot => {
+                this.lvTotalCount = {
+                    lv1Count: snapshot.child('lv1Count').val(),
+                    lv2Count: snapshot.child('lv2Count').val(),
+                    lv3Count: snapshot.child('lv3Count').val()
+                };
+            });
     },
     timeInterval: null,
     methods: {
@@ -97,6 +113,7 @@ export default {
         resetToNextQuestion: function() {
             this.currentQuestion = Math.min(7, this.currentQuestion + 1);
             this.isShowResult = false;
+            this.displayResult = false;
             this.currentSelected = -1;
             this.resetTimeCount();
         },
@@ -104,25 +121,50 @@ export default {
             this.selectedAns[this.currentQuestion] = ans;
             let isOk = ans == this.ans[questionIndex];
             this.selectedAnsResult[this.currentQuestion] = isOk;
+            this.displayResult = isOk;
             this.isShowResult = true;
+
             if (this.currentQuestion < 7) {
-                if (ans > -1) {
-                    setTimeout(() => {
-                        this.resetToNextQuestion();
-                    }, 2000);
-                } else {
+                setTimeout(() => {
                     this.resetToNextQuestion();
-                }
+                }, 1500);
             } else {
                 //送出作答結果，等待後 轉到結果頁 帶網址參數
                 let correctCount = 0;
-                $(this.selectedAnsResult).each((index,item)=>{
-                    if(item){
-                       correctCount++; 
+                $(this.selectedAnsResult).each((index, item) => {
+                    if (item) {
+                        correctCount++;
                     }
                 });
-                console.log("答對: "+ correctCount);
+                console.log('答對: ' + correctCount);
+                this.submitResult(correctCount);
             }
+        },
+        submitResult(correctCount) {
+            let resultLv = 1;
+
+            if (correctCount <= 4) {
+                resultLv = 1;
+            } else if (correctCount <= 6) {
+                //type2 ++
+                resultLv = 2;
+            } else if (correctCount <= 8) {
+                //type3 ++
+                resultLv = 3;
+            }
+
+            let updateData = {};
+
+            updateData[`lv${resultLv}Count`] = this.lvTotalCount[`lv${resultLv}Count`] + 1;
+
+            _firebase
+                .database()
+                .ref()
+                .update(updateData, function(error) {
+                    setTimeout(() => {
+                        location.replace(`/result.html?count=${correctCount}`);
+                    }, 1500);
+                });
         },
         selectedOption: function(e, questionIndex, ans) {
             e.preventDefault();

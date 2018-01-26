@@ -4,25 +4,25 @@ section.result-chart
         div.chart
             div.chart-canvas
                 .bar-item.bar1
-                    .bar
-                    .text 100%
+                    .bar(ref="bar1")
+                    .text(ref="bar3Text") {{lv1DisplayNumber}}%
                 .bar-item.bar2
-                    .bar
-                    .text 100%
+                    .bar(ref="bar2")
+                    .text(ref="bar3Text") {{lv2DisplayNumber}}%
                 .bar-item.bar3
-                    .bar
-                    .text 100%
-            .user-bar
-                .people
-                .display-bar 
+                    .bar(ref="bar3")
+                    .text(ref="bar3Text") {{lv3DisplayNumber}}%
+            .user-bar(ref="userBar")
+                .people(ref="user")
+                .display-bar(ref="userDisplayBar")
             .y-line.clearfix
                 - for (var i = 1; i <= 8; ++i) {
                     span
                 - }
             .y-number.clearfix
-                - for (var i = 0; i <= 8; ++i) {
-                    div.y-number-grid.active
-                        span= i
+                - for (var j = 0; j  <= 8; ++j) {
+                    div.y-number-grid(v-bind:class="{active: userCorrectcCount == #{j}}")
+                        span= j 
                 - }
 
             
