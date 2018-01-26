@@ -9072,7 +9072,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 __vue__options__.render = function(){with(this){return _c('section',{staticClass:"index test"},[_c('div',{staticClass:"index__hd"}),_c('div',{staticClass:"index__bd"},[_c('div',{staticClass:"index__content"},[_c('div',{staticClass:"l-container"},[_c('div',{staticClass:"l-vm"},[_c('div',{staticClass:"l-vm__content"},[_c('div',{ref:"title",staticClass:"test__title"},[_v("麵包大會考 快問快答挑戰賽 考驗你的麵包級數 ")]),_c('div',{ref:"cover",staticClass:"index__cover"},[_c('div',{ref:"dish1",staticClass:"index__dish index__dish--1"}),_c('div',{ref:"dish2",staticClass:"index__dish index__dish--2"}),_c('div',{ref:"dish3",staticClass:"index__dish index__dish--3"}),_c('div',{ref:"dish4",staticClass:"index__dish index__dish--4"})]),_c('div',{ref:"ctrls",staticClass:"test__ctrls"},[_m(0)]),_c('div',{ref:"note",staticClass:"test__note hide-text"})])])])])]),_c('div',{staticClass:"index__ft"})])}}
-__vue__options__.staticRenderFns = [function(){with(this){return _c('a',{attrs:{"href":"\b/qa.html"}},[_c('span',{staticClass:"hideText"},[_v("開始測驗")])])}}]
+__vue__options__.staticRenderFns = [function(){with(this){return _c('a',{attrs:{"href":"\bqa.html"}},[_c('span',{staticClass:"hideText"},[_v("開始測驗")])])}}]
 __vue__options__._scopeId = "data-v-6"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
