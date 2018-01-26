@@ -1002,7 +1002,23 @@ _mixins
   height: 199px;
   /*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key3-6-m.png*/ }
 
+.key.key3 .key__item.key__item--6 span.mb {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.04978351992088781);
+  background-position: -418px -2458px;
+  width: 199px;
+  height: 199px;
+  /*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key3-6-m.png*/ }
+
 .key3-6 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.04978351992088781);
+  background-position: -2812px -1622px;
+  width: 140px;
+  height: 140px;
+  /*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key3-6.png*/ }
+
+.key.key3 .key__item.key__item--6 span.pc {
   display: block;
   background-image: url(../images/sprite.png?v=0.04978351992088781);
   background-position: -2812px -1622px;

@@ -643,7 +643,7 @@ $key-flow-height: 1020px;
         background-color: #a40000;
         box-shadow: 0 4px 0 0 #7d0000;
     }
-    @for $i from 1 through 5 {
+    @for $i from 1 through 6 {
         .key__item.key__item--#{$i} span.pc {
             @extend %key3-#{$i};
         }
