@@ -4076,7 +4076,7 @@ body {
       .nav-menu {
         background: #fff;
         width: 100%;
-        top: -301px;
+        top: -601px;
         position: absolute;
         -webkit-transition: all 0.3s ease-out;
         transition: all 0.3s ease-out;
@@ -4084,8 +4084,6 @@ body {
         z-index: 1;
         opacity: 0; }
         .nav-menu--active {
-          -webkit-box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.4);
           top: 101px;
           opacity: 1; }
       .nav-btn {
