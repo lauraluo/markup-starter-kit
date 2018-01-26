@@ -2,8 +2,8 @@ nav.nav(itemscope itemtype="http://schema.org/SiteNavigationElement" v-bind:clas
     div.l-container
         div.nav-bd.clearfix
             h1.nav-logo
-                a.hide-text(href="/" alt="康健x統一麵包" title="康健x統一麵包"): span 康健x統一麵包
-            div.nav__home: a(href="/"): span.nav-home-link.hide-text 回首頁
+                a.hide-text(href="../" alt="康健x統一麵包" title="康健x統一麵包"): span 康健x統一麵包
+            div.nav__home: a(href="../"): span.nav-home-link.hide-text 回首頁
             div.nav-btn(v-on:click="toggleMenu($event)")
                 div.one
                 div.two
@@ -16,20 +16,20 @@ nav.nav(itemscope itemtype="http://schema.org/SiteNavigationElement" v-bind:clas
             div.nav-menu(role="navigation"  v-bind:class="{ 'nav-menu--active': isShowMenu }")
                 ul.clearfix
                     li.nav-item
-                        a(href="/" alt="統一麵包大解密" itemprop="url" title="統一麵包大解密"): span 統一麵包大解密
+                        a(href="../" alt="統一麵包大解密" itemprop="url" title="統一麵包大解密"): span 統一麵包大解密
                     li.nav-item.nav-item--parent(v-bind:class="{ active: isShowSubMenu }"   )
                         a(href="/" alt="麵包小學堂" itemprop="url" title="麵包小學堂" v-on:click="toggleSubMenu($event)"): span 麵包小學堂
                         transition(name='fade'  enter-active-class="animated fadeIn" leave-active-class="animated fadeOut")
                             .nav-sub-wrap(v-show="isShowSubMenu")
                                 ul.nav-sub-menu  
                                     li.nav-sub-menu__item
-                                        a(href="/key.1.html" alt="保鮮術？兼顧安心美味的製程秘密！" itemprop="url" title="保鮮術？兼顧安心美味的製程秘密！")
+                                        a(href="../key.1.html" alt="保鮮術？兼顧安心美味的製程秘密！" itemprop="url" title="保鮮術？兼顧安心美味的製程秘密！")
                                             span 保鮮術？兼顧安心美味的製程秘密！
                                     li.nav-sub-menu__item
-                                        a(href="/key.2.html" alt="30年麵包師傅：紀律，才能確保每一口最佳口感！" itemprop="url" title="30年麵包師傅：紀律，才能確保每一口最佳口感！")
+                                        a(href="../key.2.html" alt="30年麵包師傅：紀律，才能確保每一口最佳口感！" itemprop="url" title="30年麵包師傅：紀律，才能確保每一口最佳口感！")
                                             span 30年麵包師傅：紀律，才能確保每一口最佳口感！
                                     li.nav-sub-menu__item
-                                        a(href="/key.3.html" alt="食安微角落靠專業自律！烘焙業龍頭大廠這樣做" itemprop="url" title="食安微角落靠專業自律！烘焙業龍頭大廠這樣做")
+                                        a(href="../key.3.html" alt="食安微角落靠專業自律！烘焙業龍頭大廠這樣做" itemprop="url" title="食安微角落靠專業自律！烘焙業龍頭大廠這樣做")
                                             span 食安微角落靠專業自律！烘焙業龍頭大廠這樣做
                     li.nav-item
-                        a(href="/test.html" alt="麵包大會考" itemprop="url" title="麵包大會考"): span 麵包大會考
+                        a(href="../test.html" alt="麵包大會考" itemprop="url" title="麵包大會考"): span 麵包大會考
