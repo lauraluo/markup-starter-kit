@@ -8249,7 +8249,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 __vue__options__.render = function(){with(this){return _c('section',{staticClass:"index"},[_c('div',{staticClass:"index__hd"}),_c('div',{staticClass:"index__bd"},[_c('div',{staticClass:"index__content"},[_c('div',{staticClass:"l-container"},[_c('div',{staticClass:"l-vm"},[_c('div',{staticClass:"l-vm__content"},[_c('div',{ref:"title",staticClass:"index__title hide-text"},[_v("麵包大解密 安心飲食新指標")]),_c('div',{ref:"cover",staticClass:"index__cover"},[_c('div',{ref:"dish1",staticClass:"index__dish index__dish--1"}),_c('div',{ref:"dish2",staticClass:"index__dish index__dish--2"}),_c('div',{ref:"dish3",staticClass:"index__dish index__dish--3"}),_c('div',{ref:"dish4",staticClass:"index__dish index__dish--4"})]),_c('div',{ref:"keys",staticClass:"index__keys"},[_c('a',{staticClass:"index__keys__item index__keys__item--1 hide-text",attrs:{"href":"/key.1.html"}},[_v("安心關鍵1 麵包保鮮")]),_c('a',{staticClass:"index__keys__item index__keys__item--2 hide-text",attrs:{"href":"/key.2.html"}},[_v("安心關鍵2 一致的品質")]),_c('a',{staticClass:"index__keys__item index__keys__item--3 hide-text",attrs:{"href":"/key.3.html"}},[_v("安心關鍵3 飲食安全")])]),_c('div',{ref:"note",staticClass:"index__note hide-text"})])])]),_c('a',{staticClass:"index__link-test hide-text",attrs:{"href":"/test.html"}},[_v("麵包大會考")])])]),_c('div',{staticClass:"index__ft"})])}}
 __vue__options__.staticRenderFns = []
-__vue__options__._scopeId = "data-v-5"
+__vue__options__._scopeId = "data-v-6"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -8259,9 +8259,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5", __vue__options__)
+    hotAPI.createRecord("data-v-6", __vue__options__)
   } else {
-    hotAPI.reload("data-v-5", __vue__options__)
+    hotAPI.reload("data-v-6", __vue__options__)
   }
 })()}
 },{"vue":2,"vue-hot-reload-api":1,"vueify/lib/insert-css":3}],5:[function(require,module,exports){
@@ -8433,9 +8433,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-7", __vue__options__)
+    hotAPI.createRecord("data-v-9", __vue__options__)
   } else {
-    hotAPI.reload("data-v-7", __vue__options__)
+    hotAPI.reload("data-v-9", __vue__options__)
   }
 })()}
 },{"vue":2,"vue-hot-reload-api":1,"vueify/lib/insert-css":3}],8:[function(require,module,exports){
@@ -8480,9 +8480,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-9", __vue__options__)
+    hotAPI.createRecord("data-v-7", __vue__options__)
   } else {
-    hotAPI.reload("data-v-9", __vue__options__)
+    hotAPI.reload("data-v-7", __vue__options__)
   }
 })()}
 },{"vue":2,"vue-hot-reload-api":1,"vueify/lib/insert-css":3}],9:[function(require,module,exports){
@@ -8916,7 +8916,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 __vue__options__.render = function(){with(this){return _c('section',{staticClass:"result-chart"},[_c('div',{staticClass:"l-container"},[_c('div',{staticClass:"title"},[_v("玩過的人都對幾題")]),_c('div',{staticClass:"chart"},[_c('div',{staticClass:"chart-canvas"},[_c('div',{staticClass:"bar-item bar1"},[_c('div',{ref:"bar1",staticClass:"bar"}),_c('div',{ref:"bar3Text",staticClass:"text"},[_v(_s(lv1DisplayNumber)+"%")])]),_c('div',{staticClass:"bar-item bar2"},[_c('div',{ref:"bar2",staticClass:"bar"}),_c('div',{ref:"bar3Text",staticClass:"text"},[_v(_s(lv2DisplayNumber)+"%")])]),_c('div',{staticClass:"bar-item bar3"},[_c('div',{ref:"bar3",staticClass:"bar"}),_c('div',{ref:"bar3Text",staticClass:"text"},[_v(_s(lv3DisplayNumber)+"%")])])]),_c('div',{ref:"userBar",staticClass:"user-bar"},[_c('div',{ref:"user",staticClass:"people"}),_c('div',{ref:"userDisplayBar",staticClass:"display-bar"})]),_m(0),_c('div',{staticClass:"y-number clearfix"},[_c('div',{staticClass:"y-number-grid",class:{active: userCorrectcCount == 0}},[_c('span',[_v("0")])]),_c('div',{staticClass:"y-number-grid",class:{active: userCorrectcCount == 1}},[_c('span',[_v("1")])]),_c('div',{staticClass:"y-number-grid",class:{active: userCorrectcCount == 2}},[_c('span',[_v("2")])]),_c('div',{staticClass:"y-number-grid",class:{active: userCorrectcCount == 3}},[_c('span',[_v("3")])]),_c('div',{staticClass:"y-number-grid",class:{active: userCorrectcCount == 4}},[_c('span',[_v("4")])]),_c('div',{staticClass:"y-number-grid",class:{active: userCorrectcCount == 5}},[_c('span',[_v("5")])]),_c('div',{staticClass:"y-number-grid",class:{active: userCorrectcCount == 6}},[_c('span',[_v("6")])]),_c('div',{staticClass:"y-number-grid",class:{active: userCorrectcCount == 7}},[_c('span',[_v("7")])]),_c('div',{staticClass:"y-number-grid",class:{active: userCorrectcCount == 8}},[_c('span',[_v("8")])])])])])])}}
 __vue__options__.staticRenderFns = [function(){with(this){return _c('div',{staticClass:"y-line clearfix"},[_c('span'),_c('span'),_c('span'),_c('span'),_c('span'),_c('span'),_c('span'),_c('span')])}}]
-__vue__options__._scopeId = "data-v-11"
+__vue__options__._scopeId = "data-v-10"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -8926,9 +8926,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-11", __vue__options__)
+    hotAPI.createRecord("data-v-10", __vue__options__)
   } else {
-    hotAPI.reload("data-v-11", __vue__options__)
+    hotAPI.reload("data-v-10", __vue__options__)
   }
 })()}
 },{"vue":2,"vue-hot-reload-api":1,"vueify/lib/insert-css":3}],13:[function(require,module,exports){
@@ -8971,7 +8971,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 __vue__options__.render = function(){with(this){return _c('div',{staticClass:"library"},[_c('div',{staticClass:"libary__group libary__group--1",class:{'active': currentOpened == 1},on:{"click":function($event){toogleLibary($event,1)}}},[_m(0),_c('div',{ref:"content1",staticClass:"libary__content"},[_m(1)])]),_c('div',{staticClass:"libary__group libary__group--2",class:{active: currentOpened == 2},on:{"click":function($event){toogleLibary($event,2)}}},[_m(2),_c('div',{ref:"content2",staticClass:"libary__content"},[_m(3)])]),_c('div',{staticClass:"libary__group libary__group--3",class:{active: currentOpened == 3},on:{"click":function($event){toogleLibary($event,3)}}},[_m(4),_c('div',{ref:"content3",staticClass:"libary__content"},[_m(5)])])])}}
 __vue__options__.staticRenderFns = [function(){with(this){return _c('div',{staticClass:"libary__title"},[_c('div',{staticClass:"l-container"},[_c('span',{staticClass:"text"},[_v("一般麵包知識題")]),_c('span',{staticClass:"icon"})])])}},function(){with(this){return _c('dl',{staticClass:"l-container"},[_c('div',{staticClass:"main"},[_c('div',{staticClass:"item"},[_c('dt',{staticClass:"q"},[_v("Q. 製成麵包需要哪四大基本元素？")]),_c('dd',{staticClass:"a"},[_v("A. 麵粉、水、鹽、酵母")]),_c('dd',{staticClass:"text"},[_v("製作麵包的基本原料包括了水、麵粉、鹽和酵母，臺灣較流行的麵包口味則會再加上油脂、糖和蛋。"),_c('br'),_v("\n[麵粉] 影響口感。麵粉加水揉和時產生筋性，在發酵過程中，酵母產生的二氧化碳封鎖在麵糰中，讓麵包膨脹。"),_c('br'),_v("\n[水] 若發酵時間充足，水能夠充分地滲透到麵粉的深層組織中，也能讓麵包更柔軟保濕。"),_c('br'),_v("\n[鹽]讓麵糰具有柔軟度及彈性。"),_c('br'),_v("\n[酵母] 可使麵糰蓬鬆。"),_c('br')])]),_c('div',{staticClass:"item"},[_c('dt',{staticClass:"q"},[_v("Q. 麵包不添加防腐劑，會很容易發霉？")]),_c('dd',{staticClass:"a"},[_v("A. 不一定")]),_c('dd',{staticClass:"text"},[_v("其實麵包是烤熟，並不容易壞，如果環境條件控制好，例如火候、溫濕度、麵包冷透後密封包裝等，可以用不加防腐劑的方式，再延長麵包的保鮮期。"),_c('br'),_v("\n統一麵包為讓麵包更柔軟且不易乾硬，也掌控了麵包的水活性，在不添加添加物的前提下，增加賞味期限。")])]),_c('div',{staticClass:"item"},[_c('dt',{staticClass:"q"},[_v("Q. 哪個菌種作用，讓麵包可以蓬鬆柔軟？")]),_c('dd',{staticClass:"a"},[_v("A. 應該是酵母菌")]),_c('dd',{staticClass:"text"},[_v("酵母可使麵糰蓬鬆。"),_c('br'),_v("\n統一麵包研究團隊不斷地技術創新，例如透過使用卵磷脂、蛋黃或是攪拌方式，強化口感綿密的效果。")])])])])}},function(){with(this){return _c('div',{staticClass:"libary__title"},[_c('div',{staticClass:"l-container"},[_c('span',{staticClass:"text"},[_v("包裝麵包認知題")]),_c('span',{staticClass:"icon"})])])}},function(){with(this){return _c('dl',{staticClass:"l-container"},[_c('div',{staticClass:"main"},[_c('div',{staticClass:"item"},[_c('dt',{staticClass:"q"},[_v("Q. 年輕媽媽購買麵包給小朋友吃時，應該建議她注意下列哪項？")]),_c('dd',{staticClass:"a"},[_v("A. 原料、營養標示、製造日期、保存期限…以上皆是")]),_c('dd',{staticClass:"text"},[_v("目前法規只規定包裝食品應有成分及營養標示，對於散裝食品的規範則相對寬鬆，只能期待業者自主標示原料及相關營養訊息。"),_c('br'),_v("\n地方衛生單位的稽核也僅集中於一定規模以上的食品廠，對於坊間烘焙坊，只適用熟食法規來進行微生物汙染源的規範。"),_c('br'),_v("\n大型食品廠在廠房配置、水源及食品衛生專業人員編制等都有規範，並要求業者具備原料溯源和自主檢驗的能力。小規模烘焙坊往往連與上游廠商的議價能力都有限，更遑論做到前往上游供應商查看的自主管理與源頭管理。"),_c('br'),_v("\n如何確保民眾買到安心的商品，除了業者，更依賴消費者自身的選擇與把關！")])]),_c('div',{staticClass:"item"},[_c('dt',{staticClass:"q"},[_v("以下哪一個是台灣最大包裝麵包品牌logo？")]),_c('dd',{staticClass:"a clearfix"},[_v("A."),_c('img',{attrs:{"src":"../images/qa-logo.png","alt":""}})]),_c('dd',{staticClass:"text"},[_v("其實麵包是烤熟，並不容易壞，如果環境條件控制好，例如火候、溫濕度、麵包冷透後密封包裝等，可以用不加防腐劑的方式，再延長麵包的保鮮期。"),_c('br'),_v("\n統一麵包於1980年創立，是當時台灣最大、最自動化的機製麵包廠。38年來，統一麵包持續用心烘焙出經典麵包，堅持帶給人們吃的幸福。")])]),_c('div',{staticClass:"item"},[_c('dt',{staticClass:"q"},[_v("Q. 麵包剛出爐，應該控制什麼環境因子來維持鮮度？")]),_c('dd',{staticClass:"a"},[_v("A. 溫濕度")]),_c('dd',{staticClass:"text"},[_v("統一麵包生產廠除了有嚴密的清潔消毒，空氣中的落菌數也必須每天監測，全廠區內也均有嚴格的溫、溼度掌控。除了生產線上從半成品到成品的輸送過程，嚴格要求完整的覆蓋保護，包裝後的麵包，從廠內到裝上配送車送到門市，全程都必須控制在28℃ 以下。避免過程中出現任何食安隱憂。")])])])])}},function(){with(this){return _c('div',{staticClass:"libary__title"},[_c('div',{staticClass:"l-container"},[_c('span',{staticClass:"text"},[_v("麵包達人得分題")]),_c('span',{staticClass:"icon"})])])}},function(){with(this){return _c('dl',{staticClass:"l-container"},[_c('div',{staticClass:"main"},[_c('div',{staticClass:"item"},[_c('dt',{staticClass:"q"},[_v("Q. 年輕媽媽購買麵包給小朋友吃時，應該建議她注意下列哪項？")]),_c('dd',{staticClass:"a"},[_v("A. 原料、營養標示、製造日期、保存期限…以上皆是")]),_c('dd',{staticClass:"text"},[_v("目前法規只規定包裝食品應有成分及營養標示，對於散裝食品的規範則相對寬鬆，只能期待業者自主標示原料及相關營養訊息。"),_c('br'),_v("\n地方衛生單位的稽核也僅集中於一定規模以上的食品廠，對於坊間烘焙坊，只適用熟食法規來進行微生物汙染源的規範。"),_c('br'),_v("\n大型食品廠在廠房配置、水源及食品衛生專業人員編制等都有規範，並要求業者具備原料溯源和自主檢驗的能力。小規模烘焙坊往往連與上游廠商的議價能力都有限，更遑論做到前往上游供應商查看的自主管理與源頭管理。"),_c('br'),_v("\n如何確保民眾買到安心的商品，除了業者，更依賴消費者自身的選擇與把關！")])]),_c('div',{staticClass:"item"},[_c('dt',{staticClass:"q"},[_v("包多以下哪個元素，能有較佳風味？")]),_c('dd',{staticClass:"a clearfix"},[_v("A. 低溫熟成的自製老麵種 ")]),_c('dd',{staticClass:"text"},[_v("老麵種是指長時間發酵的麵糰，因為長期發酵，所以會比一般的麵糰香，也會讓麵包口感變好。"),_c('br'),_v("\n統一麵包內部研發自製老麵種，以長時間低溫培養，讓酵母菌和乳酸菌能夠充分地生長。同時，也經過百位認證烘焙師傅的用心監控，只為讓消費者不受時間與空間限制，也能安心享受麵包的美味。")])])])])}}]
-__vue__options__._scopeId = "data-v-10"
+__vue__options__._scopeId = "data-v-11"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -8981,9 +8981,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-10", __vue__options__)
+    hotAPI.createRecord("data-v-11", __vue__options__)
   } else {
-    hotAPI.reload("data-v-10", __vue__options__)
+    hotAPI.reload("data-v-11", __vue__options__)
   }
 })()}
 },{"vue":2,"vue-hot-reload-api":1,"vueify/lib/insert-css":3}],14:[function(require,module,exports){
@@ -9073,7 +9073,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 __vue__options__.render = function(){with(this){return _c('section',{staticClass:"index test"},[_c('div',{staticClass:"index__hd"}),_c('div',{staticClass:"index__bd"},[_c('div',{staticClass:"index__content"},[_c('div',{staticClass:"l-container"},[_c('div',{staticClass:"l-vm"},[_c('div',{staticClass:"l-vm__content"},[_c('div',{ref:"title",staticClass:"test__title"},[_v("麵包大會考 快問快答挑戰賽 考驗你的麵包級數 ")]),_c('div',{ref:"cover",staticClass:"index__cover"},[_c('div',{ref:"dish1",staticClass:"index__dish index__dish--1"}),_c('div',{ref:"dish2",staticClass:"index__dish index__dish--2"}),_c('div',{ref:"dish3",staticClass:"index__dish index__dish--3"}),_c('div',{ref:"dish4",staticClass:"index__dish index__dish--4"})]),_c('div',{ref:"ctrls",staticClass:"test__ctrls"},[_m(0)]),_c('div',{ref:"note",staticClass:"test__note hide-text"})])])])])]),_c('div',{staticClass:"index__ft"})])}}
 __vue__options__.staticRenderFns = [function(){with(this){return _c('a',{attrs:{"href":"\b/qa.html"}},[_c('span',{staticClass:"hideText"},[_v("開始測驗")])])}}]
-__vue__options__._scopeId = "data-v-6"
+__vue__options__._scopeId = "data-v-5"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -9083,9 +9083,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-6", __vue__options__)
+    hotAPI.createRecord("data-v-5", __vue__options__)
   } else {
-    hotAPI.reload("data-v-6", __vue__options__)
+    hotAPI.reload("data-v-5", __vue__options__)
   }
 })()}
 },{"vue":2,"vue-hot-reload-api":1,"vueify/lib/insert-css":3}],15:[function(require,module,exports){
