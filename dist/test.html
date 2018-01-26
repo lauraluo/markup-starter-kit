@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Article" ng-app="markup" debug="false">
+  <!--page default Information-->
+  <!--html head-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge,chrome=1">
+    <title>首頁</title>
+    <meta name="description" content="敘述">
+    <meta name="viewport" content="width=640">
+    <!-- Schema.org markup for Google+-->
+    <meta itemprop="name" content="首頁">
+    <meta itemprop="description" content="敘述">
+    <meta itemprop="image" content="指定顯示圖片">
+    <!-- og-->
+    <meta property="og:title" content="首頁">
+    <meta property="og:description" content="敘述">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="指定顯示圖片">
+    <link rel="Shortcut Icon" type="images/x-icon" href="../images/fav.ico">
+    <link rel="stylesheet" href="css/main.css"><!--CDN link for  TweenMax-->
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.1/mobile-detect.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://code.createjs.com/preloadjs-0.6.1.min.js"></script>
+    <script type="text/javascript">
+      var md = new MobileDetect(window.navigator.userAgent);
+      var IsMobile = md.phone() != null || md.tablet() != null  || window.innerWidth <= 640;
+      // Initialize Firebase
+      // Initialize Firebase
+      var config = {
+          apiKey: "AIzaSyBOr4h4h97xUQ0UjtYP7CVJt12V8htNAzs",
+          authDomain: "ch-2018-uni-bread.firebaseapp.com",
+          databaseURL: "https://ch-2018-uni-bread.firebaseio.com",
+          projectId: "ch-2018-uni-bread",
+          storageBucket: "ch-2018-uni-bread.appspot.com",
+          messagingSenderId: "569018786142"
+      };
+      var _firebase = firebase.initializeApp(config);
+    </script>
+  </head>
+  <!--html body-->
+  <body class="l-index">
+    <div class="l-wrap">
+      <!--nav-->
+      <div id="nav"></div>
+      <div id="pageMain" class="l-main">
+        <!--main view-->
+        <div id="test">
+          <section class="index test">
+            <div class="index__hd"></div>
+            <div class="index__bd">
+              <div class="index__content">
+                <div class="l-container">
+                  <div class="l-vm">
+                    <div class="l-vm__content">
+                      <div ref="title" class="test__title">麵包大會考 快問快答挑戰賽 考驗你的麵包級數 </div>
+                      <div ref="cover" class="index__cover">
+                        <div ref="dish1" class="index__dish index__dish--1"></div>
+                        <div ref="dish2" class="index__dish index__dish--2"></div>
+                        <div ref="dish3" class="index__dish index__dish--3"></div>
+                        <div ref="dish4" class="index__dish index__dish--4"></div>
+                      </div>
+                      <div ref="ctrls" class="test__ctrls"><a href="/qa.html"><span class="hideText">開始測驗</span></a></div>
+                      <div ref="note" class="test__note hide-text"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="index__ft"></div>
+          </section>
+        </div>
+        <div class="l-footer footer">
+          <div class="footer1">
+            <div class="l-container"></div>
+          </div>
+          <div class="footer2">
+            <div class="l-container">
+              <div id="commonhealth_footer">
+                <div class="commonhealth_footer-channel">
+                  <ul>
+                    <li><a href="http://www.commonhealth.com.tw/magazine/latest/" target="_blank">康健雜誌</a></li>
+                    <li><a href="https://www.commonhealth.com.tw/book/index.action" target="_blank">康健出版</a></li>
+                    <li><a href="http://www.commonhealth.com.tw/" target="_blank">康健官網</a></li>
+                    <li><a href="https://www.youtube.com/user/CommonHealthTV" target="_blank">康健影音</a></li>
+                    <li><a href="https://line.me/ti/p/@commonhealth" target="_blank">康健LINE</a></li><br>
+                    <li><a href="https://www.facebook.com/commonhealth/" target="_blank">康健FB</a></li>
+                    <li><a href="https://kb.commonhealth.com.tw/" target="_blank">康健知識庫</a></li>
+                    <li><a href="https://club.commonhealth.com.tw/" target="_blank">大人の社團</a></li>
+                    <li><a href="https://shop.commonhealth.com.tw/" target="_blank">大人的好物</a></li>
+                  </ul>
+                </div>
+                <div class="commonhealth_footer-copyright">Copyright © 2017 康健雜誌. <br>All rights reserved. 版權所有，禁止擅自轉貼節錄</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fb-root"></div>
+  </body>
+  <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.4&appId=262477160615577";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <script src="../bundle.js"></script>
+</html>

@@ -3,23 +3,7 @@ extends _layout.jade
 
 //page html
 block page_main
-    section.index.test
-        div.index__hd
-        div.index__bd
-            div.index__content
-                div.l-container
-                    div.l-vm
-                        div.l-vm__content
-                            .test__title 麵包大會考 快問快答挑戰賽 考驗你的麵包級數 
-                            .index__cover
-                                .index__dish.index__dish--1
-                                .index__dish.index__dish--2
-                                .index__dish.index__dish--3
-                                .index__dish.index__dish--4
-                            .test__ctrls
-                                a(href="/qa.html"): span.hideText 開始測驗
-                            .test__note.hide-text
-                    
-        div.index__ft
+    div(id='test')
+        include _test.jade
     include _footer.jade
 

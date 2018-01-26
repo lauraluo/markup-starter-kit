@@ -2,7 +2,7 @@ section.qa(id="qa")
     .qa__mask(v-if="isShowResult")
     div.qa__result(v-if="isShowResult" v-bind:class="{ok:displayResult,error:!displayResult}")
     div.qa__bd           
-        div.qa__content(v-bind:class="{'fxied3': currentQuestion == 0}")
+        div.qa__content(v-bind:class="{'fixed4': currentQuestion == 3}")
             div.l-container
                 transition-group(name='fade' enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft" tag="div")
                     div.qa-wrap(v-for="(question,index) in questions" v-bind:key="index"  v-if="index == currentQuestion" )            

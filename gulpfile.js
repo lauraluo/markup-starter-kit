@@ -15,6 +15,7 @@ const gulp = require('gulp'),
     vueify = require('gulp-vueify'),
     babel = require('gulp-babel');
 // browserify = require('gulp-browserify');
+var envify = require('envify/custom');
 
 var babelify = require('babelify');
 var extend = require('extend');
@@ -163,7 +164,10 @@ var customOpts = {
     debug: true
 };
 var opts = assign({}, watchify.args, customOpts);
-var b = watchify(browserify(opts));
+
+var b = watchify(
+    browserify(opts).transform({ global: true }, envify({ NODE_ENV: 'production' }))
+);
 
 gulp.task('bundleJs', bundle);
 b.on('update', bundle);
@@ -230,6 +234,7 @@ gulp.task('build', ['bundleJs', 'sprite', 'jade', 'sass', 'copyAll'], function()
 
 //Group Dev
 gulp.task('dev', ['set-dev-node-env', 'build', 'connectDist', 'watch', 'open'], function() {});
+gulp.task('public', ['build'], function() {});
 
 //Default  Task
 gulp.task('default', ['dev'], function() {});

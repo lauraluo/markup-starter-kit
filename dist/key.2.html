@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Article" ng-app="markup" debug="false">
+  <!--page default Information-->
+  <!--html head-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge,chrome=1">
+    <title>首頁</title>
+    <meta name="description" content="敘述">
+    <meta name="viewport" content="width=640">
+    <!-- Schema.org markup for Google+-->
+    <meta itemprop="name" content="首頁">
+    <meta itemprop="description" content="敘述">
+    <meta itemprop="image" content="指定顯示圖片">
+    <!-- og-->
+    <meta property="og:title" content="首頁">
+    <meta property="og:description" content="敘述">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="指定顯示圖片">
+    <link rel="Shortcut Icon" type="images/x-icon" href="../images/fav.ico">
+    <link rel="stylesheet" href="css/main.css"><!--CDN link for  TweenMax-->
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.1/mobile-detect.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://code.createjs.com/preloadjs-0.6.1.min.js"></script>
+    <script type="text/javascript">
+      var md = new MobileDetect(window.navigator.userAgent);
+      var IsMobile = md.phone() != null || md.tablet() != null  || window.innerWidth <= 640;
+      // Initialize Firebase
+      // Initialize Firebase
+      var config = {
+          apiKey: "AIzaSyBOr4h4h97xUQ0UjtYP7CVJt12V8htNAzs",
+          authDomain: "ch-2018-uni-bread.firebaseapp.com",
+          databaseURL: "https://ch-2018-uni-bread.firebaseio.com",
+          projectId: "ch-2018-uni-bread",
+          storageBucket: "ch-2018-uni-bread.appspot.com",
+          messagingSenderId: "569018786142"
+      };
+      var _firebase = firebase.initializeApp(config);
+    </script>
+  </head>
+  <!--html body-->
+  <body class="l-index">
+    <div class="l-wrap">
+      <!--nav-->
+      <div id="nav"></div>
+      <div id="pageMain" class="l-main">
+        <!--main view-->
+        <section id="key" class="key key2">
+          <div class="key__hd"></div>
+          <div class="key__bd">
+            <div class="l-container">
+              <section class="key__content">
+                <h1 class="key__title">安心關鍵 2 一張圖看懂 麵包一致的品質關鍵 30年麵包師傅：紀律，才能確保每一口最佳口感！</h1>
+                <div class="key__flow">
+                  <div class="key__flow__main">
+                    <div class="key__flow__bread key__flow__bread--1"></div>
+                    <div class="key__flow__box key__flow__box--1"></div>
+                    <div class="key__flow__bread key__flow__bread--2"></div>
+                    <div class="key__flow__box key__flow__box--2"></div>
+                    <div class="key__flow__line"></div>
+                    <div class="key__flow__bread key__flow__bread--3"></div>
+                  </div>
+                  <div class="key__anis">
+                    <div class="key__ani key__ani--1"></div>
+                    <div class="key__ani key__ani--2"></div>
+                    <div class="key__ani key__ani--3"></div>
+                    <div class="key__ani key__ani--4"></div>
+                    <div class="key__ani key__ani--5"></div>
+                  </div>
+                  <div class="key__items">
+                    <div v-on:click="showPop($event, 0)" class="key__item key__item--1"><span class="title hide">麵包專業講解：紀律X時間，換取一致的品質</span><span class="content hide">「每一個麵包都能享受到同樣的幸福，才能讓消費者吃到的都是一樣新鮮和口感的麵包！」高品質麵包不只需要研發者的用心，更需要製程上所有人員的專業和嚴格控管，相較於一般的烘焙坊，機製麵包有專業製程與把關，才能每天為國人供應超過30萬一致的高品質麵包！</span><span class="pc"></span><span class="mb"></span>
+                      <div class="icon"></div>
+                    </div>
+                    <div v-on:click="showPop($event, 1)" class="key__item key__item--2"><span class="title hide">專業細節1：人員專業及研發力</span><span class="content hide">高品質的製程從第一線人員開始，工廠的創新速度(專利申請)和員工的專業程度(國家級證照)，都直接影響每個產品的品質！</span><span class="pc"></span><span class="mb"></span>
+                      <div class="icon"></div>
+                    </div>
+                    <div v-on:click="showPop($event, 2)" class="key__item key__item--3"><span class="title hide">專業細節2：長時間中種法</span><span class="content hide">麵包要美味一刻也急不得！相較一般烘焙採取短時間直接法；長時間低溫培養，才能讓酵母菌和乳酸菌充分地活化，代謝產生的有機酸、酵素與麵糰作用，才能完整釋放出熟成的香氣、品質更柔軟細緻。不用添加物也能香郁美味！</span><span class="pc"></span><span class="mb"></span>
+                      <div class="icon"></div>
+                    </div>
+                    <div v-on:click="showPop($event, 3)" class="key__item key__item--4"><span class="title hide">專業細節3：自製老麵種</span><span class="content hide">低溫熟成的自製老麵種產生乳酸及醋酸等有機酸降低麵糰的pH值，能夠抑制雜菌的生長，讓麵包的賞味期限得以延長，柔軟鮮度能維持得更久。</span><span class="pc"></span><span class="mb"></span>
+                      <div class="icon"></div>
+                    </div>
+                    <div v-on:click="showPop($event, 4)" class="key__item key__item--5"><span class="title hide">專業細節4：自動生產的輔助</span><span class="content hide">手工+機器做出來的麵包，比全手工更有品質！手工難免有技術侷限和不穩定度，機器可以成為很好的輔助。例如手工包餡的時候很難掌控，但包餡機就能做到皮薄餡多、均勻分布，確保最完美的口感。</span><span class="pc"></span><span class="mb"></span>
+                      <div class="icon"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="key__end">
+                  <div class="key__share">
+                    <div class="key__share__item square_fb"></div>
+                    <div class="key__share__item square_line"></div>
+                    <div class="key__share__item square_tw"></div>
+                    <div class="key__share__item square_gl"></div>
+                  </div>
+                  <div class="key__end__note"></div>
+                  <div class="key__end__ctrls"><a href="/key.1.html" class="next">上個關鍵：麵包保鮮</a><a href="/key.3.html" class="next">下個關鍵：麵包飲食安全</a></div>
+                </div><a href="/test.html" class="index__link-test hide-text">麵包大會考</a>
+              </section>
+            </div>
+          </div>
+        </section>
+        <div class="footer-page">
+          <div class="l-container">
+            <div class="footer-page__content">
+              <div class="video hideText">  熱銷單品海鹽羅宋麵包鹹甜交織，成全令人懷念的經典美味</div>
+              <div class="classic hideText">統一麵包經典烘焙，一直都在不受時間限制，也能享受安心的美味</div>
+            </div>
+          </div>
+          <div class="l-footer footer">
+            <div class="footer1">
+              <div class="l-container"></div>
+            </div>
+            <div class="footer2">
+              <div class="l-container">
+                <div id="commonhealth_footer">
+                  <div class="commonhealth_footer-channel">
+                    <ul>
+                      <li><a href="http://www.commonhealth.com.tw/magazine/latest/" target="_blank">康健雜誌</a></li>
+                      <li><a href="https://www.commonhealth.com.tw/book/index.action" target="_blank">康健出版</a></li>
+                      <li><a href="http://www.commonhealth.com.tw/" target="_blank">康健官網</a></li>
+                      <li><a href="https://www.youtube.com/user/CommonHealthTV" target="_blank">康健影音</a></li>
+                      <li><a href="https://line.me/ti/p/@commonhealth" target="_blank">康健LINE</a></li><br>
+                      <li><a href="https://www.facebook.com/commonhealth/" target="_blank">康健FB</a></li>
+                      <li><a href="https://kb.commonhealth.com.tw/" target="_blank">康健知識庫</a></li>
+                      <li><a href="https://club.commonhealth.com.tw/" target="_blank">大人の社團</a></li>
+                      <li><a href="https://shop.commonhealth.com.tw/" target="_blank">大人的好物</a></li>
+                    </ul>
+                  </div>
+                  <div class="commonhealth_footer-copyright">Copyright © 2017 康健雜誌. <br>All rights reserved. 版權所有，禁止擅自轉貼節錄</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fb-root"></div>
+  </body>
+  <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.4&appId=262477160615577";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <script src="../bundle.js"></script>
+</html>

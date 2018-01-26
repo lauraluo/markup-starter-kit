@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Article" ng-app="markup" debug="false">
+  <!--page default Information-->
+  <!--html head-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge,chrome=1">
+    <title>首頁</title>
+    <meta name="description" content="敘述">
+    <meta name="viewport" content="width=640">
+    <!-- Schema.org markup for Google+-->
+    <meta itemprop="name" content="首頁">
+    <meta itemprop="description" content="敘述">
+    <meta itemprop="image" content="指定顯示圖片">
+    <!-- og-->
+    <meta property="og:title" content="首頁">
+    <meta property="og:description" content="敘述">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="指定顯示圖片">
+    <link rel="Shortcut Icon" type="images/x-icon" href="../images/fav.ico">
+    <link rel="stylesheet" href="css/main.css"><!--CDN link for  TweenMax-->
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.1/mobile-detect.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://code.createjs.com/preloadjs-0.6.1.min.js"></script>
+    <script type="text/javascript">
+      var md = new MobileDetect(window.navigator.userAgent);
+      var IsMobile = md.phone() != null || md.tablet() != null  || window.innerWidth <= 640;
+      // Initialize Firebase
+      // Initialize Firebase
+      var config = {
+          apiKey: "AIzaSyBOr4h4h97xUQ0UjtYP7CVJt12V8htNAzs",
+          authDomain: "ch-2018-uni-bread.firebaseapp.com",
+          databaseURL: "https://ch-2018-uni-bread.firebaseio.com",
+          projectId: "ch-2018-uni-bread",
+          storageBucket: "ch-2018-uni-bread.appspot.com",
+          messagingSenderId: "569018786142"
+      };
+      var _firebase = firebase.initializeApp(config);
+    </script>
+  </head>
+  <!--html body-->
+  <body class="l-index">
+    <div class="l-wrap">
+      <!--nav-->
+      <div id="nav"></div>
+      <div id="pageMain" class="l-main">
+        <!--main view-->
+        <section id="key" class="key key3">
+          <div class="key__hd"></div>
+          <div class="key__bd">
+            <div class="l-container">
+              <section class="key__content">
+                <h1 class="key__title">安心關鍵 3 一張圖看懂 麵包飲食安全關鍵 食安微角落靠專業自律！烘焙業龍頭大廠這樣做</h1>
+                <div class="key__flow">
+                  <div class="key__flow__main">
+                    <div class="key__flow__bread key__flow__bread--1"></div>
+                    <div class="key__flow__box key__flow__box--1"></div>
+                    <div class="key__flow__bread key__flow__bread--2"></div>
+                    <div class="key__flow__box key__flow__box--2"></div>
+                    <div class="key__flow__line"></div>
+                    <div class="key__flow__bread key__flow__bread--3"></div>
+                  </div>
+                  <div class="key__anis">
+                    <div class="key__ani key__ani--1"></div>
+                    <div class="key__ani key__ani--2"></div>
+                    <div class="key__ani key__ani--3"></div>
+                    <div class="key__ani key__ani--4"></div>
+                    <div class="key__ani key__ani--5"></div>
+                  </div>
+                  <div class="key__items">
+                    <div v-on:click="showPop($event, 0)" class="key__item key__item--1"><span class="title hide">麵包專業講解：&lt;br/&gt;食安微角落的自律把關才有食品安全!</span><span class="content hide">食品真的是良心事業！平價產品卻有高標準、高成本的自律機制，麵包製程不複雜，但食品安全關鍵在於魔鬼細節，幾大關鍵點是民眾和其他烘焙業者要參考學習的。</span><span class="pc"></span><span class="mb"></span>
+                      <div class="icon"></div>
+                    </div>
+                    <div v-on:click="showPop($event, 1)" class="key__item key__item--2"><span class="title hide">專業細節1：嚴格採購原則原料品質把關</span><span class="content hide">原料的品質和等級每批都不同，內部要訂定嚴格的採購原則，確保產品的食安品質。例如不得含防腐劑、到貨的原料保存期限，在採購時捨棄能降低成本的大量購買，而是用少量訂單的方式逐批採購，維持原料的鮮度。</span><span class="pc"></span><span class="mb"></span>
+                      <div class="icon"></div>
+                    </div>
+                    <div v-on:click="showPop($event, 2)" class="key__item key__item--3"><span class="title hide">專業細節2：溯源管理原料源頭把關</span><span class="content hide">食安危機常出現於源頭，大型的烘焙品牌才有力量前往源頭要求與檢驗。以雞蛋為例，從畜牧場使用的水、飼料、養殖環境，到液蛋的藥物殘留檢測、液蛋全程運輸溫控，都是食安的重要把關作為。</span><span class="pc"></span><span class="mb"></span>
+                      <div class="icon"></div>
+                    </div>
+                    <div v-on:click="showPop($event, 3)" class="key__item key__item--4"><span class="title hide">專業細節3：嚴格原料及成品檢驗</span><span class="content hide">食品大廠除了能有嚴密的供應商管理，將採購風險降到最低，進廠生產到出貨也需要嚴格「自主檢驗」。例如金屬、包裝等食安指標檢測，確認安全無虞才能出貨。</span><span class="pc"></span><span class="mb"></span>
+                      <div class="icon"></div>
+                    </div>
+                    <div v-on:click="showPop($event, 4)" class="key__item key__item--5"><span class="title hide">專業細節4：烹飪器皿的安全性</span><span class="content hide">烹飪器皿的材質風險、過度使用都可能導致食安問題的發生，任何細節都不可輕忽。例如烤盤的使用紀錄、定期更換，在所有接觸到原料的器具材質也都應有嚴格的要求。</span><span class="pc"></span><span class="mb"></span>
+                      <div class="icon"></div>
+                    </div>
+                    <div v-on:click="showPop($event, 5)" class="key__item key__item--6"><span class="title hide">專業細節5：體制外食安中心監督</span><span class="content hide">除了自主管理，第三方單位的不定期抽檢也是食安維護不懈怠的動能。專業良心的食品品牌會有「食安警察」機制，隨時把關風險、嚴格監控，幫助民眾安心飲食。</span><span class="pc"></span><span class="mb"></span>
+                      <div class="icon"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="key__end">
+                  <div class="key__share">
+                    <div class="key__share__item square_fb"></div>
+                    <div class="key__share__item square_line"></div>
+                    <div class="key__share__item square_tw"></div>
+                    <div class="key__share__item square_gl"></div>
+                  </div>
+                  <div class="key__end__note"></div>
+                  <div class="key__end__ctrls"><a href="/key.2.html" class="prev">上個關鍵：麵包一致的品質</a></div>
+                </div><a href="/test.html" class="index__link-test hide-text">麵包大會考</a>
+              </section>
+            </div>
+          </div>
+        </section>
+        <div class="footer-page">
+          <div class="l-container">
+            <div class="footer-page__content">
+              <div class="video hideText">  熱銷單品海鹽羅宋麵包鹹甜交織，成全令人懷念的經典美味</div>
+              <div class="classic hideText">統一麵包經典烘焙，一直都在不受時間限制，也能享受安心的美味</div>
+            </div>
+          </div>
+          <div class="l-footer footer">
+            <div class="footer1">
+              <div class="l-container"></div>
+            </div>
+            <div class="footer2">
+              <div class="l-container">
+                <div id="commonhealth_footer">
+                  <div class="commonhealth_footer-channel">
+                    <ul>
+                      <li><a href="http://www.commonhealth.com.tw/magazine/latest/" target="_blank">康健雜誌</a></li>
+                      <li><a href="https://www.commonhealth.com.tw/book/index.action" target="_blank">康健出版</a></li>
+                      <li><a href="http://www.commonhealth.com.tw/" target="_blank">康健官網</a></li>
+                      <li><a href="https://www.youtube.com/user/CommonHealthTV" target="_blank">康健影音</a></li>
+                      <li><a href="https://line.me/ti/p/@commonhealth" target="_blank">康健LINE</a></li><br>
+                      <li><a href="https://www.facebook.com/commonhealth/" target="_blank">康健FB</a></li>
+                      <li><a href="https://kb.commonhealth.com.tw/" target="_blank">康健知識庫</a></li>
+                      <li><a href="https://club.commonhealth.com.tw/" target="_blank">大人の社團</a></li>
+                      <li><a href="https://shop.commonhealth.com.tw/" target="_blank">大人的好物</a></li>
+                    </ul>
+                  </div>
+                  <div class="commonhealth_footer-copyright">Copyright © 2017 康健雜誌. <br>All rights reserved. 版權所有，禁止擅自轉貼節錄</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fb-root"></div>
+  </body>
+  <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.4&appId=262477160615577";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <script src="../bundle.js"></script>
+</html>

@@ -3,25 +3,7 @@ extends _layout.jade
 
 //page html
 block page_main
-    section.index
-        div.index__hd
-        div.index__bd
-            div.index__content
-                div.l-container
-                    div.l-vm
-                        div.l-vm__content
-                            .index__title.hide-text 麵包大解密 安心飲食新指標
-                            .index__cover
-                               .index__dish.index__dish--1
-                               .index__dish.index__dish--2
-                               .index__dish.index__dish--3
-                               .index__dish.index__dish--4
-                            .index__keys
-                                a.index__keys__item.index__keys__item--1.hide-text(href="/key.1.html") 安心關鍵1 麵包保鮮
-                                a.index__keys__item.index__keys__item--2.hide-text(href="/key.2.html") 安心關鍵2 一致的品質
-                                a.index__keys__item.index__keys__item--3.hide-text(href="/key.3.html") 安心關鍵3 飲食安全
-                            .index__note.hide-text
-                    a.index__link-test(href="#").hide-text 麵包大會考
-        div.index__ft
+    div(id='index')
+        include _index.jade
     include _footer.jade
 

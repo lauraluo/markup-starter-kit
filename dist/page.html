@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Article" ng-app="markup" debug="false">
+  <!--page default Information-->
+  <!--html head-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge,chrome=1">
+    <title>pageTitle</title>
+    <meta name="description" content="pageDesc">
+    <meta name="viewport" content="width=640">
+    <!-- Schema.org markup for Google+-->
+    <meta itemprop="name" content="pageTitle">
+    <meta itemprop="description" content="pageDesc">
+    <meta itemprop="image" content="指定顯示圖片">
+    <!-- og-->
+    <meta property="og:title" content="pageTitle">
+    <meta property="og:description" content="pageDesc">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="指定顯示圖片">
+    <link rel="Shortcut Icon" type="images/x-icon" href="../images/fav.ico">
+    <link rel="stylesheet" href="css/main.css"><!--CDN link for  TweenMax-->
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.1/mobile-detect.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://code.createjs.com/preloadjs-0.6.1.min.js"></script>
+    <script type="text/javascript">
+      var md = new MobileDetect(window.navigator.userAgent);
+      var IsMobile = md.phone() != null || md.tablet() != null  || window.innerWidth <= 640;
+      // Initialize Firebase
+      // Initialize Firebase
+      var config = {
+          apiKey: "AIzaSyBOr4h4h97xUQ0UjtYP7CVJt12V8htNAzs",
+          authDomain: "ch-2018-uni-bread.firebaseapp.com",
+          databaseURL: "https://ch-2018-uni-bread.firebaseio.com",
+          projectId: "ch-2018-uni-bread",
+          storageBucket: "ch-2018-uni-bread.appspot.com",
+          messagingSenderId: "569018786142"
+      };
+      var _firebase = firebase.initializeApp(config);
+    </script>
+  </head>
+  <!--html body-->
+  <body class="l-index">
+    <div class="l-wrap">
+      <!--nav-->
+      <div id="nav"></div>
+      <div id="pageMain" class="l-main">
+        <!--main view-->
+        <section class="rule">
+          <div class="l-container"></div>
+        </section>
+      </div>
+    </div>
+    <div class="fb-root"></div>
+  </body>
+  <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.4&appId=262477160615577";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <script src="../bundle.js"></script>
+</html>
