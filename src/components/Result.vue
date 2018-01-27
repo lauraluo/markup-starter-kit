@@ -11,21 +11,21 @@ div
                         |麵包新手-復古好滋味
                     .desc Wow！愛麵包的你，雖然很享受每一口的溫暖美味，但不能不了解麵包的製作細節呀~~快往下看熊健康的麵包知識大解析，感受食的安心，再挑戰一次！
                     div.img-wrap
-                        img(src="/images/end-bread1.png")
+                        img(src="./images/end-bread1.png")
                 .result2(v-bind:class="{active:resultType == 1}")
                     .title 
                         span.mark 中高級
                         |麵包小當家-意猶未盡的美味
                     .desc 不錯喔！懂得分辨美味麵包，你就像麵包界的青蔥起士，讓人熟悉又意猶未盡！想知道如何得到經典麵包？快往下看熊健康麵包秘密大解析，再挑戰一次！
                     div.img-wrap
-                        img(src="/images/end-bread2.png")
+                        img(src="./images/end-bread2.png")
                 .result3(v-bind:class="{active:resultType == 2}")
                     .title 
                         span.mark 高階
                         |麵包專業達人-經典中的經典
                     .desc 不錯喔！懂得分辨美味麵包，你就像麵包界的青蔥起士，讓人熟悉又意猶未盡！想知道如何得到經典麵包？快往下看熊健康麵包秘密大解析，再挑戰一次！
                     div.img-wrap
-                        img(src="/images/end-bread3.png")
+                        img(src="./images/end-bread3.png")
                 .result__share
                     p.text 分享你的結果
                     - var shareUrl = 'http://topic.commonhealth.com.tw/pecos-bread/test.html';
