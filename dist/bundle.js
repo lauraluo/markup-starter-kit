@@ -8248,8 +8248,8 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 __vue__options__.render = function(){with(this){return _c('section',{staticClass:"index"},[_c('div',{staticClass:"index__hd"}),_c('div',{staticClass:"index__bd"},[_c('div',{staticClass:"index__content"},[_c('div',{staticClass:"l-container"},[_c('div',{staticClass:"l-vm"},[_c('div',{staticClass:"l-vm__content"},[_c('div',{ref:"title",staticClass:"index__title hide-text"},[_v("麵包大解密 安心飲食新指標")]),_c('div',{ref:"cover",staticClass:"index__cover"},[_c('div',{ref:"dish1",staticClass:"index__dish index__dish--1"}),_c('div',{ref:"dish2",staticClass:"index__dish index__dish--2"}),_c('div',{ref:"dish3",staticClass:"index__dish index__dish--3"}),_c('div',{ref:"dish4",staticClass:"index__dish index__dish--4"})]),_c('div',{ref:"keys",staticClass:"index__keys"},[_m(0),_c('a',{staticClass:"index__keys__item index__keys__item--2 hide-text",attrs:{"href":"key.2.html"}},[_v("安心關鍵2 一致的品質")]),_c('a',{staticClass:"index__keys__item index__keys__item--3 hide-text",attrs:{"href":"key.3.html"}},[_v("安心關鍵3 飲食安全")])]),_c('div',{ref:"note",staticClass:"index__note hide-text"})])])]),_c('a',{staticClass:"index__link-test hide-text",attrs:{"href":"test.html"}},[_v("麵包大會考")])])]),_c('div',{staticClass:"index__ft"})])}}
-__vue__options__.staticRenderFns = [function(){with(this){return _c('a',{staticClass:"index__keys__item index__keys__item--1",attrs:{"href":"key.1.html"}},[_c('span',{staticClass:"hide-text"},[_v("安心關鍵1 麵包保鮮")])])}}]
-__vue__options__._scopeId = "data-v-5"
+__vue__options__.staticRenderFns = [function(){with(this){return _c('a',{staticClass:"index__keys__item index__keys__item--1",attrs:{"href":"key.1.html"}},[_c('span',{staticClass:"hideText"},[_v("安心關鍵1 麵包保鮮")])])}}]
+__vue__options__._scopeId = "data-v-4"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -8259,9 +8259,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5", __vue__options__)
+    hotAPI.createRecord("data-v-4", __vue__options__)
   } else {
-    hotAPI.reload("data-v-5", __vue__options__)
+    hotAPI.reload("data-v-4", __vue__options__)
   }
 })()}
 },{"vue":2,"vue-hot-reload-api":1,"vueify/lib/insert-css":3}],5:[function(require,module,exports){
@@ -8514,9 +8514,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-9", __vue__options__)
+    hotAPI.createRecord("data-v-8", __vue__options__)
   } else {
-    hotAPI.reload("data-v-9", __vue__options__)
+    hotAPI.reload("data-v-8", __vue__options__)
   }
 })()}
 },{"vue":2,"vue-hot-reload-api":1,"vueify/lib/insert-css":3}],8:[function(require,module,exports){
@@ -8561,9 +8561,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-8", __vue__options__)
+    hotAPI.createRecord("data-v-9", __vue__options__)
   } else {
-    hotAPI.reload("data-v-8", __vue__options__)
+    hotAPI.reload("data-v-9", __vue__options__)
   }
 })()}
 },{"vue":2,"vue-hot-reload-api":1,"vueify/lib/insert-css":3}],9:[function(require,module,exports){
@@ -8886,7 +8886,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 __vue__options__.render = function(){with(this){return _c('div',[_c('section',{staticClass:"result"},[_c('div',{staticClass:"result__hd"}),_c('div',{staticClass:"result__bd"},[_c('div',{staticClass:"l-containera"},[_c('div',{staticClass:"result1",class:{active:resultType == 0}},[_m(0),_c('div',{staticClass:"desc"},[_v("Wow！愛麵包的你，雖然很享受每一口的溫暖美味，但不能不了解麵包的製作細節呀~~快往下看熊健康的麵包知識大解析，感受食的安心，再挑戰一次！")]),_m(1)]),_c('div',{staticClass:"result2",class:{active:resultType == 1}},[_m(2),_c('div',{staticClass:"desc"},[_v("不錯喔！懂得分辨美味麵包，你就像麵包界的青蔥起士，讓人熟悉又意猶未盡！想知道如何得到經典麵包？快往下看熊健康麵包秘密大解析，再挑戰一次！")]),_m(3)]),_c('div',{staticClass:"result3",class:{active:resultType == 2}},[_m(4),_c('div',{staticClass:"desc"},[_v("不錯喔！懂得分辨美味麵包，你就像麵包界的青蔥起士，讓人熟悉又意猶未盡！想知道如何得到經典麵包？快往下看熊健康麵包秘密大解析，再挑戰一次！")]),_m(5)]),_m(6),_m(7)])]),_c('div',{staticClass:"result__ft"})]),_c('ResultLibarys'),_c('ResultChart')],1)}}
 __vue__options__.staticRenderFns = [function(){with(this){return _c('div',{staticClass:"title"},[_c('span',{staticClass:"mark"},[_v("初級")]),_v("麵包新手-復古好滋味")])}},function(){with(this){return _c('div',{staticClass:"img-wrap"},[_c('img',{attrs:{"src":"/images/end-bread1.png"}})])}},function(){with(this){return _c('div',{staticClass:"title"},[_c('span',{staticClass:"mark"},[_v("中高級")]),_v("麵包小當家-意猶未盡的美味")])}},function(){with(this){return _c('div',{staticClass:"img-wrap"},[_c('img',{attrs:{"src":"/images/end-bread2.png"}})])}},function(){with(this){return _c('div',{staticClass:"title"},[_c('span',{staticClass:"mark"},[_v("高階")]),_v("麵包專業達人-經典中的經典")])}},function(){with(this){return _c('div',{staticClass:"img-wrap"},[_c('img',{attrs:{"src":"/images/end-bread3.png"}})])}},function(){with(this){return _c('div',{staticClass:"result__share"},[_c('p',{staticClass:"text"},[_v("分享你的結果")]),_c('div',{staticClass:"result__share__item square_fb"},[_c('div',{staticClass:"fb-share-button",attrs:{"data-href":"http://topic.commonhealth.com.tw/pecos-bread/test.html","data-layout":"button","data-size":"small","data-mobile-iframe":"true"}},[_c('a',{staticClass:"fb-xfbml-parse-ignore",attrs:{"target":"_blank","href":"https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F[object Object]&src=sdkpreparse"}},[_v("分享")])])]),_c('div',{staticClass:"result__share__item square_line"},[_c('div',{staticClass:"line-it-button",staticStyle:{"display":"none"},attrs:{"data-lang":"zh_Hant","data-type":"share-c","data-url":"http://topic.commonhealth.com.tw/pecos-bread/test.html"}})]),_c('div',{staticClass:"result__share__item square_tw"},[_c('a',{staticClass:"twitter-share-button",attrs:{"href":"https://twitter.com/intent/tweet?text=康健x統一麵包|麵包大會考:快問快答挑戰賽 考驗你的麵包級數&url=http://topic.commonhealth.com.tw/pecos-bread/test.html","data-size":"large"}})]),_c('div',{staticClass:"result__share__item square_gl"},[_c('div',{staticClass:"g-plus",attrs:{"data-action":"share","data-width":"120","data-height":"24","data-href":"http://topic.commonhealth.com.tw/pecos-bread/test.html"}})])])}},function(){with(this){return _c('div',{staticClass:"result__more"},[_c('p',{staticClass:"text"},[_v("想知道所有答案嗎？")]),_c('a',{staticClass:"btn",attrs:{"href":"#libarys"}},[_c('span',[_v("往下看更多解答                   ")])])])}}]
-__vue__options__._scopeId = "data-v-4"
+__vue__options__._scopeId = "data-v-5"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -8896,9 +8896,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4", __vue__options__)
+    hotAPI.createRecord("data-v-5", __vue__options__)
   } else {
-    hotAPI.reload("data-v-4", __vue__options__)
+    hotAPI.reload("data-v-5", __vue__options__)
   }
 })()}
 },{"./ResultChart.vue":12,"./ResultLibarys.vue":13,"vue":2,"vue-hot-reload-api":1,"vueify/lib/insert-css":3}],12:[function(require,module,exports){
