@@ -8329,7 +8329,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 __vue__options__.render = function(){with(this){return _c('div',[_c('key1',{directives:[{name:"show",rawName:"v-show",value:(currentKeyPage == 1),expression:"currentKeyPage == 1"}],attrs:{"is-show-pop":isShowPop,"current-title":currentTitle,"current-content":currentContent},on:{"showpop":showPop,"closepop":closePop}}),_c('key2',{directives:[{name:"show",rawName:"v-show",value:(currentKeyPage == 2),expression:"currentKeyPage == 2"}],attrs:{"is-show-pop":isShowPop,"current-title":currentTitle,"current-content":currentContent},on:{"showpop":showPop,"closepop":closePop}}),_c('key3',{directives:[{name:"show",rawName:"v-show",value:(currentKeyPage == 3),expression:"currentKeyPage == 3"}],attrs:{"is-show-pop":isShowPop,"current-title":currentTitle,"current-content":currentContent},on:{"showpop":showPop,"closepop":closePop}}),_c('transition',{attrs:{"name":"fade","enter-active-class":"animated fadeIn active","leave-active-class":"animated fadeOut"}},[_c('div',{directives:[{name:"show",rawName:"v-show",value:(isShowPop),expression:"isShowPop"}],staticClass:"pop"},[_c('div',{staticClass:"l-container"},[_c('div',{staticClass:"pop__bd"},[_c('div',{staticClass:"pop__content"},[_c('div',{staticClass:"pop__title",domProps:{"innerHTML":_s(currentTitle)}}),_c('div',{staticClass:"pop__text"},[_v(_s(currentContent))]),_c('div',{staticClass:"pop__ctrls"},[_c('div',{staticClass:"pop__btn",on:{"click":function($event){closePop($event)}}},[_v("了解!")])])])])])])])],1)}}
 __vue__options__.staticRenderFns = []
-__vue__options__._scopeId = "data-v-2"
+__vue__options__._scopeId = "data-v-1"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -8339,9 +8339,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2", __vue__options__)
+    hotAPI.createRecord("data-v-1", __vue__options__)
   } else {
-    hotAPI.reload("data-v-2", __vue__options__)
+    hotAPI.reload("data-v-1", __vue__options__)
   }
 })()}
 },{"./Key1.vue":6,"./Key2.vue":7,"./Key3.vue":8,"vue":2,"vue-hot-reload-api":1,"vueify/lib/insert-css":3}],6:[function(require,module,exports){
@@ -8434,9 +8434,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-8", __vue__options__)
+    hotAPI.createRecord("data-v-9", __vue__options__)
   } else {
-    hotAPI.reload("data-v-8", __vue__options__)
+    hotAPI.reload("data-v-9", __vue__options__)
   }
 })()}
 },{"vue":2,"vue-hot-reload-api":1,"vueify/lib/insert-css":3}],8:[function(require,module,exports){
@@ -8481,9 +8481,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-9", __vue__options__)
+    hotAPI.createRecord("data-v-8", __vue__options__)
   } else {
-    hotAPI.reload("data-v-9", __vue__options__)
+    hotAPI.reload("data-v-8", __vue__options__)
   }
 })()}
 },{"vue":2,"vue-hot-reload-api":1,"vueify/lib/insert-css":3}],9:[function(require,module,exports){
@@ -8541,7 +8541,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 __vue__options__.render = function(){with(this){return _c('nav',{staticClass:"nav",class:{ 'nav--active': isShowMenu },attrs:{"itemscope":"itemscope","itemtype":"http://schema.org/SiteNavigationElement"}},[_c('div',{staticClass:"l-container"},[_c('div',{staticClass:"nav-bd clearfix"},[_m(0),_m(1),_c('div',{staticClass:"nav-btn",on:{"click":function($event){toggleMenu($event)}}},[_c('div',{staticClass:"one"}),_c('div',{staticClass:"two"}),_c('div',{staticClass:"three"})]),_m(2),_c('div',{staticClass:"nav-menu",class:{ 'nav-menu--active': isShowMenu },attrs:{"role":"navigation"}},[_c('ul',{staticClass:"clearfix"},[_m(3),_c('li',{staticClass:"nav-item nav-item--parent",class:{ active: isShowSubMenu }},[_c('a',{attrs:{"href":"\b/","alt":"麵包小學堂","itemprop":"url","title":"麵包小學堂"},on:{"click":function($event){toggleSubMenu($event)}}},[_c('span',[_v("麵包小學堂")])]),_c('transition',{attrs:{"name":"fade","enter-active-class":"animated fadeIn","leave-active-class":"animated fadeOut"}},[_c('div',{directives:[{name:"show",rawName:"v-show",value:(isShowSubMenu),expression:"isShowSubMenu"}],staticClass:"nav-sub-wrap"},[_c('ul',{staticClass:"nav-sub-menu"},[_c('li',{staticClass:"nav-sub-menu__item"},[_c('a',{attrs:{"href":"key.1.html","alt":"保鮮術？兼顧安心美味的製程秘密！","itemprop":"url","title":"保鮮術？兼顧安心美味的製程秘密！"}},[_c('span',[_v("保鮮術？兼顧安心美味的製程秘密！")])])]),_c('li',{staticClass:"nav-sub-menu__item"},[_c('a',{attrs:{"href":"key.2.html","alt":"30年麵包師傅：紀律，才能確保每一口最佳口感！","itemprop":"url","title":"30年麵包師傅：紀律，才能確保每一口最佳口感！"}},[_c('span',[_v("30年麵包師傅：紀律，才能確保每一口最佳口感！")])])]),_c('li',{staticClass:"nav-sub-menu__item"},[_c('a',{attrs:{"href":"key.3.html","alt":"食安微角落靠專業自律！烘焙業龍頭大廠這樣做","itemprop":"url","title":"食安微角落靠專業自律！烘焙業龍頭大廠這樣做"}},[_c('span',[_v("食安微角落靠專業自律！烘焙業龍頭大廠這樣做")])])])])])])],1),_m(4)])])])])])}}
 __vue__options__.staticRenderFns = [function(){with(this){return _c('h1',{staticClass:"nav-logo"},[_c('a',{staticClass:"hide-text",attrs:{"href":"index.html","alt":"康健x統一麵包","title":"康健x統一麵包"}},[_c('span',[_v("康健x統一麵包")])])])}},function(){with(this){return _c('div',{staticClass:"nav__home"},[_c('a',{attrs:{"href":"index.html"}},[_c('span',{staticClass:"nav-home-link hide-text"},[_v("回首頁")])])])}},function(){with(this){return _c('div',{staticClass:"nav-soical"},[_c('div',{staticClass:"nav-soical__item"},[_c('div',{staticClass:"fb_share",attrs:{"href":""}},[_c('div',{staticClass:"fb-share-button",attrs:{"data-href":"http://topic.commonhealth.com.tw/pecos-bread/index.html","data-layout":"button","data-size":"small","data-mobile-iframe":"true"}},[_c('a',{staticClass:"fb-xfbml-parse-ignore",attrs:{"target":"_blank","href":"https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Ftopic.commonhealth.com.tw/pecos-bread/index.html&src=sdkpreparse"}},[_v("分享")])])])]),_c('div',{staticClass:"nav-soical__item"},[_c('a',{staticClass:"line_share",attrs:{"href":""}},[_c('div',{staticClass:"line-it-button",staticStyle:{"display":"none"},attrs:{"data-lang":"zh_Hant","data-type":"share-c","data-url":"http://topic.commonhealth.com.tw/pecos-bread/index.html"}})])])])}},function(){with(this){return _c('li',{staticClass:"nav-item"},[_c('a',{attrs:{"href":"","alt":"統一麵包大解密","itemprop":"url","title":"統一麵包大解密"}},[_c('span',[_v("統一麵包大解密")])])])}},function(){with(this){return _c('li',{staticClass:"nav-item"},[_c('a',{attrs:{"href":"test.html","alt":"麵包大會考","itemprop":"url","title":"麵包大會考"}},[_c('span',[_v("麵包大會考")])])])}}]
-__vue__options__._scopeId = "data-v-1"
+__vue__options__._scopeId = "data-v-3"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -8551,9 +8551,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-1", __vue__options__)
+    hotAPI.createRecord("data-v-3", __vue__options__)
   } else {
-    hotAPI.reload("data-v-1", __vue__options__)
+    hotAPI.reload("data-v-3", __vue__options__)
   }
 })()}
 },{"vue":2,"vue-hot-reload-api":1,"vueify/lib/insert-css":3}],10:[function(require,module,exports){
@@ -8723,7 +8723,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 __vue__options__.render = function(){with(this){return _c('section',{staticClass:"qa",attrs:{"id":"qa"}},[(isShowResult)?_c('div',{staticClass:"qa__mask"}):_e(),(isShowResult)?_c('div',{staticClass:"qa__result",class:{ok:displayResult,error:!displayResult}}):_e(),_c('div',{staticClass:"qa__bd"},[_c('div',{staticClass:"qa__content",class:{'fixed4': currentQuestion == 3}},[_c('div',{staticClass:"l-container"},[_c('transition-group',{attrs:{"name":"fade","enter-active-class":"animated fadeInRight","leave-active-class":"animated fadeOutLeft","tag":"div"}},_l((questions),function(question,index){return (index == currentQuestion)?_c('div',{key:index,staticClass:"qa-wrap"},[_c('div',{staticClass:"l-vm"},[_c('div',{staticClass:"l-vm__content"},[_c('div',{staticClass:"qa__info"},[_c('div',{staticClass:"qa__step"},[_c('span',[_v(_s(timeCount))])]),_c('div',{staticClass:"qa__progress"},[_c('span',{staticClass:"display-bar"})])]),_c('div',{staticClass:"qa__type"},[_c('span',[_v(_s(question.type))])]),_c('div',{staticClass:"qa__main clearfix"},[_c('div',{staticClass:"qa__q clearfix"},[_c('span',{staticClass:"icon"},[_v("Q")]),_c('span',{staticClass:"number"},[_v(_s(index + 1))]),_c('span',{staticClass:"text"},[_v(_s(question.title))])]),_c('div',{staticClass:"qa__list"},[_c('div',{staticClass:"qa__items"},_l((question.options),function(option,optionIndex){return _c('div',{key:optionIndex,staticClass:"qa__item gtm-event",class:{ 'active': optionIndex +1 == currentSelected && isShowResult ,'disabled': optionIndex +1 != currentSelected && isShowResult },attrs:{"data-category":"bread-click","data-action":"ans-click","data-label":option},on:{"click":function($event){selectedOption($event,index,optionIndex + 1)}}},[_c('div',{staticClass:"text",domProps:{"innerHTML":_s(option)}})])}))])])])])]):_e()}))],1)])])])}}
 __vue__options__.staticRenderFns = []
-__vue__options__._scopeId = "data-v-3"
+__vue__options__._scopeId = "data-v-2"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -8733,9 +8733,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3", __vue__options__)
+    hotAPI.createRecord("data-v-2", __vue__options__)
   } else {
-    hotAPI.reload("data-v-3", __vue__options__)
+    hotAPI.reload("data-v-2", __vue__options__)
   }
 })()}
 },{"vue":2,"vue-hot-reload-api":1,"vueify/lib/insert-css":3}],11:[function(require,module,exports){

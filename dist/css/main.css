@@ -124,7 +124,7 @@ _mixins
 
 .fb_share {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2911px -2320px;
   width: 64px;
   height: 28px;
@@ -132,7 +132,7 @@ _mixins
 
 .flow-box1, .key__flow__box--1 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2441px -1501px;
   width: 232px;
   height: 251px;
@@ -140,7 +140,7 @@ _mixins
 
 .flow-box2, .key__flow__box--2 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2441px -1240px;
   width: 232px;
   height: 251px;
@@ -148,7 +148,7 @@ _mixins
 
 .footer-classic-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -495px -1686px;
   width: 540px;
   height: 204px;
@@ -156,7 +156,7 @@ _mixins
 
 .footer-classic {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: 0px -1964px;
   width: 449px;
   height: 220px;
@@ -164,7 +164,7 @@ _mixins
 
 .footer-video-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1045px -1686px;
   width: 538px;
   height: 204px;
@@ -172,7 +172,7 @@ _mixins
 
 .footer-video {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -459px -1964px;
   width: 449px;
   height: 220px;
@@ -180,7 +180,7 @@ _mixins
 
 .home-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2911px -2358px;
   width: 43px;
   height: 42px;
@@ -188,7 +188,7 @@ _mixins
 
 .index-dish1 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1179px -2194px;
   width: 242px;
   height: 185px;
@@ -196,7 +196,7 @@ _mixins
 
 .index-dish2 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -927px -2194px;
   width: 242px;
   height: 185px;
@@ -204,7 +204,7 @@ _mixins
 
 .index-dish3 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -675px -2194px;
   width: 242px;
   height: 186px;
@@ -212,7 +212,7 @@ _mixins
 
 .index-dish4 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -423px -2194px;
   width: 242px;
   height: 186px;
@@ -220,7 +220,7 @@ _mixins
 
 .index-key1-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2166px -1686px;
   width: 194px;
   height: 160px;
@@ -228,7 +228,7 @@ _mixins
 
 .index-key1 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -674px;
   width: 180px;
   height: 150px;
@@ -236,7 +236,7 @@ _mixins
 
 .index-key2-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1431px -2194px;
   width: 192px;
   height: 178px;
@@ -244,7 +244,7 @@ _mixins
 
 .index-key2 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1045px -2458px;
   width: 180px;
   height: 187px;
@@ -252,7 +252,7 @@ _mixins
 
 .index-key3-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1633px -2194px;
   width: 192px;
   height: 164px;
@@ -260,7 +260,7 @@ _mixins
 
 .index-key3 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -510px;
   width: 180px;
   height: 154px;
@@ -268,7 +268,7 @@ _mixins
 
 .index-note-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: 0px -1461px;
   width: 618px;
   height: 215px;
@@ -276,7 +276,7 @@ _mixins
 
 .index-note {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -628px -1461px;
   width: 585px;
   height: 213px;
@@ -284,7 +284,7 @@ _mixins
 
 .index-slogan-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1437px -1015px;
   width: 488px;
   height: 188px;
@@ -292,7 +292,7 @@ _mixins
 
 .index-slogan {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1458px -1257px;
   width: 343px;
   height: 132px;
@@ -300,7 +300,7 @@ _mixins
 
 .index-test-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: 0px -2194px;
   width: 192px;
   height: 254px;
@@ -308,7 +308,7 @@ _mixins
 
 .index-test {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -834px;
   width: 135px;
   height: 178px;
@@ -316,7 +316,7 @@ _mixins
 
 .key-desc1-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1901px -1686px;
   width: 255px;
   height: 162px;
@@ -324,7 +324,7 @@ _mixins
 
 .key-desc1, .key__ani--1 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2525px -2194px;
   width: 234px;
   height: 130px;
@@ -332,7 +332,7 @@ _mixins
 
 .key-desc2-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -2431px;
   width: 139px;
   height: 58px;
@@ -340,7 +340,7 @@ _mixins
 
 .key-desc2, .key__ani--2 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -603px -500px;
   width: 279px;
   height: 50px;
@@ -348,7 +348,7 @@ _mixins
 
 .key-desc3-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -2499px;
   width: 114px;
   height: 60px;
@@ -356,7 +356,7 @@ _mixins
 
 .key-desc3, .key__ani--3 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -2222px;
   width: 174px;
   height: 88px;
@@ -364,7 +364,7 @@ _mixins
 
 .key-desc4-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2441px -256px;
   width: 263px;
   height: 260px;
@@ -372,7 +372,7 @@ _mixins
 
 .key-desc4, .key__ani--4 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -202px -2194px;
   width: 211px;
   height: 217px;
@@ -380,7 +380,7 @@ _mixins
 
 .key-desc5, .key__ani--5 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1967px -294px;
   width: 421px;
   height: 301px;
@@ -388,7 +388,7 @@ _mixins
 
 .key-flow-1, .key__flow__bread--1 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1235px -2458px;
   width: 212px;
   height: 142px;
@@ -396,7 +396,7 @@ _mixins
 
 .key-flow-2, .key__flow__bread--2 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1457px -2458px;
   width: 208px;
   height: 139px;
@@ -404,7 +404,7 @@ _mixins
 
 .key-flow-3, .key__flow__bread--3 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1675px -2458px;
   width: 200px;
   height: 137px;
@@ -412,7 +412,7 @@ _mixins
 
 .key-flow-pdline {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2441px 0px;
   width: 361px;
   height: 246px;
@@ -420,7 +420,7 @@ _mixins
 
 .key1-1-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1967px -963px;
   width: 313px;
   height: 348px;
@@ -428,7 +428,7 @@ _mixins
 
 .key.key1 .key__item.key__item--1 span.mb {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1967px -963px;
   width: 313px;
   height: 348px;
@@ -436,7 +436,7 @@ _mixins
 
 .key1-1 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2441px -1954px;
   width: 298px;
   height: 182px;
@@ -444,7 +444,7 @@ _mixins
 
 .key.key1 .key__item.key__item--1 span.pc {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2441px -1954px;
   width: 298px;
   height: 182px;
@@ -452,7 +452,7 @@ _mixins
 
 .key1-2-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1872px -1964px;
   width: 228px;
   height: 199px;
@@ -460,7 +460,7 @@ _mixins
 
 .key.key1 .key__item.key__item--2 span.mb {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1872px -1964px;
   width: 228px;
   height: 199px;
@@ -468,7 +468,7 @@ _mixins
 
 .key1-2 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2065px -2194px;
   width: 220px;
   height: 140px;
@@ -476,7 +476,7 @@ _mixins
 
 .key.key1 .key__item.key__item--2 span.pc {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2065px -2194px;
   width: 220px;
   height: 140px;
@@ -484,7 +484,7 @@ _mixins
 
 .key1-3-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2110px -1964px;
   width: 228px;
   height: 199px;
@@ -492,7 +492,7 @@ _mixins
 
 .key.key1 .key__item.key__item--3 span.mb {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2110px -1964px;
   width: 228px;
   height: 199px;
@@ -500,7 +500,7 @@ _mixins
 
 .key1-3 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -1172px;
   width: 160px;
   height: 140px;
@@ -508,7 +508,7 @@ _mixins
 
 .key.key1 .key__item.key__item--3 span.pc {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -1172px;
   width: 160px;
   height: 140px;
@@ -516,7 +516,7 @@ _mixins
 
 .key1-4-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2441px -764px;
   width: 256px;
   height: 228px;
@@ -524,7 +524,7 @@ _mixins
 
 .key.key1 .key__item.key__item--4 span.mb {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2441px -764px;
   width: 256px;
   height: 228px;
@@ -532,7 +532,7 @@ _mixins
 
 .key1-4 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px 0px;
   width: 180px;
   height: 160px;
@@ -540,7 +540,7 @@ _mixins
 
 .key.key1 .key__item.key__item--4 span.pc {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px 0px;
   width: 180px;
   height: 160px;
@@ -548,7 +548,7 @@ _mixins
 
 .key1-5-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -627px -2458px;
   width: 199px;
   height: 199px;
@@ -556,7 +556,7 @@ _mixins
 
 .key.key1 .key__item.key__item--5 span.mb {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -627px -2458px;
   width: 199px;
   height: 199px;
@@ -564,7 +564,7 @@ _mixins
 
 .key1-5 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -1472px;
   width: 140px;
   height: 140px;
@@ -572,7 +572,7 @@ _mixins
 
 .key.key1 .key__item.key__item--5 span.pc {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -1472px;
   width: 140px;
   height: 140px;
@@ -580,7 +580,7 @@ _mixins
 
 .key1-6-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -836px -2458px;
   width: 199px;
   height: 199px;
@@ -588,7 +588,7 @@ _mixins
 
 .key.key1 .key__item.key__item--6 span.mb {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -836px -2458px;
   width: 199px;
   height: 199px;
@@ -596,7 +596,7 @@ _mixins
 
 .key1-6 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -1922px;
   width: 140px;
   height: 140px;
@@ -604,7 +604,7 @@ _mixins
 
 .key.key1 .key__item.key__item--6 span.pc {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -1922px;
   width: 140px;
   height: 140px;
@@ -612,7 +612,7 @@ _mixins
 
 .key1-footer-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -603px 0px;
   width: 600px;
   height: 432px;
@@ -620,7 +620,7 @@ _mixins
 
 .key1-title-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1967px 0px;
   width: 464px;
   height: 284px;
@@ -628,7 +628,7 @@ _mixins
 
 .key1_footer, .key.key1 .key__end__note {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -695px -1015px;
   width: 732px;
   height: 215px;
@@ -636,7 +636,7 @@ _mixins
 
 .key1_title {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -604px -867px;
   width: 511px;
   height: 135px;
@@ -644,7 +644,7 @@ _mixins
 
 .key2-1-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1967px -605px;
   width: 313px;
   height: 348px;
@@ -652,7 +652,7 @@ _mixins
 
 .key.key2 .key__item.key__item--1 span.mb {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1967px -605px;
   width: 313px;
   height: 348px;
@@ -660,7 +660,7 @@ _mixins
 
 .key2-1 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2441px -1762px;
   width: 298px;
   height: 182px;
@@ -668,7 +668,7 @@ _mixins
 
 .key.key2 .key__item.key__item--1 span.pc {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2441px -1762px;
   width: 298px;
   height: 182px;
@@ -676,7 +676,7 @@ _mixins
 
 .key2-2-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1634px -1964px;
   width: 228px;
   height: 199px;
@@ -684,7 +684,7 @@ _mixins
 
 .key.key2 .key__item.key__item--2 span.mb {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1634px -1964px;
   width: 228px;
   height: 199px;
@@ -692,7 +692,7 @@ _mixins
 
 .key2-2 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1835px -2194px;
   width: 220px;
   height: 140px;
@@ -700,7 +700,7 @@ _mixins
 
 .key.key2 .key__item.key__item--2 span.pc {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1835px -2194px;
   width: 220px;
   height: 140px;
@@ -708,7 +708,7 @@ _mixins
 
 .key2-3-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1157px -1964px;
   width: 229px;
   height: 200px;
@@ -716,7 +716,7 @@ _mixins
 
 .key.key2 .key__item.key__item--3 span.mb {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1157px -1964px;
   width: 229px;
   height: 200px;
@@ -724,7 +724,7 @@ _mixins
 
 .key2-3 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -1322px;
   width: 160px;
   height: 140px;
@@ -732,7 +732,7 @@ _mixins
 
 .key.key2 .key__item.key__item--3 span.pc {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -1322px;
   width: 160px;
   height: 140px;
@@ -740,7 +740,7 @@ _mixins
 
 .key2-4-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2441px -526px;
   width: 256px;
   height: 228px;
@@ -748,7 +748,7 @@ _mixins
 
 .key.key2 .key__item.key__item--4 span.mb {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2441px -526px;
   width: 256px;
   height: 228px;
@@ -756,7 +756,7 @@ _mixins
 
 .key2-4 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -170px;
   width: 180px;
   height: 160px;
@@ -764,7 +764,7 @@ _mixins
 
 .key.key2 .key__item.key__item--4 span.pc {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -170px;
   width: 180px;
   height: 160px;
@@ -772,7 +772,7 @@ _mixins
 
 .key2-5-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: 0px -2458px;
   width: 199px;
   height: 200px;
@@ -780,7 +780,7 @@ _mixins
 
 .key.key2 .key__item.key__item--5 span.mb {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: 0px -2458px;
   width: 199px;
   height: 200px;
@@ -788,7 +788,7 @@ _mixins
 
 .key2-5 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -1772px;
   width: 140px;
   height: 140px;
@@ -796,7 +796,7 @@ _mixins
 
 .key.key2 .key__item.key__item--5 span.pc {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -1772px;
   width: 140px;
   height: 140px;
@@ -804,7 +804,7 @@ _mixins
 
 .key2-footer-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: 0px 0px;
   width: 593px;
   height: 563px;
@@ -812,7 +812,7 @@ _mixins
 
 .key2-title-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1213px -551px;
   width: 582px;
   height: 285px;
@@ -820,7 +820,7 @@ _mixins
 
 .key2_footer, .key.key2 .key__end__note {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1213px 0px;
   width: 744px;
   height: 243px;
@@ -828,7 +828,7 @@ _mixins
 
 .key2_title {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1213px -846px;
   width: 717px;
   height: 135px;
@@ -836,7 +836,7 @@ _mixins
 
 .key3-1-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1967px -1321px;
   width: 313px;
   height: 348px;
@@ -844,7 +844,7 @@ _mixins
 
 .key.key3 .key__item.key__item--1 span.mb {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1967px -1321px;
   width: 313px;
   height: 348px;
@@ -852,7 +852,7 @@ _mixins
 
 .key3-1 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1593px -1686px;
   width: 298px;
   height: 182px;
@@ -860,7 +860,7 @@ _mixins
 
 .key.key3 .key__item.key__item--1 span.pc {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1593px -1686px;
   width: 298px;
   height: 182px;
@@ -868,7 +868,7 @@ _mixins
 
 .key3-2-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1396px -1964px;
   width: 228px;
   height: 199px;
@@ -876,7 +876,7 @@ _mixins
 
 .key.key3 .key__item.key__item--2 span.mb {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1396px -1964px;
   width: 228px;
   height: 199px;
@@ -884,7 +884,7 @@ _mixins
 
 .key3-2 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2295px -2194px;
   width: 220px;
   height: 140px;
@@ -892,7 +892,7 @@ _mixins
 
 .key.key3 .key__item.key__item--2 span.pc {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2295px -2194px;
   width: 220px;
   height: 140px;
@@ -900,7 +900,7 @@ _mixins
 
 .key3-3-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -918px -1964px;
   width: 229px;
   height: 200px;
@@ -908,7 +908,7 @@ _mixins
 
 .key.key3 .key__item.key__item--3 span.mb {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -918px -1964px;
   width: 229px;
   height: 200px;
@@ -916,7 +916,7 @@ _mixins
 
 .key3-3 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -1022px;
   width: 160px;
   height: 140px;
@@ -924,7 +924,7 @@ _mixins
 
 .key.key3 .key__item.key__item--3 span.pc {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -1022px;
   width: 160px;
   height: 140px;
@@ -932,7 +932,7 @@ _mixins
 
 .key3-4-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2441px -1002px;
   width: 256px;
   height: 228px;
@@ -940,7 +940,7 @@ _mixins
 
 .key.key3 .key__item.key__item--4 span.mb {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2441px -1002px;
   width: 256px;
   height: 228px;
@@ -948,7 +948,7 @@ _mixins
 
 .key3-4 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -340px;
   width: 180px;
   height: 160px;
@@ -956,7 +956,7 @@ _mixins
 
 .key.key3 .key__item.key__item--4 span.pc {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -340px;
   width: 180px;
   height: 160px;
@@ -964,7 +964,7 @@ _mixins
 
 .key3-5-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -209px -2458px;
   width: 199px;
   height: 200px;
@@ -972,7 +972,7 @@ _mixins
 
 .key.key3 .key__item.key__item--5 span.mb {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -209px -2458px;
   width: 199px;
   height: 200px;
@@ -980,7 +980,7 @@ _mixins
 
 .key3-5 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -2072px;
   width: 140px;
   height: 140px;
@@ -988,7 +988,7 @@ _mixins
 
 .key.key3 .key__item.key__item--5 span.pc {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -2072px;
   width: 140px;
   height: 140px;
@@ -996,7 +996,7 @@ _mixins
 
 .key3-6-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -418px -2458px;
   width: 199px;
   height: 199px;
@@ -1004,7 +1004,7 @@ _mixins
 
 .key.key3 .key__item.key__item--6 span.mb {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -418px -2458px;
   width: 199px;
   height: 199px;
@@ -1012,7 +1012,7 @@ _mixins
 
 .key3-6 {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -1622px;
   width: 140px;
   height: 140px;
@@ -1020,7 +1020,7 @@ _mixins
 
 .key.key3 .key__item.key__item--6 span.pc {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -1622px;
   width: 140px;
   height: 140px;
@@ -1028,7 +1028,7 @@ _mixins
 
 .key3-footer-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: 0px -573px;
   width: 594px;
   height: 432px;
@@ -1036,7 +1036,7 @@ _mixins
 
 .key3-title-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -604px -573px;
   width: 536px;
   height: 284px;
@@ -1044,7 +1044,7 @@ _mixins
 
 .key3_footer, .key.key3 .key__end__note {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: 0px -1257px;
   width: 750px;
   height: 194px;
@@ -1052,7 +1052,7 @@ _mixins
 
 .key3_title {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -760px -1257px;
   width: 688px;
   height: 135px;
@@ -1060,7 +1060,7 @@ _mixins
 
 .line_share {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2957px -834px;
   width: 30px;
   height: 30px;
@@ -1068,7 +1068,7 @@ _mixins
 
 .logo-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -603px -442px;
   width: 313px;
   height: 48px;
@@ -1076,7 +1076,7 @@ _mixins
 
 .logo {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2441px -2146px;
   width: 220px;
   height: 34px;
@@ -1084,7 +1084,7 @@ _mixins
 
 .nav-home-link {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2957px -874px;
   width: 24px;
   height: 24px;
@@ -1092,7 +1092,7 @@ _mixins
 
 .qa-watch {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -2320px;
   width: 89px;
   height: 101px;
@@ -1100,7 +1100,7 @@ _mixins
 
 .square_fb {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2714px -356px;
   width: 40px;
   height: 40px;
@@ -1108,7 +1108,7 @@ _mixins
 
 .square_gl {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2714px -306px;
   width: 40px;
   height: 40px;
@@ -1116,7 +1116,7 @@ _mixins
 
 .square_line {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2936px -2499px;
   width: 40px;
   height: 40px;
@@ -1124,7 +1124,7 @@ _mixins
 
 .square_tw {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2714px -256px;
   width: 40px;
   height: 40px;
@@ -1132,7 +1132,7 @@ _mixins
 
 .test-footer-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1213px -253px;
   width: 594px;
   height: 288px;
@@ -1140,7 +1140,7 @@ _mixins
 
 .test-footer {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: 0px -1015px;
   width: 685px;
   height: 232px;
@@ -1148,7 +1148,7 @@ _mixins
 
 .test-title-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: 0px -1686px;
   width: 485px;
   height: 268px;
@@ -1156,7 +1156,7 @@ _mixins
 
 .test-title {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1223px -1461px;
   width: 599px;
   height: 200px;
@@ -1164,7 +1164,7 @@ _mixins
 
 .text-start-m {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -2569px;
   width: 145px;
   height: 32px;
@@ -1172,7 +1172,7 @@ _mixins
 
 .text-start {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -2812px -2611px;
   width: 101px;
   height: 22px;
@@ -5808,7 +5808,7 @@ body {
       margin-top: 15px; }
     .nav-logo span {
       display: block;
-      background-image: url(../images/sprite.png?v=0.8495700765173775);
+      background-image: url(../images/sprite.png?v=0.5167111192129148);
       background-position: -2441px -2146px;
       width: 220px;
       height: 34px;
@@ -5818,7 +5818,7 @@ body {
         margin: 15px; }
         .nav-logo span {
           display: block;
-          background-image: url(../images/sprite.png?v=0.8495700765173775);
+          background-image: url(../images/sprite.png?v=0.5167111192129148);
           background-position: -603px -442px;
           width: 313px;
           height: 48px;
@@ -5830,7 +5830,7 @@ body {
     float: left; }
     .nav__home a span {
       display: block;
-      background-image: url(../images/sprite.png?v=0.8495700765173775);
+      background-image: url(../images/sprite.png?v=0.5167111192129148);
       background-position: -2957px -874px;
       width: 24px;
       height: 24px;
@@ -5841,7 +5841,7 @@ body {
         margin: 10px 0px 0 10px; }
         .nav__home a span {
           display: block;
-          background-image: url(../images/sprite.png?v=0.8495700765173775);
+          background-image: url(../images/sprite.png?v=0.5167111192129148);
           background-position: -2911px -2358px;
           width: 43px;
           height: 42px;
@@ -6210,7 +6210,7 @@ html {
         min-height: 1050px; } }
   .index__title {
     display: block;
-    background-image: url(../images/sprite.png?v=0.8495700765173775);
+    background-image: url(../images/sprite.png?v=0.5167111192129148);
     background-position: -1458px -1257px;
     width: 343px;
     height: 132px;
@@ -6242,28 +6242,28 @@ html {
     opacity: 0; }
     .index__dish--1 {
       display: block;
-      background-image: url(../images/sprite.png?v=0.8495700765173775);
+      background-image: url(../images/sprite.png?v=0.5167111192129148);
       background-position: -1179px -2194px;
       width: 242px;
       height: 185px;
       /*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-dish1.png*/ }
     .index__dish--2 {
       display: block;
-      background-image: url(../images/sprite.png?v=0.8495700765173775);
+      background-image: url(../images/sprite.png?v=0.5167111192129148);
       background-position: -927px -2194px;
       width: 242px;
       height: 185px;
       /*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-dish2.png*/ }
     .index__dish--3 {
       display: block;
-      background-image: url(../images/sprite.png?v=0.8495700765173775);
+      background-image: url(../images/sprite.png?v=0.5167111192129148);
       background-position: -675px -2194px;
       width: 242px;
       height: 186px;
       /*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-dish3.png*/ }
     .index__dish--4 {
       display: block;
-      background-image: url(../images/sprite.png?v=0.8495700765173775);
+      background-image: url(../images/sprite.png?v=0.5167111192129148);
       background-position: -423px -2194px;
       width: 242px;
       height: 186px;
@@ -6299,7 +6299,7 @@ html {
         -ms-transform-origin: 100% 0;
         transform-origin: 100% 0;
         display: block;
-        background-image: url(../images/sprite.png?v=0.8495700765173775);
+        background-image: url(../images/sprite.png?v=0.5167111192129148);
         background-position: -2812px -674px;
         width: 180px;
         height: 150px;
@@ -6310,7 +6310,7 @@ html {
             -ms-transform: translateX(-10px);
             transform: translateX(-10px);
             display: block;
-            background-image: url(../images/sprite.png?v=0.8495700765173775);
+            background-image: url(../images/sprite.png?v=0.5167111192129148);
             background-position: -2166px -1686px;
             width: 194px;
             height: 160px;
@@ -6320,7 +6320,7 @@ html {
         -ms-transform-origin: 50% 0;
         transform-origin: 50% 0;
         display: block;
-        background-image: url(../images/sprite.png?v=0.8495700765173775);
+        background-image: url(../images/sprite.png?v=0.5167111192129148);
         background-position: -1045px -2458px;
         width: 180px;
         height: 187px;
@@ -6331,7 +6331,7 @@ html {
             -ms-transform: translateY(20px);
             transform: translateY(20px);
             display: block;
-            background-image: url(../images/sprite.png?v=0.8495700765173775);
+            background-image: url(../images/sprite.png?v=0.5167111192129148);
             background-position: -1431px -2194px;
             width: 192px;
             height: 178px;
@@ -6341,7 +6341,7 @@ html {
         -ms-transform-origin: 0 0;
         transform-origin: 0 0;
         display: block;
-        background-image: url(../images/sprite.png?v=0.8495700765173775);
+        background-image: url(../images/sprite.png?v=0.5167111192129148);
         background-position: -2812px -510px;
         width: 180px;
         height: 154px;
@@ -6352,7 +6352,7 @@ html {
             -ms-transform: translateX(10px);
             transform: translateX(10px);
             display: block;
-            background-image: url(../images/sprite.png?v=0.8495700765173775);
+            background-image: url(../images/sprite.png?v=0.5167111192129148);
             background-position: -1633px -2194px;
             width: 192px;
             height: 164px;
@@ -6362,7 +6362,7 @@ html {
     top: -60px;
     right: -60px;
     display: block;
-    background-image: url(../images/sprite.png?v=0.8495700765173775);
+    background-image: url(../images/sprite.png?v=0.5167111192129148);
     background-position: -628px -1461px;
     width: 585px;
     height: 213px;
@@ -6372,14 +6372,14 @@ html {
         top: 120px;
         left: 10px;
         display: block;
-        background-image: url(../images/sprite.png?v=0.8495700765173775);
+        background-image: url(../images/sprite.png?v=0.5167111192129148);
         background-position: 0px -1461px;
         width: 618px;
         height: 215px;
         /*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/index-note-m.png*/ } }
   .index__link-test {
     display: block;
-    background-image: url(../images/sprite.png?v=0.8495700765173775);
+    background-image: url(../images/sprite.png?v=0.5167111192129148);
     background-position: -2812px -834px;
     width: 135px;
     height: 178px;
@@ -6412,7 +6412,7 @@ html {
         right: 0;
         top: 350px;
         display: block;
-        background-image: url(../images/sprite.png?v=0.8495700765173775);
+        background-image: url(../images/sprite.png?v=0.5167111192129148);
         background-position: 0px -2194px;
         width: 192px;
         height: 254px;
@@ -6427,7 +6427,7 @@ html {
       padding: 30px 0 20px 0; } }
   .test__title {
     display: block;
-    background-image: url(../images/sprite.png?v=0.8495700765173775);
+    background-image: url(../images/sprite.png?v=0.5167111192129148);
     background-position: -1223px -1461px;
     width: 599px;
     height: 200px;
@@ -6439,7 +6439,7 @@ html {
         -ms-transform: scale(1);
         transform: scale(1);
         display: block;
-        background-image: url(../images/sprite.png?v=0.8495700765173775);
+        background-image: url(../images/sprite.png?v=0.5167111192129148);
         background-position: 0px -1686px;
         width: 485px;
         height: 268px;
@@ -6472,7 +6472,7 @@ html {
           padding: 15px 24px; } }
       .test__ctrls a span {
         display: block;
-        background-image: url(../images/sprite.png?v=0.8495700765173775);
+        background-image: url(../images/sprite.png?v=0.5167111192129148);
         background-position: -2812px -2611px;
         width: 101px;
         height: 22px;
@@ -6494,7 +6494,7 @@ html {
     right: -20px;
     top: -50px;
     display: block;
-    background-image: url(../images/sprite.png?v=0.8495700765173775);
+    background-image: url(../images/sprite.png?v=0.5167111192129148);
     background-position: 0px -1015px;
     width: 685px;
     height: 232px;
@@ -6502,7 +6502,7 @@ html {
     @media (max-width: 640px) and (min-width: 0) {
       .test__note {
         display: block;
-        background-image: url(../images/sprite.png?v=0.8495700765173775);
+        background-image: url(../images/sprite.png?v=0.5167111192129148);
         background-position: -1213px -253px;
         width: 594px;
         height: 288px;
@@ -6533,28 +6533,28 @@ html {
 @media (max-width: 640px) and (min-width: 0) {
   .key__ani.key__ani--1 {
     display: block;
-    background-image: url(../images/sprite.png?v=0.8495700765173775);
+    background-image: url(../images/sprite.png?v=0.5167111192129148);
     background-position: -1901px -1686px;
     width: 255px;
     height: 162px;
     /*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key-desc1-m.png*/ }
   .key__ani.key__ani--2 {
     display: block;
-    background-image: url(../images/sprite.png?v=0.8495700765173775);
+    background-image: url(../images/sprite.png?v=0.5167111192129148);
     background-position: -2812px -2431px;
     width: 139px;
     height: 58px;
     /*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key-desc2-m.png*/ }
   .key__ani.key__ani--3 {
     display: block;
-    background-image: url(../images/sprite.png?v=0.8495700765173775);
+    background-image: url(../images/sprite.png?v=0.5167111192129148);
     background-position: -2812px -2499px;
     width: 114px;
     height: 60px;
     /*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/key-desc3-m.png*/ }
   .key__ani.key__ani--4 {
     display: block;
-    background-image: url(../images/sprite.png?v=0.8495700765173775);
+    background-image: url(../images/sprite.png?v=0.5167111192129148);
     background-position: -2441px -256px;
     width: 263px;
     height: 260px;
@@ -6642,7 +6642,7 @@ html {
   .key__flow__line {
     position: absolute;
     display: block;
-    background-image: url(../images/sprite.png?v=0.8495700765173775);
+    background-image: url(../images/sprite.png?v=0.5167111192129148);
     background-position: -2441px 0px;
     width: 361px;
     height: 246px;
@@ -6841,7 +6841,7 @@ html {
 
 .key.key1 .key__title {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -604px -867px;
   width: 511px;
   height: 135px;
@@ -6849,7 +6849,7 @@ html {
   @media (max-width: 640px) and (min-width: 0) {
     .key.key1 .key__title {
       display: block;
-      background-image: url(../images/sprite.png?v=0.8495700765173775);
+      background-image: url(../images/sprite.png?v=0.5167111192129148);
       background-position: -1967px 0px;
       width: 464px;
       height: 284px;
@@ -6865,7 +6865,7 @@ html {
     left: 0;
     margin-top: -50px;
     display: block;
-    background-image: url(../images/sprite.png?v=0.8495700765173775);
+    background-image: url(../images/sprite.png?v=0.5167111192129148);
     background-position: -603px 0px;
     width: 600px;
     height: 432px;
@@ -6873,7 +6873,7 @@ html {
 
 .key.key2 .key__title {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -1213px -846px;
   width: 717px;
   height: 135px;
@@ -6881,7 +6881,7 @@ html {
   @media (max-width: 640px) and (min-width: 0) {
     .key.key2 .key__title {
       display: block;
-      background-image: url(../images/sprite.png?v=0.8495700765173775);
+      background-image: url(../images/sprite.png?v=0.5167111192129148);
       background-position: -1213px -551px;
       width: 582px;
       height: 285px;
@@ -6900,7 +6900,7 @@ html {
     left: 0;
     margin-top: -30px;
     display: block;
-    background-image: url(../images/sprite.png?v=0.8495700765173775);
+    background-image: url(../images/sprite.png?v=0.5167111192129148);
     background-position: 0px 0px;
     width: 593px;
     height: 563px;
@@ -6908,7 +6908,7 @@ html {
 
 .key.key3 .key__title {
   display: block;
-  background-image: url(../images/sprite.png?v=0.8495700765173775);
+  background-image: url(../images/sprite.png?v=0.5167111192129148);
   background-position: -760px -1257px;
   width: 688px;
   height: 135px;
@@ -6916,7 +6916,7 @@ html {
   @media (max-width: 640px) and (min-width: 0) {
     .key.key3 .key__title {
       display: block;
-      background-image: url(../images/sprite.png?v=0.8495700765173775);
+      background-image: url(../images/sprite.png?v=0.5167111192129148);
       background-position: -604px -573px;
       width: 536px;
       height: 284px;
@@ -6932,7 +6932,7 @@ html {
     left: 0;
     margin-top: -10px;
     display: block;
-    background-image: url(../images/sprite.png?v=0.8495700765173775);
+    background-image: url(../images/sprite.png?v=0.5167111192129148);
     background-position: 0px -573px;
     width: 594px;
     height: 432px;
@@ -6954,7 +6954,7 @@ html {
         margin: 20px auto; } }
   .footer-page .video {
     display: block;
-    background-image: url(../images/sprite.png?v=0.8495700765173775);
+    background-image: url(../images/sprite.png?v=0.5167111192129148);
     background-position: -459px -1964px;
     width: 449px;
     height: 220px;
@@ -6962,14 +6962,14 @@ html {
     @media (max-width: 640px) and (min-width: 0) {
       .footer-page .video {
         display: block;
-        background-image: url(../images/sprite.png?v=0.8495700765173775);
+        background-image: url(../images/sprite.png?v=0.5167111192129148);
         background-position: -1045px -1686px;
         width: 538px;
         height: 204px;
         /*source-image:/Users/apple/Documents/Git/basic-porject/src/images/sprites/footer-video-m.png*/ } }
   .footer-page .classic {
     display: block;
-    background-image: url(../images/sprite.png?v=0.8495700765173775);
+    background-image: url(../images/sprite.png?v=0.5167111192129148);
     background-position: 0px -1964px;
     width: 449px;
     height: 220px;
@@ -6977,7 +6977,7 @@ html {
     @media (max-width: 640px) and (min-width: 0) {
       .footer-page .classic {
         display: block;
-        background-image: url(../images/sprite.png?v=0.8495700765173775);
+        background-image: url(../images/sprite.png?v=0.5167111192129148);
         background-position: -495px -1686px;
         width: 540px;
         height: 204px;
@@ -7102,7 +7102,7 @@ html {
     top: -50px;
     font-size: 5.0rem;
     display: block;
-    background-image: url(../images/sprite.png?v=0.8495700765173775);
+    background-image: url(../images/sprite.png?v=0.5167111192129148);
     background-position: -2812px -2320px;
     width: 89px;
     height: 101px;
