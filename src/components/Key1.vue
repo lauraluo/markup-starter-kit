@@ -3,8 +3,11 @@
 </template>
 
 <script>
+
 export default {
     name: 'Key1',
+    components: {
+    },
     props: ['currentTitle', 'currentContent', 'isShowPop'],
     data() {
         return {};

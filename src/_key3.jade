@@ -43,7 +43,7 @@ section.key.key3(id="key")
                         
                         - var order = 0;
                         for title in popTitles
-                            div(class="key__item key__item--#{++order}" v-on:click="showPop($event, #{order})")
+                            div(class="key__item key__item--#{++order} gtm-event" v-on:click="showPop($event, #{order})"  data-category="bread-click" data-action="popup-click" data-label='安心關鍵 1 :'+title )
                                 span.title.hide #{title}
                                 span.content.hide #{contentItems[order-1]}
                                 span.pc
@@ -51,10 +51,20 @@ section.key.key3(id="key")
                                 div.icon
                 div.key__end
                     div.key__share
+                        - var shareUrl = 'http://topic.commonhealth.com.tw/pecos-bread/key.3.html';
+                        - var shareUrlDecode = 'http%3A%2F%2F#topic.commonhealth.com.tw%2Fpecos-bread%2Fkey.3.html';
+                        - var shareText = "康健x統一麵包 安心關鍵 1 一張圖看懂 麵包保鮮關鍵 保鮮術？兼顧安心美味的製程秘密！"
                         div.key__share__item.square_fb
+                            //todo: data-href and href need absolute href.
+                            div.fb-share-button(data-href=shareUrl, data-layout='button', data-size='small', data-mobile-iframe='true')
+                                a.fb-xfbml-parse-ignore(target='_blank', href='https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F'+{shareUrlDecode}+'&src=sdkpreparse') 分享
                         div.key__share__item.square_line
+                            div.line-it-button(data-lang='zh_Hant', data-type='share-c', style='display: none;' data-url=shareUrl)
                         div.key__share__item.square_tw
+                            //todo: url, text
+                            a.twitter-share-button(href='https://twitter.com/intent/tweet?text='+shareText+'&url='+shareUrl, data-size='large')
                         div.key__share__item.square_gl
+                            div.g-plus(data-action='share', data-width='120', data-height='24', data-href=shareUrl)
                     div.key__end__note
                     div.key__end__ctrls
                         a.prev(href="key.2.html") 上個關鍵：麵包一致的品質

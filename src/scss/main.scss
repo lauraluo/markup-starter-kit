@@ -513,7 +513,8 @@ $key-flow-height: 1020px;
             margin: 0 10px;
             position: relative;
             overflow: hidden;
-            > iframe, > div {
+            >iframe,
+            >div {
                 transform: scale(4);
                 position: absolute;
                 top: 0;
@@ -1056,9 +1057,12 @@ $key-flow-height: 1020px;
         display: block;
         margin: 0 auto;
     }
-    .result2,
+    .result1,.result2,
     .result3 {
-        // display: none;
+        display: none;
+        &.active {
+            display: block;
+        }
     }
     .result1 img,
     .result3 img {
@@ -1091,8 +1095,18 @@ $key-flow-height: 1020px;
             }
         }
         &__item {
+            overflow: hidden;
+            position: relative;
             margin: 10px;
             display: inline-block;
+            >iframe,
+            >div {
+                transform: scale(4);
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+            }
         }
     }
     &__more {

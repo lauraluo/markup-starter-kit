@@ -8,13 +8,20 @@ head
     // Schema.org markup for Google+
     meta(itemprop="name" content="#{pageTitle}")
     meta(itemprop="description" content="#{pageDesc}")
-    meta(itemprop="image" content="指定顯示圖片")
+    meta(itemprop="image" content="#{pageCover}")
 
     // og
     meta(property="og:title" content="#{pageTitle}")
     meta(property="og:description" content="#{pageDesc}")
     meta(property="og:type" content="article")
-    meta(property="og:image" content="指定顯示圖片")
+    meta(property="og:image" content="#{pageCover}")
+
+    meta(property='fb:pages', content='138654461200')
+    meta(property='fb:pages', content='1537360033181144')
+    meta(property='fb:pages', content='654250351375124')
+    meta(property='fb:pages', content='654250351375124')
+    meta(property='fb:pages', content='307869372947150')
+
 
     //- TODO : Place favicon.ico and apple-touch-icon.png in the root directory
     link(rel="Shortcut Icon" type="images/x-icon" href="images/fav.ico")
@@ -40,5 +47,39 @@ head
             messagingSenderId: "569018786142"
         };
         var _firebase = firebase.initializeApp(config);
-   script(src='https://apis.google.com/js/platform.js', async='', defer='')
-    {lang: 'zh-TW'}
+    
+    script(src='https://apis.google.com/js/platform.js', async='', defer='').
+        window.___gcfg = {
+            lang: 'zh-CN'
+        };
+    // Google Tag Manager
+    noscript
+        iframe(src='//www.googletagmanager.com/ns.html?id=GTM-MCMN77', height='0', width='0', style='display:none;visibility:hidden')
+    script.
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MCMN77');
+    // End Google Tag Manager
+    // Facebook Pixel Code
+    script.
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '153319238642910');
+        fbq('track', 'PageView');
+    noscript
+        img(height='1', width='1', style='display:none', src='https://www.facebook.com/tr?id=153319238642910&ev=PageView&noscript=1')
+    // End Facebook Pixel Code
+    //
+    script(type='text/javascript').
+        var _sf_startpt=(new Date()).getTime()
+
+
+

@@ -2,8 +2,9 @@
 html(itemscope,itemtype="http://schema.org/Article",ng-app="markup" debug="false")
     //page default Information
     block pageInfo
-        - var pageTitle = "首頁"
-        - var pageDesc = "敘述"
+        - var pageTitle = "麵包大解密 安心飲食新指標"
+        - var pageDesc = "安心關鍵1： 麵包保鮮 安心關鍵2: 一致的品質 安心關鍵3: 飲食安全 "
+        - var pageCover = "./images/share-index.png"
     //html head
     include _head.jade
     //html body
@@ -59,4 +60,31 @@ html(itemscope,itemtype="http://schema.org/Article",ng-app="markup" debug="false
             js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.4&appId=262477160615577";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
+    script(type='text/javascript').
+        var _sf_async_config={};
+        /** CONFIGURATION START **/
+        _sf_async_config.uid = 64865;
+        _sf_async_config.domain = 'topic.commonhealth.com.tw';
+        _sf_async_config.useCanonical = true;
+        _sf_async_config.sections = 'SECTION';  //CHANGE THIS
+        _sf_async_config.authors = 'AUTHOR';    //CHANGE THIS
+        /** CONFIGURATION END **/
+        (function(){
+        function loadChartbeat() {
+        window._sf_endpt=(new Date()).getTime();
+        var e = document.createElement('script');
+        e.setAttribute('language', 'javascript');
+        e.setAttribute('type', 'text/javascript');
+        e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+        document.body.appendChild(e);
+        }
+        var oldonload = window.onload;
+        window.onload = (typeof window.onload != 'function') ?
+        loadChartbeat : function() { oldonload(); loadChartbeat(); };
+        })();
+    // Advenue DMP Container - Uni-president Website
+    script(type='text/javascript', charset='UTF-8').
+        (function(w,d,s,i,c){var f=d.createElement(s);f.type="text/javascript";f.async=true;f.src=("https:"==d.location.protocol? "https://ssl-avd.innity.net":"http://avd.innity.net")+"/"+i+"/container_"+c+".js";var g=d.getElementsByTagName(s)[0];g.parentNode.insertBefore(f, g);})(window, document, "script", "283", "583e77871c51b1e062befc53");
+    // End Advenue DMP Container
+
     script(src="bundle.js")
