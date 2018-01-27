@@ -11,23 +11,24 @@
     <!-- Schema.org markup for Google+-->
     <meta itemprop="name" content="安心關鍵3|康健x統一麵包">
     <meta itemprop="description" content="一張圖看懂 麵包飲食安全關鍵 食安微角落靠專業自律！烘焙業龍頭大廠這樣做">
-    <meta itemprop="image" content="undefined">
+    <meta itemprop="image" content="./images/share-key3.jpg">
     <!-- og-->
     <meta property="og:title" content="安心關鍵3|康健x統一麵包">
     <meta property="og:description" content="一張圖看懂 麵包飲食安全關鍵 食安微角落靠專業自律！烘焙業龍頭大廠這樣做">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="undefined">
+    <meta property="og:image" content="./images/share-key3.jpg">
     <meta property="fb:pages" content="138654461200">
     <meta property="fb:pages" content="1537360033181144">
     <meta property="fb:pages" content="654250351375124">
     <meta property="fb:pages" content="654250351375124">
     <meta property="fb:pages" content="307869372947150">
-    <link rel="Shortcut Icon" type="images/x-icon" href="images/fav.ico">
+    <link rel="Shortcut Icon" type="images/x-icon" href="./images/favicon.png">
     <link rel="stylesheet" href="css/main.css"><!--CDN link for  TweenMax-->
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.1/mobile-detect.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
     <script src="https://code.createjs.com/preloadjs-0.6.1.min.js"></script>
     <script type="text/javascript">
       var md = new MobileDetect(window.navigator.userAgent);
@@ -110,23 +111,35 @@
                     <div class="key__ani key__ani--5"></div>
                   </div>
                   <div class="key__items">
-                    <div v-on:click="showPop($event, 0)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :麵包專業講解：&lt;br/&gt;食安微角落的自律把關才有食品安全!" class="key__item key__item--1 gtm-event"><span class="title hide">麵包專業講解：&lt;br/&gt;食安微角落的自律把關才有食品安全!</span><span class="content hide">食品真的是良心事業！平價產品卻有高標準、高成本的自律機制，麵包製程不複雜，但食品安全關鍵在於魔鬼細節，幾大關鍵點是民眾和其他烘焙業者要參考學習的。</span><span class="pc"></span><span class="mb"></span>
-                      <div class="icon"></div>
+                    <div v-on:click="showPop($event, 0)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :麵包專業講解：&lt;br/&gt;食安微角落的自律把關才有食品安全!" class="key__item key__item--1 gtm-event">
+                      <div class="ani-wrap"><span class="title hide">麵包專業講解：&lt;br/&gt;食安微角落的自律把關才有食品安全!</span><span class="content hide">食品真的是良心事業！平價產品卻有高標準、高成本的自律機制，麵包製程不複雜，但食品安全關鍵在於魔鬼細節，幾大關鍵點是民眾和其他烘焙業者要參考學習的。</span><span class="pc"></span><span class="mb"></span>
+                        <div class="icon"></div>
+                      </div>
                     </div>
-                    <div v-on:click="showPop($event, 1)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :專業細節1：嚴格採購原則原料品質把關" class="key__item key__item--2 gtm-event"><span class="title hide">專業細節1：嚴格採購原則原料品質把關</span><span class="content hide">原料的品質和等級每批都不同，內部要訂定嚴格的採購原則，確保產品的食安品質。例如不得含防腐劑、到貨的原料保存期限，在採購時捨棄能降低成本的大量購買，而是用少量訂單的方式逐批採購，維持原料的鮮度。</span><span class="pc"></span><span class="mb"></span>
-                      <div class="icon"></div>
+                    <div v-on:click="showPop($event, 1)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :專業細節1：嚴格採購原則原料品質把關" class="key__item key__item--2 gtm-event">
+                      <div class="ani-wrap"><span class="title hide">專業細節1：嚴格採購原則原料品質把關</span><span class="content hide">原料的品質和等級每批都不同，內部要訂定嚴格的採購原則，確保產品的食安品質。例如不得含防腐劑、到貨的原料保存期限，在採購時捨棄能降低成本的大量購買，而是用少量訂單的方式逐批採購，維持原料的鮮度。</span><span class="pc"></span><span class="mb"></span>
+                        <div class="icon"></div>
+                      </div>
                     </div>
-                    <div v-on:click="showPop($event, 2)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :專業細節2：溯源管理原料源頭把關" class="key__item key__item--3 gtm-event"><span class="title hide">專業細節2：溯源管理原料源頭把關</span><span class="content hide">食安危機常出現於源頭，大型的烘焙品牌才有力量前往源頭要求與檢驗。以雞蛋為例，從畜牧場使用的水、飼料、養殖環境，到液蛋的藥物殘留檢測、液蛋全程運輸溫控，都是食安的重要把關作為。</span><span class="pc"></span><span class="mb"></span>
-                      <div class="icon"></div>
+                    <div v-on:click="showPop($event, 2)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :專業細節2：溯源管理原料源頭把關" class="key__item key__item--3 gtm-event">
+                      <div class="ani-wrap"><span class="title hide">專業細節2：溯源管理原料源頭把關</span><span class="content hide">食安危機常出現於源頭，大型的烘焙品牌才有力量前往源頭要求與檢驗。以雞蛋為例，從畜牧場使用的水、飼料、養殖環境，到液蛋的藥物殘留檢測、液蛋全程運輸溫控，都是食安的重要把關作為。</span><span class="pc"></span><span class="mb"></span>
+                        <div class="icon"></div>
+                      </div>
                     </div>
-                    <div v-on:click="showPop($event, 3)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :專業細節3：嚴格原料及成品檢驗" class="key__item key__item--4 gtm-event"><span class="title hide">專業細節3：嚴格原料及成品檢驗</span><span class="content hide">食品大廠除了能有嚴密的供應商管理，將採購風險降到最低，進廠生產到出貨也需要嚴格「自主檢驗」。例如金屬、包裝等食安指標檢測，確認安全無虞才能出貨。</span><span class="pc"></span><span class="mb"></span>
-                      <div class="icon"></div>
+                    <div v-on:click="showPop($event, 3)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :專業細節3：嚴格原料及成品檢驗" class="key__item key__item--4 gtm-event">
+                      <div class="ani-wrap"><span class="title hide">專業細節3：嚴格原料及成品檢驗</span><span class="content hide">食品大廠除了能有嚴密的供應商管理，將採購風險降到最低，進廠生產到出貨也需要嚴格「自主檢驗」。例如金屬、包裝等食安指標檢測，確認安全無虞才能出貨。</span><span class="pc"></span><span class="mb"></span>
+                        <div class="icon"></div>
+                      </div>
                     </div>
-                    <div v-on:click="showPop($event, 4)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :專業細節4：烹飪器皿的安全性" class="key__item key__item--5 gtm-event"><span class="title hide">專業細節4：烹飪器皿的安全性</span><span class="content hide">烹飪器皿的材質風險、過度使用都可能導致食安問題的發生，任何細節都不可輕忽。例如烤盤的使用紀錄、定期更換，在所有接觸到原料的器具材質也都應有嚴格的要求。</span><span class="pc"></span><span class="mb"></span>
-                      <div class="icon"></div>
+                    <div v-on:click="showPop($event, 4)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :專業細節4：烹飪器皿的安全性" class="key__item key__item--5 gtm-event">
+                      <div class="ani-wrap"><span class="title hide">專業細節4：烹飪器皿的安全性</span><span class="content hide">烹飪器皿的材質風險、過度使用都可能導致食安問題的發生，任何細節都不可輕忽。例如烤盤的使用紀錄、定期更換，在所有接觸到原料的器具材質也都應有嚴格的要求。</span><span class="pc"></span><span class="mb"></span>
+                        <div class="icon"></div>
+                      </div>
                     </div>
-                    <div v-on:click="showPop($event, 5)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :專業細節5：體制外食安中心監督" class="key__item key__item--6 gtm-event"><span class="title hide">專業細節5：體制外食安中心監督</span><span class="content hide">除了自主管理，第三方單位的不定期抽檢也是食安維護不懈怠的動能。專業良心的食品品牌會有「食安警察」機制，隨時把關風險、嚴格監控，幫助民眾安心飲食。</span><span class="pc"></span><span class="mb"></span>
-                      <div class="icon"></div>
+                    <div v-on:click="showPop($event, 5)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :專業細節5：體制外食安中心監督" class="key__item key__item--6 gtm-event">
+                      <div class="ani-wrap"><span class="title hide">專業細節5：體制外食安中心監督</span><span class="content hide">除了自主管理，第三方單位的不定期抽檢也是食安維護不懈怠的動能。專業良心的食品品牌會有「食安警察」機制，隨時把關風險、嚴格監控，幫助民眾安心飲食。</span><span class="pc"></span><span class="mb"></span>
+                        <div class="icon"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -155,14 +168,11 @@
         </section>
         <div class="footer-page">
           <div class="l-container">
-            <div class="footer-page__content">
-              <div class="video hideText">  熱銷單品海鹽羅宋麵包鹹甜交織，成全令人懷念的經典美味</div>
-              <div class="classic hideText">統一麵包經典烘焙，一直都在不受時間限制，也能享受安心的美味</div>
-            </div>
+            <div class="footer-page__content"><a href="https://goo.gl/y8qFjk" target="_blank" title="熱銷單品 熱銷單品海鹽羅宋麵包鹹甜交織，成全令人懷念的經典美味" class="video hideText">熱銷單品海鹽羅宋麵包鹹甜交織，成全令人懷念的經典美味</a><a href="https://goo.gl/SEd5yt" target="_blank" title="統一麵包 熱銷單品海鹽羅宋麵包鹹甜交織，成全令人懷念的經典美味" class="classic hideText">統一麵包經典烘焙，一直都在不受時間限制，也能享受安心的美味</a></div>
           </div>
           <div class="l-footer footer">
             <div class="footer1">
-              <div class="l-container"></div>
+              <div class="l-container"><a href="http://www.uni-president.com.tw" target="_blank" title="統一企業官方網站" class="logo1 hideText">統一企業官方網站</a><a href="http://www.pecos.com.tw" target="_blank" title="統一企業官方網站" class="logo2 hideText">統一企業行銷網站</a></div>
             </div>
             <div class="footer2">
               <div class="l-container">

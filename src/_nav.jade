@@ -21,7 +21,7 @@ nav.nav(itemscope itemtype="http://schema.org/SiteNavigationElement" v-bind:clas
             div.nav-menu(role="navigation"  v-bind:class="{ 'nav-menu--active': isShowMenu }")
                 ul.clearfix
                     li.nav-item
-                        a(href="" alt="統一麵包大解密" itemprop="url" title="統一麵包大解密"): span 統一麵包大解密
+                        a(href="index.html" alt="統一麵包大解密" itemprop="url" title="統一麵包大解密"): span 統一麵包大解密
                     li.nav-item.nav-item--parent(v-bind:class="{ active: isShowSubMenu }"   )
                         a(href="/" alt="麵包小學堂" itemprop="url" title="麵包小學堂" v-on:click="toggleSubMenu($event)"): span 麵包小學堂
                         transition(name='fade'  enter-active-class="animated fadeIn" leave-active-class="animated fadeOut")

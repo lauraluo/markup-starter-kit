@@ -41,6 +41,7 @@ export default {
     },
     methods: {
         runChart: function() {
+            var controller = new ScrollMagic.Controller();
             var canvasWidth = $(this.$refs.userBar).width();
             var peopleWidth = $(this.$refs.user).width();
             var tl = new TimelineMax({
@@ -123,7 +124,11 @@ export default {
                 '-=1'
             );
 
-            tl.play();
+            new ScrollMagic.Scene({
+                triggerElement: '.result-chart'
+            })
+                .setTween(tl)
+                .addTo(controller);
         }
     }
 };

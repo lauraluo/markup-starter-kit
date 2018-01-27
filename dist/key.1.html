@@ -11,23 +11,24 @@
     <!-- Schema.org markup for Google+-->
     <meta itemprop="name" content="安心關鍵1|康健x統一麵包">
     <meta itemprop="description" content="一張圖看懂 麵包保鮮關鍵 保鮮術？兼顧安心美味的製程秘密！">
-    <meta itemprop="image" content="undefined">
+    <meta itemprop="image" content="./images/share-key1.jpg">
     <!-- og-->
     <meta property="og:title" content="安心關鍵1|康健x統一麵包">
     <meta property="og:description" content="一張圖看懂 麵包保鮮關鍵 保鮮術？兼顧安心美味的製程秘密！">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="undefined">
+    <meta property="og:image" content="./images/share-key1.jpg">
     <meta property="fb:pages" content="138654461200">
     <meta property="fb:pages" content="1537360033181144">
     <meta property="fb:pages" content="654250351375124">
     <meta property="fb:pages" content="654250351375124">
     <meta property="fb:pages" content="307869372947150">
-    <link rel="Shortcut Icon" type="images/x-icon" href="images/fav.ico">
+    <link rel="Shortcut Icon" type="images/x-icon" href="./images/favicon.png">
     <link rel="stylesheet" href="css/main.css"><!--CDN link for  TweenMax-->
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.1/mobile-detect.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
     <script src="https://code.createjs.com/preloadjs-0.6.1.min.js"></script>
     <script type="text/javascript">
       var md = new MobileDetect(window.navigator.userAgent);
@@ -109,24 +110,36 @@
                     <div class="key__ani key__ani--4"></div>
                     <div class="key__ani key__ani--5"></div>
                   </div>
-                  <div class="key__items">
-                    <div v-on:click="showPop($event, 0)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :麵包專業講解鮮度≠添加防腐劑" class="key__item key__item--1 gtm-event"><span class="title hide">麵包專業講解鮮度≠添加防腐劑</span><span class="content hide">麵包的鮮度取決於微生物生長速度，和製程及保存方式息息相關，控制環境中的溫度、濕度和落菌數及麵包的pH值和水分，麵包不需要防腐劑就能保持鮮度，放置3-4天都維持最佳風味。</span><span class="pc"></span><span class="mb"></span>
-                      <div class="icon"></div>
+                  <div ref="items" class="key__items">
+                    <div ref="pop0" v-on:click="showPop($event, 0)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :麵包專業講解鮮度≠添加防腐劑" class="key__item key__item--1 gtm-event">
+                      <div class="ani-wrap"><span class="title hide">麵包專業講解鮮度≠添加防腐劑</span><span class="content hide">麵包的鮮度取決於微生物生長速度，和製程及保存方式息息相關，控制環境中的溫度、濕度和落菌數及麵包的pH值和水分，麵包不需要防腐劑就能保持鮮度，放置3-4天都維持最佳風味。</span><span class="pc"></span><span class="mb"></span>
+                        <div class="icon"></div>
+                      </div>
                     </div>
-                    <div v-on:click="showPop($event, 1)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :專業細節1 : 落菌數隨時監控" class="key__item key__item--2 gtm-event"><span class="title hide">專業細節1 : 落菌數隨時監控</span><span class="content hide">麵包的鮮度取決於微生物生長速度，和製程及保存方式息息相關，控制環境中的溫度、濕度和落菌數及麵包的pH值和水分，麵包不需要防腐劑就能保持鮮度，放置3-4天都維持最佳風味。</span><span class="pc"></span><span class="mb"></span>
-                      <div class="icon"></div>
+                    <div ref="pop1" v-on:click="showPop($event, 1)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :專業細節1 : 落菌數隨時監控" class="key__item key__item--2 gtm-event">
+                      <div class="ani-wrap"><span class="title hide">專業細節1 : 落菌數隨時監控</span><span class="content hide">麵包的鮮度取決於微生物生長速度，和製程及保存方式息息相關，控制環境中的溫度、濕度和落菌數及麵包的pH值和水分，麵包不需要防腐劑就能保持鮮度，放置3-4天都維持最佳風味。</span><span class="pc"></span><span class="mb"></span>
+                        <div class="icon"></div>
+                      </div>
                     </div>
-                    <div v-on:click="showPop($event, 2)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :專業細節2 : 麵糰pH值" class="key__item key__item--3 gtm-event"><span class="title hide">專業細節2 : 麵糰pH值</span><span class="content hide">麵包師傅進到工廠內，要經過一系列的清潔除塵，空間上也有防蟲的防護層，確保生產線上最低的落菌數！</span><span class="pc"></span><span class="mb"></span>
-                      <div class="icon"></div>
+                    <div ref="pop2" v-on:click="showPop($event, 2)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :專業細節2 : 麵糰pH值" class="key__item key__item--3 gtm-event">
+                      <div class="ani-wrap"><span class="title hide">專業細節2 : 麵糰pH值</span><span class="content hide">麵包師傅進到工廠內，要經過一系列的清潔除塵，空間上也有防蟲的防護層，確保生產線上最低的落菌數！</span><span class="pc"></span><span class="mb"></span>
+                        <div class="icon"></div>
+                      </div>
                     </div>
-                    <div v-on:click="showPop($event, 3)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :專業細節3 : 製程各環節溫度控管" class="key__item key__item--4 gtm-event"><span class="title hide">專業細節3 : 製程各環節溫度控管</span><span class="content hide">低溫熟成法讓麵包的酸鹼值不利雜菌生長，不需多添加防腐劑就能維持鮮度。</span><span class="pc"></span><span class="mb"></span>
-                      <div class="icon"></div>
+                    <div ref="pop3" v-on:click="showPop($event, 3)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :專業細節3 : 製程各環節溫度控管" class="key__item key__item--4 gtm-event">
+                      <div class="ani-wrap"><span class="title hide">專業細節3 : 製程各環節溫度控管</span><span class="content hide">低溫熟成法讓麵包的酸鹼值不利雜菌生長，不需多添加防腐劑就能維持鮮度。</span><span class="pc"></span><span class="mb"></span>
+                        <div class="icon"></div>
+                      </div>
                     </div>
-                    <div v-on:click="showPop($event, 4)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :專業細節4 : 全程溫濕度監控" class="key__item key__item--5 gtm-event"><span class="title hide">專業細節4 : 全程溫濕度監控</span><span class="content hide">烘焙時需達到中心溫度到95℃完全熟化、包裝前又要完全降溫....麵包的不同階段都有管控溫度。</span><span class="pc"></span><span class="mb"></span>
-                      <div class="icon"></div>
+                    <div ref="pop4" v-on:click="showPop($event, 4)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :專業細節4 : 全程溫濕度監控" class="key__item key__item--5 gtm-event">
+                      <div class="ani-wrap"><span class="title hide">專業細節4 : 全程溫濕度監控</span><span class="content hide">烘焙時需達到中心溫度到95℃完全熟化、包裝前又要完全降溫....麵包的不同階段都有管控溫度。</span><span class="pc"></span><span class="mb"></span>
+                        <div class="icon"></div>
+                      </div>
                     </div>
-                    <div v-on:click="showPop($event, 5)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :專業細節5 : 陳列時包裝保護" class="key__item key__item--6 gtm-event"><span class="title hide">專業細節5 : 陳列時包裝保護</span><span class="content hide">環境的溫、濕度會影響細菌的生長，專業工廠會全程監控環境溫、濕度，維持在一定標準之下，以增加賞味期限。</span><span class="pc"></span><span class="mb"></span>
-                      <div class="icon"></div>
+                    <div ref="pop5" v-on:click="showPop($event, 5)" data-category="bread-click" data-action="popup-click" data-label="安心關鍵 1 :專業細節5 : 陳列時包裝保護" class="key__item key__item--6 gtm-event">
+                      <div class="ani-wrap"><span class="title hide">專業細節5 : 陳列時包裝保護</span><span class="content hide">環境的溫、濕度會影響細菌的生長，專業工廠會全程監控環境溫、濕度，維持在一定標準之下，以增加賞味期限。</span><span class="pc"></span><span class="mb"></span>
+                        <div class="icon"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -155,14 +168,11 @@
         </section>
         <div class="footer-page">
           <div class="l-container">
-            <div class="footer-page__content">
-              <div class="video hideText">  熱銷單品海鹽羅宋麵包鹹甜交織，成全令人懷念的經典美味</div>
-              <div class="classic hideText">統一麵包經典烘焙，一直都在不受時間限制，也能享受安心的美味</div>
-            </div>
+            <div class="footer-page__content"><a href="https://goo.gl/y8qFjk" target="_blank" title="熱銷單品 熱銷單品海鹽羅宋麵包鹹甜交織，成全令人懷念的經典美味" class="video hideText">熱銷單品海鹽羅宋麵包鹹甜交織，成全令人懷念的經典美味</a><a href="https://goo.gl/SEd5yt" target="_blank" title="統一麵包 熱銷單品海鹽羅宋麵包鹹甜交織，成全令人懷念的經典美味" class="classic hideText">統一麵包經典烘焙，一直都在不受時間限制，也能享受安心的美味</a></div>
           </div>
           <div class="l-footer footer">
             <div class="footer1">
-              <div class="l-container"></div>
+              <div class="l-container"><a href="http://www.uni-president.com.tw" target="_blank" title="統一企業官方網站" class="logo1 hideText">統一企業官方網站</a><a href="http://www.pecos.com.tw" target="_blank" title="統一企業官方網站" class="logo2 hideText">統一企業行銷網站</a></div>
             </div>
             <div class="footer2">
               <div class="l-container">

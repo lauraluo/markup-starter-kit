@@ -36,7 +36,152 @@ export default {
         };
     },
     computed: {},
-    mounted() {},
+    mounted() {
+        var controller = new ScrollMagic.Controller();
+        var tlGroup = {};
+
+        var tlBg = new TimelineMax({
+            repeat: 0,
+            delay: 1,
+            paused: true,
+            yoyo: false
+        });
+
+        tlBg.add(
+            TweenMax.fromTo(
+                $('.key__title'),
+                0.4,
+                {
+                    y: -50,
+                    opacity: 0
+                },
+                {
+                    y: 0,
+                    opacity: 1
+                }
+            ),
+            0
+        );
+
+        tlBg.add(
+            TweenMax.fromTo(
+                $('.index__link-test'),
+                0.3,
+                {
+                    y: -20,
+                    opacity: 0
+                },
+                {
+                    y: 0,
+                    opacity: 1
+                }
+            ),
+            0
+        );
+        tlBg.add(
+            TweenMax.fromTo(
+                $('.key__flow__main'),
+                0.4,
+                {
+                    y: -50,
+                    opacity: 0
+                },
+                {
+                    y: 0,
+                    opacity: 1
+                }
+            ),
+            '-=0.1'
+        );
+
+        tlBg.add(
+            TweenMax.fromTo(
+                $('.key__flow__bread--1'),
+                0.4,
+                {
+                    y: -30,
+                    opacity: 0
+                },
+                {
+                    y: 0,
+                    opacity: 1
+                }
+            ),
+            '-=0.1'
+        );
+
+        tlBg.add(
+            TweenMax.fromTo(
+                $('.key__flow__bread--2'),
+                0.4,
+                {
+                    y: -80,
+                    opacity: 0
+                },
+                {
+                    y: 0,
+                    opacity: 1
+                }
+            ),
+            '-=0.1'
+        );
+
+        tlBg.add(
+            TweenMax.fromTo(
+                $('.key__flow__bread--3'),
+                0.4,
+                {
+                    y: -20,
+                    opacity: 0
+                },
+                {
+                    y: 0,
+                    opacity: 1
+                }
+            ),
+            '-=0.1'
+        );
+
+        tlBg.add(
+            TweenMax.fromTo(
+                $('.key__anis'),
+                0.4,
+                {
+                    y: -20,
+                    opacity: 0
+                },
+                {
+                    y: 0,
+                    opacity: 1
+                }
+            ),
+            '+=0.1'
+        );
+
+        tlBg.add(
+            TweenMax.fromTo(
+                $('.key__item .ani-wrap'),
+                0.6,
+                {
+                    y: -20,
+                    opacity: 0
+                },
+                {
+                    y: 0,
+                    opacity: 1
+                }
+            ),
+            '+=0.5'
+        );
+
+        tlBg.play();
+
+        // new ScrollMagic.Scene({
+        //     triggerElement: '.key__item--1'
+        // })
+        //     .setTween(tl)
+        //     .addTo(controller);
+    },
     methods: {
         showPop: function(e, itemOrder) {
             var order = itemOrder + 1;
@@ -51,7 +196,6 @@ export default {
         },
         closePop: function(e) {
             e.preventDefault();
-            console.log('close');
             this.isShowPop = false;
         }
     }

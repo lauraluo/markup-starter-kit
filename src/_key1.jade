@@ -18,7 +18,7 @@ section.key.key1(id="key")
                         div.key__ani.key__ani--3
                         div.key__ani.key__ani--4
                         div.key__ani.key__ani--5
-                    div.key__items
+                    div.key__items(ref="items")
                         - var title0 = "麵包專業講解鮮度≠添加防腐劑";
                         - var content0 = "麵包的鮮度取決於微生物生長速度，和製程及保存方式息息相關，控制環境中的溫度、濕度和落菌數及麵包的pH值和水分，麵包不需要防腐劑就能保持鮮度，放置3-4天都維持最佳風味。";
                         
@@ -43,12 +43,13 @@ section.key.key1(id="key")
                         
                         - var order = 0;
                         for title in popTitles
-                            div(class="key__item key__item--#{++order} gtm-event" v-on:click="showPop($event, #{order})"  data-category="bread-click" data-action="popup-click" data-label='安心關鍵 1 :'+title)
-                                span.title.hide #{title}
-                                span.content.hide #{contentItems[order-1]}
-                                span.pc
-                                span.mb
-                                div.icon
+                            div(class="key__item key__item--#{++order} gtm-event" ref='pop'+order v-on:click="showPop($event, #{order})"  data-category="bread-click" data-action="popup-click" data-label='安心關鍵 1 :'+title)
+                                div.ani-wrap
+                                    span.title.hide #{title}
+                                    span.content.hide #{contentItems[order-1]}
+                                    span.pc
+                                    span.mb
+                                    div.icon
                 div.key__end
                     div.key__share
                         - var shareUrl = 'http://topic.commonhealth.com.tw/pecos-bread/key.1.html';

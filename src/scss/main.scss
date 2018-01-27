@@ -7,6 +7,7 @@
 @import 'utils/_variables.scss';
 @import 'utils/_mixins.scss';
 @import 'utils/_grid.scss';
+@import 'utils/_animation.scss';
 //sprite scss import 至少要啟用gulp一次
 @import '_sprite.scss';
 //2.vendors
@@ -99,6 +100,10 @@ html {
         position: absolute;
         left: 30px;
         opacity: 0;
+        animation-name: zboing-small;
+        animation-delay: 5s;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
         &--1 {
             @include index-dish1();
         }
@@ -178,7 +183,7 @@ html {
         right: 30px;
         top: 30vh; // transform: scale(1);
         // transition: $tran;
-        @include animate-css(bounce, 2s, 99, 8s);
+        @include animate-css(rubberBand, 5s, infinite, 5s);
         &:hover {
             transform: scale(1.2);
         }
@@ -264,6 +269,9 @@ $key-flow-height: 1020px;
     }
     &__content {
         padding: 50px 0 40px 0;
+    }
+    &__anis {
+        height: 100%;
     }
     &__ani {
         @for $i from 1 through 5 {
@@ -407,6 +415,9 @@ $key-flow-height: 1020px;
         position: absolute;
         transform: scale(1);
         transition: $tran;
+        .ani-wrap {
+            opacity: 0;
+        }
         span {
             &.pc {
                 @include respond-to(small-up) {
@@ -435,6 +446,9 @@ $key-flow-height: 1020px;
             position: absolute;
             top: -5px;
             right: -5px;
+            @for $i from 1 through 6 {
+                @include animate-css(rubberBand, 5s, infinite, #{$i}*1000 );
+            }
             @include respond-to(small) {
                 transform: scale(1.5)
             }
@@ -680,6 +694,7 @@ $key-flow-height: 1020px;
     }
     .video,
     .classic {
+        display: block;
         float: left;
         margin: 10px;
         @include respond-to(small) {
@@ -1057,7 +1072,8 @@ $key-flow-height: 1020px;
         display: block;
         margin: 0 auto;
     }
-    .result1,.result2,
+    .result1,
+    .result2,
     .result3 {
         display: none;
         &.active {

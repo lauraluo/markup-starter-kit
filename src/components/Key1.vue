@@ -3,17 +3,17 @@
 </template>
 
 <script>
-
 export default {
     name: 'Key1',
-    components: {
-    },
+    components: {},
     props: ['currentTitle', 'currentContent', 'isShowPop'],
     data() {
         return {};
     },
     computed: {},
-    mounted() {},
+    mounted() {
+
+    },
     methods: {
         showPop: function(e, itemOrder) {
             e.preventDefault();
