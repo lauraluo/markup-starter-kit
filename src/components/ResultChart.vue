@@ -45,10 +45,7 @@ export default {
             var canvasWidth = $(this.$refs.userBar).width();
             var peopleWidth = $(this.$refs.user).width();
             var tl = new TimelineMax({
-                repeat: 0,
-                delay: 1,
-                paused: true,
-                yoyo: false
+                delay: 1
             });
 
             var bar1Height = Math.pow(this.lv1Count / this.totalSum * 100, 0.5) * 10;
@@ -125,7 +122,7 @@ export default {
             );
 
             new ScrollMagic.Scene({
-                triggerElement: '.result-chart'
+                triggerElement: '#result-chart'
             })
                 .setTween(tl)
                 .addTo(controller);

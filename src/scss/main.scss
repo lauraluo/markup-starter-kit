@@ -447,10 +447,13 @@ $key-flow-height: 1020px;
             top: -5px;
             right: -5px;
             @for $i from 1 through 6 {
-                @include animate-css(rubberBand, 5s, infinite, #{$i}*1000 );
+                @include animate-css(rubberBand, 5s, infinite, #{$i+'s'} );
             }
             @include respond-to(small) {
-                transform: scale(1.5)
+                height: 60px;
+                width: 60px;
+                background: url(../images/key-book.png) no-repeat center center;
+                background-size: auto 30px;
             }
         }
         &:hover {
