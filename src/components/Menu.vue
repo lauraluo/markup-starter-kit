@@ -10,14 +10,14 @@ export default {
     data() {
         return {
             isMobile: false,
-            isShowMenu: true,
+            isShowMenu: false,
             isShowSubMenu: false
         };
     },
     computed: {},
     mounted() {
-        this.isShowMenu = !IsMobile;
         if (!IsMobile) {
+            // this.isShowMenu = !IsMobile;
             $('#pageMain').on('click', e => {
                 if (this.isShowMenu) {
                     this.closeSubMenu(e);

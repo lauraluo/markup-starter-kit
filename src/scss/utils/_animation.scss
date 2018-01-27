@@ -45,6 +45,18 @@
     }
 }
 
+@keyframes indexBtnIcon {
+    0% {
+        transform: translateX(-2px);
+    }
+    70% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0

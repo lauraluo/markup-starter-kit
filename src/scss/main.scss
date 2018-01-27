@@ -26,10 +26,16 @@
 //7.themes
 $tran: 0.3s ease-in-out 0.1s all;
 $boxShadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
-html {
-    background-image: url(../images/bg.jpg);
-    background-size: cover;
-    background-position: fixed;
+body {
+    background: url(../images/bg-1.png) repeat center center;
+}
+
+.l-wrap {
+    @include respond-to(small-up) {
+        background-image: url(../images/bg-2.png);
+        background-size: cover;
+        background-position: fixed;
+    }
 }
 
 .hide {
@@ -132,6 +138,37 @@ html {
             position: relative;
             transform: scale(1);
             transition: $tran;
+            .btn {
+                position: absolute;
+                cursor: pointer;
+                display: inline-block;
+                background: #cfa972;
+                border-radius: 20px;
+                color: #fff;
+                font-size: 1.3rem;
+                letter-spacing: 3px;
+                padding: 8px 10px;
+                box-shadow: 0 4px 0 0 #996c33, 0 -5px 0 0 #fff;
+                transition: $tran;
+                @include respond-to(small) {
+                    font-size: 1.4rem;
+                    padding: 10px 13px;
+                }
+                &:hover {
+                    transform: translateY(2px);
+                    box-shadow: 0 2px 0 0 #996c33;
+                }
+            }
+            .icon {
+                display: inline-block;
+                font-size: 1.4rem;
+                color: #fff; // position: absolute;
+                padding-left: 5px;
+                animation-name: indexBtnIcon;
+                animation-delay: 0s;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
             @include respond-to(small) {
                 margin: 0px;
             }
@@ -147,6 +184,14 @@ html {
                     transform: translateX(-10px);
                     @include index-key1-m();
                 }
+                .btn {
+                    top: 99px;
+                    left: 46px;
+                    @include respond-to(small) {
+                        top: 105px;
+                        left: 46px;
+                    }
+                }
             }
             &--2 {
                 transform-origin: 50% 0;
@@ -155,6 +200,14 @@ html {
                     transform: translateY(20px);
                     @include index-key2-m();
                 }
+                .btn {
+                    top: 137px;
+                    left: 47px;
+                    @include respond-to(small) {
+                        top: 124px;
+                        left: 46px;
+                    }
+                }
             }
             &--3 {
                 transform-origin: 0 0;
@@ -162,6 +215,14 @@ html {
                 @include respond-to(small) {
                     transform: translateX(10px);
                     @include index-key3-m();
+                }
+                .btn {
+                    top: 104px;
+                    left: 48px;
+                    @include respond-to(small) {
+                        top: 110px;
+                        left: 52px;
+                    }
                 }
             }
         }
@@ -181,9 +242,43 @@ html {
         @include index-test();
         position: absolute;
         right: 30px;
-        top: 30vh; // transform: scale(1);
-        // transition: $tran;
-        @include animate-css(rubberBand, 5s, infinite, 5s);
+        top: 30vh;
+        .btn {
+            cursor: pointer;
+            position: absolute;
+            display: inline-block;
+            background: #e60012;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 1.3rem;
+            letter-spacing: 3px;
+            padding: 8px 10px;
+            box-shadow: 0 4px 0 0 #a40000;
+            transition: $tran;
+            bottom: 19px;
+            left: 26px;
+            @include respond-to(small) {
+                font-size: 1.7rem;
+                padding: 15px 25px;
+                bottom: 29px;
+                left: 34px;
+                border-radius: 40px;
+            }
+            &:hover {
+                transform: translateY(2px);
+                box-shadow: 0 2px 0 0 #996c33;
+            }
+        }
+        .icon {
+            display: inline-block;
+            font-size: 1.4rem;
+            color: #fff; // position: absolute;
+            padding-left: 5px;
+            animation-name: indexBtnIcon;
+            animation-delay: 0s;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
         &:hover {
             transform: scale(1.2);
         }
@@ -447,7 +542,7 @@ $key-flow-height: 1020px;
             top: -5px;
             right: -5px;
             @for $i from 1 through 6 {
-                @include animate-css(rubberBand, 5s, infinite, #{$i+'s'} );
+                @include animate-css(rubberBand, 5s, infinite, #{$i+'s'});
             }
             @include respond-to(small) {
                 height: 60px;
@@ -1301,7 +1396,7 @@ $key-flow-height: 1020px;
             .bar {
                 background: #fff799;
                 border-radius: 10px 10px 0 0;
-                height: 100px;
+                height: 0px;
                 bottom: 0;
                 width: 100%;
                 position: absolute;
