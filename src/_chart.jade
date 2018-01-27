@@ -13,7 +13,7 @@ section.result-chart(id="result-chart")
                     .bar(ref="bar3")
                     .text(ref="bar3Text") {{lv3DisplayNumber}}%
             .user-bar(ref="userBar")
-                .people(ref="user")
+                .people(ref="user" v-bind:class="{lv3: userCorrectcCount >= 7}")
                 .display-bar(ref="userDisplayBar")
             .y-line.clearfix
                 - for (var i = 1; i <= 8; ++i) {

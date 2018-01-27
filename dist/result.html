@@ -211,7 +211,7 @@
                   </div>
                 </div>
                 <div ref="userBar" class="user-bar">
-                  <div ref="user" class="people"></div>
+                  <div ref="user" v-bind:class="{lv3: userCorrectcCount &gt;= 7}" class="people"></div>
                   <div ref="userDisplayBar" class="display-bar"></div>
                 </div>
                 <div class="y-line clearfix"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
@@ -230,9 +230,16 @@
               </div>
             </div>
           </section>
+        </div>
+        <div class="footer-page">
+          <div class="l-container">
+            <div class="footer-page__content"><a href="https://goo.gl/y8qFjk" target="_blank" title="熱銷單品 熱銷單品海鹽羅宋麵包鹹甜交織，成全令人懷念的經典美味" class="video hideText">熱銷單品海鹽羅宋麵包鹹甜交織，成全令人懷念的經典美味</a><a href="https://goo.gl/SEd5yt" target="_blank" title="統一麵包 熱銷單品海鹽羅宋麵包鹹甜交織，成全令人懷念的經典美味" class="classic hideText">統一麵包經典烘焙，一直都在不受時間限制，也能享受安心的美味</a></div>
+          </div>
           <div class="l-footer footer">
             <div class="footer1">
-              <div class="l-container"><a href="http://www.uni-president.com.tw" target="_blank" title="統一企業官方網站" class="logo1 hideText">統一企業官方網站</a><a href="http://www.pecos.com.tw" target="_blank" title="統一企業官方網站" class="logo2 hideText">統一企業行銷網站</a></div>
+              <div class="l-container"><a href="http://www.uni-president.com.tw" target="_blank" title="統一企業官方網站" class="logo1 hideText">統一企業官方網站</a><a href="http://www.pecos.com.tw" target="_blank" title="統一企業官方網站" class="logo2 hideText">統一企業行銷網站</a>
+                <p class="text">本網站內容均受著作權法保障，除非有特別聲明，<br class="pcOnly">其著作權屬於統一企業(股)公司或其他內容提供者所有，請勿將全部或部分圖文內容轉載於任何形式媒體</p>
+              </div>
             </div>
             <div class="footer2">
               <div class="l-container">

@@ -26,14 +26,30 @@
 //7.themes
 $tran: 0.3s ease-in-out 0.1s all;
 $boxShadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
-body {
+html {
     background: url(../images/bg-1.png) repeat center center;
+}
+
+.pcOnly {
+    @include respond-to(small-up) {
+        display: block!important;
+    }
+    @include respond-to(small) {
+        display: none !important;
+    }
+}
+.mbOnly {
+    @include respond-to(small-up) {
+        display: none !important;
+    }
+    @include respond-to(small) {
+        display: block !important;
+    }
 }
 
 .l-wrap {
     @include respond-to(small-up) {
-        background-image: url(../images/bg-2.png);
-        background-size: cover;
+        background: url(../images/bg-2.png) repeat-y center -200px;
         background-position: fixed;
     }
 }
@@ -243,6 +259,7 @@ body {
         position: absolute;
         right: 30px;
         top: 30vh;
+        transition: $tran;
         .btn {
             cursor: pointer;
             position: absolute;
@@ -1153,8 +1170,11 @@ $key-flow-height: 1020px;
         font-size: 1.6rem;
         line-height: 1.6;
         color: #6a3906;
-        width: grid-width(7);
         margin: 0 auto;
+        text-align: center;
+        @include respond-to(small-up) {
+            padding: 0 200px;
+        }
         @include respond-to(small) {
             font-size: 2.6rem;
             width: grid-width(10);
@@ -1299,10 +1319,19 @@ $key-flow-height: 1020px;
         }
     }
     &__content {
-        margin: 30px auto;
+        margin: 0px auto;
         display: none;
+        background: #fff;
         .main {
             @extend .clearfix;
+            padding: 30px 0;
+            background: url(../images/libarys-bear.png) #fff no-repeat right bottom;
+            background-size: 126px auto;
+            @include respond-to(small) {
+                padding-bottom: 230px;
+                background: url(../images/libarys-bear.png) #fff no-repeat center bottom;
+                background-size: 178px auto;
+            }
         }
         .item {
             width: 49.5%;
@@ -1424,13 +1453,18 @@ $key-flow-height: 1020px;
                 width: 88px;
                 height: 121px;
                 background: url(../images/people.png) no-repeat 0 0;
+                background-size: 100% auto;
                 position: absolute;
                 bottom: 0;
                 transform: translateX(-50%);
+                &.lv3 {
+                    background-image: url(../images/people-lv3.png);
+                }
                 @include respond-to(small) {
                     width: 158px;
                     height: 217px;
-                    background: url(../images/people-m.png) no-repeat 0 0;
+                    background: url(../images/people.png) no-repeat 0 0;
+                    background-size: 100% auto;
                 }
             }
             .display-bar {

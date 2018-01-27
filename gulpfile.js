@@ -64,7 +64,7 @@ gulp.task('sprite', function() {
             imgName: 'sprite.png',
             cssName: '_sprite.scss',
             padding: 10,
-            exportOpts: { quality: 20 },
+            exportOpts: { quality: 100 },
             cssTemplate: function(data) {
                 var output = '';
                 var v = Math.random();

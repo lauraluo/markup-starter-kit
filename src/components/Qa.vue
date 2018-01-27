@@ -52,7 +52,7 @@ export default {
                     title: '以下哪一個是臺灣人記憶深刻的麵包品牌logo？',
                     type: '包裝麵包認知題',
                     options: [
-                        '<img src="./images/qa-logo.png">',
+                        '<img src="./images/qa-logo-0.png">',
                         '<img src="./images/qa-logo.png">'
                     ]
                 },

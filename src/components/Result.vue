@@ -4,7 +4,7 @@ div
     section.result
         div.result__hd
         div.result__bd
-            div.l-containera
+            div.l-container
                 .result1(v-bind:class="{active:resultType == 0}")
                     .title 
                         span.mark 初級
