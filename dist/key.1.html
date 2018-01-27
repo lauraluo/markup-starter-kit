@@ -40,6 +40,7 @@
       var _firebase = firebase.initializeApp(config);
     </script>
   </head>
+  <script src="https://apis.google.com/js/platform.js" async="" defer="">{lang: 'zh-TW'}</script>
   <!--html body-->
   <body class="l-index">
     <div class="l-wrap">
@@ -92,10 +93,20 @@
                 </div>
                 <div class="key__end">
                   <div class="key__share">
-                    <div class="key__share__item square_fb"></div>
-                    <div class="key__share__item square_line"></div>
-                    <div class="key__share__item square_tw"></div>
-                    <div class="key__share__item square_gl"></div>
+                    <div class="key__share__item square_fb">
+                      <!--todo: data-href and href need absolute href.-->
+                      <div data-href="http://www.google.com.tw" data-layout="button" data-size="small" data-mobile-iframe="true" class="fb-share-button"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.google.com.tw&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">分享</a></div>
+                    </div>
+                    <div class="key__share__item square_line">
+                      <!--todo: data-url.-->
+                      <div data-lang="zh_Hant" data-type="share-c" data-url="http://www.google.com.tw" style="display: none;" class="line-it-button"></div>
+                    </div>
+                    <div class="key__share__item square_tw">
+                      <!--todo: url, text--><a href="https://twitter.com/intent/tweet?text=DefsultText&amp;url=http://www.google.com.tw" data-size="large" class="twitter-share-button"></a>
+                    </div>
+                    <div class="key__share__item square_gl">
+                      <div data-action="share" data-width="120" data-height="24" data-href="http://www.yahoo.com.tw" class="g-plus"></div>
+                    </div>
                   </div>
                   <div class="key__end__note"></div>
                   <div class="key__end__ctrls"><a href="key.2.html" class="next">下個關鍵：麵包一致的品質</a></div>
@@ -141,6 +152,37 @@
     </div>
     <div class="fb-root"></div>
   </body>
+  <!--line init script-->
+  <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+  <!--facebook init script-->
+  <div id="fb-root"></div>
+  <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.11&appId=1955657071318292&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <!--twitter init script-->
+  <script>
+    window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        t._e = [];
+        t.ready = function(f) {
+        t._e.push(f);
+        };
+        return t;
+    }(document, "script", "twitter-wjs"));
+    
+  </script>
   <script type="text/javascript">
     (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];

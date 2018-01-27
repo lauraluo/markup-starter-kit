@@ -40,6 +40,7 @@
       var _firebase = firebase.initializeApp(config);
     </script>
   </head>
+  <script src="https://apis.google.com/js/platform.js" async="" defer="">{lang: 'zh-TW'}</script>
   <!--html body-->
   <body class="l-index">
     <div class="l-wrap">
@@ -141,6 +142,37 @@
     </div>
     <div class="fb-root"></div>
   </body>
+  <!--line init script-->
+  <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+  <!--facebook init script-->
+  <div id="fb-root"></div>
+  <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.11&appId=1955657071318292&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <!--twitter init script-->
+  <script>
+    window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        t._e = [];
+        t.ready = function(f) {
+        t._e.push(f);
+        };
+        return t;
+    }(document, "script", "twitter-wjs"));
+    
+  </script>
   <script type="text/javascript">
     (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];

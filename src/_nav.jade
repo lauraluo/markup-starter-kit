@@ -10,9 +10,14 @@ nav.nav(itemscope itemtype="http://schema.org/SiteNavigationElement" v-bind:clas
                 div.three
             div.nav-soical
                 div.nav-soical__item
-                    a.fb_share(href="")
+                    div.fb_share(href="")
+                        //todo: data-href and href need absolute href.
+                        div.fb-share-button(data-href='http://www.google.com.tw', data-layout='button', data-size='small', data-mobile-iframe='true')
+                            a.fb-xfbml-parse-ignore(target='_blank', href='https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.google.com.tw&src=sdkpreparse') 分享
                 div.nav-soical__item
                     a.line_share(href="")
+                        //todo: data-url.
+                        div.line-it-button(data-lang='zh_Hant', data-type='share-c', data-url='http://www.google.com.tw', style='display: none;')
             div.nav-menu(role="navigation"  v-bind:class="{ 'nav-menu--active': isShowMenu }")
                 ul.clearfix
                     li.nav-item

@@ -176,9 +176,9 @@ html {
         @include index-test();
         position: absolute;
         right: 30px;
-        top: 30vh;
-        transform: scale(1);
-        transition: $tran;
+        top: 30vh; // transform: scale(1);
+        // transition: $tran;
+        @include animate-css(bounce, 2s, 99, 8s);
         &:hover {
             transform: scale(1.2);
         }
@@ -780,8 +780,7 @@ $key-flow-height: 1020px;
         bottom: 0;
         background: rgba($color: #000000, $alpha: 0.5);
         z-index: 1;
-        @include respond-to(small) {
-        }
+        @include respond-to(small) {}
     }
     .l-vm {
         height: 70vh;
@@ -904,8 +903,7 @@ $key-flow-height: 1020px;
         height: 110px;
         position: absolute;
         top: 500px;
-        z-index: 4;
-        // display: none;
+        z-index: 4; // display: none;
         &.active {
             display: block;
         }
@@ -913,7 +911,7 @@ $key-flow-height: 1020px;
             position: fixed;
             width: 100vw;
             height: 100vh;
-            top:0;
+            top: 0;
             left: 0;
         }
         &.ok {
@@ -1243,8 +1241,7 @@ $key-flow-height: 1020px;
         }
         .bar-item {
             position: relative;
-            height: 100%;
-            // width: 33.333333%;
+            height: 100%; // width: 33.333333%;
             float: left;
             position: relative;
             overflow: hidden;
@@ -1269,13 +1266,13 @@ $key-flow-height: 1020px;
             }
             &.bar1 {
                 width: (4/8*100)#{'%'};
-            } 
+            }
             &.bar2 {
                 width: (2/8*100)#{'%'};
-            } 
+            }
             &.bar3 {
                 width: (2/8*100)#{'%'};
-            } 
+            }
             &.bar2 .bar {
                 background: #fff45c;
             }

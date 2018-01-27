@@ -52,9 +52,17 @@ section.key.key1(id="key")
                 div.key__end
                     div.key__share
                         div.key__share__item.square_fb
+                            //todo: data-href and href need absolute href.
+                            div.fb-share-button(data-href='http://www.google.com.tw', data-layout='button', data-size='small', data-mobile-iframe='true')
+                                a.fb-xfbml-parse-ignore(target='_blank', href='https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.google.com.tw&src=sdkpreparse') 分享
                         div.key__share__item.square_line
+                            //todo: data-url.
+                            div.line-it-button(data-lang='zh_Hant', data-type='share-c', data-url='http://www.google.com.tw', style='display: none;')
                         div.key__share__item.square_tw
+                            //todo: url, text
+                            a.twitter-share-button(href='https://twitter.com/intent/tweet?text=DefsultText&url=http://www.google.com.tw', data-size='large')
                         div.key__share__item.square_gl
+                            div.g-plus(data-action='share', data-width='120', data-height='24', data-href='http://www.yahoo.com.tw')
                     div.key__end__note
                     div.key__end__ctrls
                         a.next(href="key.2.html") 下個關鍵：麵包一致的品質
