@@ -204,6 +204,16 @@ $nav_height_mb: 135px;
         &__item {
             float: left;
             margin-left: 10px;
+            position: relative;
+            overflow: hidden;
+            .fb_share > div {
+                transform: scale(2);
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+            }
+            
         }
         @include respond-to(small) {
             display: none;

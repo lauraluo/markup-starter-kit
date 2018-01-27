@@ -5958,7 +5958,17 @@ body {
     margin-top: 15px; }
     .nav-soical__item {
       float: left;
-      margin-left: 10px; }
+      margin-left: 10px;
+      position: relative;
+      overflow: hidden; }
+      .nav-soical__item .fb_share > div {
+        -webkit-transform: scale(2);
+        -ms-transform: scale(2);
+        transform: scale(2);
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0; }
     @media (max-width: 640px) and (min-width: 0) {
       .nav-soical {
         display: none; } }
@@ -6757,7 +6767,17 @@ html {
       transform: scale(1.2); } }
   .key__share__item {
     display: inline-block;
-    margin: 0 10px; }
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden; }
+    .key__share__item > iframe, .key__share__item > div {
+      -webkit-transform: scale(4);
+      -ms-transform: scale(4);
+      transform: scale(4);
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0; }
 
 .key__end {
   position: relative; }

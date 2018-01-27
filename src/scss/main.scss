@@ -511,6 +511,15 @@ $key-flow-height: 1020px;
         &__item {
             display: inline-block;
             margin: 0 10px;
+            position: relative;
+            overflow: hidden;
+            > iframe, > div {
+                transform: scale(4);
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+            }
         }
     }
     &__end {
