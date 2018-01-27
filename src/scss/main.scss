@@ -637,7 +637,7 @@ $key-flow-height: 1020px;
         @extend .clearfix;
         margin-left: 320px;
         @include respond-to(small) {
-            margin-left: 220px;
+            margin-left: 230px;
             transform: scale(1.2);
         }
         &__item {
@@ -1226,7 +1226,10 @@ $key-flow-height: 1020px;
             }
         }
         &__items {
+            @extend .clearfix;
+            margin-left: 360px;
             @include respond-to(small) {
+                margin-left: 215px;
                 transform: scale(1.2);
                 margin-top: 20px;
             }
@@ -1235,9 +1238,9 @@ $key-flow-height: 1020px;
             overflow: hidden;
             position: relative;
             margin: 10px;
-            display: inline-block;
-            >iframe,
-            >div {
+            display: block;
+            float: left;
+            > * {
                 transform: scale(4);
                 position: absolute;
                 top: 0;

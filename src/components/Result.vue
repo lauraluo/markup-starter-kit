@@ -31,17 +31,18 @@ div
                     - var shareUrl = 'http://topic.commonhealth.com.tw/pecos-bread/test.html';
                     - var shareUrlDecode = 'http%3A%2F%2F#topic.commonhealth.com.tw%2Fpecos-bread%2Ftest.html';
                     - var shareText = "康健x統一麵包|麵包大會考:快問快答挑戰賽 考驗你的麵包級數"
-                    div.result__share__item.square_fb
-                        //todo: data-href and href need absolute href.
-                        div.fb-share-button(data-href=shareUrl, data-layout='button', data-size='small', data-mobile-iframe='true')
-                            a.fb-xfbml-parse-ignore(target='_blank', href='https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F'+{shareUrlDecode}+'&src=sdkpreparse') 分享
-                    div.result__share__item.square_line
-                        div.line-it-button(data-lang='zh_Hant', data-type='share-c', style='display: none;' data-url=shareUrl)
-                    div.result__share__item.square_tw
-                        //todo: url, text
-                        a.twitter-share-button(href='https://twitter.com/intent/tweet?text='+shareText+'&url='+shareUrl, data-size='large')
-                    div.result__share__item.square_gl
-                        div.g-plus(data-action='share', data-width='120', data-height='24', data-href=shareUrl)          
+                     .result__share__items
+                        div.result__share__item.square_fb
+                            //todo: data-href and href need absolute href.
+                            div.fb-share-button(data-href=shareUrl, data-layout='button', data-size='small', data-mobile-iframe='true')
+                                a.fb-xfbml-parse-ignore(target='_blank', href='https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F'+{shareUrlDecode}+'&src=sdkpreparse') 分享
+                        div.result__share__item.square_line
+                            div.line-it-button(data-lang='zh_Hant', data-type='share-c', style='display: none;' data-url=shareUrl)
+                        div.result__share__item.square_tw
+                            //todo: url, text
+                            a.twitter-share-button(href='https://twitter.com/intent/tweet?text='+shareText+'&url='+shareUrl, data-size='large')
+                        div.result__share__item.square_gl
+                            div.g-plus(data-action='share', data-width='120', data-height='24', data-href=shareUrl)          
                 .result__more
                     p.text 想知道所有答案嗎？
                     a.btn(href="#libarys"): span 往下看更多解答                   
