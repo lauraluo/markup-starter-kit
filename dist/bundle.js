@@ -8249,7 +8249,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 __vue__options__.render = function(){with(this){return _c('section',{staticClass:"index"},[_c('div',{staticClass:"index__hd"}),_c('div',{staticClass:"index__bd"},[_c('div',{staticClass:"index__content"},[_c('div',{staticClass:"l-container"},[_c('div',{staticClass:"l-vm"},[_c('div',{staticClass:"l-vm__content"},[_c('div',{ref:"title",staticClass:"index__title hide-text"},[_v("麵包大解密 安心飲食新指標")]),_c('div',{ref:"cover",staticClass:"index__cover"},[_c('div',{ref:"dish1",staticClass:"index__dish index__dish--1"}),_c('div',{ref:"dish2",staticClass:"index__dish index__dish--2"}),_c('div',{ref:"dish3",staticClass:"index__dish index__dish--3"}),_c('div',{ref:"dish4",staticClass:"index__dish index__dish--4"})]),_c('div',{ref:"keys",staticClass:"index__keys"},[_m(0),_m(1),_m(2)]),_c('div',{ref:"note",staticClass:"index__note hide-text"})])])]),_m(3)])]),_c('div',{staticClass:"index__ft"})])}}
 __vue__options__.staticRenderFns = [function(){with(this){return _c('a',{staticClass:"index__keys__item index__keys__item--1",attrs:{"href":"key.1.html"}},[_c('span',{staticClass:"hideText"},[_v("安心關鍵1 麵包保鮮")]),_c('span',{staticClass:"btn"},[_v("去看看"),_c('span',{staticClass:"icon"},[_v(">")])])])}},function(){with(this){return _c('a',{staticClass:"index__keys__item index__keys__item--2",attrs:{"href":"key.2.html"}},[_c('span',{staticClass:"hideText"},[_v("安心關鍵2 一致的品質")]),_c('span',{staticClass:"btn"},[_v("去看看"),_c('span',{staticClass:"icon"},[_v(">")])])])}},function(){with(this){return _c('a',{staticClass:"index__keys__item index__keys__item--3",attrs:{"href":"key.3.html"}},[_c('span',{staticClass:"hideText"},[_v("安心關鍵3 飲食安全")]),_c('span',{staticClass:"btn"},[_v("去看看"),_c('span',{staticClass:"icon"},[_v(">")])])])}},function(){with(this){return _c('a',{staticClass:"index__link-test",attrs:{"href":"test.html"}},[_c('span',{staticClass:"btn"},[_v("去試試"),_c('span',{staticClass:"icon"},[_v(">")])])])}}]
-__vue__options__._scopeId = "data-v-3"
+__vue__options__._scopeId = "data-v-4"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -8259,9 +8259,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3", __vue__options__)
+    hotAPI.createRecord("data-v-4", __vue__options__)
   } else {
-    hotAPI.reload("data-v-3", __vue__options__)
+    hotAPI.reload("data-v-4", __vue__options__)
   }
 })()}
 },{"vue":2,"vue-hot-reload-api":1,"vueify/lib/insert-css":3}],5:[function(require,module,exports){
@@ -8803,7 +8803,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 __vue__options__.render = function(){with(this){return _c('section',{staticClass:"qa",attrs:{"id":"qa"}},[(isShowResult)?_c('div',{staticClass:"qa__mask"}):_e(),(isShowResult)?_c('div',{staticClass:"qa__result",class:{ok:displayResult,error:!displayResult}}):_e(),_c('div',{staticClass:"qa__bd"},[_c('div',{staticClass:"qa__content",class:{'fixed4': currentQuestion == 3}},[_c('div',{staticClass:"l-container"},[_c('transition-group',{attrs:{"name":"fade","enter-active-class":"animated fadeInRight","leave-active-class":"animated fadeOutLeft","tag":"div"}},_l((questions),function(question,index){return (index == currentQuestion)?_c('div',{key:index,staticClass:"qa-wrap"},[_c('div',{staticClass:"l-vm"},[_c('div',{staticClass:"l-vm__content"},[_c('div',{staticClass:"qa__info"},[_c('div',{staticClass:"qa__step"},[_c('span',[_v(_s(timeCount))])]),_c('div',{staticClass:"qa__progress"},[_c('span',{staticClass:"display-bar"})])]),_c('div',{staticClass:"qa__type"},[_c('span',[_v(_s(question.type))])]),_c('div',{staticClass:"qa__main clearfix"},[_c('div',{staticClass:"qa__q clearfix"},[_c('span',{staticClass:"icon"},[_v("Q")]),_c('span',{staticClass:"number"},[_v(_s(index + 1))]),_c('span',{staticClass:"text"},[_v(_s(question.title))])]),_c('div',{staticClass:"qa__list"},[_c('div',{staticClass:"qa__items"},_l((question.options),function(option,optionIndex){return _c('div',{key:optionIndex,staticClass:"qa__item gtm-event",class:{ 'active': optionIndex +1 == currentSelected && isShowResult ,'disabled': optionIndex +1 != currentSelected && isShowResult },attrs:{"data-category":"bread-click","data-action":"ans-click","data-label":option},on:{"click":function($event){selectedOption($event,index,optionIndex + 1)}}},[_c('div',{staticClass:"text",domProps:{"innerHTML":_s(option)}})])}))])])])])]):_e()}))],1)])])])}}
 __vue__options__.staticRenderFns = []
-__vue__options__._scopeId = "data-v-4"
+__vue__options__._scopeId = "data-v-2"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -8813,9 +8813,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4", __vue__options__)
+    hotAPI.createRecord("data-v-2", __vue__options__)
   } else {
-    hotAPI.reload("data-v-4", __vue__options__)
+    hotAPI.reload("data-v-2", __vue__options__)
   }
 })()}
 },{"vue":2,"vue-hot-reload-api":1,"vueify/lib/insert-css":3}],11:[function(require,module,exports){
@@ -8886,7 +8886,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 __vue__options__.render = function(){with(this){return _c('div',[_c('section',{staticClass:"result"},[_c('div',{staticClass:"result__hd"}),_c('div',{staticClass:"result__bd"},[_c('div',{staticClass:"l-container"},[_c('div',{staticClass:"result1",class:{active:resultType == 0}},[_m(0),_c('div',{staticClass:"desc"},[_v("Wow！愛麵包的你，雖然很享受每一口的溫暖美味，但不能不了解麵包的製作細節呀~~快往下看熊健康的麵包知識大解析，感受食的安心，再挑戰一次！")]),_m(1)]),_c('div',{staticClass:"result2",class:{active:resultType == 1}},[_m(2),_c('div',{staticClass:"desc"},[_v("不錯喔！懂得分辨美味麵包，你就像麵包界的青蔥起士，讓人熟悉又意猶未盡！想知道如何得到經典麵包？快往下看熊健康麵包秘密大解析，再挑戰一次！")]),_m(3)]),_c('div',{staticClass:"result3",class:{active:resultType == 2}},[_m(4),_c('div',{staticClass:"desc"},[_v("不錯喔！懂得分辨美味麵包，你就像麵包界的青蔥起士，讓人熟悉又意猶未盡！想知道如何得到經典麵包？快往下看熊健康麵包秘密大解析，再挑戰一次！")]),_m(5)]),_m(6),_m(7)])]),_c('div',{staticClass:"result__ft"})]),_c('ResultLibarys'),_c('ResultChart')],1)}}
 __vue__options__.staticRenderFns = [function(){with(this){return _c('div',{staticClass:"title"},[_c('span',{staticClass:"mark"},[_v("初級")]),_v("麵包新手-復古好滋味")])}},function(){with(this){return _c('div',{staticClass:"img-wrap"},[_c('img',{attrs:{"src":"./images/end-bread1.png"}})])}},function(){with(this){return _c('div',{staticClass:"title"},[_c('span',{staticClass:"mark"},[_v("中高級")]),_v("麵包小當家-意猶未盡的美味")])}},function(){with(this){return _c('div',{staticClass:"img-wrap"},[_c('img',{attrs:{"src":"./images/end-bread2.png"}})])}},function(){with(this){return _c('div',{staticClass:"title"},[_c('span',{staticClass:"mark"},[_v("高階")]),_v("麵包專業達人-經典中的經典")])}},function(){with(this){return _c('div',{staticClass:"img-wrap"},[_c('img',{attrs:{"src":"./images/end-bread3.png"}})])}},function(){with(this){return _c('div',{staticClass:"result__share"},[_c('p',{staticClass:"text"},[_v("分享你的結果")]),_c('div',{staticClass:"result__share__items"},[_c('div',{staticClass:"result__share__item square_fb"},[_c('div',{staticClass:"fb-share-button",attrs:{"data-href":"http://topic.commonhealth.com.tw/pecos-bread/test.html","data-layout":"button","data-size":"small","data-mobile-iframe":"true"}},[_c('a',{staticClass:"fb-xfbml-parse-ignore",attrs:{"target":"_blank","href":"https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F[object Object]&src=sdkpreparse"}},[_v("分享")])])]),_c('div',{staticClass:"result__share__item square_line"},[_c('div',{staticClass:"line-it-button",staticStyle:{"display":"none"},attrs:{"data-lang":"zh_Hant","data-type":"share-c","data-url":"http://topic.commonhealth.com.tw/pecos-bread/test.html"}})]),_c('div',{staticClass:"result__share__item square_tw"},[_c('a',{staticClass:"twitter-share-button",attrs:{"href":"https://twitter.com/intent/tweet?text=康健x統一麵包|麵包大會考:快問快答挑戰賽 考驗你的麵包級數&url=http://topic.commonhealth.com.tw/pecos-bread/test.html","data-size":"large"}})]),_c('div',{staticClass:"result__share__item square_gl"},[_c('div',{staticClass:"g-plus",attrs:{"data-action":"share","data-width":"120","data-height":"24","data-href":"http://topic.commonhealth.com.tw/pecos-bread/test.html"}})])])])}},function(){with(this){return _c('div',{staticClass:"result__more"},[_c('p',{staticClass:"text"},[_v("想知道所有答案嗎？")]),_c('a',{staticClass:"btn",attrs:{"href":"#libarys"}},[_c('span',[_v("往下看更多解答                   ")])])])}}]
-__vue__options__._scopeId = "data-v-2"
+__vue__options__._scopeId = "data-v-3"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -8896,9 +8896,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2", __vue__options__)
+    hotAPI.createRecord("data-v-3", __vue__options__)
   } else {
-    hotAPI.reload("data-v-2", __vue__options__)
+    hotAPI.reload("data-v-3", __vue__options__)
   }
 })()}
 },{"./ResultChart.vue":12,"./ResultLibarys.vue":13,"vue":2,"vue-hot-reload-api":1,"vueify/lib/insert-css":3}],12:[function(require,module,exports){

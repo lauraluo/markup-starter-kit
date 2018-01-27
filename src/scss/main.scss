@@ -164,7 +164,7 @@ html {
                 font-size: 1.3rem;
                 letter-spacing: 3px;
                 padding: 8px 10px;
-                box-shadow: 0 4px 0 0 #996c33, 0 -5px 0 0 #fff;
+                box-shadow: 0 4px 0 0 #996c33;
                 transition: $tran;
                 @include respond-to(small) {
                     font-size: 1.4rem;
