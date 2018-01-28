@@ -45,7 +45,8 @@ export default {
             var canvasWidth = $(this.$refs.userBar).width();
             var peopleWidth = $(this.$refs.user).width();
             var tl = new TimelineMax({
-                delay: 1
+                delay: 1,
+                smoothChildTiming:true
             });
 
             var bar1Height = Math.pow(this.lv1Count / this.totalSum * 100, 0.5) * 10;

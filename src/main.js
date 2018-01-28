@@ -6,6 +6,8 @@ import Result from './components/Result.vue';
 import Index from './components/Index.vue';
 import Test from './components/Test.vue';
 
+
+
 new Vue({
     el: '#nav',
     render: h => h(Menu)

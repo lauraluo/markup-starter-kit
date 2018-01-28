@@ -21,7 +21,8 @@ html(itemscope,itemtype="http://schema.org/Article",ng-app="markup" debug="false
                 //main view
                 block page_main
             
-        div.fb-root
+    script(src="bundle.js")
+
     //line init script
     script(src='https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js', async='async', defer='defer')
     //facebook init script
@@ -87,4 +88,3 @@ html(itemscope,itemtype="http://schema.org/Article",ng-app="markup" debug="false
         (function(w,d,s,i,c){var f=d.createElement(s);f.type="text/javascript";f.async=true;f.src=("https:"==d.location.protocol? "https://ssl-avd.innity.net":"http://avd.innity.net")+"/"+i+"/container_"+c+".js";var g=d.getElementsByTagName(s)[0];g.parentNode.insertBefore(f, g);})(window, document, "script", "283", "583e77871c51b1e062befc53");
     // End Advenue DMP Container
 
-    script(src="bundle.js")

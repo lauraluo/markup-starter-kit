@@ -8182,6 +8182,7 @@ exports.default = {
         var dishTl = new TimelineMax({
             repeat: -1,
             delay: 1,
+            smoothChildTiming: true,
             paused: false,
             yoyo: false
         });
@@ -8189,6 +8190,7 @@ exports.default = {
         var coverTl = new TimelineMax({
             repeat: 0,
             delay: 1,
+            smoothChildTiming: true,
             paused: false,
             yoyo: false
         });
@@ -8310,7 +8312,8 @@ exports.default = {
 
         var tlBg = new TimelineMax({
             repeat: 0,
-            delay: 1,
+            delay: 1.2,
+            smoothChildTiming: true,
             paused: true,
             yoyo: false
         });
@@ -8323,13 +8326,22 @@ exports.default = {
             opacity: 1
         }), 0);
 
-        tlBg.add(TweenMax.fromTo($('.index__link-test'), 0.3, {
-            y: -20,
-            opacity: 0
-        }, {
-            y: 0,
-            opacity: 1
-        }), 0);
+        // tlBg.add(
+        //     TweenMax.fromTo(
+        //         $('.index__link-test'),
+        //         0.3,
+        //         {
+        //             y: -20,
+        //             opacity: 0
+        //         },
+        //         {
+        //             y: 0,
+        //             opacity: 1
+        //         }
+        //     ),
+        //     0
+        // );
+
         tlBg.add(TweenMax.fromTo($('.key__flow__main'), 0.4, {
             y: -50,
             opacity: 0
@@ -8337,30 +8349,31 @@ exports.default = {
             y: 0,
             opacity: 1
         }), '-=0.1');
+        if (!IsMobile) {
+            tlBg.add(TweenMax.fromTo($('.key__flow__bread--1'), 0.4, {
+                y: -30,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1
+            }), '-=0.1');
 
-        tlBg.add(TweenMax.fromTo($('.key__flow__bread--1'), 0.4, {
-            y: -30,
-            opacity: 0
-        }, {
-            y: 0,
-            opacity: 1
-        }), '-=0.1');
+            tlBg.add(TweenMax.fromTo($('.key__flow__bread--2'), 0.4, {
+                y: -30,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1
+            }), '-=0.1');
 
-        tlBg.add(TweenMax.fromTo($('.key__flow__bread--2'), 0.4, {
-            y: -80,
-            opacity: 0
-        }, {
-            y: 0,
-            opacity: 1
-        }), '-=0.1');
-
-        tlBg.add(TweenMax.fromTo($('.key__flow__bread--3'), 0.4, {
-            y: -20,
-            opacity: 0
-        }, {
-            y: 0,
-            opacity: 1
-        }), '-=0.1');
+            tlBg.add(TweenMax.fromTo($('.key__flow__bread--3'), 0.4, {
+                y: -30,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1
+            }), '-=0.1');
+        }
 
         tlBg.add(TweenMax.fromTo($('.key__anis'), 0.4, {
             y: -20,
@@ -8368,7 +8381,7 @@ exports.default = {
         }, {
             y: 0,
             opacity: 1
-        }), '+=0.1');
+        }), '+=0.6');
 
         tlBg.add(TweenMax.fromTo($('.key__item .ani-wrap'), 0.6, {
             y: -20,
@@ -8376,7 +8389,7 @@ exports.default = {
         }, {
             y: 0,
             opacity: 1
-        }), '+=0.5');
+        }), '-=0.1');
 
         tlBg.play();
 
@@ -8456,7 +8469,7 @@ exports.default = {
 };})()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
-__vue__options__.render = function(){with(this){return _c('section',{staticClass:"key key1",attrs:{"id":"key"}},[_c('div',{staticClass:"key__hd"}),_c('div',{staticClass:"key__bd"},[_c('div',{staticClass:"l-container"},[_c('section',{staticClass:"key__content"},[_c('h1',{staticClass:"key__title"},[_v("安心關鍵 1 一張圖看懂 麵包保鮮關鍵 保鮮術？兼顧安心美味的製程秘密！")]),_c('div',{staticClass:"key__flow"},[_m(0),_m(1),_c('div',{ref:"items",staticClass:"key__items"},[_c('div',{ref:"pop0",staticClass:"key__item key__item--1 gtm-event",attrs:{"data-category":"bread-click","data-action":"popup-click","data-label":"安心關鍵 1 :麵包專業講解鮮度≠添加防腐劑"},on:{"click":function($event){showPop($event, 0)}}},[_m(2)]),_c('div',{ref:"pop1",staticClass:"key__item key__item--2 gtm-event",attrs:{"data-category":"bread-click","data-action":"popup-click","data-label":"安心關鍵 1 :專業細節1 : 落菌數隨時監控"},on:{"click":function($event){showPop($event, 1)}}},[_m(3)]),_c('div',{ref:"pop2",staticClass:"key__item key__item--3 gtm-event",attrs:{"data-category":"bread-click","data-action":"popup-click","data-label":"安心關鍵 1 :專業細節2 : 麵糰pH值"},on:{"click":function($event){showPop($event, 2)}}},[_m(4)]),_c('div',{ref:"pop3",staticClass:"key__item key__item--4 gtm-event",attrs:{"data-category":"bread-click","data-action":"popup-click","data-label":"安心關鍵 1 :專業細節3 : 製程各環節溫度控管"},on:{"click":function($event){showPop($event, 3)}}},[_m(5)]),_c('div',{ref:"pop4",staticClass:"key__item key__item--5 gtm-event",attrs:{"data-category":"bread-click","data-action":"popup-click","data-label":"安心關鍵 1 :專業細節4 : 全程溫濕度監控"},on:{"click":function($event){showPop($event, 4)}}},[_m(6)]),_c('div',{ref:"pop5",staticClass:"key__item key__item--6 gtm-event",attrs:{"data-category":"bread-click","data-action":"popup-click","data-label":"安心關鍵 1 :專業細節5 : 陳列時包裝保護"},on:{"click":function($event){showPop($event, 5)}}},[_m(7)])])]),_m(8),_m(9)])])])])}}
+__vue__options__.render = function(){with(this){return _c('section',{staticClass:"key key1"},[_c('div',{staticClass:"key__hd"}),_c('div',{staticClass:"key__bd"},[_c('div',{staticClass:"l-container"},[_c('section',{staticClass:"key__content"},[_c('h1',{staticClass:"key__title"},[_v("安心關鍵 1 一張圖看懂 麵包保鮮關鍵 保鮮術？兼顧安心美味的製程秘密！")]),_c('div',{staticClass:"key__flow"},[_m(0),_m(1),_c('div',{ref:"items",staticClass:"key__items"},[_c('div',{ref:"pop0",staticClass:"key__item key__item--1 gtm-event",attrs:{"data-category":"bread-click","data-action":"popup-click","data-label":"安心關鍵 1 :麵包專業講解鮮度≠添加防腐劑"},on:{"click":function($event){showPop($event, 0)}}},[_m(2)]),_c('div',{ref:"pop1",staticClass:"key__item key__item--2 gtm-event",attrs:{"data-category":"bread-click","data-action":"popup-click","data-label":"安心關鍵 1 :專業細節1 : 落菌數隨時監控"},on:{"click":function($event){showPop($event, 1)}}},[_m(3)]),_c('div',{ref:"pop2",staticClass:"key__item key__item--3 gtm-event",attrs:{"data-category":"bread-click","data-action":"popup-click","data-label":"安心關鍵 1 :專業細節2 : 麵糰pH值"},on:{"click":function($event){showPop($event, 2)}}},[_m(4)]),_c('div',{ref:"pop3",staticClass:"key__item key__item--4 gtm-event",attrs:{"data-category":"bread-click","data-action":"popup-click","data-label":"安心關鍵 1 :專業細節3 : 製程各環節溫度控管"},on:{"click":function($event){showPop($event, 3)}}},[_m(5)]),_c('div',{ref:"pop4",staticClass:"key__item key__item--5 gtm-event",attrs:{"data-category":"bread-click","data-action":"popup-click","data-label":"安心關鍵 1 :專業細節4 : 全程溫濕度監控"},on:{"click":function($event){showPop($event, 4)}}},[_m(6)]),_c('div',{ref:"pop5",staticClass:"key__item key__item--6 gtm-event",attrs:{"data-category":"bread-click","data-action":"popup-click","data-label":"安心關鍵 1 :專業細節5 : 陳列時包裝保護"},on:{"click":function($event){showPop($event, 5)}}},[_m(7)])])]),_m(8),_m(9)])])])])}}
 __vue__options__.staticRenderFns = [function(){with(this){return _c('div',{staticClass:"key__flow__main"},[_c('div',{staticClass:"key__flow__bread key__flow__bread--1"}),_c('div',{staticClass:"key__flow__box key__flow__box--1"}),_c('div',{staticClass:"key__flow__bread key__flow__bread--2"}),_c('div',{staticClass:"key__flow__box key__flow__box--2"}),_c('div',{staticClass:"key__flow__line"}),_c('div',{staticClass:"key__flow__bread key__flow__bread--3"})])}},function(){with(this){return _c('div',{staticClass:"key__anis"},[_c('div',{staticClass:"key__ani key__ani--1"}),_c('div',{staticClass:"key__ani key__ani--2"}),_c('div',{staticClass:"key__ani key__ani--3"}),_c('div',{staticClass:"key__ani key__ani--4"}),_c('div',{staticClass:"key__ani key__ani--5"})])}},function(){with(this){return _c('div',{staticClass:"ani-wrap"},[_c('span',{staticClass:"title hide"},[_v("麵包專業講解鮮度≠添加防腐劑")]),_c('span',{staticClass:"content hide"},[_v("麵包的鮮度取決於微生物生長速度，和製程及保存方式息息相關，控制環境中的溫度、濕度和落菌數及麵包的pH值和水分，麵包不需要防腐劑就能保持鮮度，放置3-4天都維持最佳風味。")]),_c('span',{staticClass:"pc"}),_c('span',{staticClass:"mb"}),_c('div',{staticClass:"icon"})])}},function(){with(this){return _c('div',{staticClass:"ani-wrap"},[_c('span',{staticClass:"title hide"},[_v("專業細節1 : 落菌數隨時監控")]),_c('span',{staticClass:"content hide"},[_v("麵包的鮮度取決於微生物生長速度，和製程及保存方式息息相關，控制環境中的溫度、濕度和落菌數及麵包的pH值和水分，麵包不需要防腐劑就能保持鮮度，放置3-4天都維持最佳風味。")]),_c('span',{staticClass:"pc"}),_c('span',{staticClass:"mb"}),_c('div',{staticClass:"icon"})])}},function(){with(this){return _c('div',{staticClass:"ani-wrap"},[_c('span',{staticClass:"title hide"},[_v("專業細節2 : 麵糰pH值")]),_c('span',{staticClass:"content hide"},[_v("麵包師傅進到工廠內，要經過一系列的清潔除塵，空間上也有防蟲的防護層，確保生產線上最低的落菌數！")]),_c('span',{staticClass:"pc"}),_c('span',{staticClass:"mb"}),_c('div',{staticClass:"icon"})])}},function(){with(this){return _c('div',{staticClass:"ani-wrap"},[_c('span',{staticClass:"title hide"},[_v("專業細節3 : 製程各環節溫度控管")]),_c('span',{staticClass:"content hide"},[_v("低溫熟成法讓麵包的酸鹼值不利雜菌生長，不需多添加防腐劑就能維持鮮度。")]),_c('span',{staticClass:"pc"}),_c('span',{staticClass:"mb"}),_c('div',{staticClass:"icon"})])}},function(){with(this){return _c('div',{staticClass:"ani-wrap"},[_c('span',{staticClass:"title hide"},[_v("專業細節4 : 全程溫濕度監控")]),_c('span',{staticClass:"content hide"},[_v("烘焙時需達到中心溫度到95℃完全熟化、包裝前又要完全降溫....麵包的不同階段都有管控溫度。")]),_c('span',{staticClass:"pc"}),_c('span',{staticClass:"mb"}),_c('div',{staticClass:"icon"})])}},function(){with(this){return _c('div',{staticClass:"ani-wrap"},[_c('span',{staticClass:"title hide"},[_v("專業細節5 : 陳列時包裝保護")]),_c('span',{staticClass:"content hide"},[_v("環境的溫、濕度會影響細菌的生長，專業工廠會全程監控環境溫、濕度，維持在一定標準之下，以增加賞味期限。")]),_c('span',{staticClass:"pc"}),_c('span',{staticClass:"mb"}),_c('div',{staticClass:"icon"})])}},function(){with(this){return _c('div',{staticClass:"key__end"},[_c('div',{staticClass:"key__share"},[_c('div',{staticClass:"key__share__item square_fb"},[_c('div',{staticClass:"fb-share-button",attrs:{"data-href":"http://topic.commonhealth.com.tw/pecos-bread/key.1.html","data-layout":"button","data-size":"small","data-mobile-iframe":"true"}},[_c('a',{staticClass:"fb-xfbml-parse-ignore",attrs:{"target":"_blank","href":"https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F[object Object]&src=sdkpreparse"}},[_v("分享")])])]),_c('div',{staticClass:"key__share__item square_line"},[_c('div',{staticClass:"line-it-button",staticStyle:{"display":"none"},attrs:{"data-lang":"zh_Hant","data-type":"share-c","data-url":"http://topic.commonhealth.com.tw/pecos-bread/key.1.html"}})]),_c('div',{staticClass:"key__share__item square_tw"},[_c('a',{staticClass:"twitter-share-button",attrs:{"href":"https://twitter.com/intent/tweet?text=康健x統一麵包 安心關鍵 1 一張圖看懂 麵包保鮮關鍵 保鮮術？兼顧安心美味的製程秘密！&url=http://topic.commonhealth.com.tw/pecos-bread/key.1.html","data-size":"large"}})]),_c('div',{staticClass:"key__share__item square_gl"},[_c('div',{staticClass:"g-plus",attrs:{"data-action":"share","data-width":"120","data-height":"24","data-href":"http://topic.commonhealth.com.tw/pecos-bread/key.1.html"}})])]),_c('div',{staticClass:"key__end__note"}),_c('div',{staticClass:"key__end__ctrls"},[_c('a',{staticClass:"next",attrs:{"href":"key.2.html"}},[_v("下個關鍵：麵包一致的品質")])])])}},function(){with(this){return _c('a',{staticClass:"index__link-test",attrs:{"href":"test.html"}},[_c('span',{staticClass:"btn"},[_v("去試試"),_c('span',{staticClass:"icon"},[_v(">")])])])}}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -8951,7 +8964,8 @@ exports.default = {
             var canvasWidth = $(this.$refs.userBar).width();
             var peopleWidth = $(this.$refs.user).width();
             var tl = new TimelineMax({
-                delay: 1
+                delay: 1,
+                smoothChildTiming: true
             });
 
             var bar1Height = Math.pow(this.lv1Count / this.totalSum * 100, 0.5) * 10;
@@ -9087,6 +9101,7 @@ exports.default = {
         var dishTl = new TimelineMax({
             repeat: -1,
             delay: 1,
+            smoothChildTiming: true,
             paused: false,
             yoyo: false
         });
@@ -9094,6 +9109,7 @@ exports.default = {
         var coverTl = new TimelineMax({
             repeat: 0,
             delay: 1,
+            smoothChildTiming: true,
             paused: false,
             yoyo: false
         });

@@ -42,7 +42,8 @@ export default {
 
         var tlBg = new TimelineMax({
             repeat: 0,
-            delay: 1,
+            delay: 1.2,
+            smoothChildTiming: true,
             paused: true,
             yoyo: false
         });
@@ -63,21 +64,22 @@ export default {
             0
         );
 
-        tlBg.add(
-            TweenMax.fromTo(
-                $('.index__link-test'),
-                0.3,
-                {
-                    y: -20,
-                    opacity: 0
-                },
-                {
-                    y: 0,
-                    opacity: 1
-                }
-            ),
-            0
-        );
+        // tlBg.add(
+        //     TweenMax.fromTo(
+        //         $('.index__link-test'),
+        //         0.3,
+        //         {
+        //             y: -20,
+        //             opacity: 0
+        //         },
+        //         {
+        //             y: 0,
+        //             opacity: 1
+        //         }
+        //     ),
+        //     0
+        // );
+
         tlBg.add(
             TweenMax.fromTo(
                 $('.key__flow__main'),
@@ -93,54 +95,55 @@ export default {
             ),
             '-=0.1'
         );
+        if (!IsMobile) {
+            tlBg.add(
+                TweenMax.fromTo(
+                    $('.key__flow__bread--1'),
+                    0.4,
+                    {
+                        y: -30,
+                        opacity: 0
+                    },
+                    {
+                        y: 0,
+                        opacity: 1
+                    }
+                ),
+                '-=0.1'
+            );
 
-        tlBg.add(
-            TweenMax.fromTo(
-                $('.key__flow__bread--1'),
-                0.4,
-                {
-                    y: -30,
-                    opacity: 0
-                },
-                {
-                    y: 0,
-                    opacity: 1
-                }
-            ),
-            '-=0.1'
-        );
+            tlBg.add(
+                TweenMax.fromTo(
+                    $('.key__flow__bread--2'),
+                    0.4,
+                    {
+                        y: -30,
+                        opacity: 0
+                    },
+                    {
+                        y: 0,
+                        opacity: 1
+                    }
+                ),
+                '-=0.1'
+            );
 
-        tlBg.add(
-            TweenMax.fromTo(
-                $('.key__flow__bread--2'),
-                0.4,
-                {
-                    y: -80,
-                    opacity: 0
-                },
-                {
-                    y: 0,
-                    opacity: 1
-                }
-            ),
-            '-=0.1'
-        );
-
-        tlBg.add(
-            TweenMax.fromTo(
-                $('.key__flow__bread--3'),
-                0.4,
-                {
-                    y: -20,
-                    opacity: 0
-                },
-                {
-                    y: 0,
-                    opacity: 1
-                }
-            ),
-            '-=0.1'
-        );
+            tlBg.add(
+                TweenMax.fromTo(
+                    $('.key__flow__bread--3'),
+                    0.4,
+                    {
+                        y: -30,
+                        opacity: 0
+                    },
+                    {
+                        y: 0,
+                        opacity: 1
+                    }
+                ),
+                '-=0.1'
+            );
+        }
 
         tlBg.add(
             TweenMax.fromTo(
@@ -155,7 +158,7 @@ export default {
                     opacity: 1
                 }
             ),
-            '+=0.1'
+            '+=0.6'
         );
 
         tlBg.add(
@@ -171,7 +174,7 @@ export default {
                     opacity: 1
                 }
             ),
-            '+=0.5'
+            '-=0.1'
         );
 
         tlBg.play();

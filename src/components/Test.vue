@@ -14,6 +14,7 @@ export default {
         var dishTl = new TimelineMax({
             repeat: -1,
             delay: 1,
+            smoothChildTiming:true,
             paused: false,
             yoyo: false
         });
@@ -21,6 +22,7 @@ export default {
         var coverTl = new TimelineMax({
             repeat: 0,
             delay: 1,
+            smoothChildTiming:true,
             paused: false,
             yoyo: false
         });
