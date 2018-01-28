@@ -117,6 +117,72 @@ gulp.task('sprite', function() {
     spriteData.css.pipe(gulp.dest('src/scss/'));
 });
 
+gulp.task('spritex2', function() {
+    var spriteData = gulp.src('src/images/spritesx2/**/*.png').pipe(
+        spritesmith({
+            imgName: 'spritex2.png',
+            cssName: '_spritex2.scss',
+            padding: 10,
+            exportOpts: { quality: 100 },
+            algorithm: 'top-down',
+            cssTemplate: function(data) {
+                var output = '';
+                var v = Math.random();
+                data.sprites.forEach(function(sprite) {
+                    var total_width = sprite.total_width;
+                    output += [
+                        '.' + sprite.name + ' {\n',
+                        '  display: block;\n',
+                        '  background-image: url("../images/' + sprite.image + '?v=' + v + '");\n',
+                        '  background-position: ' +
+                            Math.round(sprite.offset_x / 2) +
+                            'px ' +
+                            Math.round(sprite.offset_y / 2) +
+                            'px;\n',
+                        '  background-size: ' + Math.round(total_width/2) +'px auto;\n',
+                        '  width:' + Math.round(sprite.width/2) + 'px;\n',
+                        '  height: ' + Math.round(sprite.height/2) + 'px;\n',
+                        '/*source-image:' + sprite.source_image + '*/\n',
+                        '}\n',
+                        '%' + sprite.name + ' {\n',
+                        '  display: block;\n',
+                        '  background-image: url("../images/' + sprite.image + '?v=' + v + '");\n',
+                        '  background-position: ' +
+                            Math.round(sprite.offset_x / 2) +
+                            'px ' +
+                            Math.round(sprite.offset_y / 2) +
+                            'px;\n',
+                        '  background-size: ' + Math.round(total_width/2) +'px auto;\n',
+                        '  width:' + Math.round(sprite.width/2) + 'px;\n',
+                        '  height: ' + Math.round(sprite.height/2) + 'px;\n',
+                        '/*source-image:' + sprite.source_image + '*/\n',
+                        '}\n',
+                        '@mixin ' + sprite.name + '() {\n',
+                        '  display: block;\n',
+                        '  background-image: url("../images/' + sprite.image + '?v=' + v + '");\n',
+                        '  background-position: ' +
+                            Math.round(sprite.offset_x / 2) +
+                            'px ' +
+                            Math.round(sprite.offset_y / 2) +
+                            'px;\n',
+                        '  background-size: ' + Math.round(total_width/2) +'px auto;\n',
+                        '  width:' + Math.round(sprite.width/2) + 'px;\n',
+                        '  height: ' + Math.round(sprite.height/2) + 'px;\n',
+                        '/*source-image:' + sprite.source_image + '*/\n',
+                        '}\n'
+                    ].join('');
+                });
+                return output;
+            }
+        })
+    );
+
+    spriteData.img.pipe(gulp.dest('dist/images'));
+    spriteData.css.pipe(gulp.dest('src/scss/'));
+
+
+});
+
 // Jade
 gulp.task('jade', function() {
     gulp
@@ -217,6 +283,7 @@ gulp.task('watch', function() {
     gulp.watch('src/scss/**/**.scss', ['sass']);
     gulp.watch(['src/images/*'], ['copyImg']);
     gulp.watch(['src/images/sprites/*'], ['sprite']);
+    gulp.watch(['src/images/spritesx2/*'], ['spritex2']);
     gulp.watch(['dist/*.html'], ['html']);
     gulp.watch(['dist/bundle.js'], ['bundleReload']);
 });
@@ -230,7 +297,7 @@ gulp.task('set-prod-node-env', function() {
 });
 
 //Build
-gulp.task('build', ['bundleJs', 'sprite', 'jade', 'sass', 'copyAll'], function() {});
+gulp.task('build', ['bundleJs', 'sprite','spritex2', 'jade', 'sass', 'copyAll'], function() {});
 
 //Group Dev
 gulp.task('dev', ['set-dev-node-env', 'build', 'connectDist', 'watch', 'open'], function() {});

@@ -1,5 +1,6 @@
 @charset 'UTF-8';
 
+
 /* ----- IMPORT -----*/
 
 //1.utils
@@ -10,6 +11,7 @@
 @import 'utils/_animation.scss';
 //sprite scss import 至少要啟用gulp一次
 @import '_sprite.scss';
+@import '_spritex2.scss';
 //2.vendors
 @import 'vendor/animate.scss';
 //3.base
@@ -724,10 +726,10 @@ $key-flow-height: 1020px;
     }
     @for $i from 1 through 6 {
         .key__item.key__item--#{$i} span.pc {
-            @extend %key1-#{$i};
+            @extend .key1-#{$i};
         }
         .key__item.key__item--#{$i} span.mb {
-            @extend %key1-#{$i}-m;
+            @extend .key1-#{$i}-m;
         }
     }
     .key__end__note {
@@ -1102,7 +1104,7 @@ $key-flow-height: 1020px;
             padding-top: 85px;
             padding-left: 130px;
             padding-right: 40px;
-            background: url(../images/qa-item-bg-m.png) no-repeat 0 0;
+            @include qa-item-bg-m();
         }
         @include respond-to(small-up) {
             &:nth-child(1) {
