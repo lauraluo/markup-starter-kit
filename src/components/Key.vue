@@ -12,7 +12,7 @@
                             .pop__title(v-html="currentTitle")
                             .pop__text {{currentContent}}
                             .pop__ctrls
-                                .pop__btn(v-on:click="closePop($event)") 了解!
+                                .pop__btn(v-on:click="closePop($event)") 了解！
 </template>
 
 <script>

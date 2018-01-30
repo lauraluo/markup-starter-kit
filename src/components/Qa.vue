@@ -13,6 +13,8 @@ export default {
             currentCount: 0,
             timeCount: 5,
             currentQuestion: 0,
+            isStart:false,
+            startTimeCount:5,
             typeNames: ['一般麵包知識題', '包裝麵包認知題', '麵包達人得分題'],
             ans: [1, 2, 2, 3, 1, 2, 2, 1],
             selectedAns: [],
@@ -79,7 +81,20 @@ export default {
     },
     computed: {},
     mounted() {
-        this.resetTimeCount();
+         let startTnterval = setInterval(() => {
+            let time = this.startTimeCount;
+            if (this.startTimeCount <= 0) {
+                clearInterval(startTnterval);
+                setTimeout(() => {
+                    this.resetTimeCount();
+                    this.isStart = true;
+                },500);
+            } else {
+                time--;
+                this.startTimeCount = time;
+            }
+        }, 1000);
+
         for (let i = 0; i < 8; i++) {
             this.selectedAns.push(-1);
             this.selectedAnsResult.push(false);

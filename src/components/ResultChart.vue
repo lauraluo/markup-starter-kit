@@ -35,7 +35,6 @@ export default {
                 this.lv1DisplayNumber = Math.floor(this.lv1Count / this.totalSum * 100);
                 this.lv2DisplayNumber = Math.floor(this.lv2Count / this.totalSum * 100);
                 this.lv3DisplayNumber = 100 - this.lv1DisplayNumber - this.lv2DisplayNumber;
-
                 this.runChart();
             });
     },
@@ -122,11 +121,14 @@ export default {
                 '-=1'
             );
 
-            new ScrollMagic.Scene({
-                triggerElement: '#result-chart'
-            })
-                .setTween(tl)
-                .addTo(controller);
+            if (!IsMobile) {
+                new ScrollMagic.Scene({
+                    duration: 100,	// the scene should last for a scroll distance of 100px
+                    offset: -100
+                })
+                    .setTween(tl)
+                    .addTo(controller);
+            }
         }
     }
 };

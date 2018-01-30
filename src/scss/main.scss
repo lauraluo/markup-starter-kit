@@ -1038,6 +1038,54 @@ $key-flow-height: 1020px;
             }
         }
     }
+    &__start {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba($color: #000000, $alpha: 0.90);
+        z-index: 99;
+        color: #fff;
+        text-align: center;
+        @include respond-to(small) {
+            padding: 30px;
+        }
+        span {
+            display: inline-block;
+            font-size: 2.4rem;
+            @include respond-to(small) {
+                font-size: 2.8rem;
+            }
+        }
+        .number {
+            font-size:10.0rem;
+            @include respond-to(small) {
+                margin-top:30px;
+            }
+        }
+        .title {
+            line-height:100px;
+            vertical-align: middle;
+            @include respond-to(small) {
+                line-height:2;
+            }
+        }
+        .tipinfo {
+            border-radius: 50%;
+            border: 1px solid #fff; 
+            width: 100px;
+            height: 100px;
+            @include respond-to(small) {
+                width: 120px;
+                height: 120px;
+                line-height:120px;
+                vertical-align: middle;
+                margin-bottom:30px;
+            }
+        }
+        
+    }
     &__list {
         padding: 40px 0;
         width: grid-width(12);
@@ -1528,6 +1576,32 @@ $key-flow-height: 1020px;
                         transform: translateX(-50%);
                     }
                 }
+            }
+        }
+    }
+    &__more {
+        text-align: center;
+        .btn {
+            cursor: pointer;
+            display: inline-block;
+            background: #f19149;
+            border-radius: 24px;
+            color: #fff;
+            font-size: 2.4rem;
+            padding: 10px 50px;
+            box-shadow: 0 4px 0 0 #ee7820;
+            transition: $tran;
+            &:hover {
+                transform: translateY(2px);
+                box-shadow: 0 2px 0 0 #ee7820;
+            }
+            @include respond-to(small) {
+                width: 400px;
+                font-size: 2.8rem;
+                display: block;
+                text-align: center;
+                margin: 60px auto 0 auto;
+                padding: 10px 10px;
             }
         }
     }

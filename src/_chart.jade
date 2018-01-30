@@ -2,7 +2,7 @@ section.result-chart(id="result-chart")
     div.l-container
         div.title 玩過的人都對幾題
         div.chart
-            div.chart-canvas
+            div.chart-canvas(id="chart-canvas")
                 .bar-item.bar1
                     .bar(ref="bar1")
                     .text(ref="bar3Text") {{lv1DisplayNumber}}%
@@ -24,5 +24,7 @@ section.result-chart(id="result-chart")
                     div.y-number-grid(v-bind:class="{active: userCorrectcCount == #{j}}")
                         span= j 
                 - }
+        .result-chart__more
+                a.btn(href="#libarys"): span 再挑戰一次  
 
             

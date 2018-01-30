@@ -4,6 +4,13 @@ section.qa(id="qa")
     div.qa__bd           
         div.qa__content(v-bind:class="{'fixed4': currentQuestion == 3}")
             div.l-container
+                .qa__start(v-if="!isStart")
+                    div.l-vm
+                        div.l-vm__content
+                            p.title
+                                span.tipinfo 注意
+                                span.text 【準備開始囉！】<br class="mbOnly"/> 一題限時５秒回答，未在時間內完成即算答錯~ 
+                            div.number {{startTimeCount}}
                 transition-group(name='fade' enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft" tag="div")
                     div.qa-wrap(v-for="(question,index) in questions" v-bind:key="index"  v-if="index == currentQuestion" )            
                         div.l-vm

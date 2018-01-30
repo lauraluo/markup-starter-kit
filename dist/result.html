@@ -196,7 +196,7 @@
             <div class="l-container">
               <div class="title">玩過的人都對幾題</div>
               <div class="chart">
-                <div class="chart-canvas">
+                <div id="chart-canvas" class="chart-canvas">
                   <div class="bar-item bar1">
                     <div ref="bar1" class="bar"></div>
                     <div ref="bar3Text" class="text">{{lv1DisplayNumber}}%</div>
@@ -228,6 +228,7 @@
                   <div v-bind:class="{active: userCorrectcCount == 8}" class="y-number-grid"><span>8</span></div>
                 </div>
               </div>
+              <div class="result-chart__more"><a href="#libarys" class="btn"><span>再挑戰一次  </span></a></div>
             </div>
           </section>
         </div>

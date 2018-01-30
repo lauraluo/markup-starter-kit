@@ -88,39 +88,7 @@
       <div id="nav"></div>
       <div id="pageMain" class="l-main">
         <!--main view-->
-        <section id="qa" class="qa">
-          <div v-if="isShowResult" class="qa__mask"></div>
-          <div v-if="isShowResult" v-bind:class="{ok:displayResult,error:!displayResult}" class="qa__result"></div>
-          <div class="qa__bd">          
-            <div v-bind:class="{'fixed4': currentQuestion == 3}" class="qa__content">
-              <div class="l-container">
-                <transition-group name="fade" enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft" tag="div">
-                  <div v-for="(question,index) in questions" v-bind:key="index" v-if="index == currentQuestion" class="qa-wrap">           
-                    <div class="l-vm">
-                      <div class="l-vm__content">
-                        <div class="qa__info">
-                          <div class="qa__step"><span>{{timeCount}}</span></div>
-                          <div class="qa__progress"><span class="display-bar"></span></div>
-                        </div>
-                        <div class="qa__type"><span>{{question.type}}</span></div>
-                        <div class="qa__main clearfix">
-                          <div class="qa__q clearfix"><span class="icon">Q</span><span class="number">{{index + 1}}</span><span class="text">{{question.title}}</span></div>
-                          <div class="qa__list">
-                            <div class="qa__items">
-                              <div v-for="(option,optionIndex) in question.options" v-bind:key="optionIndex" v-on:click="selectedOption($event,index,optionIndex + 1)" v-bind:class="{ 'active': optionIndex +1 == currentSelected &amp;&amp; isShowResult ,'disabled': optionIndex +1 != currentSelected &amp;&amp; isShowResult }" data-category="bread-click" data-action="ans-click" v-bind:data-label="option" class="qa__item gtm-event">
-                                <div v-html="option" class="text"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </transition-group>
-              </div>
-            </div>
-          </div>
-        </section>
+        <div id="qa"></div>
         <div class="footer-page">
           <div class="l-container">
             <div class="footer-page__content"><a href="https://goo.gl/y8qFjk" target="_blank" title="熱銷單品 熱銷單品海鹽羅宋麵包鹹甜交織，成全令人懷念的經典美味" class="video hideText">熱銷單品海鹽羅宋麵包鹹甜交織，成全令人懷念的經典美味</a><a href="https://goo.gl/SEd5yt" target="_blank" title="統一麵包 熱銷單品海鹽羅宋麵包鹹甜交織，成全令人懷念的經典美味" class="classic hideText">統一麵包經典烘焙，一直都在不受時間限制，也能享受安心的美味</a></div>
