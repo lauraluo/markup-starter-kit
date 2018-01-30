@@ -248,7 +248,7 @@ function bundle() {
         .on('error', gutil.log.bind(gutil, 'Browserify Error'))
         .pipe(source('bundle.js'))
         .pipe(buffer())
-        .pipe(sourcemaps.init({ loadMaps: true })) // loads map from browserify file
+        .pipe(sourcemaps.init({ loadMaps: false })) // loads map from browserify file
         .pipe(sourcemaps.write('./')) // writes .map file
         .pipe(gulp.dest('./dist'));
 }
