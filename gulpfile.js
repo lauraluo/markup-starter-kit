@@ -44,6 +44,7 @@ gulp.task('sass', function() {
         .pipe(
             sass({
                 errLogToConsole: true,
+                outputStyle: 'compressed',
                 includePaths: ['src/scss/**/**']
             })
         )
@@ -232,7 +233,9 @@ var customOpts = {
 var opts = assign({}, watchify.args, customOpts);
 
 var b = watchify(
-    browserify(opts).transform({ global: true }, envify({ NODE_ENV: 'production' }))
+    browserify(opts)
+        .transform({ global: true }, envify({ NODE_ENV: 'production' }))
+        .transform('uglifyify', { global: true  })
 );
 
 gulp.task('bundleJs', bundle);
@@ -249,6 +252,7 @@ function bundle() {
         .pipe(sourcemaps.write('./')) // writes .map file
         .pipe(gulp.dest('./dist'));
 }
+
 
 //assets
 
