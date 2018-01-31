@@ -107,6 +107,7 @@ export default {
     computed: {},
     mounted() {
         alert("!!!!!!!!!");
+        alert(URL);
         
         var url = new URL(location.href);
         let userCorrectcCount = url.searchParams.get('count') || 0;
