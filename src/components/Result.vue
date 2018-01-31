@@ -84,8 +84,8 @@ div
                     p.text 想知道所有答案嗎？
                     a.btn(href="#libarys"): span 往下看更多解答                   
         div.result__ft
-    //- ResultLibarys
-    //- ResultChart
+    ResultLibarys
+    ResultChart
 </template>
 
 <script>
@@ -109,7 +109,6 @@ export default {
 
         function getQueryParams(qs) {
             qs = qs.split('+').join(' ');
-
             var params = {},
                 tokens,
                 re = /[?&]?([^=]+)=([^&]*)/g;
@@ -120,12 +119,8 @@ export default {
 
             return params;
         }
-
         var query = getQueryParams(document.location.search);
-
         let userCorrectcCount = query.count || 0;
-
-        alert(query.count);
 
         if (userCorrectcCount <= 4) {
             this.resultType = 0;
