@@ -84,8 +84,8 @@ div
                     p.text 想知道所有答案嗎？
                     a.btn(href="#libarys"): span 往下看更多解答                   
         div.result__ft
-    ResultLibarys
-    ResultChart
+    //- ResultLibarys
+    //- ResultChart
 </template>
 
 <script>
