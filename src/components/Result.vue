@@ -62,7 +62,7 @@ div
                             |麵包專業達人-經典中的經典
                         .desc  超棒的！不只麵包細節，連製程、購買細節都考不倒你啊！知性與理性交織，簡直是麵包界的海鹽羅宋！往下看看熊健康的麵包知識大解析，為你的智慧再添經典。
                         div.img-wrap
-                            img(src="./images/end-bread2.png")
+                            img(src="./images/end-bread3.png")
                     .result__share
                         p.text 分享你的結果
                         - var shareUrl = 'http://topic.commonhealth.com.tw/pecos-bread/result3.html';
