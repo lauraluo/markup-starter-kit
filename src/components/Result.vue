@@ -106,11 +106,13 @@ export default {
     },
     computed: {},
     mounted() {
+        alert("!!!!!!!!!");
+        
         var url = new URL(location.href);
         let userCorrectcCount = url.searchParams.get('count') || 0;
 
         alert(url.searchParams.get('count'));
-        
+
         if (userCorrectcCount <= 4) {
             this.resultType = 0;
         } else if (userCorrectcCount <= 6) {
