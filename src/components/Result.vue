@@ -108,6 +108,9 @@ export default {
     mounted() {
         var url = new URL(location.href);
         let userCorrectcCount = url.searchParams.get('count') || 0;
+
+        alert(url.searchParams.get('count'));
+        
         if (userCorrectcCount <= 4) {
             this.resultType = 0;
         } else if (userCorrectcCount <= 6) {
@@ -117,22 +120,6 @@ export default {
         }
     },
     methods: {
-        showPop: function(e, itemOrder) {
-            var order = itemOrder + 1;
-            var dItem = $('.key' + this.currentKeyPage + ' .key__item.key__item--' + order);
-
-            var _currentTitle = dItem.find('.title').text();
-            var _currentContent = dItem.find('.content').text();
-
-            this.currentTitle = _currentTitle;
-            this.currentContent = _currentContent;
-            this.isShowPop = true;
-        },
-        closePop: function(e) {
-            e.preventDefault();
-            console.log('close');
-            this.isShowPop = false;
-        }
     }
 };
 </script>
