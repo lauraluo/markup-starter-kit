@@ -106,13 +106,26 @@ export default {
     },
     computed: {},
     mounted() {
-        alert("!!!!!!!!!");
-        alert(URL);
-        
-        var url = new URL(location.href);
-        let userCorrectcCount = url.searchParams.get('count') || 0;
 
-        alert(url.searchParams.get('count'));
+        function getQueryParams(qs) {
+            qs = qs.split('+').join(' ');
+
+            var params = {},
+                tokens,
+                re = /[?&]?([^=]+)=([^&]*)/g;
+
+            while ((tokens = re.exec(qs))) {
+                params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+            }
+
+            return params;
+        }
+
+        var query = getQueryParams(document.location.search);
+
+        let userCorrectcCount = query.count || 0;
+
+        alert(query.count);
 
         if (userCorrectcCount <= 4) {
             this.resultType = 0;
@@ -122,8 +135,7 @@ export default {
             this.resultType = 2;
         }
     },
-    methods: {
-    }
+    methods: {}
 };
 </script>
 
