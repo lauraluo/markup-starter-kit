@@ -62,8 +62,8 @@ export default {
                     title: '哪種麵包的製作方法，需費時較長時間？',
                     type: '麵包達人得分題',
                     options: [
-                        '我知道，是直接法<span>Straight-Dough<br/>Metho</span>',
-                        '我超懂，是中種法<span>Sponge-Dough<br/>Method</span>'
+                        '我知道，是直接法',
+                        '我超懂，是中種法'
                     ]
                 },
                 {
@@ -177,7 +177,7 @@ export default {
                 .ref()
                 .update(updateData, function(error) {
                     setTimeout(() => {
-                        location.replace(`result.html?count=${correctCount}`);
+                        location = './result.html?count=' + correctCount;
                     }, 1500);
                 });
         },
