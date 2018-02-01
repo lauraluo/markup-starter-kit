@@ -30,4 +30,4 @@ section.qa(id="qa")
                                     .qa__list
                                         .qa__items
                                             div.qa__item.gtm-event(v-for="(option,optionIndex) in question.options" v-bind:key="optionIndex" v-on:click="selectedOption($event,index,optionIndex + 1)" v-bind:class="{ 'active': optionIndex +1 == currentSelected && isShowResult ,'disabled': optionIndex +1 != currentSelected && isShowResult }" data-category="bread-click" data-action="ans-click" v-bind:data-label="option")
-                                                div.text(v-html="option")
+                                                div.text.gtm-event(v-html="option" data-category="bread-click" data-action="ans-click" v-bind:data-label="option")
