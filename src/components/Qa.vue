@@ -171,15 +171,17 @@ export default {
             let updateData = {};
 
             updateData[`lv${resultLv}Count`] = this.lvTotalCount[`lv${resultLv}Count`] + 1;
-
-            _firebase
-                .database()
-                .ref()
-                .update(updateData, function(error) {
-                    setTimeout(() => {
-                        location = './result.html?count=' + correctCount;
-                    }, 1500);
-                });
+            console.log(!isNaN(updateData[`lv${resultLv}Count`]));
+            if(!isNaN(updateData[`lv${resultLv}Count`]) ){
+                _firebase
+                    .database()
+                    .ref()
+                    .update(updateData, function(error) {
+                        setTimeout(() => {
+                            location = './result.html?count=' + correctCount;
+                        }, 1500);
+                    });
+            }
         },
         selectedOption: function(e, questionIndex, ans) {
             e.preventDefault();

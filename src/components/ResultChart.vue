@@ -137,9 +137,7 @@ export default {
                 new ScrollMagic.Scene({
                     duration: 100,	// the scene should last for a scroll distance of 100px
                     offset: -100
-                })
-                    .setTween(tl)
-                    .addTo(controller);
+                }).setPin(tl).addTo(controller);
             }
         }
     }
