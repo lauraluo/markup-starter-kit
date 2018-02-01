@@ -235,7 +235,7 @@ var opts = assign({}, watchify.args, customOpts);
 var b = watchify(
     browserify(opts)
         .transform({ global: true }, envify({ NODE_ENV: 'production' }))
-        // .transform('uglifyify', { global: true  })
+        .transform('uglifyify', { global: true  })
 );
 
 gulp.task('bundleJs', bundle);
