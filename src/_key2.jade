@@ -39,13 +39,13 @@ section.key.key2(id="key")
                         
                         - var order = 0;
                         for title in popTitles
-                            div(class="key__item key__item--#{++order} gtm-event" v-on:click="showPop($event, #{order})"  data-category="bread-click" data-action="popup-click" data-label='安心關鍵 2 :'+title)
+                            div.gtm-event(class="key__item key__item--#{++order}" data-category="bread-click" data-action="popup-click" data-label='安心關鍵 2 :'+title v-on:click="showPop($event, #{order})")
                                 div.ani-wrap
                                     span.title.hide #{title}
                                     span.content.hide #{contentItems[order-1]}
-                                    span.pc
-                                    span.mb
-                                    div.icon
+                                    span.pc.gtm-event(data-category="bread-click" data-action="popup-click" data-label='安心關鍵 2 :'+title)
+                                    span.mb.gtm-event(data-category="bread-click" data-action="popup-click" data-label='安心關鍵 2 :'+title)
+                                    div.icon.gtm-event(data-category="bread-click" data-action="popup-click" data-label='安心關鍵 2 :'+title)
                 div.key__end
                     div.key__share
                         - var shareUrl = 'http://topic.commonhealth.com.tw/pecos-bread/key.2.html';

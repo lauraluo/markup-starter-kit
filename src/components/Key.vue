@@ -1,11 +1,11 @@
 
 <template lang="jade">
     div
-        key1(v-on:showpop="showPop" v-on:closepop="closePop"  v-show="currentKeyPage == 1" v-bind:is-show-pop="isShowPop" v-bind:current-title="currentTitle" v-bind:current-content="currentContent")
-        key2(v-on:showpop="showPop" v-on:closepop="closePop"  v-show="currentKeyPage == 2" v-bind:is-show-pop="isShowPop" v-bind:current-title="currentTitle" v-bind:current-content="currentContent")
-        key3(v-on:showpop="showPop" v-on:closepop="closePop"  v-show="currentKeyPage == 3" v-bind:is-show-pop="isShowPop" v-bind:current-title="currentTitle" v-bind:current-content="currentContent")
+        key1(v-on:showpop="showPop" v-on:closepop="closePop"  v-if="currentKeyPage == 1" v-bind:is-show-pop="isShowPop" v-bind:current-title="currentTitle" v-bind:current-content="currentContent")
+        key2(v-on:showpop="showPop" v-on:closepop="closePop"  v-if="currentKeyPage == 2" v-bind:is-show-pop="isShowPop" v-bind:current-title="currentTitle" v-bind:current-content="currentContent")
+        key3(v-on:showpop="showPop" v-on:closepop="closePop"  v-if="currentKeyPage == 3" v-bind:is-show-pop="isShowPop" v-bind:current-title="currentTitle" v-bind:current-content="currentContent")
         transition(name='fade'  enter-active-class="animated fadeIn active" leave-active-class="animated fadeOut")
-            div.pop(v-show="isShowPop")
+            div.pop(v-if="isShowPop")
                 div.l-container
                     div.pop__bd
                         .pop__content

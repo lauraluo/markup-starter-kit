@@ -151,7 +151,6 @@ export default {
                         correctCount++;
                     }
                 });
-                console.log('答對: ' + correctCount);
                 this.submitResult(correctCount);
             }
         },
