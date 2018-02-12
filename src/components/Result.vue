@@ -15,8 +15,8 @@ div
                             img(src="./images/end-bread1.png")
                     .result__share
                         p.text 分享你的結果
-                        - var shareUrl = 'http://topic.commonhealth.com.tw/pecos-bread/result1.html';
-                        - var shareUrlDecode = 'http%3A%2F%2F#topic.commonhealth.com.tw%2Fpecos-bread%2Fresult1.html';
+                        - var shareUrl = 'http://topic.commonhealth.com.tw/uni-bread/result1.html';
+                        - var shareUrlDecode = 'http%3A%2F%2F#topic.commonhealth.com.tw%2Funi-bread%2Fresult1.html';
                         - var shareText = "喜愛麵包的我，原來是：初級麵包新手-復古好滋味！麵包百百種，麵包知識更是萬萬種~快來挑戰限時麵包大會考，由康健熊健康出題，測試你是不是麵包達人唷"
                         .result__share__items
                             div.result__share__item.square_fb
@@ -40,8 +40,8 @@ div
                             img(src="./images/end-bread2.png")
                     .result__share
                         p.text 分享你的結果
-                        - var shareUrl = 'http://topic.commonhealth.com.tw/pecos-bread/result2.html';
-                        - var shareUrlDecode = 'http%3A%2F%2F#topic.commonhealth.com.tw%2Fpecos-bread%2Fresult2.html';
+                        - var shareUrl = 'http://topic.commonhealth.com.tw/uni-bread/result2.html';
+                        - var shareUrlDecode = 'http%3A%2F%2F#topic.commonhealth.com.tw%2Funi-bread%2Fresult2.html';
                         - var shareText = "喜愛麵包的我，原來是：高級麵包小當家，意猶未盡的美味！麵包百百種，麵包知識更是萬萬種~快來挑戰限時麵包大會考，由康健熊健康出題，測試你是不是麵包達人唷"
                         .result__share__items
                             div.result__share__item.square_fb
@@ -65,8 +65,8 @@ div
                             img(src="./images/end-bread3.png")
                     .result__share
                         p.text 分享你的結果
-                        - var shareUrl = 'http://topic.commonhealth.com.tw/pecos-bread/result3.html';
-                        - var shareUrlDecode = 'http%3A%2F%2F#topic.commonhealth.com.tw%2Fpecos-bread%2Fresult3.html';
+                        - var shareUrl = 'http://topic.commonhealth.com.tw/uni-bread/result3.html';
+                        - var shareUrlDecode = 'http%3A%2F%2F#topic.commonhealth.com.tw%2Funi-bread%2Fresult3.html';
                         - var shareText = "喜愛麵包的我，原來是：高階麵包專業達人，經典中的經典！麵包百百種，麵包知識更是萬萬種~快來挑戰限時麵包大會考，由康健熊健康出題，測試你是不是麵包達人唷"
                         .result__share__items
                             div.result__share__item.square_fb

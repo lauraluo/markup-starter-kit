@@ -216,7 +216,26 @@ $nav_height_mb: 135px;
             
         }
         @include respond-to(small) {
-            display: none;
+            // display: none;
+            position: absolute;
+            right: 130px;
+            top: 20px;
+            .fb_share {
+                @include square_fb;
+                > div {
+                    transform: scale(10);
+                }
+            }
+            .line_share {
+                @include square_line;
+                > * {
+                    transform: scale(2);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                }
+            }
         }
     }
     @include respond-to(small) {
