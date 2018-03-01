@@ -63,7 +63,7 @@ html {
 .nav {
     position: relative;
     z-index: 1;
-    margin-bottom: -10px;
+    margin-bottom: -18px;
     @include respond-to(small) {
         // margin-bottom: -80px;
     }
@@ -80,19 +80,17 @@ html {
     position: relative;
     padding-bottom: 10px;
     z-index: 0;
-    padding: 20px 0;
+    padding: 20px 0 0 0;
     background: url(../images/index-bg.jpg) no-repeat 50% 50%;
     background-size: cover;
-    @include respond-to(small) {
-        padding: 20px 0;
-    }
     .l-vm {
-        height: 75vh;
-        min-height: 750px;
+        height: 60vh;
+        min-height: 650px;
         width: 100%;
         text-align: center;
         @include respond-to(small) {
-            min-height: 1050px;
+            min-height: 800px;
+            margin:50px 0;
         }
     }
     .l-vm__content {
@@ -103,157 +101,153 @@ html {
         @include index-slogan();
         margin: 0 auto;
         @include respond-to(small) {
-            position: relative;
-            top: 0px;
-            transform: scale(1.4);
+            @include index-slogan-m();
+            margin-top: 50px;
+            
         }
     }
     &__cover {
-        background: url(../images/index__dish.png) no-repeat center bottom;
-        width: 300px;
-        height: 216px;
-        margin: 20px auto;
+        width: 330px;
+        height: 180px;
+        margin: 40px auto;
         position: relative;
         @include respond-to(small) {
-            top: 100px;
-            transform: scale(1.3);
+            width: 469px;
+            height: 256px;
         }
     }
     &__dish {
         margin: 0 auto;
         position: absolute;
-        left: 30px;
         opacity: 0;
-        animation-name: zboing-small;
-        animation-delay: 5s;
-        animation-duration: 5s;
-        animation-iteration-count: infinite;
+        // animation-name: zboing-small;
+        // animation-delay: 5s;
+        // animation-duration: 5s;
+        // animation-iteration-count: infinite;
         &--1 {
             @include index-dish1();
+            @include respond-to(small) {
+                @include index-dish1-m();
+            }
         }
         &--2 {
             @include index-dish2();
+            @include respond-to(small) {
+                @include index-dish2-m();
+            }
         }
         &--3 {
             @include index-dish3();
+            @include respond-to(small) {
+                @include index-dish3-m();
+            }
         }
-        &--4 {
-            @include index-dish4();
-        }
+      
     }
     &__keys {
-        width: 600px;
         margin: 0 auto;
         text-align: center;
-        position: relative;
-        top: -70px;
         @include respond-to(small) {
             top: 80px;
         }
         &__item {
-            float: left;
+            float:left;
             margin: 10px;
             position: relative;
             transform: scale(1);
             transition: $tran;
+            margin: 0 10px;
+            @include respond-to(small) {
+                margin: 5px;
+            }
             .btn {
+                @include index-btn();
+                color:#000;
+                font-size:1.6rem;
                 position: absolute;
                 cursor: pointer;
-                display: inline-block;
-                background: #cfa972;
-                border-radius: 20px;
-                color: #fff;
-                font-size: 1.3rem;
-                letter-spacing: 3px;
-                padding: 8px 10px;
-                box-shadow: 0 4px 0 0 #996c33;
-                transition: $tran;
+                line-height:30px;
+                vertical-align: middle;
+                top:100px;
+                left:25px;
                 @include respond-to(small) {
-                    font-size: 1.4rem;
-                    padding: 10px 13px;
-                }
-                &:hover {
-                    transform: translateY(2px);
-                    box-shadow: 0 2px 0 0 #996c33;
+                    @include index-btn-m();
+                    transform: scale(0.8);
+                    font-size: 2.8rem;
+                    line-height:58px;
+                    top:130px;
+                    left:10px;
                 }
             }
             .icon {
+                @include index-btn-arrow();
                 display: inline-block;
-                font-size: 1.4rem;
-                color: #fff; // position: absolute;
-                padding-left: 5px;
+                margin:5px 0 0 5px;
                 animation-name: indexBtnIcon;
                 animation-delay: 0s;
                 animation-duration: 1s;
                 animation-iteration-count: infinite;
+                @include respond-to(small) {
+                    @include index-btn-arrow-m();
+                    display: inline-block;
+                }
+
             }
-            @include respond-to(small) {
-                margin: 0px;
-            }
+           
             @include respond-to(small-up) {
                 &:hover {
-                    transform: scale(1.2);
+                    transform: translateY(-10px);
                 }
             }
             &--1 {
                 transform-origin: 100% 0;
                 @include index-key1();
                 @include respond-to(small) {
-                    transform: translateX(-10px);
                     @include index-key1-m();
                 }
-                .btn {
-                    top: 99px;
-                    left: 46px;
-                    @include respond-to(small) {
-                        top: 105px;
-                        left: 46px;
-                    }
-                }
+                
             }
             &--2 {
                 transform-origin: 50% 0;
                 @include index-key2();
                 @include respond-to(small) {
-                    transform: translateY(20px);
                     @include index-key2-m();
                 }
-                .btn {
-                    top: 137px;
-                    left: 47px;
-                    @include respond-to(small) {
-                        top: 124px;
-                        left: 46px;
-                    }
-                }
+                
             }
             &--3 {
                 transform-origin: 0 0;
                 @include index-key3();
                 @include respond-to(small) {
-                    transform: translateX(10px);
                     @include index-key3-m();
                 }
-                .btn {
-                    top: 104px;
-                    left: 48px;
-                    @include respond-to(small) {
-                        top: 110px;
-                        left: 52px;
-                    }
-                }
+                
             }
         }
     }
+    &__ft {
+        padding: 40px;
+        background: url(../images/note-bg.png) repeat 0 0;
+        @include respond-to(small) {
+            padding:0;
+        }
+    }
     &__note {
+        margin: 0 auto;
         position: relative;
-        top: -60px;
-        right: -60px;
         @include index-note();
         @include respond-to(small) {
-            top: 120px;
-            left: 10px;
             @include index-note-m();
+            top:-15px;
+        }
+    }
+    &__bear {
+        @include index-note-bear();
+        position:absolute;
+        right:0;
+        top:-210px;
+        @include respond-to(small) {
+            display:none;
         }
     }
     &__link-test {
@@ -262,44 +256,51 @@ html {
         right: 30px;
         top: 30vh;
         transition: $tran;
+        @include respond-to(small) {
+            top: 25vh;
+            transform: scale(0.7);
+        }
         .btn {
             cursor: pointer;
             position: absolute;
             display: inline-block;
-            background: #e60012;
+            border:1px solid #ac6a00;
             border-radius: 20px;
-            color: #fff;
-            font-size: 1.3rem;
+            color: #ac6a00;
+            font-size: 1.6rem;
             letter-spacing: 3px;
-            padding: 8px 10px;
-            box-shadow: 0 4px 0 0 #a40000;
+            line-height:30px;
+            vertical-align: middle;
+            padding: 0px 10px;
             transition: $tran;
-            bottom: 19px;
-            left: 26px;
+            bottom: 29px;
+            left: 20px;
             @include respond-to(small) {
-                font-size: 1.7rem;
-                padding: 15px 25px;
-                bottom: 29px;
+                
+                font-size: 2.8rem;
+                padding: 15px 20px;
+                bottom: 39px;
                 left: 34px;
                 border-radius: 40px;
             }
-            &:hover {
-                transform: translateY(2px);
-                box-shadow: 0 2px 0 0 #996c33;
-            }
         }
         .icon {
-            display: inline-block;
-            font-size: 1.4rem;
-            color: #fff; // position: absolute;
-            padding-left: 5px;
+            @include index-link-arrow();
+            display:inline-block;
+            line-height:30px;
+            vertical-align: middle;
+            margin-left:5px;
             animation-name: indexBtnIcon;
             animation-delay: 0s;
             animation-duration: 1s;
             animation-iteration-count: infinite;
+            @include respond-to(small) {
+                @include index-link-arrow-m();
+                display:inline-block;
+            }
         }
         &:hover {
-            transform: scale(1.2);
+            transform: scale(1.05);
         }
         @include respond-to(small-up) {
             position: fixed;
@@ -314,11 +315,11 @@ html {
 }
 
 .test {
-    padding: 20px 0;
+    padding: 20px 0 0 0;
     background: url(../images/test_bg.jpg) no-repeat 50% 50%;
     background-size: cover;
     @include respond-to(small) {
-        padding: 30px 0 20px 0;
+        padding: 30px 0 0 0;
     }
     &__title {
         @include test-title();
@@ -327,7 +328,7 @@ html {
         @include respond-to(small) {
             transform: scale(1);
             @include test-title-m;
-            margin-bottom: -50px;
+            // margin-bottom: -50px;
         }
     }
     &__ctrls {
@@ -335,27 +336,18 @@ html {
         z-index: 2;
         text-align: center;
         @include respond-to(small) {
-            margin-top: 180px;
+            margin-top: 40px;
             margin-bottom: 50px;
         }
         a {
+            @include test-btn();
             display: inline-block;
             margin: 0 auto;
-            background: #009944;
-            box-shadow: 0 10px 0 0 #007130;
-            padding: 10px 50px;
-            border-radius: 20px;
             transition: $tran;
             @include respond-to(small) {
                 transform: scale(1.5);
-                border-radius: 30px;
-                padding: 15px 24px;
-            }
-            span {
-                @include text-start();
             }
             &:hover {
-                box-shadow: 0 5px 0 0 #007130;
                 transform: translateY(5px);
                 @include respond-to(small) {
                     transform: translateY(5px) scale(1.5);
@@ -364,14 +356,29 @@ html {
         }
     }
     &__note {
-        position: relative;
-        z-index: 1;
-        right: -20px;
-        top: -50px;
         @include test-footer();
+        margin:0 auto;
         @include respond-to(small) {
             @include test-footer-m();
             right: 0;
+            position:relative;
+            top:-20px;
+        }
+    }
+    &__ft {
+        padding: 20px;
+        background: url(../images/note-bg.png) repeat 0 0;
+        @include respond-to(small) {
+            padding: 0px;
+        }
+    }
+    &__bear {
+        @include test-note-bear();
+        position:absolute;
+        right:100px;
+        top:-210px;
+        @include respond-to(small) {
+            display:none;
         }
     }
 }

@@ -27,7 +27,7 @@ export default {
             yoyo: false
         });
 
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i < 3; i++) {
             let tweenTime = 1;
             let delayTime = 5;
 
@@ -42,13 +42,13 @@ export default {
                         opacity: 1
                     }
                 ),
-                delayTime * i
+                (delayTime+0.5) * i
             );
             dishTl.add(
                 TweenMax.to($(this.$refs[`dish${i + 1}`]), tweenTime, {
                     opacity: 0
                 }),
-                `+=${delayTime}`
+                delayTime * (i+1)
             );
         }
 
@@ -103,21 +103,21 @@ export default {
             coverTlPaddingTime
         );
 
-        coverTl.add(
-            TweenMax.fromTo(
-                $(this.$refs.note),
-                coverTlTweenTime,
-                {
-                    opacity: 0,
-                    y: -50
-                },
-                {
-                    opacity: 1,
-                    y: -0
-                }
-            ),
-            coverTlPaddingTime
-        );
+        // coverTl.add(
+        //     TweenMax.fromTo(
+        //         $(this.$refs.note),
+        //         coverTlTweenTime,
+        //         {
+        //             opacity: 0,
+        //             y: -50
+        //         },
+        //         {
+        //             opacity: 1,
+        //             y: -0
+        //         }
+        //     ),
+        //     coverTlPaddingTime
+        // );
     },
     methods: {}
 };

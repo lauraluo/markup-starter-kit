@@ -27,7 +27,7 @@ export default {
             yoyo: false
         });
 
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i < 3; i++) {
             let tweenTime = 1;
             let delayTime = 5;
 
@@ -42,16 +42,15 @@ export default {
                         opacity: 1
                     }
                 ),
-                delayTime * i
+                (delayTime+0.5) * i
             );
             dishTl.add(
                 TweenMax.to($(this.$refs[`dish${i + 1}`]), tweenTime, {
                     opacity: 0
                 }),
-                `+=${delayTime}`
+                delayTime * (i+1)
             );
         }
-
         let coverTlTweenTime = 0.6;
         let coverTlPaddingTime = '-=0.3';
 

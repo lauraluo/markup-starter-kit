@@ -10,23 +10,25 @@ section.index
                             .index__dish.index__dish--1(ref="dish1")
                             .index__dish.index__dish--2(ref="dish2")
                             .index__dish.index__dish--3(ref="dish3")
-                            .index__dish.index__dish--4(ref="dish4")
-                        .index__keys(ref="keys")
+                        .index__keys.clearfix(ref="keys")
                             a.index__keys__item.index__keys__item--1(href="key.1.html")
                                 span.hideText 安心關鍵1 麵包保鮮
                                 span.btn 去看看
-                                    span.icon >
+                                    span.icon
                             a.index__keys__item.index__keys__item--2(href="key.2.html")
                                 span.hideText 安心關鍵2 一致的品質
                                 span.btn 去看看
-                                    span.icon >
+                                    span.icon
                             a.index__keys__item.index__keys__item--3(href="key.3.html")
                                 span.hideText 安心關鍵3 飲食安全
                                 span.btn 去看看
-                                    span.icon >
-                        .index__note.hide-text(ref="note")
+                                    span.icon
+                   
             a.index__link-test.gtm-event(href="https://goo.gl/dPeLZn"  data-category="bread-click" data-action="floating-click" data-label="大會考去試試")
                 span.btn.gtm-event(data-category="bread-click" data-action="floating-click" data-label="大會考去試試") 去試試
-                    span.icon >
+                    span.icon
 
     div.index__ft
+        .index__note(ref="note")
+        div.l-container
+            .index__bear
