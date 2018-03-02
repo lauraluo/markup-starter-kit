@@ -85,7 +85,7 @@ html {
     background-size: cover;
     .index__link-test {
         @include respond-to(small) {
-            top: 220px;
+            top: 230px;
             right: -40px;
             transform: scale(0.6);
         }
@@ -96,7 +96,7 @@ html {
         width: 100%;
         text-align: center;
         @include respond-to(small) {
-            min-height: 800px;
+            min-height: 840px;
             margin:40px 0;
         }
     }
@@ -120,7 +120,7 @@ html {
         position: relative;
         @include respond-to(small) {
             width: 469px;
-            height: 285px;
+            height: 265px;
         }
     }
     &__dish {
