@@ -83,6 +83,13 @@ html {
     padding: 20px 0 0 0;
     background: url(../images/index-bg.jpg) no-repeat 50% 50%;
     background-size: cover;
+    .index__link-test {
+        @include respond-to(small) {
+            top: 220px;
+            right: -40px;
+            transform: scale(0.6);
+        }
+    }
     .l-vm {
         height: 65vh;
         min-height: 650px;
@@ -90,7 +97,7 @@ html {
         text-align: center;
         @include respond-to(small) {
             min-height: 800px;
-            margin:50px 0;
+            margin:40px 0;
         }
     }
     .l-vm__content {
@@ -113,7 +120,7 @@ html {
         position: relative;
         @include respond-to(small) {
             width: 469px;
-            height: 256px;
+            height: 285px;
         }
     }
     &__dish {
@@ -124,20 +131,24 @@ html {
         // animation-delay: 5s;
         // animation-duration: 5s;
         // animation-iteration-count: infinite;
+        @include respond-to(small-up) {
+            transform: scale(0.7);
+            transform-origin: 0% 00%;
+        }
         &--1 {
-            @include index-dish1();
+            @include index-dish1-m();
             @include respond-to(small) {
                 @include index-dish1-m();
             }
         }
         &--2 {
-            @include index-dish2();
+            @include index-dish2-m();
             @include respond-to(small) {
                 @include index-dish2-m();
             }
         }
         &--3 {
-            @include index-dish3();
+            @include index-dish3-m();
             @include respond-to(small) {
                 @include index-dish3-m();
             }
