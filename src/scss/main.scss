@@ -84,7 +84,7 @@ html {
     background: url(../images/index-bg.jpg) no-repeat 50% 50%;
     background-size: cover;
     .l-vm {
-        height: 60vh;
+        height: 65vh;
         min-height: 650px;
         width: 100%;
         text-align: center;
@@ -366,7 +366,7 @@ html {
         }
     }
     &__ft {
-        padding: 20px;
+        padding: 60px 0;
         background: url(../images/note-bg.png) repeat 0 0;
         @include respond-to(small) {
             padding: 0px;

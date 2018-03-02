@@ -125,7 +125,7 @@ gulp.task('spritex2', function() {
             cssName: '_spritex2.scss',
             padding: 10,
             exportOpts: { quality: 100 },
-            algorithm: 'top-down',
+            algorithm: 'left-right',
             cssTemplate: function(data) {
                 var output = '';
                 var v = Math.random();
