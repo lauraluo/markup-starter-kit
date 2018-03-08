@@ -32,6 +32,26 @@ html {
     background: url(../images/bg-1.png) repeat center center;
 }
 
+.btn-style1 {
+    background: #f3d5a1;
+    background-image: linear-gradient(to bottom, #f3d5a1, #e3a24f);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    color: #000;
+    padding: 3px 30px;
+    border: solid #e1aa56 2px;
+    text-decoration: none;
+    transition: $tran;
+    display: inline-block;
+}
+
+.btn-style1:hover {
+    background: #e3a24f;
+    background-image: linear-gradient(to bottom, #e3a24f, #f3d5a1);
+    text-decoration: none;
+}
+
 .pcOnly {
     @include respond-to(small-up) {
         display: block!important;
@@ -51,7 +71,7 @@ html {
 
 .l-wrap {
     @include respond-to(small-up) {
-        background: url(../images/bg-2.png) repeat-y center -200px;
+        // background: url(../images/bg-2.png) repeat-y center -200px;
         background-position: fixed;
     }
 }
@@ -84,8 +104,10 @@ html {
     background: url(../images/index-bg.jpg) no-repeat 50% 50%;
     background-size: cover;
     .index__link-test {
+       
         @include respond-to(small) {
             top: 230px;
+            bottom: auto;
             right: -40px;
             transform: scale(0.6);
         }
@@ -265,8 +287,9 @@ html {
         @include index-test();
         position: absolute;
         right: 30px;
-        top: 30vh;
+        bottom: 240px;
         transition: $tran;
+        transform: scale(0.85);
         @include respond-to(small) {
             top: 25vh;
             transform: scale(0.7);
@@ -397,13 +420,26 @@ html {
 $key-flow-height: 1020px;
 .key {
     &__title {
-        margin: 0 auto;
+        margin: 0 auto 100px auto;
+        @include respond-to(small) {
+            margin: 50px auto 0px auto;
+        }
     }
     &__content {
         padding: 50px 0 40px 0;
     }
     &__anis {
         height: 100%;
+    }
+    .index__link-test {
+        position: fixed;
+        z-index: 999;
+        @include respond-to(small) {
+            top: auto;
+            bottom: 50px;
+            right: -30px;
+            transform: scale(0.6);
+        }
     }
     &__ani {
         @for $i from 1 through 5 {
@@ -477,18 +513,29 @@ $key-flow-height: 1020px;
         margin: 50px auto -120px auto;
         @include respond-to(small) {
             height: 1450px;
-            margin-top: 240px;
+            margin-top: 280px;
             margin-bottom: -20px;
         }
         &__main {
-            background: url(../images/key-bg.png) no-repeat 50% 0;
             width: 593px;
             height: $key-flow-height;
             position: absolute;
             left: 0;
             @include respond-to(small) {
                 top: 140px;
-                transform: scale(1.26);
+            }
+            &-wrap {
+                background: url(../images/key-bg.png) no-repeat 50% 0;
+                position: absolute;
+                top:0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                @include respond-to(small) {
+                    top: 0px;
+                    opacity: 0.5;
+                    transform: scale(1.3);
+                }
             }
         }
         &__bread {
@@ -517,6 +564,7 @@ $key-flow-height: 1020px;
         &__box--1 {
             left: 232px;
             top: 66px;
+
         }
         &__box--2 {
             left: 131px;
@@ -569,82 +617,79 @@ $key-flow-height: 1020px;
             }
         }
         .icon {
-            border-radius: 50px;
-            height: 40px;
-            width: 40px;
             background: url(../images/key-book.png) no-repeat center center;
-            background-color: #555;
-            box-shadow: 0 4px 0 0 #444;
+            background-size: auto 31px;
+            height: 31px;
+            width: 32px;
             position: absolute;
-            top: -5px;
-            right: -5px;
+            top: 16px;
+            right: 58px;
             @for $i from 1 through 6 {
                 @include animate-css(rubberBand, 5s, infinite, #{$i+'s'});
             }
             @include respond-to(small) {
-                height: 60px;
-                width: 60px;
+                height: 44px;
+                width: 45px;
+                top: 20px;
+                right: 80px;
                 background: url(../images/key-book.png) no-repeat center center;
-                background-size: auto 30px;
+                background-size: auto 44px;
             }
         }
         &:hover {
             transform: scale(1.05);
         }
         &--1 {
-            right: 0px;
+            right: 20px;
             top: -20px;
-            .icon {
-                top: 30px;
-            }
         }
         &--2 {
-            left: -201px;
+            left: -101px;
             top: 156px;
         }
         &--3 {
-            left: 50px;
-            top: 252px;
+            left: 150px;
+            top: 212px;
         }
         &--4 {
             right: -75px;
-            top: 299px;
+            top: 319px;
         }
         &--5 {
-            left: -111px;
-            top: 477px;
+            left: -10px;
+            top: 370px;
         }
         &--6 {
             right: -172px;
-            top: 540px;
+            top: 530px;
         }
         @include respond-to(small) {
             &--1 {
-                right: 0px;
-                top: -130px;
+                right: 10px;
+                top: -200px;
                 .icon {
-                    top: 150px;
+                    // top: 150px;
                 }
             }
             &--2 {
-                left: -15px;
-                top: 100px;
+                left: 0px;
+                top: 70px;
             }
             &--3 {
-                left: 200px;
-                top: 240px;
+                left: 165px;
+                top: 285px;
             }
             &--4 {
                 right: 0px;
-                top: 450px;
+                top: 430px;
             }
             &--5 {
                 left: 0px;
                 top: 620px;
             }
             &--6 {
-                right: 290px;
-                top: 830px;
+                right: 250px;
+                top: 850px;
             }
         }
     }
@@ -675,35 +720,49 @@ $key-flow-height: 1020px;
             }
         }
     }
+    &__ft {
+        padding: 20px 0;
+        background: url(../images/note-bg.png) repeat 0 0;
+        @include respond-to(small) {
+            // padding:0;
+        }
+    }
     &__end {
         position: relative;
     }
     &__end__note {
-        margin: 30px auto;
+        margin: 20px auto 30px auto;
         position: relative;
-        left: -57px;
         z-index: 1;
+        @include respond-to(small) {
+            margin: 40px auto;
+        }
     }
     &__end__ctrls {
         text-align: center;
-        margin: 0 auto;
+        margin: 20px auto;
+        width:70%;
+        @include respond-to(small) {
+            margin: 20px auto;
+            width: auto;
+        }
+        // width: 640px;
+        @extend .clearfix;
         .prev,
         .next {
             display: inline-block;
             width: 300px;
             height: 40px;
-            color: #a84200;
+            color: #ac6a00;
             font-size: 1.6rem;
             line-height: 40px;
             vertical-align: middle;
             box-sizing: border-box;
             margin: 0 10px;
             transition: $tran;
-            transition-delay: 0.3s;
+            transition-delay: 0s;
             transform: translateY(0);
-            &:hover {
-                transform: translateY(-5px);
-            }
+           
             @include respond-to(small) {
                 width: 533px;
                 height: 71px;
@@ -711,20 +770,35 @@ $key-flow-height: 1020px;
                 line-height: 71px;
                 font-size: 2.84rem;
                 margin: 10px auto;
+                
             }
         }
         .prev {
             padding-left: 20px;
             background: url(../images/key_bg_prev.png) no-repeat 0 0;
+            float: left;
             @include respond-to(small) {
+                float:none;
                 background: url(../images/key-prev-m.png) no-repeat 0 0;
+                background-size: auto 100%;
+                margin: 10px auto;
+            }
+            &:hover {
+                transform: translateY(-5px);
             }
         }
         .next {
             background: url(../images/key_bg_next.png) no-repeat 0 0;
             padding-right: 20px;
+            float: right;
             @include respond-to(small) {
                 background: url(../images/key-next-m.png) no-repeat 0 0;
+                background-size: auto 100%;
+                float: none;
+                margin: 10px auto;
+            }
+            &:hover {
+                transform: translateY(-5px);
             }
         }
     }
@@ -738,10 +812,6 @@ $key-flow-height: 1020px;
             @include key1-title-m();
         }
     }
-    .key__item .icon {
-        background-color: #f8b551;
-        box-shadow: 0 4px 0 0 #f39a05;
-    }
     @for $i from 1 through 6 {
         .key__item.key__item--#{$i} span.pc {
             @extend .key1-#{$i};
@@ -750,11 +820,21 @@ $key-flow-height: 1020px;
             @extend .key1-#{$i}-m;
         }
     }
+    .key__end__bear {
+        @include key1_footer_bear();
+        position: absolute;
+        top: -100px;
+        left: -170px;
+        @include respond-to(small) {
+            left: 400px;
+            top: -150px;
+        }
+    }
     .key__end__note {
         @extend .key1_footer;
         @include respond-to(small) {
             left: 0;
-            margin-top: -50px;
+            // margin-top: -50px;
             @include key1-footer-m();
         }
     }
@@ -768,10 +848,6 @@ $key-flow-height: 1020px;
             @include key2-title-m();
         }
     }
-    .key__item .icon {
-        background-color: #eb6100;
-        box-shadow: 0 4px 0 0 #d34107;
-    }
     @for $i from 1 through 5 {
         .key__item.key__item--#{$i} span.pc {
             @extend %key2-#{$i};
@@ -780,15 +856,30 @@ $key-flow-height: 1020px;
             @extend %key2-#{$i}-m;
         }
     }
+    .key__end__bear {
+        @include key2_footer_bear();
+        position: absolute;
+        top: -120px;
+        left: -170px;
+        @include respond-to(small) {
+            left: 450px;
+            top: -150px;
+        }
+    }
     .key__share {
-        margin-bottom: -50px;
+        // margin-bottom: -50px;
     }
     .key__end__note {
         @extend .key2_footer;
         @include respond-to(small) {
             left: 0;
-            margin-top: -30px;
             @include key2-footer-m();
+        }
+    }
+    .key__end__ctrls {
+        .prev,.next {
+            display: inline-block;
+            float: none;
         }
     }
 }
@@ -800,10 +891,6 @@ $key-flow-height: 1020px;
         @include respond-to(small) {
             @include key3-title-m();
         }
-    }
-    .key__item .icon {
-        background-color: #a40000;
-        box-shadow: 0 4px 0 0 #7d0000;
     }
     @for $i from 1 through 6 {
         .key__item.key__item--#{$i} span.pc {
@@ -817,17 +904,27 @@ $key-flow-height: 1020px;
         @extend .key3_footer;
         @include respond-to(small) {
             left: 0;
-            margin-top: -10px;
+            // margin-top: -10px;
             @include key3-footer-m();
+        }
+    }
+    .key__end__bear {
+        @include key3_footer_bear();
+        position: absolute;
+        top: -90px;
+        left: -150px;
+        @include respond-to(small) {
+            left: 450px;
+            top: -150px;
         }
     }
 }
 
 .footer-page {
-    border-top: dotted 2px #cfa972;
+    border-top: dotted 2px #d3b07e;
     &__content {
         text-align: center;
-        margin: 50px auto;
+        margin: 40px auto;
         @extend .clearfix;
     }
     .video,
@@ -874,7 +971,7 @@ $key-flow-height: 1020px;
         line-height: 1.8;
     }
     &__title {
-        color: #e60012;
+        color: #a84200;
         font-size: 2rem;
         margin-bottom: 20px;
         text-align: center;
@@ -884,7 +981,7 @@ $key-flow-height: 1020px;
     }
     &__text {
         font-size: 1.6rem;
-        color: #996c33;
+        color: #000000;
         @include respond-to(small) {
             font-size: 2.4rem;
         }
@@ -894,22 +991,12 @@ $key-flow-height: 1020px;
         margin-top: 30px;
     }
     &__btn {
+        @extend .btn-style1;
         cursor: pointer;
-        display: inline-block;
-        background: #cfa972;
-        border-radius: 20px;
-        color: #fff;
         font-size: 1.4rem;
-        padding: 3px 25px;
-        box-shadow: 0 4px 0 0 #996c33;
-        transition: $tran;
         @include respond-to(small) {
             font-size: 2.4rem;
             padding: 5px 45px;
-        }
-        &:hover {
-            transform: translateY(2px);
-            box-shadow: 0 2px 0 0 #996c33;
         }
     }
 }
