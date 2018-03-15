@@ -19,7 +19,7 @@ section.qa(id="qa")
                                     div.qa__step
                                         span {{timeCount}}
                                     .qa__progress
-                                        span.display-bar
+                                        span.display-bar(v-bind:style="{width: (index + 1)/8 *100 +'%'}")
                                 .qa__type
                                     span {{question.type}}
                                 .qa__main.clearfix

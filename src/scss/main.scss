@@ -1017,6 +1017,7 @@ $key-flow-height: 1020px;
             min-height: 1380px;
         }
         &.fixed4 {
+            min-height: 900px;
             @include respond-to(small) {
                 height: 70vh;
                 min-height: 1940px;
